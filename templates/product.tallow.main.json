@@ -52,6 +52,13 @@
             "custom_liquid": "<p style=\"font-size: 13px; font-weight: 300; color: #FAFAF8; font-family: var(--font-body); line-height: 1.6; margin: 0; padding: 12px 0 8px;\">\n  Männerpflege auf Tallow-Basis, veredelt mit ausgewählten Naturölen. Nahezu identisch mit den natürlichen Lipiden der Haut (Sebum) und reich an Vitamin A, D, E &amp; K. Unterstützt die Hautbarriere und pflegt intensiv.\n</p>"
           }
         },
+        "mm_pdp_low_stock": {
+          "type": "custom_liquid",
+          "name": "MM PDP - Low Stock Indicator",
+          "settings": {
+            "custom_liquid": "<div class=\"mm-lowstock\">\n  <span class=\"mm-lowstock__dot\" aria-hidden=\"true\"></span>\n  <span class=\"mm-lowstock__label\">Low Stock</span>\n</div>\n<style>\n  .product__info-container .mm-lowstock { margin: 0; }\n  .mm-lowstock { display: flex; align-items: center; gap: 8px; padding: 2px 0 10px; font-family: var(--mm-font-body, var(--font-body)); }\n  .mm-lowstock__dot { flex: 0 0 auto; width: 8px; height: 8px; border-radius: var(--mm-radius-dot, 999px); background: #E08A2C; box-shadow: 0 0 0 0 rgba(224,138,44,0.5), 0 0 6px 1px rgba(224,138,44,0.45); animation: mm-lowstock-pulse 2s var(--mm-ease, cubic-bezier(0.4,0,0.2,1)) infinite; }\n  .mm-lowstock__label { font-size: 12px; font-weight: 600; line-height: 1; letter-spacing: 0.06em; color: #E08A2C; }\n  @keyframes mm-lowstock-pulse {\n    0%   { box-shadow: 0 0 0 0 rgba(224,138,44,0.5), 0 0 6px 1px rgba(224,138,44,0.45); }\n    70%  { box-shadow: 0 0 0 7px rgba(224,138,44,0), 0 0 10px 3px rgba(224,138,44,0.55); }\n    100% { box-shadow: 0 0 0 0 rgba(224,138,44,0), 0 0 6px 1px rgba(224,138,44,0.45); }\n  }\n  @media (prefers-reduced-motion: reduce) {\n    .mm-lowstock__dot { animation: none; }\n  }\n</style>"
+          }
+        },
         "upsell_koala_bundles_bundle_app_block_fXg4BA": {
           "type": "shopify://apps/upsell-koala-bundles/blocks/bundle-app-block/2b951f75-113f-4fca-bdf3-c92703235716",
           "settings": {
@@ -337,6 +344,7 @@
         "title",
         "text_TmqRRT",
         "custom_liquid_YjXmkL",
+        "mm_pdp_low_stock",
         "upsell_koala_bundles_bundle_app_block_fXg4BA",
         "sternify_sternify_bundle_pDeFci",
         "price",
