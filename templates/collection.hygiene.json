@@ -1,0 +1,65 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "banner": {
+      "type": "main-collection-banner",
+      "disabled": true,
+      "settings": {
+        "show_collection_description": true,
+        "show_collection_image": false,
+        "color_scheme": "background-1"
+      }
+    },
+    "product-grid": {
+      "type": "custom-liquid",
+      "name": "MM Collection Grid - Bestseller-Karten-Stil",
+      "settings": {
+        "custom_liquid": "{{ 'mm-home-bestseller.css' | asset_url | stylesheet_tag }}\n<script src=\"{{ 'mm-home-bestseller.js' | asset_url }}\" defer=\"defer\"></script>\n<section class=\"mm-bs mm-bs-collection\">\n  {%- liquid\n    assign image_overrides_json = image_overrides_json | default: ''\n  -%}\n  {%- if collection.products.size == 0 -%}\n    <p class=\"mm-bs-collection-empty\">Aktuell sind keine Produkte in dieser Kategorie verfügbar.</p>\n  {%- else -%}\n  <div class=\"mm-bs-collection-grid\" data-mmp-grid>\n    {%- for product in collection.products -%}\n      {%- assign variant = product.selected_or_first_available_variant -%}\n      {%- assign compare = variant.compare_at_price -%}\n      {%- assign card_image = product.featured_image -%}\n      {%- case product.handle -%}\n        {%- when 'clear-skin-set' -%}\n          {%- assign card_image_url = 'https://menmansion.com/cdn/shop/files/3AFA3753-3FDA-433E-982D-042241CC2475_46bba72e-9862-4bfa-b6b1-f81c65ca0414.jpg' -%}\n        {%- else -%}\n          {%- assign card_image_url = card_image | image_url: width: 800 -%}\n      {%- endcase -%}\n      {%- case product.handle -%}\n        {%- when 'tallow-gesichtscreme-y-50ml' or 'aleppo-seife-190g' -%}\n          {%- assign card_cat = 'haut' -%}\n        {%- when 'sea-texture-spray' -%}\n          {%- assign card_cat = 'haare' -%}\n        {%- when 'bartpflege-set' or 'bartpflegeserum' -%}\n          {%- assign card_cat = 'bart' -%}\n        {%- when 'jawline-gum' or 'eisroller-pro' or 'gua-sha-jade-roller' -%}\n          {%- assign card_cat = 'tools' -%}\n        {%- else -%}\n          {%- assign card_cat = 'haut' -%}\n      {%- endcase -%}\n      {%- case product.handle -%}\n        {%- when 'tallow-gesichtscreme-y-50ml' or 'bartpflege-set' -%}\n          {%- assign card_pop = 1 -%}\n        {%- else -%}\n          {%- assign card_pop = 0 -%}\n      {%- endcase -%}\n      {%- case product.handle -%}\n        {%- when 'arctic-skin-set' -%}\n          {%- assign card_usp = 'Wacher Blick, klare Haut' -%}\n        {%- when 'hot-season-edition-1' -%}\n          {%- assign card_usp = 'Kühlung, Pflege, Definition' -%}\n        {%- when 'skin-beard-set' -%}\n          {%- assign card_usp = 'Geschmeidige Haut & Bart' -%}\n        {%- when 'skin-hair-duo' -%}\n          {%- assign card_usp = 'Gepflegte Haut, mehr Volumen' -%}\n        {%- when 'clear-skin-set' -%}\n          {%- assign card_usp = 'Ruhigere, reinere Haut' -%}\n        {%- when 'daily-care-essentials' -%}\n          {%- assign card_usp = 'Die komplette Routine' -%}\n        {%- when 'aleppo-seife-190g' -%}\n          {%- assign card_usp = 'Rein gereinigt, spürbar geschmeidig' -%}\n        {%- when 'tallow-gesichtscreme-o-50ml' or 'tallow-gesichtscreme-y-50ml' -%}\n          {%- assign card_usp = 'Reines Gold für klare und gesunde Haut' -%}\n        {%- when 'bartpflegeserum' -%}\n          {%- assign card_usp = 'Weicherer, geschmeidiger Bart' -%}\n        {%- when 'sea-texture-spray' -%}\n          {%- assign card_usp = 'Mehr Textur, mehr Volumen' -%}\n        {%- when 'jawline-gum' -%}\n          {%- assign card_usp = 'Definierte Kieferlinie in Minuten' -%}\n        {%- when 'gua-sha-jade-roller' -%}\n          {%- assign card_usp = 'Straffere Konturen, sichtbar' -%}\n        {%- when 'eisroller-pro' -%}\n          {%- assign card_usp = 'Weniger Schwellungen &amp;&nbsp;Rötungen' -%}\n        {%- when 'bartpflege-set' -%}\n          {%- assign card_usp = 'Voller, definierter Bart' -%}\n        {%- else -%}\n          {%- assign card_usp = '' -%}\n      {%- endcase -%}\n      <article class=\"mm-bs-card\" data-cat=\"{{ card_cat }}\" data-price=\"{{ variant.price | divided_by: 100.0 }}\" data-pop=\"{{ card_pop }}\">\n        <div class=\"mm-bs-card-media\">\n          <a href=\"{{ product.url }}\" class=\"mm-bs-media-link\">\n            {%- if card_image_url contains 'menmansion.com' and card_image_url contains '3AFA3753' -%}\n              <img src=\"{{ card_image_url }}?width=800\" alt=\"{{ product.title | escape }}\" loading=\"lazy\">\n            {%- else -%}\n              <img src=\"{{ card_image_url }}\" alt=\"{{ product.title | escape }}\" loading=\"lazy\">\n            {%- endif -%}\n          </a>\n          {%- if compare > variant.price -%}\n            <div class=\"mm-bs-badges\"><span class=\"mm-bs-badge-save\" style=\"margin-left:auto;\">Spare {{ compare | minus: variant.price | money_without_currency }} €</span></div>\n          {%- endif -%}\n        </div>\n        <div class=\"mm-bs-card-body\">\n          <h3 class=\"mm-bs-name\"><a href=\"{{ product.url }}\" class=\"mm-bs-name-link\">{{ product.title }}</a></h3>\n            {%- render 'mm-rating', product: product, fallback: all_products['skin-beard-set'] -%}\n            {%- if card_usp != blank -%}<p class=\"mm-bs-benefit\">{{ card_usp }}</p>{%- endif -%}\n          <div class=\"mm-bs-buy\">\n            <div class=\"mm-bs-price-row\">\n              <span class=\"mm-bs-price\">{{ variant.price | money_without_currency }} €</span>\n              {%- if compare > variant.price -%}<span class=\"mm-bs-compare\">{{ compare | money_without_currency }} €</span>{%- endif -%}\n            </div>\n            {%- if compare > variant.price -%}<span class=\"mm-bs-saving\">Du sparst {{ compare | minus: variant.price | money_without_currency }} €</span>{%- endif -%}\n          </div>\n        </div>\n      </article>\n    {%- endfor -%}\n  </div>\n  {%- endif -%}\n</section>",
+        "color_scheme": "background-1",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "zegsu-alireviews-collection": {
+      "type": "apps",
+      "settings": {
+        "include_margins": true
+      }
+    },
+    "mm_collection_pflege_intro_section": {
+      "type": "custom-liquid",
+      "name": "MM Pflegeprodukte - Announcement/Hero/Trust/Filter",
+      "settings": {
+        "custom_liquid": "{{ 'mm-collection-pflege.css' | asset_url | stylesheet_tag }}\n<script src=\"{{ 'mm-collection-pflege.js' | asset_url }}\" defer=\"defer\"></script>\n<section class=\"mmp-hero\">\n  <img\n    class=\"mmp-hero__img\"\n    src=\"https://menmansion.com/cdn/shop/files/L1007643.jpg?v=1776242371&width=1600\"\n    alt=\"Men Mansion Pflegeprodukte\"\n    width=\"1600\" height=\"900\" fetchpriority=\"high\" decoding=\"async\">\n  <div class=\"mmp-hero__scrim\"></div>\n  <div class=\"mmp-hero__copy\">\n    \n    <h1 class=\"mmp-hero__title\">Ein Produkt.<br>Ein klarer Job.</h1>\n    <p class=\"mmp-hero__sub\">100&nbsp;% natürliche Wirkstoffe, handgemacht in Deutschland.\n      Kein Baukasten aus Füllstoffen - nur was wirkt.</p>\n  </div>\n</section>\n\n<ul class=\"mmp-trust\">\n  <li><span class=\"mmp-trust__ic\">✓</span>100 % natürlich</li>\n  <li><span class=\"mmp-trust__ic\">✓</span>Schnelle Lieferung</li>\n  <li><span class=\"mmp-trust__ic\">✓</span>30 Tage Rückgabe</li>\n  <li><span class=\"mmp-trust__ic\">✓</span>4,8/5 · +2.400 Bewertungen</li>\n</ul>\n\n",
+        "color_scheme": "background-1",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "mm_collection_pflege_outro_section": {
+      "type": "custom-liquid",
+      "name": "MM Pflegeprodukte - Cross-Sell/Kaufberatung/FAQ/Sticky",
+      "settings": {
+        "custom_liquid": "<a class=\"mmp-xsell\" href=\"/collections/bundles\">\n  <div>\n    \n    <p class=\"mmp-xsell__title\">Zwei Produkte, die du hier siehst - im Bundle bis zu 32&nbsp;% billiger.</p>\n  </div>\n  <span class=\"mmp-xsell__cta\">Bundles ansehen</span>\n</a>\n\n<section class=\"mmp-guide\">\n  \n  <h2 class=\"mmp-guide__title\">Wo möchtest du starten?</h2>\n  <div class=\"mmp-guide__grid\">\n    <button class=\"mmp-guide__item\" data-filter=\"haut\">\n      <span class=\"mmp-guide__need\">Gestresste Haut</span>\n      <span class=\"mmp-guide__pick\">Tallow Gesichtscreme®</span>\n      <span class=\"mmp-guide__why\">Nährt, regeneriert und stärkt die Hautbarriere.</span>\n    </button>\n    <button class=\"mmp-guide__item\" data-filter=\"bart\">\n      <span class=\"mmp-guide__need\">Lücken im Bart</span>\n      <span class=\"mmp-guide__pick\">Bartpflegeserum</span>\n      <span class=\"mmp-guide__why\">Beruhigt die Haut, unterstützt gesundes Bartwachstum.</span>\n    </button>\n    <button class=\"mmp-guide__item\" data-filter=\"haare\">\n      <span class=\"mmp-guide__need\">Keine Textur</span>\n      <span class=\"mmp-guide__pick\">Sea Texture Spray</span>\n      <span class=\"mmp-guide__why\">Mehr Volumen, mattes Finish - ohne zu verkleben.</span>\n    </button>\n    <button class=\"mmp-guide__item\" data-filter=\"tools\">\n      <span class=\"mmp-guide__need\">Geschwollenes Gesicht</span>\n      <span class=\"mmp-guide__pick\">Eisroller Pro</span>\n      <span class=\"mmp-guide__why\">Zwei Minuten morgens, sofort wacher.</span>\n    </button>\n  </div>\n</section>\n\n<section class=\"mmp-faq\">\n  \n  <div class=\"mmp-faq__list\">\n    <details class=\"mmp-faq__item\" open>\n      <summary>Womit fange ich als Einsteiger an?<span class=\"mmp-faq__sign\"></span></summary>\n      <p>Aleppo Seife zum Reinigen und die Tallow Gesichtscreme zum Pflegen. Zwei Produkte,\n        morgens und abends je eine Minute - das deckt 80&nbsp;% ab.</p>\n    </details>\n    <details class=\"mmp-faq__item\">\n      <summary>Was heißt „100&nbsp;% natürlich\" konkret?<span class=\"mmp-faq__sign\"></span></summary>\n      <p>Keine Silikone, Parabene, Mikroplastik oder synthetischen Duftstoffe. Die Rezepturen\n        bestehen aus Rindertalg, Pflanzenölen und ätherischen Ölen - vollständige INCI auf\n        jeder Produktseite.</p>\n    </details>\n    <details class=\"mmp-faq__item\">\n      <summary>Wie lange reicht eine Gesichtscreme?<span class=\"mmp-faq__sign\"></span></summary>\n      <p>Bei täglicher Anwendung morgens und abends etwa 10 bis 12 Wochen - ein erbsengroßes\n        Stück pro Anwendung genügt.</p>\n    </details>\n    <details class=\"mmp-faq__item\">\n      <summary>Was, wenn ein Produkt meiner Haut nicht passt?<span class=\"mmp-faq__sign\"></span></summary>\n      <p>30 Tage Rückgaberecht - auch geöffnet. Schreib uns kurz, wir erstatten den vollen Betrag.</p>\n    </details>\n    <details class=\"mmp-faq__item\">\n      <summary>Wann kommt meine Bestellung?<span class=\"mmp-faq__sign\"></span></summary>\n      <p>Versand aus unserem Lager in Rottenburg - innerhalb von 1–2 Werktagen nach Auftragseingang.\n        Lieferzeit in Deutschland, Österreich und der Schweiz: 2–4 Werktage.</p>\n    </details>\n  </div>\n</section>\n\n<div class=\"mmp-sticky\" data-mmp-sticky hidden>\n  <div class=\"mmp-sticky__track\"><div class=\"mmp-sticky__fill\" data-mmp-fill style=\"width:0%\"></div></div>\n  <div class=\"mmp-sticky__inner\">\n    <div class=\"mmp-sticky__text\">\n      <span class=\"mmp-sticky__ship\" data-mmp-ship>Noch 55,00 € bis Gratisversand</span>\n      <span class=\"mmp-sticky__total\" data-mmp-total>0,00 € · 0 Artikel</span>\n    </div>\n    <a class=\"mmp-sticky__cta\" href=\"/checkout\">Zur Kasse</a>\n  </div>\n</div>",
+        "color_scheme": "background-1",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    }
+  },
+  "order": [
+    "banner",
+    "mm_collection_pflege_intro_section",
+    "product-grid",
+    "mm_collection_pflege_outro_section",
+    "zegsu-alireviews-collection"
+  ]
+}

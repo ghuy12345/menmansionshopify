@@ -1,0 +1,16 @@
+/* MEN MANSION — Header-Feinschliff (Spec: Header.md) */
+
+.header-wrapper--border-bottom {
+  border-bottom: 1px solid var(--mm-graphite) !important;
+}
+
+.cart-count-bubble {
+  background-color: var(--mm-gold-soft) !important;
+  color: var(--mm-onyx) !important;
+}
+
+/* App-Override: Essential Announcement Bar (essential-announcer) - Text/Emojis kommen aus der
+   App selbst, hier nur Groesse angepasst (Wrapper-Padding + Schriftgroesse). */
+[class*="essential_annoucement_bar_wrapper"] {
+  padding: 16px 15px !important;
+}

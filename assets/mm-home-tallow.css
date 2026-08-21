@@ -1,0 +1,106 @@
+/* MEN MANSION — Startseiten-Tallow-Section (Spec: Tallow Section - Spec.md) */
+
+/* z-index 5 auf der Section, nicht nur auf der Leiste: isolation: isolate macht
+   die Section zu einem eigenen Stacking-Context, dadurch galt der z-index der
+   fixierten Sticky-Leiste nur innerhalb der Section. Die nachfolgenden Sections
+   sind im Fluss danach und liefen deshalb darueber.
+
+   5 liegt ueber allen Inhalts-Sections und unter der Header-Gruppe (6), damit
+   das offene Mobile-Menue weiterhin vor der Leiste liegt. */
+.mm-tallow { background: var(--mm-onyx); color: var(--mm-alabaster); font-family: var(--mm-font-body); position: relative; isolation: isolate; z-index: 5; }
+
+.mm-tallow-head { padding: 32px 20px 20px; text-align: center; }
+.mm-tallow-eyebrow { display: block; margin-bottom: 12px; }
+.mm-tallow-title {
+  font-family: var(--mm-font-display); font-weight: 600; color: var(--mm-alabaster);
+  font-size: 20px; line-height: 1.15; margin: 0 0 12px;
+}
+.mm-tallow-lead { margin: 0 auto; max-width: 42ch; font-size: 13.5px; line-height: 1.55; color: var(--mm-fg-muted); text-wrap: pretty; }
+
+.mm-tallow-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); }
+
+.mm-tallow-media { position: relative; aspect-ratio: 4 / 3; background: var(--mm-ink); overflow: hidden; }
+.mm-tallow-media img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.mm-tallow-badge {
+  position: absolute; top: 16px; right: 16px;
+  background: var(--mm-ink); color: var(--mm-gold-soft);
+  font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.12em;
+  padding: 8px 12px; border: 1px solid var(--mm-gold-line);
+}
+
+.mm-tallow-content { padding: 28px 20px 32px; display: flex; flex-direction: column; gap: 14px; }
+
+.mm-tallow-rating { display: flex; align-items: center; gap: 8px; font-size: 13px; color: var(--mm-fg-muted); }
+.mm-tallow-rating-stars { color: var(--mm-gold-soft); letter-spacing: 0.1em; }
+
+.mm-tallow-name { font-family: var(--mm-font-display) !important; font-weight: 600; font-size: 22px; margin: 0; }
+.mm-tallow-sub { margin: 0; font-size: 13.5px; line-height: 1.5; color: var(--mm-fg-muted); text-wrap: pretty; }
+
+.mm-tallow-usps {
+  display: flex; flex-direction: column; gap: 10px;
+  padding: 14px 0; border-top: 1px solid var(--mm-graphite); border-bottom: 1px solid var(--mm-graphite);
+}
+.mm-tallow-usp { display: flex; align-items: flex-start; gap: 10px; font-size: 14px; }
+.mm-tallow-usp-check { color: var(--mm-gold-soft); flex-shrink: 0; }
+
+.mm-tallow-price-row { display: flex; align-items: baseline; gap: 10px; flex-wrap: wrap; }
+.mm-tallow-price { font-size: 18px; font-weight: 700; }
+.mm-tallow-price-meta { font-size: 12px; color: var(--mm-fg-muted); }
+
+.mm-tallow-cta {
+  display: flex; align-items: center; justify-content: center; text-decoration: none;
+  background: var(--mm-alabaster); color: var(--mm-ink);
+  font-family: var(--mm-font-body); font-size: 11.5px; font-weight: 700; text-transform: none;
+  letter-spacing: 0.02em; min-height: 40px; width: 100%; cursor: pointer; border: 0; border-radius: var(--mm-radius-btn);
+  transition: background 150ms var(--mm-ease);
+}
+.mm-tallow-cta:hover { background: var(--mm-gold); }
+.mm-tallow-cta.is-added { background: transparent; border: 1px solid var(--mm-gold-soft); color: var(--mm-gold-soft); }
+
+.mm-tallow-stock { display: flex; align-items: center; gap: 8px; font-size: 12px; color: var(--mm-fg-muted); }
+.mm-tallow-stock-dot { width: 6px; height: 6px; border-radius: 999px; background: #7A9A65; flex-shrink: 0; }
+
+.mm-tallow-secondary {
+  display: inline-flex; align-items: center; min-height: 44px;
+  font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.14em;
+  color: var(--mm-gold-soft); border-bottom: 1px solid var(--mm-gold-line); align-self: flex-start;
+}
+
+.mm-tallow-trust {
+  display: flex; flex-wrap: wrap; gap: 10px 20px; padding-top: 8px;
+  font-size: 10px; text-transform: uppercase; letter-spacing: 0.1em; color: var(--mm-fg-muted);
+}
+
+.mm-tallow-sticky {
+  position: fixed; left: 0; right: 0; bottom: 0; z-index: 5;
+  background: rgba(14, 14, 14, 0.96); border-top: 1px solid var(--mm-graphite);
+  padding: 12px 16px; padding-bottom: calc(12px + env(safe-area-inset-bottom));
+  display: flex; align-items: center; gap: 12px;
+  transform: translateY(100%); transition: transform 200ms var(--mm-ease);
+}
+.mm-tallow-sticky.is-visible { transform: translateY(0); }
+.mm-tallow-sticky-info { display: flex; flex-direction: column; min-width: 0; }
+.mm-tallow-sticky-name { font-size: 12px; font-weight: 700; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.mm-tallow-sticky-price { font-size: 13px; color: var(--mm-gold-soft); font-weight: 700; }
+.mm-tallow-sticky-cta {
+  margin-left: auto; flex-shrink: 0; display: flex; align-items: center; justify-content: center;
+  background: var(--mm-alabaster); color: var(--mm-ink); border: 0; cursor: pointer; text-decoration: none;
+  font-family: var(--mm-font-body); font-size: 10px; font-weight: 700; text-transform: none;
+  letter-spacing: 0.02em; padding: 0 14px; min-height: 36px; border-radius: var(--mm-radius-btn);
+}
+.mm-tallow-sticky-cta.is-added { background: transparent; border: 1px solid var(--mm-gold-soft); color: var(--mm-gold-soft); }
+
+@media screen and (min-width: 760px) {
+  .mm-tallow-head { max-width: 720px; margin-inline: auto; }
+  .mm-tallow-grid {
+    grid-template-columns: 1fr 1fr; align-items: stretch;
+    max-width: 1200px; margin: 32px auto 0; padding-inline: 20px;
+  }
+  .mm-tallow-media { aspect-ratio: auto; height: 100%; }
+  .mm-tallow-content { padding: 40px 48px; justify-content: center; }
+  .mm-tallow-title { font-size: 38px; }
+  .mm-tallow-name { font-size: 28px; }
+  .mm-tallow-price { font-size: 26px; }
+  .mm-tallow-cta { font-size: 13px; letter-spacing: 0.02em; min-height: 56px; }
+  .mm-tallow-sticky { display: none !important; }
+}

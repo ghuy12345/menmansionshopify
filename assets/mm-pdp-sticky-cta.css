@@ -1,0 +1,49 @@
+/* ==========================================================================
+   Sticky-Leiste auf der PDP (Praefix mm-sc-*)
+
+   Zweck ist ausdruecklich KEIN Add-to-Cart: der Button scrollt zurueck zur
+   Bundle-Auswahl in der Buybox. Deshalb ein <button type="button"> ohne
+   Formularbindung, kein /cart/add, kein Warenkorb-Drawer.
+
+   Sichtbar erst ab der Vorher/Nachher-Section, gesteuert per Scroll-Listener
+   in der Section selbst.
+
+   Nur mobil. Auf dem Desktop steht die Buybox rechts dauerhaft im Blick, dort
+   waere die Leiste nur Verdeckung.
+   ========================================================================== */
+
+.mm-sc {
+  position: fixed; left: 0; right: 0; bottom: 0; z-index: 10;
+  display: flex; align-items: center; justify-content: space-between; gap: 14px;
+  padding: 10px 20px calc(10px + env(safe-area-inset-bottom));
+  background: var(--mm-ink);
+  border-top: 1px solid rgba(250, 250, 248, 0.1);
+  transform: translateY(110%);
+  transition: transform var(--mm-dur-2) var(--mm-ease);
+  visibility: hidden;
+}
+.mm-sc.is-visible { transform: translateY(0); visibility: visible; }
+/* Nur in der Theme-Vorschau: die Shopify-Leiste unten ist rund 52px hoch und liegt
+   als popover darueber. Ohne diesen Versatz ist die Bar auf staging nicht zu sehen. */
+.mm-sc.is-preview { bottom: 54px; padding-bottom: 10px; }
+
+/* z-index 10 bleibt unter dem Menue-Drawer (3 im eigenen Stacking-Context des
+   Headers) und unter dem Cookie-Banner. isolation: isolate haelt die inneren
+   Ebenen zusammen. */
+.mm-sc { isolation: isolate; }
+
+.mm-sc-info { display: flex; flex-direction: column; gap: 2px; min-width: 0; }
+.mm-sc-title {
+  font-size: 13px; line-height: 1.3; color: var(--mm-fg);
+  white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+}
+.mm-sc-prices { display: flex; align-items: baseline; gap: 8px; }
+.mm-sc-price { font-size: 15px; font-weight: 700; color: var(--mm-fg); }
+.mm-sc-compare { font-size: 12px; color: var(--mm-fg-muted); text-decoration: line-through; }
+
+/* Der Button ist die Komponente .mm-btn mm-btn--primary, hier nur Layout. */
+.mm-sc-cta { flex: none; display: inline-flex; align-items: center; justify-content: center; min-height: 44px; }
+
+@media screen and (min-width: 750px) {
+  .mm-sc { display: none; }
+}

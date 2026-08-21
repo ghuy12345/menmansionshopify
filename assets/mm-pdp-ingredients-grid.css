@@ -1,0 +1,101 @@
+/* ==========================================================================
+   MEN MANSION - Inhaltsstoffe als Bildraster (PDP)
+
+   Loest die App-Section "ss-product-ingredients-6" ab. Vorbild ist das
+   Kartenraster von based.com/products/shampoo: Bildkacheln, auf denen Name und
+   Nutzen ueber einem dunklen Verlauf stehen. Uebernommen wurde nur das Raster,
+   nicht die Trust-Zeile, der CTA oder die Inhaltsstoffliste der Vorlage.
+
+   Praefix mm-ig-*, nicht mm-pdp-ingredients-*: die Klassen mit diesem Namen
+   gehoeren zu einer aelteren Custom-Section in mm-pdp-clearskinset.css.
+
+   Aufbau uebernommen aus den bestehenden Sections:
+     Medienbox + Verlauf  wie .mm-r3-media / .mm-r3-fade (mm-pdp-routine3.css)
+     Text auf dem Verlauf wie .mm-hk-hero-cap (mm-pdp-herkunft2.css)
+     Raster               wie .mm-pdp-principle-grid--4 (mm-pdp-clearskinset.css)
+   ========================================================================== */
+
+.mm-ig { padding: 48px 20px; border-bottom: var(--mm-hairline); color: var(--mm-fg); }
+.mm-ig-inner { max-width: 1040px; margin-inline: auto; }
+
+/* ---------- Kopf ---------- */
+.mm-ig-head { text-align: center; margin-bottom: 22px; }
+.mm-ig-title { font-size: 26px; line-height: 1.15; margin: 0 0 8px; color: var(--mm-fg); text-wrap: balance; }
+/* Goldener Kicker: bewusste Ausnahme von der Regel "keine Eyebrow-Labels".
+   Genau dieses Element steht in der Vorlage unter der Ueberschrift. */
+.mm-ig-eyebrow {
+  margin: 0; font-family: var(--mm-font-body);
+  font-size: 11px; font-weight: 700; line-height: 1.3;
+  letter-spacing: 0.14em; text-transform: uppercase; color: var(--mm-gold-soft);
+}
+
+/* ---------- Raster ---------- */
+.mm-ig-grid {
+  display: grid; grid-template-columns: repeat(2, 1fr); gap: 8px;
+  list-style: none; margin: 0; padding: 0;
+}
+.mm-ig-card {
+  position: relative; overflow: hidden;
+  aspect-ratio: 1 / 1;
+  border-radius: var(--mm-radius-card);
+  background: var(--mm-charcoal);
+}
+.mm-ig-card img {
+  position: absolute; inset: 0;
+  width: 100%; height: 100%; object-fit: cover; display: block;
+}
+/* Freigestellte PNGs der alten Karten sitzen auf transparentem Grund und
+   wuerden mit cover angeschnitten. */
+.mm-ig-card--cutout img { object-fit: contain; padding: 14% 14% 32%; box-sizing: border-box; }
+
+/* display: block !important, weil base.css:468 div:empty { display: none } setzt
+   und der Verlauf ein leeres Element ist. Gleiche Falle wie .mm-hk-hero-grad. */
+.mm-ig-fade {
+  display: block !important;
+  position: absolute; inset: auto 0 0 0; height: 72%; pointer-events: none;
+  background: linear-gradient(to top, rgba(14, 14, 14, 0.94) 0%, rgba(14, 14, 14, 0.72) 38%, rgba(14, 14, 14, 0) 100%);
+}
+
+/* ---------- Text auf der Kachel ---------- */
+/* Anker von OBEN, nicht von unten: an der Unterkante haengend startete jeder
+   Block je nach Textlaenge auf einer anderen Hoehe (gemessen 74, 90 und 106px
+   vom oberen Kartenrand). Mit top: 44% liegt der Text auf allen Kacheln auf
+   derselben Linie und sitzt hoeher im Bild.
+   12px statt 14px seitlich: bei 171px Kartenbreite blieben sonst nur 143px und
+   "Schwarzkuemmeloel" brach mitten im Wort um. */
+.mm-ig-cap { position: absolute; left: 12px; right: 12px; top: 44%; bottom: auto; }
+/* Zutatenname bewusst in der Body-Font mit 700 statt in Saol: von Saol Standard
+   ist nur der Semibold-Schnitt geladen, dicker geht dort nicht ohne
+   synthetisches Fett. SuisseIntl-Bold ist ein echter Schnitt und steht auf dem
+   Foto satt. 14px, damit "Schwarzkuemmeloel" bei 171px Kartenbreite einzeilig
+   bleibt (bei 15px brach es um). */
+.mm-ig-name {
+  font-family: var(--mm-font-body) !important; font-weight: 700 !important;
+  font-size: 14.5px; line-height: 1.2; margin: 0 0 5px; color: var(--mm-fg);
+}
+/* Drei Zeilen sind gesetzt: die Texte sind darauf abgestimmt, der Clamp ist die
+   Absicherung, falls spaeter ein laengerer Text dazukommt. */
+/* font-family explizit: geerbt kommt SuisseIntl-Medium, der einzige geladene
+   Schnitt - der wirkt auf dunklem Grund fett. var(--mm-font-body) loest auf
+   "Suisse Intl" auf und rendert leichter, so wie der Fliesstext der
+   Nachbar-Sections. */
+/* 0.72 statt 0.82 Deckkraft: SuisseIntl-Medium ist der einzige geladene
+   Normalschnitt und wirkt auf dunklem Grund kraeftig - dadurch stand der
+   Nutzentext fast so schwer wie der fette Name darueber. Mit weniger Deckkraft
+   tritt er zurueck und der Name kommt nach vorn. */
+.mm-ig-benefit {
+  margin: 0; font-family: var(--mm-font-body); font-size: 11.5px; line-height: 1.4;
+  color: rgba(250, 250, 248, 0.72); text-wrap: pretty;
+  display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden;
+}
+
+/* ---------- Desktop: vier Spalten, Kacheln bleiben quadratisch ---------- */
+@media screen and (min-width: 750px) {
+  .mm-ig { padding: 48px var(--mm-container-pad); }
+  .mm-ig-grid { grid-template-columns: repeat(4, 1fr); gap: 14px; }
+  .mm-ig-title { font-size: 32px; }
+  .mm-ig-head { margin-bottom: 28px; }
+  .mm-ig-cap { left: 18px; right: 18px; top: 46%; bottom: auto; }
+  .mm-ig-name { font-size: 16px; }
+  .mm-ig-benefit { font-size: 12.5px; }
+}

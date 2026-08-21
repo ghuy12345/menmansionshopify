@@ -1,0 +1,144 @@
+/* MEN MANSION — Homepage VIP/Newsletter (Spec: Men-Mansion-Magazin-VIP-Footer.md) */
+/* Eigene Copy-Spalte (Eyebrow/Headline/Lead/Label/Legal) 1:1 aus der MD - der reale Klaviyo-
+   Mount bleibt als Absende-Mechanismus unangetastet (.klaviyo-form-TRCGwb), aber seine eigenen
+   Headline/Beschreibung-Bloecke werden ausgeblendet (redundant zur eigenen .mm-copy) und nur
+   die echte Email+Button-Zeile bleibt sichtbar/aktiv. */
+
+.mm {
+  --mm-onyx:#191919; --mm-ink:#0E0E0E; --mm-charcoal:#272725; --mm-graphite:#33322F;
+  --mm-alabaster:#FAFAF8; --mm-gold:#AF9841; --mm-gold-soft:#C6B074;
+  --mm-gold-line:rgba(198,176,116,.42); --mm-muted:#A8A49A; --mm-stone:#6E6B63;
+  --mm-display:"Saol Standard","Times New Roman",Georgia,serif;
+  --mm-body:"Suisse Intl",-apple-system,BlinkMacSystemFont,"Helvetica Neue",Arial,sans-serif;
+}
+.mm *, .mm *::before, .mm *::after { box-sizing: border-box; }
+.mm { font-family: var(--mm-body); font-weight: 500; letter-spacing: 0.01em; }
+.mm a { text-decoration: none; }
+
+.mm-eyebrow { display: flex; align-items: center; gap: 14px; }
+.mm-eyebrow i { width: 40px; height: 1px; background: var(--mm-gold); display: block; }
+.mm-eyebrow span { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: .14em; color: var(--mm-gold); }
+.mm-h2 { font-family: var(--mm-display); font-weight: 600; font-size: clamp(30px,4vw,48px);
+  line-height: 1.1; letter-spacing: -.015em; margin: 0; text-wrap: balance; }
+.mm-vip .mm-h2 { font-size: 20px !important; }
+@media screen and (min-width: 750px) {
+  .mm-vip .mm-h2 { font-size: clamp(30px,4vw,48px) !important; }
+}
+
+.mm-vip { background: var(--mm-alabaster); color: var(--mm-onyx); padding: clamp(48px,8vw,88px) 0; }
+.mm-vip .mm-inner { max-width: 900px; margin-inline: auto; padding-inline: clamp(20px,5vw,72px);
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(280px,1fr)); gap: clamp(28px,5vw,56px); align-items: center; }
+.mm-vip .mm-copy { display: flex; flex-direction: column; gap: 16px; }
+.mm-vip p.mm-lead { margin: 0; font-size: 12.5px; line-height: 1.55; letter-spacing: 0.01em; color: rgba(0,0,0,0.8); max-width: 26em; text-wrap: pretty; }
+@media screen and (min-width: 750px) {
+  .mm-vip p.mm-lead { font-size: clamp(16px,1.8vw,18px); }
+}
+
+.mm-vip-form-wrap { display: flex; flex-direction: column; gap: 12px; }
+.mm-vip-label { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: .2em; color: #4A4843; }
+.mm-legal { margin: 0; font-size: 12px; line-height: 1.5; color: rgba(0,0,0,0.5); }
+.mm-legal a { color: rgba(0,0,0,0.5); text-decoration: underline; }
+
+/* Klaviyos eigene Headline/Beschreibung ausblenden - redundant zur eigenen .mm-copy oben */
+.klaviyo-form-TRCGwb [data-testid="form-row"]:nth-of-type(1),
+.klaviyo-form-TRCGwb [data-testid="form-row"]:nth-of-type(2) {
+  display: none !important;
+}
+/* Eigene Zeile (E-Mail + Button) bleibt sichtbar, wird gestapelt statt nebeneinander */
+.klaviyo-form-TRCGwb [data-testid="klaviyo-form-TRCGwb"] {
+  max-width: 100% !important;
+  width: 100% !important;
+  margin: 0 !important;
+}
+/* Dieser Wrapper hatte inline min-height:120px + justify-content:center, kalkuliert fuer
+   3 sichtbare Zeilen - nach dem Ausblenden von Zeile 1+2 zentrierte das die verbleibende
+   Zeile in einer viel zu grossen Box und riss eine grosse Luecke zwischen Feld und Button. */
+.klaviyo-form-TRCGwb [data-testid="klaviyo-form-TRCGwb"] > div {
+  min-height: 0 !important;
+  height: auto !important;
+  justify-content: flex-start !important;
+}
+.klaviyo-form-TRCGwb [data-testid="form-row"]:nth-of-type(3) {
+  flex-direction: column !important;
+  gap: 12px !important;
+  align-items: stretch !important;
+  height: auto !important;
+}
+.klaviyo-form-TRCGwb [data-testid="form-row"]:nth-of-type(3) [data-testid="form-component"] {
+  height: auto !important;
+  min-height: auto !important;
+  padding: 0 !important;
+  margin: 0 !important;
+  flex: none !important;
+}
+/* Natives sr-only-Label bleibt fuer Screenreader vorhanden, visuell ersetzt durch .mm-vip-label */
+.klaviyo-form-TRCGwb .klaviyo-sr-only {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  overflow: hidden !important;
+  clip: rect(0,0,0,0) !important;
+  white-space: nowrap !important;
+}
+
+.klaviyo-form-TRCGwb .klaviyo-emailinput input {
+  width: 100% !important;
+  min-height: 54px !important;
+  padding: 15px 18px !important;
+  font-family: var(--mm-body) !important;
+  font-size: 12.5px !important;
+  color: var(--mm-onyx) !important;
+  background: transparent !important;
+  border: 1px solid #C9C6BE !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+}
+.klaviyo-form-TRCGwb .klaviyo-emailinput input:focus { border-color: var(--mm-onyx) !important; }
+.klaviyo-form-TRCGwb .klaviyo-emailinput input::placeholder { color: rgba(0,0,0,0.5) !important; opacity: 1 !important; font-size: 11px !important; }
+
+.klaviyo-form-TRCGwb .klaviyo-form-button {
+  width: 100% !important;
+  min-height: 54px !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  background: var(--mm-onyx) !important;
+  color: var(--mm-alabaster) !important;
+  font-family: var(--mm-body) !important;
+  font-weight: 700 !important;
+  font-size: 11.5px !important;
+  text-transform: none !important;
+  letter-spacing: .02em !important;
+  border: 0 !important;
+  border-radius: var(--mm-radius-btn) !important;
+}
+.klaviyo-form-TRCGwb .klaviyo-form-button:hover { background: #33322F !important; }
+
+/* ---------- Newsletter: Hierarchie nach Vorlage vom 07.08. ----------
+   Statt "Werde VIP" steht hier der Nutzen. Darueber ein Eyebrow, das die
+   Section einordnet - 14px, das ist der konsistente Eyebrow-Wert.
+   Die Headline ist groesser und laeuft in Saol Standard Semibold (600), die
+   einzige geladene Schnittstaerke. */
+.mm-vip .mm-vip-eyebrow {
+  margin: 0; font-family: var(--mm-font-body);
+  font-size: 14px; font-weight: 700; line-height: 1.2;
+  letter-spacing: 0.1em; text-transform: uppercase; color: var(--mm-gold);
+}
+.mm-vip .mm-h2 { font-size: 27px !important; font-weight: 600; line-height: 1.12; }
+@media screen and (min-width: 750px) {
+  .mm-vip .mm-h2 { font-size: clamp(34px, 4vw, 48px) !important; }
+}
+.mm-vip .mm-copy { gap: 10px; }
+
+/* Feldlabel: dieselbe Groesse wie bisher, aber weniger Sperrung - 0.2em hat die
+   Buchstaben auseinandergezogen. */
+.mm-vip-label { letter-spacing: .1em; }
+
+/* Mehr Luft um das Eingabefeld und zwischen Feld und Button */
+.klaviyo-form-TRCGwb input[type="email"] {
+  padding: 15px 16px !important;
+  margin-bottom: 10px !important;
+}
+
+/* Rechtstext kleiner - er stand fast so gross wie der Fliesstext darueber */
+.mm-legal { font-size: 10.5px; line-height: 1.45; }

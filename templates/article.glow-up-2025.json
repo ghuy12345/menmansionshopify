@@ -1,0 +1,397 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-article",
+      "blocks": {
+        "featured_image": {
+          "type": "featured_image",
+          "settings": {
+            "image_height": "small"
+          }
+        },
+        "title": {
+          "type": "title",
+          "settings": {
+            "blog_show_date": false,
+            "blog_show_author": false
+          }
+        },
+        "content": {
+          "type": "content",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "featured_image",
+        "title",
+        "content"
+      ],
+      "disabled": true,
+      "settings": {}
+    },
+    "image_banner_4ex8mb": {
+      "type": "image-banner",
+      "blocks": {
+        "heading_hmPTJy": {
+          "type": "heading",
+          "settings": {
+            "heading": "Dein Glow-Up 2025",
+            "heading_size": "h1"
+          }
+        },
+        "text_UFB6tU": {
+          "type": "text",
+          "settings": {
+            "text": "Step-by-Step Guide wie du 2025 ein Glowup bekommst.",
+            "text_style": "body"
+          }
+        }
+      },
+      "block_order": [
+        "heading_hmPTJy",
+        "text_UFB6tU"
+      ],
+      "settings": {
+        "image": "shopify://shop_images/L1007461.jpg",
+        "image_2": "shopify://shop_images/L1007461.jpg",
+        "image_overlay_opacity": 30,
+        "image_height": "large",
+        "desktop_content_position": "middle-center",
+        "show_text_box": false,
+        "desktop_content_alignment": "center",
+        "color_scheme": "",
+        "image_behavior": "none",
+        "mobile_content_alignment": "center",
+        "stack_images_on_mobile": false,
+        "show_text_below": false
+      }
+    },
+    "rich_text_6traAK": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_wEakkQ": {
+          "type": "heading",
+          "settings": {
+            "heading": "<strong>Die Bedeutung von Stil und Pflege</strong>",
+            "heading_size": "h1"
+          }
+        },
+        "text_naBaCf": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Ein gepflegtes Auftreten ist nicht nur eine Frage der Ästhetik – es geht darum, wie du dich selbst siehst und wie andere dich wahrnehmen. Der erste Eindruck zählt, und ein Mann mit einer klaren Haut, einem definierten Kiefer oder einem vollen Bart strahlt Selbstbewusstsein und Kontrolle aus. Unsere Produkte sind genau darauf ausgelegt: Sie helfen dir, deinen Stil zu perfektionieren und gleichzeitig deine Individualität zu bewahren. </p><p>Mit diesen 5 Tipps bringst du deine Skincare und dein Erscheinungsbild auf das nächste Level!</p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_wEakkQ",
+        "text_naBaCf"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 20,
+        "padding_bottom": 20
+      }
+    },
+    "image_with_text_8CgywJ": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_cWBCpn": {
+          "type": "heading",
+          "settings": {
+            "heading": "1. <strong>Perfekte Haut mit Tallow</strong>",
+            "heading_size": "h2"
+          }
+        },
+        "text_VEKffB": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Tallow ist ein Geheimtipp für Männer, die auf natürliche und effektive Hautpflege setzen. Es spendet intensive Feuchtigkeit, beruhigt gereizte Haut und schützt vor Umwelteinflüssen. Besonders abends als Pflegecreme verwendet, hinterlässt es ein entspanntes und geschmeidiges Hautgefühl und gibt dir eine glänzend cleane Haut!</p>",
+            "text_style": "body"
+          }
+        },
+        "button_hBR7wF": {
+          "type": "button",
+          "settings": {
+            "button_label": "Jetzt entdecken",
+            "button_link": "shopify://products/tallow-gesichtscreme-y-50ml",
+            "button_style_secondary": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_cWBCpn",
+        "text_VEKffB",
+        "button_hBR7wF"
+      ],
+      "settings": {
+        "image": "shopify://shop_images/Tallow5.png",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "section_color_scheme": "",
+        "color_scheme": "",
+        "image_behavior": "none",
+        "mobile_content_alignment": "center",
+        "padding_top": 20,
+        "padding_bottom": 20
+      }
+    },
+    "image_with_text_LJznAT": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_t4QLmF": {
+          "type": "heading",
+          "settings": {
+            "heading": "<strong>2. Strahlendes Lächeln</strong>",
+            "heading_size": "h2"
+          }
+        },
+        "text_jnjFMf": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Unser Zahnweißpulver entfernt sanft Verfärbungen und sorgt für natürlich weiße Zähne. Es ist schonend zu deinem Zahnschmelz und verleiht dir ein selbstbewusstes Lächeln, das Eindruck hinterlässt. Für ein Ergebnis, das du schon nach wenigen Anwendungen sehen kannst.</p>",
+            "text_style": "body"
+          }
+        },
+        "button_HkVjaD": {
+          "type": "button",
+          "settings": {
+            "button_label": "Jetzt entdecken",
+            "button_link": "shopify://products/zahnweisspulver-natuerlich",
+            "button_style_secondary": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_t4QLmF",
+        "text_jnjFMf",
+        "button_HkVjaD"
+      ],
+      "settings": {
+        "image": "shopify://shop_images/Zahnweisspulver_2.png",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "text_first",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "section_color_scheme": "",
+        "color_scheme": "",
+        "image_behavior": "none",
+        "mobile_content_alignment": "center",
+        "padding_top": 20,
+        "padding_bottom": 20
+      }
+    },
+    "image_with_text_QnCH6X": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_nHrwnb": {
+          "type": "heading",
+          "settings": {
+            "heading": "<strong>3. Die Lösung gegen Akne und Unreinheiten</strong>",
+            "heading_size": "h2"
+          }
+        },
+        "text_zkbRGz": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Der Eisroller ist die ultimative Lösung gegen Schwellungen und müde Haut. Die Kälte stimuliert die Durchblutung, beruhigt Rötungen und hinterlässt ein erfrischtes, vitales Hautbild. Perfekt nach einem langen Tag oder vor einem wichtigen Event.</p>",
+            "text_style": "body"
+          }
+        },
+        "button_XKYmAw": {
+          "type": "button",
+          "settings": {
+            "button_label": "Jetzt entdecken",
+            "button_link": "shopify://products/eisroller-pro",
+            "button_style_secondary": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_nHrwnb",
+        "text_zkbRGz",
+        "button_XKYmAw"
+      ],
+      "settings": {
+        "image": "shopify://shop_images/Eisroller3.png",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "section_color_scheme": "",
+        "color_scheme": "",
+        "image_behavior": "none",
+        "mobile_content_alignment": "center",
+        "padding_top": 20,
+        "padding_bottom": 20
+      }
+    },
+    "image_with_text_yxH3y4": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_xhVjrN": {
+          "type": "heading",
+          "settings": {
+            "heading": "4. <strong>So wächst dein Bart voller und stärker</strong>",
+            "heading_size": "h2"
+          }
+        },
+        "text_nj4znb": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Der Elite Bartroller kombiniert die Kraft von Mikronadeln mit einem aktivierenden Serum, das die Haarfollikel stimuliert. So fördert er ein gleichmäßiges Bartwachstum und hilft dabei, kahle Stellen zu füllen. Dein Weg zu einem gepflegten und maskulinen Bart war noch nie so einfach.</p>",
+            "text_style": "body"
+          }
+        },
+        "button_3bQUrU": {
+          "type": "button",
+          "settings": {
+            "button_label": "Jetzt entdecken",
+            "button_link": "shopify://products/bartpflege-set",
+            "button_style_secondary": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_xhVjrN",
+        "text_nj4znb",
+        "button_3bQUrU"
+      ],
+      "settings": {
+        "image": "shopify://shop_images/Bartset2.png",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "text_first",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "section_color_scheme": "",
+        "color_scheme": "",
+        "image_behavior": "none",
+        "mobile_content_alignment": "center",
+        "padding_top": 20,
+        "padding_bottom": 20
+      }
+    },
+    "image_with_text_f6Rf8t": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_6AdEyF": {
+          "type": "heading",
+          "settings": {
+            "heading": "5. <strong>So stärkst du deinen Körper von innen heraus</strong>",
+            "heading_size": "h2"
+          }
+        },
+        "text_8mEk39": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Unsere Supplements sind speziell für Männer entwickelt, um deine Leistungsfähigkeit und dein Wohlbefinden zu steigern. Mit hochwertigen, natürlichen Inhaltsstoffen unterstützen sie deinen Körper dabei, Energie zu tanken, Muskeln aufzubauen und einen klaren Kopf zu behalten. Perfekt für Männer, die in jeder Situation bereit sein wollen.</p>",
+            "text_style": "body"
+          }
+        },
+        "button_UDbiLb": {
+          "type": "button",
+          "settings": {
+            "button_label": "Jetzt entdecken",
+            "button_link": "shopify://collections/supplements",
+            "button_style_secondary": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_6AdEyF",
+        "text_8mEk39",
+        "button_UDbiLb"
+      ],
+      "settings": {
+        "image": "shopify://shop_images/0003-8489739843339218114.png",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "section_color_scheme": "",
+        "color_scheme": "",
+        "image_behavior": "none",
+        "mobile_content_alignment": "left",
+        "padding_top": 20,
+        "padding_bottom": 20
+      }
+    },
+    "rich_text_jMAtqr": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_q3L8hn": {
+          "type": "heading",
+          "settings": {
+            "heading": "Dein Glow-up beginnt jetzt",
+            "heading_size": "h1"
+          }
+        },
+        "text_iBNG67": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Men Mansion ist dein Sprungbrett um dieses Jahr zur besten Version deiner selbst zu werden. Der erste Schritt zu deinem Glow-up beginnt bei dir. Mit unseren ausgewählten Produkten hast du alles, was du brauchst, um dein Erscheinungsbild und deine Ausstrahlung auf das nächste Level zu bringen. </p>"
+          }
+        },
+        "button_cp9UCJ": {
+          "type": "button",
+          "settings": {
+            "button_label": "Zu den Produkten",
+            "button_link": "shopify://collections/pflegeprodukte-fuer-maenner",
+            "button_style_secondary": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_q3L8hn",
+        "text_iBNG67",
+        "button_cp9UCJ"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 24,
+        "padding_bottom": 20
+      }
+    }
+  },
+  "order": [
+    "main",
+    "image_banner_4ex8mb",
+    "rich_text_6traAK",
+    "image_with_text_8CgywJ",
+    "image_with_text_LJznAT",
+    "image_with_text_QnCH6X",
+    "image_with_text_yxH3y4",
+    "image_with_text_f6Rf8t",
+    "rich_text_jMAtqr"
+  ]
+}

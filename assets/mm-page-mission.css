@@ -1,0 +1,87 @@
+/* MEN MANSION — Unsere Mission / Unsere Geschichte (Spec: Men-Mansion-Mission-Geschichte.md) */
+/* Wiederverwendet globale Tokens/Klassen aus mm-design-system.css (--mm-*, .mm-eyebrow, .mm-btn, .mm-rule-gold) */
+
+.mm-mission { font-family: var(--mm-font-body); font-weight: var(--mm-fw-body); color: var(--mm-alabaster); }
+.mm-mission *, .mm-mission *::before, .mm-mission *::after { box-sizing: border-box; }
+
+.mm-mission .mm-sec { padding: clamp(48px, 8vw, 96px) 0 clamp(56px, 8vw, 104px); border-top: 1px solid var(--mm-graphite); }
+.mm-mission .mm-sec--mission { background: var(--mm-onyx); }
+.mm-mission .mm-sec--story { background: var(--mm-ink); }
+.mm-mission .mm-wrap { max-width: 1320px; margin-inline: auto; padding-inline: clamp(20px, 5vw, 72px); }
+.mm-mission .mm-wrap--narrow {
+  max-width: 980px; margin-inline: auto; padding-inline: clamp(20px, 5vw, 72px);
+  display: flex; flex-direction: column; gap: clamp(28px, 4vw, 44px);
+}
+
+/* Eyebrow-Linie (Icon-Strich vor .mm-eyebrow-Text, .mm-eyebrow selbst kommt aus mm-design-system.css) */
+.mm-mission .mm-eyebrow-row { display: flex; align-items: center; gap: 14px; }
+.mm-mission .mm-eyebrow-row i { width: 40px; height: 1px; background: var(--mm-gold-soft); display: block; }
+
+/* Typo */
+.mm-mission .mm-h2 {
+  font-family: var(--mm-font-display); font-weight: 600; font-size: clamp(32px, 4.4vw, 60px);
+  line-height: 1.1; letter-spacing: -0.015em; margin: 0; max-width: 16em;
+}
+.mm-mission .mm-h3 { font-family: var(--mm-font-display) !important; font-weight: 600; margin: 0; font-size: clamp(19px, 2vw, 23px); line-height: 1.15; }
+.mm-mission .mm-lead { font-size: 12.5px; line-height: 1.55; letter-spacing: 0.01em; color: var(--mm-fg-muted); margin: 0; max-width: 34em; }
+.mm-mission .mm-micro { font-size: 11px; line-height: 1.45; text-transform: none; letter-spacing: 0.02em; color: var(--mm-fg-muted); margin: 0; }
+
+/* Layout */
+.mm-mission .mm-split { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: clamp(32px, 5vw, 72px); align-items: start; }
+.mm-mission .mm-col { display: flex; flex-direction: column; gap: clamp(20px, 3vw, 28px); }
+.mm-mission .mm-grid { display: grid; gap: 1px; background: var(--mm-graphite); border: 1px solid var(--mm-graphite); }
+.mm-mission .mm-grid--compare { grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); margin-top: 4px; }
+.mm-mission .mm-grid--stats { grid-template-columns: repeat(2, 1fr); margin-top: clamp(36px, 6vw, 72px); }
+.mm-mission .mm-grid--steps { grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); list-style: none; margin: 0; padding: 0; }
+.mm-mission .mm-cell { background: var(--mm-onyx); border-radius: var(--mm-radius); padding: clamp(20px, 3vw, 28px); display: flex; flex-direction: column; gap: 8px; }
+.mm-mission .mm-cell--accent { background: var(--mm-charcoal); border-left: 1px solid var(--mm-gold-line); }
+.mm-mission .mm-cell--step { gap: 12px; padding: clamp(22px, 3vw, 30px); }
+.mm-mission .mm-cell--step .mm-step-label { color: var(--mm-gold-soft); letter-spacing: 0.22em; }
+.mm-mission .mm-cell--step p { margin: 0; font-size: 14px; letter-spacing: 0.01em; line-height: 1.55; color: var(--mm-fg-muted); }
+
+/* Vergleichsliste */
+.mm-mission .mm-listlabel { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.22em; color: var(--mm-fg-muted); margin-bottom: 16px; }
+.mm-mission .mm-listlabel--gold { color: var(--mm-gold-soft); }
+.mm-mission .mm-list { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 12px; }
+.mm-mission .mm-list li { display: flex; gap: 12px; align-items: flex-start; font-size: 13px; letter-spacing: 0.01em; line-height: 1.45; }
+.mm-mission .mm-list--con li { color: var(--mm-fg-muted); }
+.mm-mission .mm-list svg { flex: none; margin-top: 4px; }
+
+/* Stats */
+.mm-mission .mm-stat { font-family: var(--mm-font-display); font-weight: 600; font-size: 18px; line-height: 1; }
+.mm-mission .mm-stat s { color: var(--mm-gold-soft); font-size: 0.6em; text-decoration: none; }
+.mm-mission .mm-statlabel { font-size: 9px; text-transform: uppercase; letter-spacing: 0.14em; color: var(--mm-fg-muted); }
+
+/* Buttons — 54px Touch-Target (scoped Override, globales .mm-btn bleibt unangetastet) */
+.mm-mission .mm-ctas { display: flex; flex-wrap: wrap; gap: 12px; }
+.mm-mission .mm-btn { min-height: 54px; display: inline-flex; align-items: center; justify-content: center; }
+.mm-mission .mm-btn--primary { flex: 1 1 300px; white-space: nowrap; }
+.mm-mission .mm-btn--ghost { flex: 1 1 260px; white-space: nowrap; }
+
+/* Bild */
+.mm-mission .mm-media { display: flex; flex-direction: column; gap: 16px; }
+.mm-mission .mm-media figure { margin: 0; width: 100%; aspect-ratio: 4 / 5; border: 1px solid var(--mm-graphite); overflow: hidden; }
+.mm-mission .mm-media img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.mm-mission .mm-caption { font-size: 14px; line-height: 1.5; color: var(--mm-fg-muted); margin: 0; }
+
+/* Testimonial */
+.mm-mission .mm-quote {
+  margin: clamp(36px, 6vw, 72px) 0 0; padding: clamp(24px, 4vw, 40px); background: var(--mm-charcoal);
+  border-top: 1px solid var(--mm-gold-line); display: flex; flex-direction: column; gap: 18px;
+}
+.mm-mission .mm-stars { color: var(--mm-gold-soft); font-size: 13px; letter-spacing: 0.3em; }
+.mm-mission .mm-quote blockquote { margin: 0; font-family: var(--mm-font-display); font-weight: 600; font-size: clamp(19px, 2.2vw, 26px); line-height: 1.3; }
+.mm-mission .mm-quote figcaption { font-size: 12px; text-transform: uppercase; letter-spacing: 0.16em; color: var(--mm-fg-muted); }
+
+/* Story-Abschluss */
+.mm-mission .mm-close { display: flex; flex-direction: column; align-items: center; gap: 20px; padding-top: clamp(8px, 2vw, 16px); text-align: center; }
+.mm-mission .mm-close .mm-kicker { margin: 0; font-family: var(--mm-font-display); font-weight: 600; font-size: clamp(22px, 3vw, 32px); line-height: 1.15; }
+.mm-mission .mm-close .mm-btn { flex: 0 0 auto; width: 100%; max-width: 360px; }
+
+@media screen and (min-width: 750px) {
+  .mm-mission .mm-grid--stats { grid-template-columns: repeat(4, 1fr); }
+  .mm-mission .mm-stat { font-size: clamp(26px, 3vw, 34px); }
+  .mm-mission .mm-statlabel { font-size: 12px; letter-spacing: 0.16em; }
+  .mm-mission .mm-lead { font-size: clamp(18px, 2vw, 21px); }
+  .mm-mission .mm-list li { font-size: 15px; }
+}

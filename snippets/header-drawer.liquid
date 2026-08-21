@@ -1,0 +1,413 @@
+{% comment %}
+  Renders a header drawer menu for mobile and desktop.
+
+  Usage:
+  {% render 'header-drawer' %}
+
+  MEN MANSION: Inhalt nach docs/Mobile-Menue-Spezifikation ausgebaut.
+  Reihenfolge: Header-Leiste (unveraendert, mit Logo und echtem Warenkorb aus
+  sections/header.liquid) - Suche - Angebots-Banner - Shop-Navigation mit
+  Thumbnails - Produkt-Rail - Service-Links - Trust-Zeile - Utility-Leiste.
+
+  Bewusst nicht uebernommen: die Header-Leiste der Vorlage (Wortmarke statt Logo,
+  anderer Warenkorb) und die Kategorie-Dropdowns. Untermenues aus der
+  Shopify-Navigation werden trotzdem nicht verschluckt, sondern flach unter dem
+  Elternpunkt ausgegeben - so bleibt jeder Link erreichbar.
+
+  Preise, Ersparnisse und Bilder kommen aus all_products, nichts ist eingetippt.
+{% endcomment %}
+
+{{ 'mm-menu-drawer.css' | asset_url | stylesheet_tag }}
+
+<header-drawer data-breakpoint="{% if section.settings.menu_type_desktop == 'drawer' %}desktop{% else %}tablet{% endif %}">
+  <details id="Details-menu-drawer-container" class="menu-drawer-container">
+    <summary
+      class="header__icon header__icon--menu header__icon--summary link focus-inset"
+      aria-label="{{ 'sections.header.menu' | t }}"
+    >
+      <span>
+        {{- 'icon-hamburger.svg' | inline_asset_content -}}
+        {{- 'icon-close.svg' | inline_asset_content -}}
+      </span>
+    </summary>
+    <div id="menu-drawer" class="gradient menu-drawer motion-reduce color-{{ section.settings.menu_color_scheme }}">
+      <div class="menu-drawer__inner-container">
+        <div class="menu-drawer__navigation-container">
+          {%- liquid
+            assign offer_collection = collections['bundles']
+            assign rail_handles = 'tallow-gesichtscreme-y-50ml,daily-care-essentials,sea-texture-spray' | split: ','
+          -%}
+
+          <div class="mm-md-scroll">
+
+            {%- comment -%} 2. Angebots-Banner {%- endcomment -%}
+            {%- if offer_collection != blank -%}
+              {%- comment -%}
+                Bannerbild ist von Dominik vorgegeben (Sommeraktion-Motiv aus den
+                Shopify Files), nicht das Kollektionsbild.
+              {%- endcomment -%}
+              {%- assign offer_image_url = 'https://cdn.shopify.com/s/files/1/0779/4583/1766/files/hf_20260608_132653_d07d051e-e502-46b9-91e1-9cb1aaa03a69.png?v=1780925487&width=900' -%}
+              <a class="mm-md-offer" href="{{ offer_collection.url }}">
+                <span class="mm-md-offer-media">
+                  <img src="{{ offer_image_url }}" alt="" loading="lazy" width="900" height="450">
+                  <span class="mm-md-offer-scrim"></span>
+                  <span class="mm-md-offer-copy">
+                    <span class="mm-md-offer-label">Sommeraktion</span>
+                    <span class="mm-md-offer-title">2 Gratis-Produkte im Sommer-Special</span>
+                  </span>
+                </span>
+                <span class="mm-md-offer-foot">
+                  <span class="mm-md-offer-note"><span class="mm-md-gold">Gold</span> für deine Haut</span>
+                  <span class="mm-md-offer-cta">
+                    Sichern
+                    {{- 'icon-arrow.svg' | inline_asset_content -}}
+                  </span>
+                </span>
+              </a>
+            {%- endif -%}
+
+            <nav class="menu-drawer__navigation">
+              {%- comment -%} 3. Shop: Kollektions-Links mit Sub-Zeile, Badge und Thumbnail {%- endcomment -%}
+              <ul class="menu-drawer__menu list-menu" role="list">
+                {%- for link in section.settings.menu.links -%}
+                  {%- if link.type == 'collection_link' -%}
+                    {%- liquid
+                      assign nav_thumb_image = blank
+                      if link.object.products.first
+                        assign nav_thumb_image = link.object.products.first.featured_image
+                      endif
+                      assign nav_sub = ''
+                      assign nav_badge = ''
+                      case link.url
+                        when '/collections/bundles'
+                          assign nav_sub = 'Deine Routine'
+                          assign nav_badge = '2 Gratis-Produkte'
+                        when '/collections/pflegeprodukte-fuer-maenner'
+                          assign nav_sub = 'Gesicht · Bart · Körper · Haar'
+                      endcase
+                    -%}
+                    <li>
+                      <a
+                        id="HeaderDrawer-{{ link.handle }}"
+                        href="{{ link.url }}"
+                        class="menu-drawer__menu-item list-menu__item link link--text focus-inset mm-md-nav-item{% if link.current %} menu-drawer__menu-item--active{% endif %}"
+                        {% if link.current %}
+                          aria-current="page"
+                        {% endif %}
+                      >
+                        <span class="mm-md-nav-text">
+                          <span class="mm-md-nav-row">
+                            <span class="mm-md-nav-title">{{ link.title | escape }}</span>
+                            {%- if nav_badge != '' -%}
+                              <span class="mm-md-badge">
+                                <svg viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                                  <path d="M2 6h12v8H2z" stroke="currentColor" stroke-width="1.3" stroke-linejoin="round"/>
+                                  <path d="M1 4h14v2H1zM8 4v10" stroke="currentColor" stroke-width="1.3" stroke-linejoin="round"/>
+                                  <path d="M8 4S6.8 1.5 5.3 1.5 3.7 4 5.3 4zM8 4s1.2-2.5 2.7-2.5S12.3 4 10.7 4z" stroke="currentColor" stroke-width="1.3" stroke-linejoin="round"/>
+                                </svg>
+                                {{ nav_badge }}
+                              </span>
+                            {%- endif -%}
+                          </span>
+                          {%- if nav_sub != '' -%}
+                            <span class="mm-md-nav-sub">{{ nav_sub }}</span>
+                          {%- endif -%}
+                        </span>
+                        {%- if nav_thumb_image != blank -%}
+                          <img
+                            class="mm-md-thumb"
+                            src="{{ nav_thumb_image | image_url: width: 120 }}"
+                            alt=""
+                            loading="lazy"
+                            width="40"
+                            height="40"
+                          >
+                        {%- endif -%}
+                      </a>
+                    </li>
+                    {%- comment -%}
+                      Untermenue-Punkte flach mit ausgeben, damit die Vorlage ohne
+                      Dropdowns keine Links unerreichbar macht.
+                    {%- endcomment -%}
+                    {%- for childlink in link.links -%}
+                      <li>
+                        <a
+                          href="{{ childlink.url }}"
+                          class="menu-drawer__menu-item list-menu__item link link--text focus-inset mm-md-service-item{% if childlink.current %} menu-drawer__menu-item--active{% endif %}"
+                          {% if childlink.current %}
+                            aria-current="page"
+                          {% endif %}
+                        >
+                          {{ childlink.title | escape }}
+                        </a>
+                      </li>
+                    {%- endfor -%}
+                  {%- endif -%}
+                {%- endfor -%}
+              </ul>
+
+              {%- comment -%} 4. Produkt-Rail "Meistgekauft" {%- endcomment -%}
+              <div class="mm-md-rail-head">
+                <p class="mm-md-rail-title">Meistgekauft</p>
+                <a class="mm-md-rail-all" href="{{ routes.all_products_collection_url }}">Alle ansehen</a>
+              </div>
+              <ul class="mm-md-rail" role="list">
+                {%- for handle in rail_handles -%}
+                  {%- assign rail_product = all_products[handle] -%}
+                  {%- if rail_product != blank and rail_product.available -%}
+                    {%- liquid
+                      assign rail_variant = rail_product.selected_or_first_available_variant
+                      assign rail_price = rail_variant.price
+                      assign rail_compare = rail_variant.compare_at_price
+                    -%}
+                    <li>
+                      <a class="mm-md-card" href="{{ rail_product.url }}">
+                        <span class="mm-md-card-media">
+                          {%- if rail_product.featured_image != blank -%}
+                            <img
+                              src="{{ rail_product.featured_image | image_url: width: 400 }}"
+                              alt=""
+                              loading="lazy"
+                              width="400"
+                              height="400"
+                            >
+                          {%- endif -%}
+                          {%- if rail_compare > rail_price -%}
+                            <span class="mm-md-card-badge">
+                              Spare {{ rail_compare | minus: rail_price | money_without_currency }} €
+                            </span>
+                          {%- elsif forloop.first -%}
+                            <span class="mm-md-card-badge">Bestseller</span>
+                          {%- endif -%}
+                        </span>
+                        <span class="mm-md-card-body">
+                          {%- comment -%} Bewertung aus den Loox-Metafeldern, nichts eingetippt {%- endcomment -%}
+                          {%- assign rail_rating = rail_product.metafields.loox.avg_rating -%}
+                          {%- assign rail_reviews = rail_product.metafields.loox.num_reviews -%}
+                          {%- if rail_rating != blank and rail_reviews != blank -%}
+                            <span class="mm-md-card-rating">
+                              {{- rail_rating | round: 1 | replace: '.', ',' }} · {{ rail_reviews }} Bewertungen
+                            </span>
+                          {%- endif -%}
+                          <span class="mm-md-card-title">{{ rail_product.title }}</span>
+                          <span class="mm-md-card-prices">
+                            <span class="mm-md-card-price">{{ rail_price | money_without_currency }} €</span>
+                            {%- if rail_compare > rail_price -%}
+                              <span class="mm-md-card-compare">{{ rail_compare | money_without_currency }} €</span>
+                            {%- endif -%}
+                          </span>
+                        </span>
+                      </a>
+                    </li>
+                  {%- endif -%}
+                {%- endfor -%}
+              </ul>
+
+              {%- comment -%} 5. Service-Links: alles was keine Kollektion ist {%- endcomment -%}
+              <div class="mm-md-service">
+              <ul class="menu-drawer__menu list-menu mm-md-service" role="list">
+                {%- for link in section.settings.menu.links -%}
+                  {%- unless link.type == 'collection_link' or link.title == 'Home' -%}
+                    <li>
+                      <a
+                        id="HeaderDrawer-{{ link.handle }}"
+                        href="{{ link.url }}"
+                        class="menu-drawer__menu-item list-menu__item link link--text focus-inset mm-md-service-item{% if link.current %} menu-drawer__menu-item--active{% endif %}"
+                        {% if link.current %}
+                          aria-current="page"
+                        {% endif %}
+                      >
+                        {{ link.title | escape }}
+                      </a>
+                    </li>
+                    {%- for childlink in link.links -%}
+                      <li>
+                        <a
+                          href="{{ childlink.url }}"
+                          class="menu-drawer__menu-item list-menu__item link link--text focus-inset mm-md-service-item{% if childlink.current %} menu-drawer__menu-item--active{% endif %}"
+                        >
+                          {{ childlink.title | escape }}
+                        </a>
+                      </li>
+                    {%- endfor -%}
+                  {%- endunless -%}
+                {%- endfor -%}
+                {%- comment -%}
+                  "Hilfe & Kontakt" steht nicht im Hauptmenue, die Seite gibt es aber.
+                  Nur ausgeben, wenn sie wirklich existiert.
+                {%- endcomment -%}
+                {%- assign contact_page = pages['kontakt'] -%}
+                {%- if contact_page != blank -%}
+                  <li>
+                    <a
+                      href="{{ contact_page.url }}"
+                      class="menu-drawer__menu-item list-menu__item link link--text focus-inset mm-md-service-item"
+                    >
+                      Hilfe &amp; Kontakt
+                    </a>
+                  </li>
+                {%- endif -%}
+              </ul>
+              </div>
+
+            </nav>
+          </div>
+
+          <div class="menu-drawer__utility-links">
+            {%- if shop.customer_accounts_enabled -%}
+              <a
+                href="{%- if customer -%}{{ routes.account_url }}{%- else -%}{{ routes.account_login_url }}{%- endif -%}"
+                class="menu-drawer__account link focus-inset h5 medium-hide large-up-hide"
+                rel="nofollow"
+              >
+                {%- if section.settings.enable_customer_avatar -%}
+                  <account-icon>
+                    {%- if customer and customer.has_avatar? -%}
+                      {{ customer | avatar }}
+                    {%- else -%}
+                      <span class="svg-wrapper">
+                        {{- 'icon-account.svg' | inline_asset_content -}}
+                      </span>
+                    {%- endif -%}
+                  </account-icon>
+                {%- else -%}
+                  <span class="svg-wrapper">
+                    {{- 'icon-account.svg' | inline_asset_content -}}
+                  </span>
+                {%- endif -%}
+                {%- liquid
+                  if customer
+                    echo 'customer.account_fallback' | t
+                  else
+                    echo 'customer.log_in' | t
+                  endif
+                -%}
+              </a>
+            {%- endif -%}
+            {%- if localization.available_countries or localization.available_languages -%}
+              <div class="menu-drawer__localization header-localization">
+                {%- if localization.available_countries and localization.available_countries.size > 1 -%}
+                  <localization-form>
+                    {%- form 'localization', id: 'HeaderCountryMobileForm', class: 'localization-form' -%}
+                      <div>
+                        <h2 class="visually-hidden" id="HeaderCountryMobileLabel">
+                          {{ 'localization.country_label' | t }}
+                        </h2>
+                        {%- render 'country-localization', localPosition: 'HeaderCountryMobile' -%}
+                      </div>
+                    {%- endform -%}
+                  </localization-form>
+                {% endif %}
+
+                {%- if localization.available_languages and localization.available_languages.size > 1 -%}
+                  <localization-form>
+                    {%- form 'localization', id: 'HeaderLanguageMobileForm', class: 'localization-form' -%}
+                      <div>
+                        <h2 class="visually-hidden" id="HeaderLanguageMobileLabel">
+                          {{ 'localization.language_label' | t }}
+                        </h2>
+                        {%- render 'language-localization', localPosition: 'HeaderLanguageMobile' -%}
+                      </div>
+                    {%- endform -%}
+                  </localization-form>
+                {%- endif -%}
+              </div>
+            {%- endif -%}
+            <ul class="list list-social list-unstyled" role="list">
+              {%- if settings.social_twitter_link != blank -%}
+                <li class="list-social__item">
+                  <a href="{{ settings.social_twitter_link }}" class="list-social__link link">
+                    <span class="svg-wrapper">
+                      {{- 'icon-twitter.svg' | inline_asset_content -}}
+                    </span>
+                    <span class="visually-hidden">{{ 'general.social.links.twitter' | t }}</span>
+                  </a>
+                </li>
+              {%- endif -%}
+              {%- if settings.social_facebook_link != blank -%}
+                <li class="list-social__item">
+                  <a href="{{ settings.social_facebook_link }}" class="list-social__link link">
+                    <span class="svg-wrapper">
+                      {{- 'icon-facebook.svg' | inline_asset_content -}}
+                    </span>
+                    <span class="visually-hidden">{{ 'general.social.links.facebook' | t }}</span>
+                  </a>
+                </li>
+              {%- endif -%}
+              {%- if settings.social_pinterest_link != blank -%}
+                <li class="list-social__item">
+                  <a href="{{ settings.social_pinterest_link }}" class="list-social__link link">
+                    <span class="svg-wrapper">
+                      {{- 'icon-pinterest.svg' | inline_asset_content -}}
+                    </span>
+                    <span class="visually-hidden">{{ 'general.social.links.pinterest' | t }}</span>
+                  </a>
+                </li>
+              {%- endif -%}
+              {%- if settings.social_instagram_link != blank -%}
+                <li class="list-social__item">
+                  <a href="{{ settings.social_instagram_link }}" class="list-social__link link">
+                    <span class="svg-wrapper">
+                      {{- 'icon-instagram.svg' | inline_asset_content -}}
+                    </span>
+                    <span class="visually-hidden">{{ 'general.social.links.instagram' | t }}</span>
+                  </a>
+                </li>
+              {%- endif -%}
+              {%- if settings.social_tiktok_link != blank -%}
+                <li class="list-social__item">
+                  <a href="{{ settings.social_tiktok_link }}" class="list-social__link link">
+                    <span class="svg-wrapper">
+                      {{- 'icon-tiktok.svg' | inline_asset_content -}}
+                    </span>
+                    <span class="visually-hidden">{{ 'general.social.links.tiktok' | t }}</span>
+                  </a>
+                </li>
+              {%- endif -%}
+              {%- if settings.social_tumblr_link != blank -%}
+                <li class="list-social__item">
+                  <a href="{{ settings.social_tumblr_link }}" class="list-social__link link">
+                    <span class="svg-wrapper">
+                      {{- 'icon-tumblr.svg' | inline_asset_content -}}
+                    </span>
+                    <span class="visually-hidden">{{ 'general.social.links.tumblr' | t }}</span>
+                  </a>
+                </li>
+              {%- endif -%}
+              {%- if settings.social_snapchat_link != blank -%}
+                <li class="list-social__item">
+                  <a href="{{ settings.social_snapchat_link }}" class="list-social__link link">
+                    <span class="svg-wrapper">
+                      {{- 'icon-snapchat.svg' | inline_asset_content -}}
+                    </span>
+                    <span class="visually-hidden">{{ 'general.social.links.snapchat' | t }}</span>
+                  </a>
+                </li>
+              {%- endif -%}
+              {%- if settings.social_youtube_link != blank -%}
+                <li class="list-social__item">
+                  <a href="{{ settings.social_youtube_link }}" class="list-social__link link">
+                    <span class="svg-wrapper">
+                      {{- 'icon-youtube.svg' | inline_asset_content -}}
+                    </span>
+                    <span class="visually-hidden">{{ 'general.social.links.youtube' | t }}</span>
+                  </a>
+                </li>
+              {%- endif -%}
+              {%- if settings.social_vimeo_link != blank -%}
+                <li class="list-social__item">
+                  <a href="{{ settings.social_vimeo_link }}" class="list-social__link link">
+                    <span class="svg-wrapper">
+                      {{- 'icon-vimeo.svg' | inline_asset_content -}}
+                    </span>
+                    <span class="visually-hidden">{{ 'general.social.links.vimeo' | t }}</span>
+                  </a>
+                </li>
+              {%- endif -%}
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </details>
+</header-drawer>

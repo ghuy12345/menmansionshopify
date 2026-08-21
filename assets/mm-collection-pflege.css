@@ -1,0 +1,127 @@
+/* MEN MANSION — Pflegeprodukte-Collection: Announcement, Hero, Trust, Filter/Sort, Bundle-Cross-Sell, Kaufberatung, FAQ, Sticky-Cart */
+/* Spec: Pflegeprodukte-Sektion-Handoff.md — Produktkarten selbst (.mm-bs-card / .mm-bs-collection-grid) bleiben unangetastet */
+
+/* mm-home-bestseller.css setzt .mm-bs-card { display: flex } mit gleicher Spezifitaet wie die
+   native [hidden]-Browserregel — ohne diese Regel blieben per JS gefilterte Karten sichtbar
+   (siehe Fix auf der Bundles-Collection). Erzwingt das tatsaechliche Ausblenden. */
+.mm-bs-card[hidden] { display: none !important; }
+
+/* ---------- Announcement ---------- */
+.mmp-announce { display: flex; justify-content: center; align-items: center; gap: 10px;
+  background: var(--mm-ink); border-bottom: 1px solid var(--mm-graphite); padding: 9px 16px;
+  font-family: var(--mm-font-body); font-size: 11px; font-weight: 700; text-transform: uppercase;
+  letter-spacing: .18em; color: var(--mm-gold-soft); }
+.mmp-announce__sep { opacity: .4; }
+.mmp-announce__ship { color: var(--mm-fg-muted); }
+
+/* ---------- Banner ---------- */
+.mmp-hero { position: relative; }
+.mmp-hero__img { display: block; width: 100%; height: min(56vh, 420px); object-fit: cover; object-position: 50% 30%; }
+.mmp-hero__scrim { display: block !important; position: absolute; inset: 0;
+  background: linear-gradient(to top, #191919 4%, rgba(25,25,25,.72) 42%, rgba(25,25,25,.15) 100%); }
+.mmp-hero__copy { position: absolute; left: 0; right: 0; bottom: 0; padding: 0 20px 22px; max-width: 620px; }
+.mmp-hero__copy .mm-eyebrow { margin: 0 0 10px; }
+.mmp-hero__title { font-family: var(--mm-font-display); font-size: clamp(30px, 8.4vw, 52px);
+  line-height: var(--mm-lh-heading); margin: 0 0 10px; color: var(--mm-alabaster); }
+.mmp-hero__sub { font-size: 14px; line-height: 1.5; color: var(--mm-fg-muted); margin: 0; max-width: 44ch; }
+
+/* ---------- Trust ---------- */
+.mmp-trust { list-style: none; margin: 0; padding: 0; display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  border-bottom: 1px solid var(--mm-graphite); }
+.mmp-trust li { display: flex; align-items: center; gap: 9px; padding: 14px 16px;
+  border-right: 1px solid var(--mm-graphite); font-size: 11.5px; letter-spacing: .06em;
+  color: var(--mm-alabaster); }
+.mmp-trust li:last-child { border-right: 0; }
+.mmp-trust li:nth-child(n+3) { border-top: 1px solid var(--mm-graphite); }
+.mmp-trust__ic { color: var(--mm-gold-soft); font-size: 13px; }
+
+/* ---------- Filter / Sortierung ---------- */
+.mmp-bar { position: sticky; top: 0; z-index: 30; background: rgba(25,25,25,.96);
+  backdrop-filter: blur(14px); border-bottom: 1px solid var(--mm-graphite); }
+.mmp-chips { display: flex; gap: 8px; overflow-x: auto; padding: 12px 16px; scrollbar-width: none; }
+.mmp-chips::-webkit-scrollbar { display: none; }
+.mmp-chip { flex: 0 0 auto; min-height: 44px; padding: 0 16px; cursor: pointer;
+  background: transparent; color: var(--mm-fg-muted); border: 1px solid var(--mm-graphite);
+  border-radius: 0; font-family: var(--mm-font-body); font-size: 11px; font-weight: 700;
+  text-transform: uppercase; letter-spacing: .14em; transition: all var(--mm-dur-1) var(--mm-ease); }
+.mmp-chip:hover { color: var(--mm-alabaster); border-color: var(--mm-gold-line); }
+.mmp-chip.is-active { background: var(--mm-alabaster); color: var(--mm-ink); border-color: var(--mm-alabaster); }
+.mmp-bar__row { display: flex; align-items: center; justify-content: space-between; gap: 12px;
+  padding: 0 16px 12px; }
+.mmp-count { font-size: 12px; letter-spacing: .1em; text-transform: uppercase; color: var(--mm-fg-muted); }
+.mmp-sort { display: flex; align-items: center; gap: 8px; font-size: 12px; text-transform: uppercase;
+  letter-spacing: .1em; color: var(--mm-fg-muted); }
+.mmp-sort select { background: var(--mm-charcoal); color: var(--mm-alabaster);
+  border: 1px solid var(--mm-graphite); border-radius: 0; font-family: var(--mm-font-body);
+  font-size: 12px; padding: 9px 10px; min-height: 44px; }
+
+/* ---------- Bundle-Cross-Sell ---------- */
+.mmp-xsell { display: flex; align-items: center; gap: 18px; flex-wrap: wrap;
+  max-width: 1320px; margin: 40px auto 0; padding: 22px 20px;
+  background: var(--mm-ink); border: 1px solid var(--mm-gold-line); text-decoration: none;
+  color: var(--mm-alabaster); }
+.mmp-xsell > div { flex: 1 1 260px; min-width: 0; }
+.mmp-xsell__title { font-family: var(--mm-font-display); font-size: clamp(21px, 5vw, 28px); margin: 8px 0 0; }
+.mmp-xsell__cta { flex: 0 0 auto; display: inline-flex; align-items: center; min-height: 44px;
+  padding: 0 18px; background: var(--mm-alabaster); color: var(--mm-ink); font-size: 11.5px;
+  font-weight: 700; text-transform: none; letter-spacing: 0.02em; text-decoration: none; border-radius: var(--mm-radius-btn); transition: background 150ms ease; }
+.mmp-xsell__cta:hover { background: var(--mm-gold); }
+
+/* ---------- Kaufberatung ---------- */
+.mmp-guide { max-width: 1320px; margin: 40px auto 0; padding: 24px 18px;
+  background: var(--mm-ink); border: 1px solid var(--mm-graphite); }
+.mmp-guide__title { font-family: var(--mm-font-display); font-size: clamp(24px, 6vw, 34px); margin: 10px 0 18px; }
+.mmp-guide__grid { display: grid; gap: 1px; background: var(--mm-graphite);
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); }
+.mmp-guide__item { display: flex; flex-direction: column; gap: 8px; text-align: left; cursor: pointer;
+  background: var(--mm-onyx); border: 0; color: inherit; padding: 18px 16px; min-height: 116px;
+  transition: background var(--mm-dur-1) var(--mm-ease); }
+.mmp-guide__item:hover { background: var(--mm-charcoal); }
+.mmp-guide__need { font-family: var(--mm-font-body); font-size: 11px; font-weight: 700;
+  text-transform: uppercase; letter-spacing: .2em; color: var(--mm-gold-soft); }
+.mmp-guide__pick { font-family: var(--mm-font-display); font-size: 19px; }
+.mmp-guide__why { font-size: 12px; color: var(--mm-fg-muted); }
+
+/* ---------- FAQ ---------- */
+.mmp-faq { max-width: 900px; margin: 40px auto 0; padding: 0 16px; }
+.mmp-faq__list { margin-top: 14px; border-top: 1px solid var(--mm-graphite); }
+.mmp-faq__item { border-bottom: 1px solid var(--mm-graphite); }
+.mmp-faq__item summary { list-style: none; cursor: pointer; display: flex; align-items: center;
+  justify-content: space-between; gap: 16px; padding: 18px 2px; min-height: 56px;
+  font-family: var(--mm-font-body); font-size: 15px; color: var(--mm-alabaster); }
+.mmp-faq__item summary::-webkit-details-marker { display: none; }
+.mmp-faq__sign { color: var(--mm-gold-soft); font-size: 18px; flex: 0 0 auto; }
+.mmp-faq__sign::before { content: "+"; }
+.mmp-faq__item[open] .mmp-faq__sign::before { content: "−"; }
+.mmp-faq__item p { margin: 0; padding: 0 2px 18px; max-width: 62ch; font-size: 14px;
+  line-height: 1.5; color: var(--mm-fg-muted); }
+
+/* ---------- Sticky Warenkorb ---------- */
+.mmp-sticky { position: fixed; left: 0; right: 0; bottom: 0; z-index: 60; background: var(--mm-ink);
+  border-top: 1px solid var(--mm-gold-line); }
+.mmp-sticky[hidden] { display: none; }
+.mmp-sticky__track { height: 2px; background: var(--mm-graphite); }
+.mmp-sticky__fill { height: 2px; background: var(--mm-gold-soft);
+  transition: width var(--mm-dur-2) var(--mm-ease); }
+.mmp-sticky__inner { display: flex; align-items: center; gap: 14px; padding: 12px 16px;
+  max-width: 1320px; margin-inline: auto; }
+.mmp-sticky__text { display: flex; flex-direction: column; gap: 2px; min-width: 0; }
+.mmp-sticky__ship { font-size: 12px; color: var(--mm-gold-soft); }
+.mmp-sticky__total { font-family: var(--mm-font-body); font-size: 17px; font-weight: 700; color: var(--mm-alabaster); }
+.mmp-sticky__cta { margin-left: auto; flex: 0 0 auto; display: inline-flex; align-items: center;
+  min-height: 44px; padding: 0 18px; background: var(--mm-alabaster); color: var(--mm-ink);
+  font-size: 11.5px; font-weight: 700; text-transform: none; letter-spacing: 0.02em;
+  text-decoration: none; border-radius: var(--mm-radius-btn); transition: background 150ms ease; }
+.mmp-sticky__cta:hover { background: var(--mm-gold); }
+
+/* ---------- Desktop-Feinschliff ---------- */
+@media (min-width: 750px) {
+  .mmp-hero__img { height: min(52vh, 460px); object-position: 50% 48%; }
+  .mmp-hero__copy { padding: 0 40px 40px; }
+  .mmp-guide { padding: 32px 28px; }
+  .mmp-trust li:nth-child(n+3) { border-top: 0; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .mmp-chip, .mmp-guide__item, .mmp-sticky__fill { transition: none; }
+}

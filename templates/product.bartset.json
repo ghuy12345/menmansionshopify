@@ -1,0 +1,376 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-product",
+      "blocks": {
+        "loox_reviews_loox_rating_dHgpKH": {
+          "type": "shopify://apps/loox-reviews/blocks/loox-rating/5c3b337f-fd14-4df5-b1d6-80ec13e6e28e",
+          "settings": {
+            "contentSize": 11,
+            "pattern": "([count] Bewertungen)",
+            "hideText": false,
+            "alignment": "",
+            "layout": "",
+            "textColor": "",
+            "starColor": "",
+            "showAllReviews": false,
+            "looxOpenFloatingWidget": false,
+            "emptyRatingWidget": false
+          }
+        },
+        "section_store_block_atc_style_DPEAi8": {
+          "type": "shopify://apps/section-store/blocks/block-atc-style/d7a2e423-ea88-4344-b866-6d0fb487c3dd",
+          "settings": {
+            "background_color": "#fafaf8",
+            "text_color": "#191919",
+            "hover_background_color": "",
+            "hover_text_color": "",
+            "font_size": 0,
+            "font_weight": "default",
+            "border_style": "none",
+            "border_width": 1,
+            "border_color": "#000000",
+            "border_radius": -1,
+            "padding_vertical": 0,
+            "background_effect": "lift",
+            "gradient_color_end": "#333333",
+            "hover_effect": "shine_lift",
+            "animation": "none",
+            "button_icon": "arrow_right",
+            "use_custom_text": false,
+            "button_text": "Add to cart",
+            "show_price": false,
+            "round_price": false,
+            "compare_at_price_color": "#999999"
+          }
+        },
+        "title": {
+          "type": "title",
+          "settings": {}
+        },
+        "klaviyo_reviews_average_rating_9hCatY": {
+          "type": "shopify://apps/klaviyo-reviews/blocks/average-rating/db20e365-d984-4ac4-9655-e1588d951ca9",
+          "disabled": true,
+          "settings": {
+            "product": "{{product}}"
+          }
+        },
+        "price": {
+          "type": "price",
+          "disabled": true,
+          "settings": {}
+        },
+        "variant_picker": {
+          "type": "variant_picker",
+          "settings": {
+            "picker_type": "dropdown",
+            "swatch_shape": "circle"
+          }
+        },
+        "quantity_selector": {
+          "type": "quantity_selector",
+          "disabled": true,
+          "settings": {}
+        },
+        "description": {
+          "type": "description",
+          "disabled": true,
+          "settings": {}
+        },
+        "buy_buttons": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_dynamic_checkout": false,
+            "show_gift_card_recipient": false
+          }
+        },
+        "custom_liquid_9mTRhY": {
+          "type": "custom_liquid",
+          "settings": {
+            "custom_liquid": "<p style=\"display: flex; align-items: center; gap: 8px; margin: 0;\">\n  <img src=\"https://cdn.shopify.com/s/files/1/0779/4583/1766/files/pulsing-gif-2.webp?v=1760124232}}\" style=\"height:18px;\" alt=\"green dot\"/>\n  <span>Auf Lager | In 2-4 Tagen bei dir</span>\n</p>"
+          },
+          "disabled": true
+        },
+        "custom_liquid_NXtaV6": {
+          "type": "custom_liquid",
+          "settings": {
+            "custom_liquid": "<div class=\"ultimate-badges\"></div>"
+          }
+        },
+        "icon_with_text_e6QTFJ": {
+          "type": "icon-with-text",
+          "settings": {
+            "layout": "horizontal",
+            "icon_1": "truck",
+            "image_1": "shopify://shop_images/Lieferwagen-Icon.svg",
+            "heading_1": "Schneller Versand",
+            "icon_2": "return",
+            "image_2": "shopify://shop_images/0010-1888629712853834890.png",
+            "heading_2": "30 Tage Rückgabe-Garantie",
+            "icon_3": "heart",
+            "image_3": "shopify://shop_images/Person.svg",
+            "heading_3": "+10.000 glückliche Kunden"
+          },
+          "disabled": true
+        },
+        "custom_liquid_ktbqHQ": {
+          "type": "custom_liquid",
+          "settings": {
+            "custom_liquid": "<div id='ss-tabs-icon-insert-block'></div>"
+          }
+        },
+        "mm_pdp_assets": {
+          "type": "custom_liquid",
+          "name": "MM PDP Redesign - Assets",
+          "settings": {
+            "custom_liquid": "{{ 'mm-pdp-clearskinset.css' | asset_url | stylesheet_tag }}\n<script src=\"{{ 'mm-pdp-clearskinset.js' | asset_url }}\" defer=\"defer\"></script>\n<style>\n  product-info[data-product-id=\"{{ product.id }}\"] .product__title h2 { font-family: var(--mm-font-display); font-weight: 600; }\n  product-info[data-product-id=\"{{ product.id }}\"] .caption-with-letter-spacing { font-family: var(--mm-font-body); color: var(--mm-gold-soft); letter-spacing: 0.14em; }\n  product-info[data-product-id=\"{{ product.id }}\"] .product-form__submit.button--primary {\n    background: var(--mm-alabaster);\n    color: var(--mm-onyx);\n    border: 0;\n    border-radius: 10px;\n    font-family: var(--mm-font-body);\n    font-weight: 700;\n    font-size: 11px;\n    text-transform: uppercase;\n    letter-spacing: 0.14em;\n    padding: 17px 18px;\n    transition: background 150ms var(--mm-ease);\n  }\n  product-info[data-product-id=\"{{ product.id }}\"] .product-form__submit.button--primary:hover {\n    background: var(--mm-gold);\n  }\n  product-info[data-product-id=\"{{ product.id }}\"] product-form,\n  product-info[data-product-id=\"{{ product.id }}\"] .product-form,\n  product-info[data-product-id=\"{{ product.id }}\"] .product-form__buttons {\n    margin-top: 0;\n  }\n  product-info[data-product-id=\"{{ product.id }}\"] a[href=\"#looxReviewsFrame\"] {\n    display: inline-flex !important;\n    margin: 0 !important;\n    padding: 0 !important;\n  }\n  product-info[data-product-id=\"{{ product.id }}\"] .loox-rating {\n    margin: 0 !important;\n    padding: 0 !important;\n  }\n</style>"
+          }
+        },
+        "mm_pdp_price_cta": {
+          "type": "custom_liquid",
+          "name": "MM PDP Redesign - Preis + Spare-Chip + Einzelwert",
+          "settings": {
+            "custom_liquid": "{%- liquid\n  assign variant = product.selected_or_first_available_variant\n  assign compare = variant.compare_at_price\n-%}\n<div class=\"mm-pdp-price-row\">\n  <div class=\"mm-pdp-price-line\">\n    <span class=\"mm-pdp-price-total\">{{ variant.price | money_without_currency }} €</span>\n    {%- if compare > variant.price -%}\n      {%- assign save = compare | minus: variant.price -%}\n      <span class=\"mm-pdp-price-save\">Spare {{ save | money_without_currency }} €</span>\n    {%- endif -%}\n  </div>\n  {%- if compare > variant.price -%}\n    <span class=\"mm-pdp-price-compare\">(Einzelwert {{ compare | money_without_currency }} €)</span>\n  {%- endif -%}\n</div>"
+          }
+        },
+        "mm_pdp_guarantee_card": {
+          "type": "custom_liquid",
+          "name": "MM PDP Redesign - 30-Tage-Garantie",
+          "settings": {
+            "custom_liquid": "<div class=\"mm-pdp-guarantee\">\n  <svg width=\"28\" height=\"28\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\"><path d=\"M12 3l7 3v5c0 4.5-3 8.5-7 10-4-1.5-7-5.5-7-10V6l7-3z\"></path><path d=\"M9 12l2 2 4-4\"></path></svg>\n  <div>\n    <div class=\"mm-pdp-guarantee-title\">30 Tage Garantie</div>\n    <p class=\"mm-pdp-guarantee-text\">Nicht zufrieden? Kein Problem. Du hast 30 Tage Zeit, das Produkt zurückzuschicken - ohne Wenn und Aber. Das ist unser Versprechen.</p>\n  </div>\n</div>"
+          }
+        },
+        "mm_pdp_trust_row": {
+          "type": "custom_liquid",
+          "name": "MM PDP Redesign - Trust-Zeile",
+          "settings": {
+            "custom_liquid": "<div class=\"mm-pdp-trust-row\">\n  <span><svg width=\"15\" height=\"15\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\"><path d=\"M12 21s-6.5-5.2-6.5-10.2A6.5 6.5 0 0 1 12 4.3a6.5 6.5 0 0 1 6.5 6.5C18.5 15.8 12 21 12 21z\"></path><circle cx=\"12\" cy=\"10.8\" r=\"2.2\"></circle></svg>Handgemacht in Deutschland</span>\n  <span><svg width=\"15\" height=\"15\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\"><path d=\"M3 7h11v10H3z\"></path><path d=\"M14 10h4l3 3v4h-7\"></path><circle cx=\"7\" cy=\"17\" r=\"1.6\"></circle><circle cx=\"17\" cy=\"17\" r=\"1.6\"></circle></svg>Lieferung in 1–3 Werktagen</span>\n</div>"
+          }
+        },
+        "mm_pdp_step2_tiers": {
+          "type": "custom_liquid",
+          "name": "MM PDP Redesign - Schritt 2 Mengen (hidden bis Freigabe)",
+          "disabled": true,
+          "settings": {
+            "custom_liquid": "{%- liquid\n  assign variant = product.selected_or_first_available_variant\n  assign breaks = variant.quantity_price_breaks | sort: 'quantity'\n-%}\n<div class=\"mm-pdp-step-head\"><span></span></div>\n<div class=\"mm-pdp-tiers\" data-mm-tier-group data-section-id=\"{{ section.id }}\">\n  <button type=\"button\" class=\"mm-pdp-tier\" data-mm-tier data-quantity=\"1\" aria-pressed=\"true\">\n    <span class=\"mm-pdp-tier-radio\"></span>\n    <span class=\"mm-pdp-tier-body\">\n      <span class=\"mm-pdp-tier-name-row\"><span class=\"mm-pdp-tier-name\">1× Set</span></span>\n      <span class=\"mm-pdp-tier-sub\">Für den Einstieg</span>\n    </span>\n    <span class=\"mm-pdp-tier-price\"><span class=\"mm-pdp-tier-total\">{{ variant.price | money }}</span></span>\n  </button>\n  {%- for price_break in breaks -%}\n  {%- assign break_total = price_break.price | times: price_break.quantity -%}\n  {%- assign compare_total = variant.price | times: price_break.quantity -%}\n  <button type=\"button\" class=\"mm-pdp-tier\" data-mm-tier data-quantity=\"{{ price_break.quantity }}\" aria-pressed=\"false\">\n    <span class=\"mm-pdp-tier-radio\"></span>\n    <span class=\"mm-pdp-tier-body\">\n      <span class=\"mm-pdp-tier-name-row\">\n        <span class=\"mm-pdp-tier-name\">{{ price_break.quantity }}er Vorrat</span>\n        <span class=\"mm-pdp-tier-save\">Spare {{ compare_total | minus: break_total | money }}</span>\n      </span>\n      <span class=\"mm-pdp-tier-sub\">Mengenvorteil</span>\n    </span>\n    <span class=\"mm-pdp-tier-price\">\n      <span class=\"mm-pdp-tier-total\">{{ break_total | money }}</span>\n      <span class=\"mm-pdp-tier-compare\">{{ compare_total | money }}</span>\n    </span>\n  </button>\n  {%- endfor -%}\n</div>"
+          }
+        },
+        "mm_pdp_subtitle": {
+          "type": "custom_liquid",
+          "name": "MM PDP Redesign - Subtitle",
+          "settings": {
+            "custom_liquid": ""
+          }
+        },
+        "mm_pdp_description": {
+          "type": "custom_liquid",
+          "name": "MM PDP Redesign - Description",
+          "settings": {
+            "custom_liquid": "<p style=\"font-size: 13px; font-weight: 300; color: #FAFAF8; font-family: var(--font-body); line-height: 1.6; margin: 0; padding: 12px 0 8px;\">\nDermaroller und Bartserum in einer durchdachten Pflegeroutine - fördert die Durchblutung, unterstützt das Bartwachstum und macht den Bart geschmeidiger.\n</p>"
+          }
+        },
+        "mm_pdp_trust_bullets": {
+          "type": "custom_liquid",
+          "name": "MM PDP Redesign - Trust-Bullets (Haken-Icon)",
+          "settings": {
+            "custom_liquid": "<div class=\"mm-pdp-trust-bullets\">\n  <span class=\"mm-pdp-trust-bullet\"><span class=\"mm-pdp-trust-check\">✓</span>Unterstützt das natürliche Bartwachstum</span>\n  <span class=\"mm-pdp-trust-bullet\"><span class=\"mm-pdp-trust-check\">✓</span>Verbessert die Struktur vorhandener Barthaare</span>\n  <span class=\"mm-pdp-trust-bullet\"><span class=\"mm-pdp-trust-check\">✓</span>Reduziert den ungepflegten „Patchy“-Look</span>\n</div>"
+          }
+        },
+        "mm_pdp_details_accordion": {
+          "type": "custom_liquid",
+          "name": "MM PDP Redesign - Produktdetails Akkordeon",
+          "settings": {
+            "custom_liquid": "<div class=\"mm-pdp-accordion\">\n  <div class=\"mm-pdp-accordion-row\" data-mm-accordion>\n    <div class=\"mm-pdp-accordion-head\" data-mm-accordion-toggle>\n      <span class=\"mm-pdp-accordion-label\">Beschreibung</span>\n      <span class=\"mm-pdp-accordion-mark\" data-mm-accordion-mark>+</span>\n    </div>\n    <div class=\"mm-pdp-accordion-body\" data-mm-accordion-body hidden>\n      <p>Das Men Mansion Bartpflege Set kombiniert ein nährendes Bartserum mit einem präzisen Dermaroller zu einer durchdachten Pflegeroutine für Bart und Haut.</p>\n      <p>Was dieses Set bewirkt: unterstützt das natürliche Bartwachstum, fördert die Durchblutung der Bartregion, verbessert die Struktur vorhandener Barthaare, lässt den Bart voller und definierter wirken.</p>\n      <p>Der Dermaroller ergänzt die Anwendung, indem er die Haut stimuliert und die Aufnahme des Serums unterstützt - die Mikronadeln schaffen winzige Kanäle, wodurch das Serum tief eindringen kann.</p>\n      <p><strong>Ideal geeignet bei:</strong> trockenem oder widerspenstigem Bart, unruhigem Wachstum, empfindlicher oder gespannter Haut unter dem Bart.</p>\n      <p>Made in Germany. Made for Men.</p>\n    </div>\n  </div>\n  <div class=\"mm-pdp-accordion-row\" data-mm-accordion>\n    <div class=\"mm-pdp-accordion-head\" data-mm-accordion-toggle>\n      <span class=\"mm-pdp-accordion-label\">Inhaltsstoffe &amp; Wirkung</span>\n      <span class=\"mm-pdp-accordion-mark\" data-mm-accordion-mark>+</span>\n    </div>\n    <div class=\"mm-pdp-accordion-body\" data-mm-accordion-body hidden>\n      <p><strong>Bienenwachs</strong><br>Bewahrt Feuchtigkeit und schützt Bart und Haut vor dem Austrocknen. Aus verantwortungsvoller Imkerei in Europa.</p>\n      <p><strong>Sheabutter</strong><br>Pflegt trockene Haut unter dem Bart intensiv und wirkt ausgleichend. Unraffiniert, aus kontrolliertem Anbau in Westafrika.</p>\n      <p><strong>Jojobaöl</strong><br>Macht das Barthaar geschmeidiger und verbessert die Kämmbarkeit. Kaltgepresst, nachhaltiger Anbau.</p>\n      <p><strong>Squalan</strong><br>Unterstützt die Hautbarriere und zieht schnell ein - ohne Fettfilm.</p>\n      <p><strong>Vitamin E</strong><br>Schützt Haut und Haar vor äußeren Einflüssen.</p>\n    </div>\n  </div>\n  <div class=\"mm-pdp-accordion-row\" data-mm-accordion>\n    <div class=\"mm-pdp-accordion-head\" data-mm-scroll-to=\"#mm-pdp-routine-anchor\">\n      <span class=\"mm-pdp-accordion-label\">Anwendung</span>\n      <span class=\"mm-pdp-accordion-scroll-hint\"><span class=\"mm-pdp-accordion-scroll-label\">Zur Routine</span><span class=\"mm-pdp-accordion-arrow\">↓</span></span>\n    </div>\n  </div>\n  <div class=\"mm-pdp-accordion-row\" data-mm-accordion>\n    <div class=\"mm-pdp-accordion-head\" data-mm-accordion-toggle>\n      <span class=\"mm-pdp-accordion-label\">Versand &amp; Rückgabe</span>\n      <span class=\"mm-pdp-accordion-mark\" data-mm-accordion-mark>+</span>\n    </div>\n    <div class=\"mm-pdp-accordion-body\" data-mm-accordion-body hidden>\n      <p><strong>Versand aus Deutschland. Schnell und zuverlässig.</strong></p>\n      <p>Alle Bestellungen werden aus unserem Lager in Rottenburg versendet – innerhalb von 1–2 Werktagen nach Auftragseingang.</p>\n      <p><strong>Lieferzeit:</strong><br>Deutschland, Österreich, Schweiz - 2–4 Werktage</p>\n      <p><strong>Kostenloser Versand</strong> ab €60 Bestellwert.</p>\n      <p>Nicht zufrieden? Kein Problem. Du hast 30 Tage Zeit, das Produkt zurückzuschicken – ohne Wenn und Aber.</p>\n    </div>\n  </div>\n</div>"
+          }
+        },
+        "mm_pdp_trust_chips": {
+          "type": "custom_liquid",
+          "name": "MM PDP Redesign - Trust-Chips",
+          "settings": {
+            "custom_liquid": "<div class=\"mm-pdp-trust-chips\">\n  <span class=\"mm-pdp-trust-chip\"><span class=\"mm-pdp-trust-chip-dot\"></span>100% Natürlich</span>\n  <span class=\"mm-pdp-trust-chip\"><span class=\"mm-pdp-trust-chip-dot\"></span>Handgemacht</span>\n  <span class=\"mm-pdp-trust-chip\"><span class=\"mm-pdp-trust-chip-dot\"></span>Made in Germany</span>\n</div>"
+          }
+        },
+        "mm_pdp_social_proof": {
+          "type": "custom_liquid",
+          "name": "MM PDP Redesign - Social Proof",
+          "settings": {
+            "custom_liquid": "<div class=\"mm-pdp-social-proof\">\n  <div class=\"mm-pdp-social-proof-avatars\">\n    <img src=\"https://menmansion.com/cdn/shop/files/IMG_2572.jpg?width=80\" alt=\"\" loading=\"lazy\">\n    <img src=\"https://menmansion.com/cdn/shop/files/0002-8194805062219929543.png?width=80\" alt=\"\" loading=\"lazy\">\n    <img src=\"https://menmansion.com/cdn/shop/files/0003-1890891485917242492.png?width=80\" alt=\"\" loading=\"lazy\">\n  </div>\n  <p class=\"mm-pdp-social-proof-text\">Dermatologisch getestet <span class=\"mm-pdp-social-proof-verified\">✓</span> + <strong>10.000 Männern</strong> benutzen täglich!</p>\n</div>"
+          }
+        },
+        "upsell_koala_bundles_bundle_app_block_fXg4BA": {
+          "type": "shopify://apps/upsell-koala-bundles/blocks/bundle-app-block/2b951f75-113f-4fca-bdf3-c92703235716",
+          "settings": {
+            "product": "{{product}}"
+          }
+        }
+      },
+      "block_order": [
+        "mm_pdp_assets",
+        "loox_reviews_loox_rating_dHgpKH",
+        "title",
+        "mm_pdp_subtitle",
+        "mm_pdp_description",
+        "mm_pdp_trust_bullets",
+        "mm_pdp_trust_chips",
+        "mm_pdp_social_proof",
+        "upsell_koala_bundles_bundle_app_block_fXg4BA",
+        "price",
+        "mm_pdp_price_cta",
+        "variant_picker",
+        "quantity_selector",
+        "description",
+        "buy_buttons",
+        "section_store_block_atc_style_DPEAi8",
+        "mm_pdp_guarantee_card",
+        "mm_pdp_trust_row",
+        "mm_pdp_details_accordion",
+        "custom_liquid_ktbqHQ",
+        "klaviyo_reviews_average_rating_9hCatY",
+        "custom_liquid_9mTRhY",
+        "custom_liquid_NXtaV6",
+        "icon_with_text_e6QTFJ"
+      ],
+      "settings": {
+        "enable_sticky_info": true,
+        "color_scheme": "",
+        "media_size": "small",
+        "constrain_to_viewport": true,
+        "media_fit": "contain",
+        "gallery_layout": "thumbnail_slider",
+        "media_position": "left",
+        "image_zoom": "lightbox",
+        "mobile_thumbnails": "show",
+        "hide_variants": true,
+        "enable_video_looping": false,
+        "padding_top": 20,
+        "padding_bottom": 20
+      }
+    },
+    "45f77b37-82dc-4dcd-aab6-662315b32360": {
+      "type": "rich-text",
+      "blocks": {
+        "template--19956043415894__45f77b37-82dc-4dcd-aab6-662315b32360-heading-1": {
+          "type": "heading",
+          "settings": {
+            "heading": "Oft zusammen gekauft",
+            "heading_size": "h1"
+          }
+        }
+      },
+      "block_order": [
+        "template--19956043415894__45f77b37-82dc-4dcd-aab6-662315b32360-heading-1"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "background-1",
+        "full_width": true,
+        "padding_top": 20,
+        "padding_bottom": 0
+      }
+    },
+    "related-products": {
+      "type": "mm-pdp-related",
+      "settings": {
+        "heading": "",
+        "heading_size": "h1",
+        "products_to_show": 4,
+        "color_scheme": "background-1"
+      }
+    },
+    "mm_pdp_comparison_section": {
+      "type": "custom-liquid",
+      "settings": {
+        "custom_liquid": "<div class=\"mm-pdp-compare\">\n  \n  <h2 class=\"mm-pdp-compare-title\">Men Mansion vs.<br>andere Marken</h2>\n  <div class=\"mm-pdp-compare-table\">\n    <div class=\"mm-pdp-compare-row mm-pdp-compare-head\">\n      <span class=\"mm-pdp-compare-head-why\"><span class=\"mm-pdp-compare-why-label\">Warum</span>{%- if settings.logo != blank -%}<img class=\"mm-pdp-compare-logo\" src=\"{{ settings.logo | image_url: width: 300 }}\" alt=\"{{ shop.name }}\" loading=\"lazy\">{%- else -%}<span class=\"mm-pdp-compare-why-name\">Men Mansion</span>{%- endif -%}</span>\n      <span class=\"mm-pdp-compare-head-mm\"><span class=\"mm-pdp-compare-thumb\"><img src=\"{{ 'mm-tallow-tiegel.png' | asset_url }}\" alt=\"Men Mansion Tallow Gesichtscreme\" loading=\"lazy\" width=\"46\" height=\"46\"></span></span>\n      <span class=\"mm-pdp-compare-head-other\"><span class=\"mm-pdp-compare-thumb\"><img src=\"{{ 'mm-andere-tiegel.png' | asset_url }}\" alt=\"Andere Marken\" loading=\"lazy\" width=\"46\" height=\"46\"></span></span>\n    </div>\n    <div class=\"mm-pdp-compare-row\"><span class=\"mm-pdp-compare-label\">Handgefertigt in kleinen Chargen</span><span class=\"mm-pdp-compare-cell-us\"><span class=\"mm-pdp-compare-badge mm-pdp-compare-badge--yes\"><svg width=\"13\" height=\"13\" viewBox=\"0 0 16 16\" fill=\"none\"><path d=\"M3 8.5L6.5 12L13 4\" stroke=\"currentColor\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg></span></span><span class=\"mm-pdp-compare-cell-them\"><span class=\"mm-pdp-compare-badge mm-pdp-compare-badge--no\"><svg width=\"13\" height=\"13\" viewBox=\"0 0 16 16\" fill=\"none\"><path d=\"M4 4L12 12M12 4L4 12\" stroke=\"currentColor\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg></span></span></div>\n    <div class=\"mm-pdp-compare-row\"><span class=\"mm-pdp-compare-label\">Natürliche Wirkstoffe</span><span class=\"mm-pdp-compare-cell-us\"><span class=\"mm-pdp-compare-badge mm-pdp-compare-badge--yes\"><svg width=\"13\" height=\"13\" viewBox=\"0 0 16 16\" fill=\"none\"><path d=\"M3 8.5L6.5 12L13 4\" stroke=\"currentColor\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg></span></span><span class=\"mm-pdp-compare-cell-them\"><span class=\"mm-pdp-compare-badge mm-pdp-compare-badge--no\"><svg width=\"13\" height=\"13\" viewBox=\"0 0 16 16\" fill=\"none\"><path d=\"M4 4L12 12M12 4L4 12\" stroke=\"currentColor\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg></span></span></div>\n    <div class=\"mm-pdp-compare-row\"><span class=\"mm-pdp-compare-label\">Enthält Silikone &amp; Mineralöl</span><span class=\"mm-pdp-compare-cell-us\"><span class=\"mm-pdp-compare-badge mm-pdp-compare-badge--no\"><svg width=\"13\" height=\"13\" viewBox=\"0 0 16 16\" fill=\"none\"><path d=\"M4 4L12 12M12 4L4 12\" stroke=\"currentColor\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg></span></span><span class=\"mm-pdp-compare-cell-them\"><span class=\"mm-pdp-compare-badge mm-pdp-compare-badge--yes\"><svg width=\"13\" height=\"13\" viewBox=\"0 0 16 16\" fill=\"none\"><path d=\"M3 8.5L6.5 12L13 4\" stroke=\"currentColor\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg></span></span></div>\n    <div class=\"mm-pdp-compare-row\"><span class=\"mm-pdp-compare-label\">Eigene Manufaktur, keine Massenware</span><span class=\"mm-pdp-compare-cell-us\"><span class=\"mm-pdp-compare-badge mm-pdp-compare-badge--yes\"><svg width=\"13\" height=\"13\" viewBox=\"0 0 16 16\" fill=\"none\"><path d=\"M3 8.5L6.5 12L13 4\" stroke=\"currentColor\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg></span></span><span class=\"mm-pdp-compare-cell-them\"><span class=\"mm-pdp-compare-badge mm-pdp-compare-badge--no\"><svg width=\"13\" height=\"13\" viewBox=\"0 0 16 16\" fill=\"none\"><path d=\"M4 4L12 12M12 4L4 12\" stroke=\"currentColor\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg></span></span></div>\n    <div class=\"mm-pdp-compare-row\"><span class=\"mm-pdp-compare-label\">Sichtbare Ergebnisse nach wenigen Tagen</span><span class=\"mm-pdp-compare-cell-us\"><span class=\"mm-pdp-compare-badge mm-pdp-compare-badge--yes\"><svg width=\"13\" height=\"13\" viewBox=\"0 0 16 16\" fill=\"none\"><path d=\"M3 8.5L6.5 12L13 4\" stroke=\"currentColor\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg></span></span><span class=\"mm-pdp-compare-cell-them\"><span class=\"mm-pdp-compare-badge mm-pdp-compare-badge--no\"><svg width=\"13\" height=\"13\" viewBox=\"0 0 16 16\" fill=\"none\"><path d=\"M4 4L12 12M12 4L4 12\" stroke=\"currentColor\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg></span></span></div>\n    <div class=\"mm-pdp-compare-row\"><span class=\"mm-pdp-compare-label\">Künstliche Duft- &amp; Farbstoffe</span><span class=\"mm-pdp-compare-cell-us\"><span class=\"mm-pdp-compare-badge mm-pdp-compare-badge--no\"><svg width=\"13\" height=\"13\" viewBox=\"0 0 16 16\" fill=\"none\"><path d=\"M4 4L12 12M12 4L4 12\" stroke=\"currentColor\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg></span></span><span class=\"mm-pdp-compare-cell-them\"><span class=\"mm-pdp-compare-badge mm-pdp-compare-badge--yes\"><svg width=\"13\" height=\"13\" viewBox=\"0 0 16 16\" fill=\"none\"><path d=\"M3 8.5L6.5 12L13 4\" stroke=\"currentColor\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg></span></span></div>\n  </div>\n</div>",
+        "color_scheme": "background-1",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "mm_pdp_deepdives_section": {
+      "type": "custom-liquid",
+      "settings": {
+        "custom_liquid": "<div class=\"mm-pdp-deepdive-group\">\n  <div class=\"mm-pdp-deepdive\">\n    <img class=\"mm-pdp-deepdive-img\" src=\"https://menmansion.com/cdn/shop/files/L1007540.jpg?v=1764519637&width=1445\" alt=\"Bartpflege Set\">\n    <div class=\"mm-pdp-deepdive-body\">\n      \n      <h2 class=\"mm-pdp-deepdive-title\">Bartpflege Set</h2>\n      <p class=\"mm-pdp-deepdive-text\">Pflegt Barthaar und Haut darunter, macht den Bart geschmeidig und sorgt für ein gleichmäßiges, gepflegtes Erscheinungsbild - ohne zu beschweren.</p>\n      <div class=\"mm-pdp-deepdive-checks\">\n        <span><span class=\"mm-pdp-check\">✓</span>Pflegt Bart und Haut darunter</span>\n        <span><span class=\"mm-pdp-check\">✓</span>Mit Jojobaöl, Kamelienöl und Sheabutter</span>\n        <span><span class=\"mm-pdp-check\">✓</span>Zieht ein, ohne zu beschweren</span>\n      </div>\n    </div>\n  </div>\n</div>",
+        "color_scheme": "background-1",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "mm_pdp_herkunft_section": {
+      "type": "custom-liquid",
+      "settings": {
+        "custom_liquid": "<div class=\"mm-pdp-herkunft\">\n  <img class=\"mm-pdp-herkunft-img\" src=\"https://menmansion.com/cdn/shop/files/L1007540.jpg?v=1764519637&width=1200\" alt=\"Die edle Routine für Männer\">\n  <div class=\"mm-pdp-herkunft-body\">\n    \n    <h2 class=\"mm-pdp-herkunft-title\">Die edle Routine für Männer</h2>\n    <p class=\"mm-pdp-herkunft-text\">Das Bartpflege Set wurde entwickelt, um das Bartwachstum gezielt zu fördern und einen lückenhaften Bart sichtbar zu verdichten.</p>\n    <details class=\"mm-pdp-herkunft-more\">\n      <summary><span class=\"mm-pdp-herkunft-more-open\">Mehr lesen</span><span class=\"mm-pdp-herkunft-more-close\">Weniger anzeigen</span></summary>\n      <p class=\"mm-pdp-herkunft-text\">Die Kombination aus Dermaroller und Bartserum unterstützt die Durchblutung, verbessert die Pflegeaufnahme und schafft optimale Bedingungen für ein gleichmäßigeres, dichter wirkendes Bartbild. Sorgfältig hergestellt in Deutschland.</p>\n    </details></div>\n</div>",
+        "color_scheme": "background-1",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "mm_pdp_ingredients_section": {
+      "type": "custom-liquid",
+      "settings": {
+        "custom_liquid": "<div class=\"mm-pdp-ingredients\">\n  \n  <h2 class=\"mm-pdp-ingredients-title\">Die Magie dahinter</h2>\n  <div class=\"mm-pdp-ingredients-grid\">\n    <div class=\"mm-pdp-ingredient-card\">\n      <img class=\"mm-pdp-ingredient-img\" src=\"https://menmansion.com/cdn/shop/files/10_43653f2f-da26-4760-802b-9c066f1860cc.png?v=1764421329&width=300\" alt=\"Bienenwachs\">\n      <div class=\"mm-pdp-ingredient-body\">\n        <h3 class=\"mm-pdp-ingredient-title\">Bienenwachs</h3>\n        <p class=\"mm-pdp-ingredient-text\">Bewahrt Feuchtigkeit und schützt Bart und Haut vor dem Austrocknen.</p>\n        <div class=\"mm-pdp-ingredient-origin\"><span class=\"mm-pdp-ingredient-origin-label\">Herkunft</span>Aus verantwortungsvoller Imkerei in Europa</div>\n      </div>\n    </div>\n    <div class=\"mm-pdp-ingredient-card\">\n      <img class=\"mm-pdp-ingredient-img\" src=\"https://menmansion.com/cdn/shop/files/3_dd1f4f77-5cd8-458a-b526-811d5f561b6e.png?v=1772384533&width=300\" alt=\"Sheabutter\">\n      <div class=\"mm-pdp-ingredient-body\">\n        <h3 class=\"mm-pdp-ingredient-title\">Sheabutter</h3>\n        <p class=\"mm-pdp-ingredient-text\">Pflegt trockene Haut unter dem Bart intensiv und wirkt ausgleichend.</p>\n        <div class=\"mm-pdp-ingredient-origin\"><span class=\"mm-pdp-ingredient-origin-label\">Herkunft</span>Unraffiniert, aus kontrolliertem Anbau in Westafrika</div>\n      </div>\n    </div>\n    <div class=\"mm-pdp-ingredient-card\">\n      <img class=\"mm-pdp-ingredient-img\" src=\"https://menmansion.com/cdn/shop/files/0001-2632849558450873092.png?v=1772384767&width=300\" alt=\"Jojobaöl\">\n      <div class=\"mm-pdp-ingredient-body\">\n        <h3 class=\"mm-pdp-ingredient-title\">Jojobaöl</h3>\n        <p class=\"mm-pdp-ingredient-text\">Macht das Barthaar geschmeidiger und verbessert die Kämmbarkeit.</p>\n        <div class=\"mm-pdp-ingredient-origin\"><span class=\"mm-pdp-ingredient-origin-label\">Herkunft</span>Kaltgepresst, nachhaltiger Anbau</div>\n      </div>\n    </div>\n    <div class=\"mm-pdp-ingredient-card\">\n      <img class=\"mm-pdp-ingredient-img\" src=\"https://menmansion.com/cdn/shop/files/2_70a15071-ef00-4221-bdd9-d1e2015e7ef5.png?v=1772384534&width=300\" alt=\"Squalan\">\n      <div class=\"mm-pdp-ingredient-body\">\n        <h3 class=\"mm-pdp-ingredient-title\">Squalan</h3>\n        <p class=\"mm-pdp-ingredient-text\">Unterstützt die Hautbarriere und zieht schnell ein - ohne Fettfilm.</p>\n        <div class=\"mm-pdp-ingredient-origin\"><span class=\"mm-pdp-ingredient-origin-label\">Herkunft</span>Pflanzlich gewonnen, europäische Herstellung</div>\n      </div>\n    </div>\n    <div class=\"mm-pdp-ingredient-card\">\n      <img class=\"mm-pdp-ingredient-img\" src=\"https://menmansion.com/cdn/shop/files/8_da2d23e6-9991-4b02-af06-1714a4463936.png?v=1764421329&width=300\" alt=\"Vitamin E\">\n      <div class=\"mm-pdp-ingredient-body\">\n        <h3 class=\"mm-pdp-ingredient-title\">Vitamin E</h3>\n        <p class=\"mm-pdp-ingredient-text\">Schützt Haut und Haar vor äußeren Einflüssen.</p>\n        <div class=\"mm-pdp-ingredient-origin\"><span class=\"mm-pdp-ingredient-origin-label\">Herkunft</span>Tocopherol pharmazeutischer Qualität</div>\n      </div>\n    </div>\n    <div class=\"mm-pdp-ingredient-card\">\n      <img class=\"mm-pdp-ingredient-img\" src=\"https://menmansion.com/cdn/shop/files/1_809b34dc-7353-41ec-a3b1-99080a00aff0.png?v=1772384534&width=300\" alt=\"Carnaubawachs\">\n      <div class=\"mm-pdp-ingredient-body\">\n        <h3 class=\"mm-pdp-ingredient-title\">Carnaubawachs</h3>\n        <p class=\"mm-pdp-ingredient-text\">Verleiht dem Bart Struktur und leichten Halt.</p>\n        <div class=\"mm-pdp-ingredient-origin\"><span class=\"mm-pdp-ingredient-origin-label\">Herkunft</span>Nachhaltige brasilianische Ernte</div>\n      </div>\n    </div>\n    <div class=\"mm-pdp-ingredient-card\">\n      <img class=\"mm-pdp-ingredient-img\" src=\"https://menmansion.com/cdn/shop/files/4.png?v=1772384533&width=300\" alt=\"Kamelienöl\">\n      <div class=\"mm-pdp-ingredient-body\">\n        <h3 class=\"mm-pdp-ingredient-title\">Kamelienöl</h3>\n        <p class=\"mm-pdp-ingredient-text\">Pflegt Bart und Haut und sorgt für ein gleichmäßigeres Erscheinungsbild.</p>\n        <div class=\"mm-pdp-ingredient-origin\"><span class=\"mm-pdp-ingredient-origin-label\">Herkunft</span>Schonend gepresst, asiatischer Anbau</div>\n      </div>\n    </div>\n  </div>\n</div>",
+        "color_scheme": "background-1",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "mm_pdp_routine_section": {
+      "type": "custom-liquid",
+      "settings": {
+        "custom_liquid": "{{ 'mm-pdp-routine3.css' | asset_url | stylesheet_tag }}\n<section class=\"mm-r3\" id=\"mm-pdp-routine-anchor\">\n  <div class=\"mm-r3-inner\">\n\n    <header class=\"mm-r3-head\">\n      <h2 class=\"mm-r3-title\">Die Routine. <span>In 3 Steps.</span></h2>\n      <p class=\"mm-r3-sub\">Deine Bartpflege - einfach, effektiv, natürlich</p>\n    </header>\n\n    <ol class=\"mm-r3-track\" id=\"mm-r3-track\">\n      <li class=\"mm-r3-card\">\n        <div class=\"mm-r3-media\">\n          <img src=\"https://menmansion.com/cdn/shop/files/Title_3.png?v=1737102255&width=800\" alt=\"Rollen\" loading=\"lazy\" width=\"800\" height=\"600\">\n          <span class=\"mm-r3-fade\"></span>\n          <span class=\"mm-r3-num\">01</span>\n        </div>\n        <div class=\"mm-r3-body\">\n          <div class=\"mm-r3-row\"><h3>Rollen</h3></div>\n          <p>Rolle den Bartroller sanft horizontal, vertikal und diagonal über den Bartbereich, um die Haut zu stimulieren.</p>\n        </div>\n      </li>\n      <li class=\"mm-r3-card\">\n        <div class=\"mm-r3-media\">\n          <img src=\"https://menmansion.com/cdn/shop/files/4_1099dc89-b996-4bc5-b840-5d60ce9ac6ef.png?v=1736322778&width=800\" alt=\"Einmassieren\" loading=\"lazy\" width=\"800\" height=\"600\">\n          <span class=\"mm-r3-fade\"></span>\n          <span class=\"mm-r3-num\">02</span>\n        </div>\n        <div class=\"mm-r3-body\">\n          <div class=\"mm-r3-row\"><h3>Einmassieren</h3></div>\n          <p>Gib ein paar Tropfen des Serums auf die Fingerspitzen und massiere es gründlich in den Bart und die Haut ein.</p>\n        </div>\n      </li>\n      <li class=\"mm-r3-card\">\n        <div class=\"mm-r3-media\">\n          <img src=\"https://menmansion.com/cdn/shop/files/5_64deaffe-22a6-402b-a526-a47b8b33b62c.png?v=1736322777&width=800\" alt=\"Wiederholen\" loading=\"lazy\" width=\"800\" height=\"600\">\n          <span class=\"mm-r3-fade\"></span>\n          <span class=\"mm-r3-num\">03</span>\n        </div>\n        <div class=\"mm-r3-body\">\n          <div class=\"mm-r3-row\"><h3>Wiederholen</h3></div>\n          <p>Wiederhole die Anwendung 2–3 Mal pro Woche für optimale Ergebnisse.</p>\n        </div>\n      </li>\n    </ol>\n\n    <div class=\"mm-r3-dots\" id=\"mm-r3-dots\" hidden>\n      <button type=\"button\" data-i=\"0\" aria-label=\"Schritt 1\"><span></span></button>\n      <button type=\"button\" data-i=\"1\" aria-label=\"Schritt 2\"><span></span></button>\n      <button type=\"button\" data-i=\"2\" aria-label=\"Schritt 3\"><span></span></button>\n    </div>\n\n  </div>\n</section>\n\n<script>\n(function () {\n  var track = document.getElementById('mm-r3-track');\n  var dots  = document.getElementById('mm-r3-dots');\n  if (!track || !dots || !track.children.length) return;\n  var btns = dots.querySelectorAll('button');\n  function stepWidth() {\n    if (track.children.length > 1) return track.children[1].offsetLeft - track.children[0].offsetLeft;\n    return track.children[0].getBoundingClientRect().width;\n  }\n  function sync() {\n    var scrollable = track.scrollWidth - track.clientWidth > 8;\n    dots.hidden = !scrollable;\n    if (!scrollable) return;\n    var step = stepWidth();\n    if (!step) return;\n    var i = Math.min(btns.length - 1, Math.round(track.scrollLeft / step));\n    for (var n = 0; n < btns.length; n++) btns[n].setAttribute('aria-current', n === i ? 'true' : 'false');\n  }\n  for (var b = 0; b < btns.length; b++) {\n    btns[b].addEventListener('click', function () {\n      var el = track.children[+this.dataset.i];\n      if (el) track.scrollTo({ left: el.offsetLeft - track.offsetLeft, behavior: 'smooth' });\n    });\n  }\n  track.addEventListener('scroll', sync, { passive: true });\n  window.addEventListener('resize', sync);\n  sync();\n})();\n</script>",
+        "color_scheme": "background-1",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "mm_pdp_reviews_header_section": {
+      "type": "custom-liquid",
+      "settings": {
+        "custom_liquid": "{%- liquid\n  assign rating = product.metafields.loox.avg_rating\n  assign review_count = product.metafields.loox.num_reviews\n  if rating != blank\n    assign rating_display = rating | replace: '.', ','\n    assign rounded = rating | round\n  else\n    assign rating_display = '4,8'\n    assign review_count = 398\n    assign rounded = 5\n  endif\n-%}\n<div class=\"mm-pdp-reviews\">\n  <div class=\"mm-pdp-reviews-head\">\n    <div>\n      \n      <h2 class=\"mm-pdp-reviews-title\">Was Männer über uns sagen</h2>\n    </div>\n    <div class=\"mm-pdp-reviews-summary\">\n      <span class=\"mm-pdp-reviews-avg\">{{ rating_display }}</span>\n      <div class=\"mm-pdp-reviews-summary-body\">\n        <div class=\"mm-pdp-reviews-stars\">{% for i in (1..5) %}{% if i <= rounded %}★{% else %}<span style=\"color:var(--mm-graphite)\">★</span>{% endif %}{% endfor %}</div>\n        <div class=\"mm-pdp-reviews-total\">{{ review_count }} verifizierte Bewertungen</div>\n      </div>\n    </div>\n  </div>\n\n  <div class=\"mm-pdp-reviews-more-head\">\n    \n    <span class=\"mm-pdp-reviews-swipe-hint\">Wischen →</span>\n  </div>\n\n  <div\n    class=\"mm-pdp-reviews-grid\"\n    data-mm-reviews-grid\n    data-product-id=\"{{ product.id }}\"\n    data-fallback-image=\"{{ product.featured_image | image_url: width: 400 }}\"\n    data-fallback-product-name=\"{{ product.title | escape }}\"\n  ></div>\n  <div class=\"mm-pdp-reviews-more-wrap\">\n    <button type=\"button\" class=\"mm-pdp-reviews-cta mm-pdp-reviews-more\" data-mm-reviews-more hidden>Mehr Bewertungen</button>\n  </div>\n</div>",
+        "color_scheme": "background-1",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "mm_pdp_faq_section": {
+      "type": "custom-liquid",
+      "settings": {
+        "custom_liquid": "<div class=\"mm-pdp-faq\">\n  \n  <h2 class=\"mm-pdp-faq-title\">Deine Fragen. Unsere Antworten.</h2>\n  <div class=\"mm-pdp-accordion\">\n    <div class=\"mm-pdp-accordion-row\" data-mm-accordion>\n      <div class=\"mm-pdp-accordion-head\" data-mm-accordion-toggle>\n        <span class=\"mm-pdp-accordion-label\">Was ist im Bartpflege-Set enthalten?</span>\n        <span class=\"mm-pdp-accordion-mark\" data-mm-accordion-mark>+</span>\n      </div>\n      <div class=\"mm-pdp-accordion-body\" data-mm-accordion-body hidden>\n        <p>Ein nährendes Bartserum kombiniert mit einem präzisen Dermaroller zu einer durchdachten Pflegeroutine.</p>\n      </div>\n    </div>\n    <div class=\"mm-pdp-accordion-row\" data-mm-accordion>\n      <div class=\"mm-pdp-accordion-head\" data-mm-accordion-toggle>\n        <span class=\"mm-pdp-accordion-label\">Was bewirkt das Set?</span>\n        <span class=\"mm-pdp-accordion-mark\" data-mm-accordion-mark>+</span>\n      </div>\n      <div class=\"mm-pdp-accordion-body\" data-mm-accordion-body hidden>\n        <p>Unterstützt das natürliche Bartwachstum, fördert die Durchblutung der Bartregion und verbessert die Struktur vorhandener Barthaare.</p>\n      </div>\n    </div>\n    <div class=\"mm-pdp-accordion-row\" data-mm-accordion>\n      <div class=\"mm-pdp-accordion-head\" data-mm-accordion-toggle>\n        <span class=\"mm-pdp-accordion-label\">Für wen eignet sich das Set?</span>\n        <span class=\"mm-pdp-accordion-mark\" data-mm-accordion-mark>+</span>\n      </div>\n      <div class=\"mm-pdp-accordion-body\" data-mm-accordion-body hidden>\n        <p>Bei trockenem oder widerspenstigem Bart, unruhigem Wachstum und empfindlicher oder gespannter Haut unter dem Bart.</p>\n      </div>\n    </div>\n    <div class=\"mm-pdp-accordion-row\" data-mm-accordion>\n      <div class=\"mm-pdp-accordion-head\" data-mm-accordion-toggle>\n        <span class=\"mm-pdp-accordion-label\">Wie lange dauert der Versand?</span>\n        <span class=\"mm-pdp-accordion-mark\" data-mm-accordion-mark>+</span>\n      </div>\n      <div class=\"mm-pdp-accordion-body\" data-mm-accordion-body hidden>\n        <p>Versand aus unserem Lager in Rottenburg, Deutschland - innerhalb von 1–2 Werktagen nach Auftragseingang. Lieferzeit in Deutschland, Österreich und der Schweiz: 2–4 Werktage. Kostenloser Versand ab 60 € Bestellwert.</p>\n      </div>\n    </div>\n    <div class=\"mm-pdp-accordion-row\" data-mm-accordion>\n      <div class=\"mm-pdp-accordion-head\" data-mm-accordion-toggle>\n        <span class=\"mm-pdp-accordion-label\">Was, wenn mir das Produkt nicht gefällt?</span>\n        <span class=\"mm-pdp-accordion-mark\" data-mm-accordion-mark>+</span>\n      </div>\n      <div class=\"mm-pdp-accordion-body\" data-mm-accordion-body hidden>\n        <p>Du hast 30 Tage Zeit, das Produkt zurückzuschicken - ohne Wenn und Aber. Das ist unser Versprechen.</p>\n      </div>\n    </div>\n  </div>\n</div>",
+        "color_scheme": "background-1",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "mm_pdp_sticky_cta_section": {
+      "type": "custom-liquid",
+      "settings": {
+        "custom_liquid": "{{ 'mm-pdp-sticky-cta.css' | asset_url | stylesheet_tag }}\n{%- liquid\n  assign sc_variant = product.selected_or_first_available_variant\n  assign sc_price = sc_variant.price\n  assign sc_compare = sc_variant.compare_at_price\n-%}\n<div class=\"mm-sc\" id=\"mm-sc\" aria-hidden=\"true\">\n  <div class=\"mm-sc-info\">\n    <span class=\"mm-sc-title\">{{ product.title }}</span>\n    <span class=\"mm-sc-prices\">\n      <span class=\"mm-sc-price\">{{ sc_price | money_without_currency }} €</span>\n      {%- if sc_compare > sc_price -%}\n        <span class=\"mm-sc-compare\">{{ sc_compare | money_without_currency }} €</span>\n      {%- endif -%}\n    </span>\n  </div>\n  <button type=\"button\" class=\"mm-btn mm-btn--primary mm-sc-cta\" id=\"mm-sc-cta\">Bundle wählen</button>\n</div>\n\n<script>\n(function () {\n  var bar = document.getElementById('mm-sc');\n  // In der Theme-Vorschau liegt die Shopify-Leiste unten drueber und verdeckt die\n  // Sticky-Bar komplett. Nur dort nach oben versetzen, auf dem Shop bleibt sie unten.\n  if (bar && /shopifypreview\\.com$/.test(location.hostname)) bar.classList.add('is-preview');\n  var cta = document.getElementById('mm-sc-cta');\n  if (!bar || !cta) return;\n\n  // Ab hier soll die Leiste erscheinen: die Vorher/Nachher-Section.\n  var trigger = document.querySelector('.mm-pdp-ba') || document.querySelector('.mm-pdp-principle');\n  // Ziel des Klicks: die Bundle-Auswahl in der Buybox (Koala-Widget),\n  // ersatzweise der Kaufbereich.\n  function target() {\n    return document.querySelector('koala-quantity-breaks-embed')\n      || document.querySelector('koala-quantity-breaks-app-block')\n      || document.querySelector('.koala-deal')\n      || document.querySelector('.product-form__buttons')\n      || document.querySelector('.product__info-container');\n  }\n\n  var ticking = false;\n  function sync() {\n    ticking = false;\n    if (!trigger) return;\n    var show = trigger.getBoundingClientRect().top < window.innerHeight * 0.6;\n    bar.classList.toggle('is-visible', show);\n    bar.setAttribute('aria-hidden', show ? 'false' : 'true');\n  }\n  function onScroll() {\n    if (ticking) return;\n    ticking = true;\n    window.requestAnimationFrame(sync);\n  }\n\n  cta.addEventListener('click', function () {\n    var el = target();\n    if (!el) return;\n    var header = document.querySelector('.section-header, sticky-header, header');\n    var offset = header ? header.getBoundingClientRect().height + 12 : 12;\n    var y = el.getBoundingClientRect().top + window.pageYOffset - offset;\n    window.scrollTo({ top: Math.max(0, y), behavior: 'smooth' });\n  });\n\n  window.addEventListener('scroll', onScroll, { passive: true });\n  window.addEventListener('resize', onScroll);\n  sync();\n})();\n</script>",
+        "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    }
+  },
+  "order": [
+    "main",
+    "mm_pdp_deepdives_section",
+    "mm_pdp_herkunft_section",
+    "mm_pdp_ingredients_section",
+    "mm_pdp_routine_section",
+    "mm_pdp_comparison_section",
+    "mm_pdp_reviews_header_section",
+    "mm_pdp_faq_section",
+    "45f77b37-82dc-4dcd-aab6-662315b32360",
+    "related-products",
+    "mm_pdp_sticky_cta_section"
+  ]
+}

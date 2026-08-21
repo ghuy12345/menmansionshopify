@@ -1,0 +1,448 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-article",
+      "blocks": {
+        "featured_image": {
+          "type": "featured_image",
+          "settings": {
+            "image_height": "small"
+          }
+        },
+        "title": {
+          "type": "title",
+          "settings": {
+            "blog_show_date": false,
+            "blog_show_author": false
+          }
+        },
+        "content": {
+          "type": "content",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "featured_image",
+        "title",
+        "content"
+      ],
+      "disabled": true,
+      "settings": {}
+    },
+    "image_banner_WkrgBN": {
+      "type": "image-banner",
+      "blocks": {
+        "heading_At9CTa": {
+          "type": "heading",
+          "settings": {
+            "heading": "Tallow - Die Lösung für cleane und gesunde Haut",
+            "heading_size": "h1"
+          }
+        },
+        "text_dNXwrY": {
+          "type": "text",
+          "settings": {
+            "text": "",
+            "text_style": "body"
+          }
+        }
+      },
+      "block_order": [
+        "heading_At9CTa",
+        "text_dNXwrY"
+      ],
+      "settings": {
+        "image": "shopify://shop_images/Untitled_Project_5.png",
+        "image_2": "shopify://shop_images/Untitled_Project_4.png",
+        "image_overlay_opacity": 30,
+        "image_height": "medium",
+        "desktop_content_position": "middle-center",
+        "show_text_box": false,
+        "desktop_content_alignment": "center",
+        "color_scheme": "",
+        "image_behavior": "none",
+        "mobile_content_alignment": "center",
+        "stack_images_on_mobile": true,
+        "show_text_below": false
+      }
+    },
+    "rich_text_iYt8K6": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_jfykCe": {
+          "type": "heading",
+          "settings": {
+            "heading": "Was ist Tallow und warum solltest du es für deine Hautpflege nutzen?",
+            "heading_size": "h1"
+          }
+        },
+        "text_bNQTFc": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Tallow, auch bekannt als Rindertalg, ist ein 100% natürliches Fett, das aus dem Gewebe von Rindern gewonnen wird. Schon seit Jahrhunderten wurde es zur Hautpflege genutzt, da es Feuchtigkeit spendet, vor Umwelteinflüssen schützt und die Haut geschmeidig hält. Heute erfährt Tallow ein Revival, weil immer mehr Männer auf natürliche und effektive Pflegeprodukte setzen.</p><p>Ohne chemische Zusatzstoffe oder synthetische Füllstoffe bietet Tallow deiner Haut genau das, was sie braucht: <strong>intensive Feuchtigkeit, essenzielle Nährstoffe und natürlichen Schutz</strong>. Ideal für trockene, empfindliche oder strapazierte Haut.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_jfykCe",
+        "text_bNQTFc"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 20,
+        "padding_bottom": 20
+      }
+    },
+    "ss_before_after_5_gGgFQM": {
+      "type": "ss-before-after-5",
+      "blocks": {
+        "item_BMNy6N": {
+          "type": "item",
+          "settings": {
+            "icon": "atc",
+            "custom_icon": "shopify://shop_images/14.png",
+            "title": "Natürliche Feuchtigkeit für gesunde Haut",
+            "text": "",
+            "column": "1"
+          }
+        },
+        "item_CfPFQa": {
+          "type": "item",
+          "settings": {
+            "icon": "atc",
+            "custom_icon": "shopify://shop_images/15.png",
+            "title": "Sanfte Pflege, die schützt und stärkt",
+            "text": "",
+            "column": "1"
+          }
+        },
+        "item_ahfVwE": {
+          "type": "item",
+          "settings": {
+            "icon": "atc",
+            "custom_icon": "shopify://shop_images/Design_ohne_Titel-25.png",
+            "title": "Rein natürliche Inhaltsstoffe, ohne Zusätze",
+            "text": "",
+            "column": "2"
+          }
+        },
+        "item_kVgqzJ": {
+          "type": "item",
+          "settings": {
+            "icon": "atc",
+            "custom_icon": "shopify://shop_images/16.png",
+            "title": "Effektive Hautpflege für jeden Tag",
+            "text": "",
+            "column": "2"
+          }
+        }
+      },
+      "block_order": [
+        "item_BMNy6N",
+        "item_CfPFQa",
+        "item_ahfVwE",
+        "item_kVgqzJ"
+      ],
+      "settings": {
+        "content_align": "center",
+        "content_align_mobile": "center",
+        "title": "<h2>Die Vorteile von Tallow auf einen Blick</h2>",
+        "title_custom": false,
+        "title_font": "josefin_sans_n4",
+        "title_size": 36,
+        "title_size_mobile": 26,
+        "title_height": 130,
+        "text": "",
+        "text_custom": false,
+        "text_font": "josefin_sans_n4",
+        "text_size": 20,
+        "text_size_mobile": 16,
+        "text_height": 130,
+        "text_margin_top": 20,
+        "text_margin_top_mobile": 16,
+        "body_gap": 100,
+        "body_gap_mobile": 24,
+        "body_margin_top": 50,
+        "body_margin_top_mobile": 30,
+        "items_gap": 30,
+        "items_gap_mobile": 30,
+        "item_content_align": "center",
+        "item_content_align_mobile": "center",
+        "icon_size": 44,
+        "icon_size_mobile": 36,
+        "item_title_custom": false,
+        "item_title_font": "josefin_sans_n4",
+        "item_title_size": 18,
+        "item_title_size_mobile": 14,
+        "item_title_height": 130,
+        "item_title_margin_top": 10,
+        "item_title_margin_top_mobile": 10,
+        "item_text_custom": false,
+        "item_text_font": "josefin_sans_n4",
+        "item_text_size": 16,
+        "item_text_size_mobile": 13,
+        "item_text_height": 150,
+        "item_text_margin_top": 10,
+        "item_text_margin_top_mobile": 10,
+        "left_image": "shopify://shop_images/shopify749100832611577562.png",
+        "right_image": "shopify://shop_images/0002-7354832091381985753.png",
+        "image_radius": 500,
+        "image_border_thickness": 0,
+        "image_ratio": "square",
+        "image_ratio_mobile": "square",
+        "btn_size": 56,
+        "btn_size_mobile": 56,
+        "btn_arrow_size": 80,
+        "btn_arrow_size_mobile": 80,
+        "btn_border_thickness": 0,
+        "title_color": "#fafafa",
+        "text_color": "#fafafa",
+        "icon_color": "#fafafa",
+        "item_title_color": "#fafafa",
+        "item_text_color": "#fafafa",
+        "btn_bg_color": "#ffffff",
+        "btn_arrow_color": "#000000",
+        "btn_border_color": "#000000",
+        "line_color": "#ffffff",
+        "image_border_color": "#000000",
+        "background_color": "#1c1c1e",
+        "background_gradient": "",
+        "border_color": "#000000",
+        "margin_top": 0,
+        "margin_bottom": 0,
+        "margin_horizontal": 0,
+        "margin_horizontal_mobile": 0,
+        "padding_top": 16,
+        "padding_bottom": 20,
+        "padding_horizontal": 5,
+        "padding_horizontal_mobile": 1.5,
+        "full_width": false,
+        "content_width": 120,
+        "border_thickness": 0,
+        "section_radius": 0,
+        "lazy": true
+      }
+    },
+    "rich_text_DGprkz": {
+      "type": "rich-text",
+      "blocks": {
+        "button_t3MNcK": {
+          "type": "button",
+          "settings": {
+            "button_label": "Jetzt entdecken",
+            "button_link": "shopify://products/tallow-gesichtscreme-y-50ml",
+            "button_style_secondary": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "button_t3MNcK"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 24,
+        "padding_bottom": 20
+      }
+    },
+    "rich_text_NbcYHE": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_fJb3Rg": {
+          "type": "heading",
+          "settings": {
+            "heading": "Warum Tallow von Men Mansion ?",
+            "heading_size": "h1"
+          }
+        },
+        "text_HFqJ9n": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Men Mansion steht für Qualität, Authentizität und einen maskulinen Lifestyle. Inspiriert von den <strong>Römern und Gladiatoren</strong>, die Tallow bereits vor Jahrhunderten zur Hautpflege nutzten, vereinen wir <strong>traditionelle Weisheit mit den Ansprüchen des modernen Mannes</strong>.</p><p>Unsere Produkte sind:</p><ul><li><strong>100% natürlich</strong> – Frei von synthetischen Zusätzen oder unnötigen Chemikalien.</li><li><strong>Nachhaltig gewonnen</strong> – Aus Weiderindern mit artgerechter Haltung.</li><li><strong>Hochwertig verarbeitet</strong> – Handwerkliche Qualität aus Deutschland.</li></ul><p><strong>Men Mansion liefert ehrliche Ergebnisse ohne leere Versprechen.</strong> Wenn du deine Haut mit einer natürlichen Pflege stärken und regenerieren willst, ist unsere Tallow Gesichtscreme die ideale Wahl.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_fJb3Rg",
+        "text_HFqJ9n"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 20,
+        "padding_bottom": 20
+      }
+    },
+    "image_with_text_Y6E3az": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_pAKjPh": {
+          "type": "heading",
+          "settings": {
+            "heading": "<strong>Unsere eigene Herstellung  aus Baden-Württemberg</strong>",
+            "heading_size": "h2"
+          }
+        },
+        "text_7DegBe": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Qualität „Made in Germany“ – Bei Men Mansion setzen wir auf <strong>traditionelles Handwerk kombiniert mit modernen Verfahren</strong>.</p><p>Unsere Zusammenarbeit mit <strong>lokalen Landwirten</strong> stellt sicher, dass die Rinder unter besten Bedingungen gehalten werden. Vom ersten Verarbeitungsschritt bis zum fertigen Produkt achten wir auf <strong>höchste Qualitätsstandards</strong>.</p>",
+            "text_style": "body"
+          }
+        }
+      },
+      "block_order": [
+        "heading_pAKjPh",
+        "text_7DegBe"
+      ],
+      "settings": {
+        "image": "shopify://shop_images/Tallow6.png",
+        "height": "small",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "section_color_scheme": "",
+        "color_scheme": "",
+        "image_behavior": "none",
+        "mobile_content_alignment": "left",
+        "padding_top": 20,
+        "padding_bottom": 20
+      }
+    },
+    "rich_text_cczPPg": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_t9hXJQ": {
+          "type": "heading",
+          "settings": {
+            "heading": "Die Geschichte von Tallow",
+            "heading_size": "h1"
+          }
+        },
+        "text_EgXxJm": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Tallow hat eine lange Tradition und wurde schon in der Antike als wertvolles Pflegeprodukt geschätzt. Bereits die Römer und Wikinger wussten um die <strong>pflegenden und schützenden Eigenschaften</strong> dieses natürlichen Fettes. Während es bei den Römern zur Hautpflege und Wundheilung eingesetzt wurde, nutzten es die Wikinger als Schutz vor Kälte und rauen Witterungsbedingungen. Auch im Mittelalter war Tallow ein fester Bestandteil der Körperpflege und wurde oft in handgefertigten Salben und Cremes verarbeitet.</p><p>Mit der Industrialisierung geriet Tallow jedoch in Vergessenheit, da synthetische Hautpflegeprodukte den Markt eroberten. Heute, in einer Zeit, in der immer mehr Menschen nach <strong>reinen, unverfälschten und natürlichen Pflegeprodukten</strong> suchen, erlebt Tallow ein beeindruckendes Comeback. Es vereint <strong>Tradition und Wirksamkeit</strong> und ist eine der besten Optionen für eine gesunde und nachhaltige Hautpflege.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_t9hXJQ",
+        "text_EgXxJm"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "rich_text_YNBXHE": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_JRrRFL": {
+          "type": "heading",
+          "settings": {
+            "heading": "Tallow vs herkömmliche Gesichtscremes",
+            "heading_size": "h1"
+          }
+        },
+        "text_taUbWi": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Während viele herkömmliche Gesichtscremes auf <strong>synthetische Inhaltsstoffe, Silikone und künstliche Duftstoffe</strong> setzen, bleibt Tallow in seiner reinsten Form erhalten. Doch was macht den Unterschied aus?</p><p>🔹 <strong>Tallow Gesichtscreme enthält essentielle Fettsäuren</strong>, die der Hautbarriere ähneln und somit besonders gut aufgenommen werden.</p><p>🔹 <strong>Industrielle Cremes enthalten oft Konservierungsstoffe und Parabene</strong>, die langfristig die Haut reizen oder sogar austrocknen können.</p><p>🔹 <strong>Tallow ist von Natur aus reich an Vitaminen wie A, D, E und K</strong>, die für die Hautregeneration entscheidend sind, während viele konventionelle Cremes nur künstlich angereicherte Nährstoffe enthalten.</p><p>Wenn du also auf der Suche nach einer <strong>effektiven, reinen und nachhaltigen Pflege</strong> bist, dann ist Tallow Gesichtscreme die beste Wahl für deine Haut.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_JRrRFL",
+        "text_taUbWi"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 20,
+        "padding_bottom": 20
+      }
+    },
+    "rich_text_hAi3jX": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_AbYHtb": {
+          "type": "heading",
+          "settings": {
+            "heading": "Warum du jetzt auf die Tallow Gesichtscreme umsteigen solltest",
+            "heading_size": "h1"
+          }
+        },
+        "text_mPgg8e": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Tallow ist nicht nur ein bewährtes Naturprodukt, sondern auch eine <strong>hochwertige Alternative zu industriellen Cremes</strong>, die oft mit synthetischen Inhaltsstoffen belastet sind. Wenn du Wert auf <strong>maskuline, natürliche und effektive Pflege</strong> legst, dann ist die Men Mansion Tallow Gesichtscreme genau das Richtige für dich.</p><p>Gib deiner Haut die Feuchtigkeit und Pflege, die sie verdient – für ein <strong>gesundes, glattes und frisches Aussehen</strong>. Erlebe jetzt die Kraft der Natur mit der <strong>Men Mansion Tallow Gesichtscreme</strong>!</p>"
+          }
+        },
+        "button_XQAJir": {
+          "type": "button",
+          "settings": {
+            "button_label": "Jetzt entdecken",
+            "button_link": "shopify://products/tallow-gesichtscreme-y-50ml",
+            "button_style_secondary": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_AbYHtb",
+        "text_mPgg8e",
+        "button_XQAJir"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 20,
+        "padding_bottom": 20
+      }
+    }
+  },
+  "order": [
+    "main",
+    "image_banner_WkrgBN",
+    "rich_text_iYt8K6",
+    "ss_before_after_5_gGgFQM",
+    "rich_text_DGprkz",
+    "rich_text_NbcYHE",
+    "image_with_text_Y6E3az",
+    "rich_text_cczPPg",
+    "rich_text_YNBXHE",
+    "rich_text_hAi3jX"
+  ]
+}

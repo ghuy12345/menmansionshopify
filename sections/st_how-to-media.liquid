@@ -1,0 +1,1598 @@
+{% comment %} Version: 1.0.3 {% endcomment %}
+
+{% comment %}
+  ---------------------------------------------------------
+  Copyright © 2024 Sternify. All rights reserved.
+  Any unauthorized reproduction, alteration, or distribution
+  of this code, in part or in whole, is expressly forbidden.
+  Violators will be subject to legal prosecution to the maximum
+  extent permitted by law. For permissions or inquiries,
+  please contact us in our discord server: https://discord.gg/NHHCEPhsG8
+  ---------------------------------------------------------
+{% endcomment %}
+
+<script
+  src="https://app.sternify.com/verifier.js?v={{ 'now' | date: '%s' }}"
+  data-section-id="{{ section.id }}"
+  defer
+></script>
+
+<div id="st_not-found--{{ section.id }}" class="st_not-found" style="display: none;"></div>
+
+<!-- Swiper JS — use same CDN as other Sternify sections to avoid duplicate downloads -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8.4.7/swiper-bundle.min.css" />
+<script>
+  if (typeof Swiper === 'undefined') {
+    var s = document.createElement('script');
+    s.src = 'https://cdn.jsdelivr.net/npm/swiper@8.4.7/swiper-bundle.min.js';
+    document.head.appendChild(s);
+  }
+</script>
+
+<style>
+  {%- assign header_title_font = section.settings.header_font -%}
+  {%- assign header_subtitle_font = section.settings.section_subtitle_font -%}
+  {%- assign card_title_font = section.settings.card_title_font -%}
+  {%- assign card_description_font = section.settings.card_description_font -%}
+  {%- assign button_font = section.settings.button_font -%}
+  
+  {{ header_title_font | font_face }}
+  {{ header_subtitle_font | font_face }}
+  {{ card_title_font | font_face }}
+  {{ card_description_font | font_face }}
+  {{ button_font | font_face }}
+
+  {%- assign total_blocks = section.blocks.size -%}
+
+  .st_hiw-section-wrapper--{{ section.id }} {
+    margin-top: {{ section.settings.margin_top }}px;
+    margin-bottom: {{ section.settings.margin_bottom }}px;
+    overflow: hidden;
+    {% if section.settings.full_width %} 
+      padding-inline: 45px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    {% else %} 
+      padding-inline: 0;
+    {% endif %}
+  }
+  
+  .st_hiw-section-wrapper--{{ section.id }} .st_hiw-section {
+    background-color: {{ section.settings.section_bg_color }};
+    padding: 50px 50px 50px;
+    {% if section.settings.full_width %}
+      max-width: {{ section.settings.max_width }}px;
+      margin: 0 auto;
+      border-radius: 12px;
+    {% else %}
+      border-radius: 0;
+      max-width: 100%;
+    {% endif %}
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .st_hiw-section-wrapper--{{ section.id }} .st_hiw-container {
+    max-width: {{ section.settings.max_width }}px;
+  }
+
+  .st_hiw-section-wrapper--{{ section.id }} .st_hiw-header {
+    text-align: center;
+    margin-bottom: 50px;
+  }
+
+  .st_hiw-section-wrapper--{{ section.id }} .st_hiw-highlight {
+    color: {{ section.settings.header_title_highlight_color }} !important;
+  }
+
+  .st_hiw-section-wrapper--{{ section.id }} .st_hiw-title, .st_hiw-section-wrapper--{{ section.id }} .st_hiw-highlight{
+    font-family: {{ header_title_font.family }}, {{ header_title_font.fallback_families }};
+    font-weight: {{ header_title_font.weight }};
+    font-style: {{ header_title_font.style }};
+    display: inline;
+    font-size: {{ section.settings.header_fontsize_desktop }}px;
+    color: {{ section.settings.header_color }};
+    margin: 0;
+    line-height: 1.2;
+  }
+
+  .st_hiw-section-wrapper--{{ section.id }} .st_hiw-subtitle {
+    font-family: {{ header_subtitle_font.family }}, 
+    {{ header_subtitle_font.fallback_families }};
+    font-weight: {{ header_subtitle_font.weight }};
+    font-style: {{ header_subtitle_font.style }};
+    font-size: {{ section.settings.section_subtitle_fontsize_desktop }}px;
+    text-align: center;
+    color: {{ section.settings.section_subtitle_color }};
+  }
+
+  .st_hiw-section-wrapper--{{ section.id }} .st_hiw-cards-grid {
+    display: grid;
+        {% comment %} Dynamic grid template columns based on number of blocks {% endcomment %}
+    {% if total_blocks == 1 %}
+      grid-template-columns: 3fr;
+    {% elsif total_blocks == 2 %}
+      grid-template-columns: 3fr 3fr;
+    {% elsif total_blocks == 3 %}
+      grid-template-columns: 3fr 3fr 3fr;
+    {% else %}
+      grid-template-columns: 3fr 3fr 3fr 3fr;
+    {% endif %}
+    column-gap: {{ section.settings.card_gap }}px;
+    row-gap: calc({{ section.settings.card_gap }}px);
+    position: relative;
+    align-items: center;
+  }
+
+  .st_hiw-section-wrapper--{{ section.id }} .st_hiw-step-card-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 25px;
+    height: 100%;
+    width: 100%;
+  }
+
+  .st_hiw-section-wrapper--{{ section.id }} .st_hiw-step-card {
+    background: {{ section.settings.card_bg_color }};
+    border-radius: {{ section.settings.card_border_radius }}px;
+    position: relative;
+    {% if section.settings.ratio == 'square' %}
+    aspect-ratio: 1 / 1;
+    {% elsif section.settings.ratio == 'rectangle' %}
+      aspect-ratio: 16 / 12;
+    {% elsif section.settings.ratio == 'rectangle_height' %}
+      aspect-ratio: 12 / 16;
+    {% endif %}
+    width: 100%;
+    overflow: hidden;
+    {% if section.settings.card_shadow %}
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    {% endif %}
+  }
+
+  .st_hiw-section-wrapper--{{ section.id }} .st_hiw-step-icon {
+    position: absolute;
+    left: 5%;
+    top: 5%;
+    width: {{ section.settings.icon_size }}px;
+    height: {{ section.settings.icon_size }}px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    {% if section.settings.icon_bg_enable %}
+      background: {{ section.settings.icon_bg_color }};
+    {% else %}
+      background: transparent;
+    {% endif %}
+    border-radius: {{ section.settings.icon_border_radius }}%;
+    overflow: hidden;
+  }
+
+  .st_hiw-section-wrapper--{{ section.id }} .st_hiw-step-icon img {
+    width: 100%;
+    height: 100%;
+    padding: {{ section.settings.icon_padding }}px;
+    border-radius: {{ section.settings.icon_border_radius }}% !important;
+    object-fit: cover;
+  }
+
+  /* Numbered icon styling */
+  .st_hiw-section-wrapper--{{ section.id }} .st_hiw-step-icon-number {
+    width: {{ section.settings.icon_size }}px;
+    height: {{ section.settings.icon_size }}px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: {{ card_title_font.family }}, {{ card_title_font.fallback_families }};
+    font-weight: {{ card_title_font.weight }};
+    font-style: {{ card_title_font.style }};
+    font-size: calc({{ section.settings.icon_size }}px / 2);
+    color: {{ section.settings.number_icon_color }};
+    border-radius: {{ section.settings.icon_border_radius }}%;
+  }
+
+  .st_hiw-section-wrapper--{{ section.id }} .st_hiw-step-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    border-radius: {{ section.settings.card_border_radius }}px;
+  }
+
+  .st_hiw-section-wrapper--{{ section.id }} .st_hiw-step-card video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    border-radius: {{ section.settings.card_border_radius }}px;
+    cursor: pointer;
+  }
+
+  /* Video Controls */
+  .st_hiw-section-wrapper--{{ section.id }} .st_hiw-video-controls {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    display: flex;
+    gap: 8px;
+    z-index: 5;
+  }
+
+  .st_hiw-section-wrapper--{{ section.id }} .st_hiw-video-control-btn {
+    width: {{ section.settings.mute_button_size }}px;
+    height: {{ section.settings.mute_button_size }}px;
+    background-color: none;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: {{ section.settings.mute_button_icon_color }};
+    transition: all 0.3s ease;
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  .st_hiw-section-wrapper--{{ section.id }} .st_hiw-video-control-btn:hover {
+    background-color: none;
+    transform: scale(1.1);
+  }
+
+  .st_hiw-section-wrapper--{{ section.id }} .st_hiw-video-control-btn svg {
+    width: calc({{ section.settings.mute_button_size }}px * 0.5);
+    height: calc({{ section.settings.mute_button_size }}px * 0.5);
+  }
+
+  .st_hiw-section-wrapper--{{ section.id }} .st_hiw-video-control-btn svg * {
+    color: {{ section.settings.mute_button_icon_color }};
+  }
+
+  .st_hiw-section-wrapper--{{ section.id }} .st_hiw-step-textContent {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    {% if section.settings.horizontal_alignment == 'left' %}
+      align-items: flex-start;
+      text-align: left;
+    {% else %}
+      align-items: center;
+      text-align: center;
+    {% endif %}
+    gap: 15px;
+    transition: all 0.3s ease;
+    flex: 1;
+  }
+
+  .st_hiw-section-wrapper--{{ section.id }} .st_hiw-step-title {
+    font-family: {{ card_title_font.family }}, {{ card_title_font.fallback_families }};
+    font-weight: {{ card_title_font.weight }};
+    font-style: {{ card_title_font.style }};
+    font-size: {{ section.settings.card_title_fontsize }}px;
+    color: {{ section.settings.card_title_color }};
+    margin: 0;
+    line-height: 1.3;
+  }
+
+
+
+{%- liquid
+  assign title_color = section.settings.card_title_color
+  assign hex_color = title_color | remove: '#'
+  
+  assign r_hex = hex_color | slice: 0, 2
+  assign g_hex = hex_color | slice: 2, 2
+  assign b_hex = hex_color | slice: 4, 2
+  
+  assign hex_chars = '0123456789abcdef' | split: ''
+  
+  assign r1 = r_hex | slice: 0, 1 | downcase
+  assign r2 = r_hex | slice: 1, 1 | downcase
+  assign r_val = 0
+  for char in hex_chars
+    if char == r1
+      assign r_val = forloop.index0 | times: 16
+      break
+    endif
+  endfor
+  for char in hex_chars
+    if char == r2
+      assign r_temp = forloop.index0
+      assign r_val = r_val | plus: r_temp
+      break
+    endif
+  endfor
+  
+  assign g1 = g_hex | slice: 0, 1 | downcase
+  assign g2 = g_hex | slice: 1, 1 | downcase
+  assign g_val = 0
+  for char in hex_chars
+    if char == g1
+      assign g_val = forloop.index0 | times: 16
+      break
+    endif
+  endfor
+  for char in hex_chars
+    if char == g2
+      assign g_temp = forloop.index0
+      assign g_val = g_val | plus: g_temp
+      break
+    endif
+  endfor
+  
+  assign b1 = b_hex | slice: 0, 1 | downcase
+  assign b2 = b_hex | slice: 1, 1 | downcase
+  assign b_val = 0
+  for char in hex_chars
+    if char == b1
+      assign b_val = forloop.index0 | times: 16
+      break
+    endif
+  endfor
+  for char in hex_chars
+    if char == b2
+      assign b_temp = forloop.index0
+      assign b_val = b_val | plus: b_temp
+      break
+    endif
+  endfor
+  
+  assign luminance = r_val | times: 299
+  assign g_lum = g_val | times: 587
+  assign b_lum = b_val | times: 114
+  assign luminance = luminance | plus: g_lum | plus: b_lum
+  assign luminance = luminance | divided_by: 1000
+  
+  if luminance < 128
+    assign lighten_amount = 153
+    assign shimmer_r = r_val | times: 70 | divided_by: 100 | plus: lighten_amount
+    assign shimmer_g = g_val | times: 70 | divided_by: 100 | plus: lighten_amount
+    assign shimmer_b = b_val | times: 70 | divided_by: 100 | plus: lighten_amount
+    
+    if shimmer_r > 255
+      assign shimmer_r = 255
+    endif
+    if shimmer_g > 255
+      assign shimmer_g = 255
+    endif
+    if shimmer_b > 255
+      assign shimmer_b = 255
+    endif
+  else
+    assign shimmer_r = r_val | times: 70 | divided_by: 100
+    assign shimmer_g = g_val | times: 70 | divided_by: 100
+    assign shimmer_b = b_val | times: 70 | divided_by: 100
+  endif
+  
+  assign hex_lookup = '0123456789abcdef' | split: ''
+  
+  assign r_first = shimmer_r | divided_by: 16
+  assign r_second = shimmer_r | modulo: 16
+  assign shimmer_r_hex = hex_lookup[r_first] | append: hex_lookup[r_second]
+  
+  assign g_first = shimmer_g | divided_by: 16
+  assign g_second = shimmer_g | modulo: 16
+  assign shimmer_g_hex = hex_lookup[g_first] | append: hex_lookup[g_second]
+  
+  assign b_first = shimmer_b | divided_by: 16
+  assign b_second = shimmer_b | modulo: 16
+  assign shimmer_b_hex = hex_lookup[b_first] | append: hex_lookup[b_second]
+  
+  assign shimmer_color = '#' | append: shimmer_r_hex | append: shimmer_g_hex | append: shimmer_b_hex
+-%}
+
+
+  .st_hiw-section-wrapper--{{ section.id }} .st_hiw-step-textContent:hover .st_hiw-step-title {
+    {% if section.settings.card_title_hover_effect %}
+      background: linear-gradient(-45deg, {{ section.settings.card_title_color }} 40%, {{ shimmer_color }} 50%, {{ section.settings.card_title_color }} 60%);
+      background-size: 300%;
+      background-position-x: 100%;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      animation: shimmer 3s infinite linear;
+    {% endif %}
+  }
+
+
+
+@keyframes shimmer {
+  0% {
+    background-position-x: 100%;
+  }
+  40% {
+    background-position-x: 0%;
+  }
+  100% {
+    background-position-x: 0%; /* Holds position from 40% to 100%, creating a pause */
+  }
+}
+
+  .st_hiw-section-wrapper--{{ section.id }} .st_hiw-step-description, .st_hiw-section-wrapper--{{ section.id }} .st_hiw-step-description *{
+    font-family: {{ card_description_font.family }}, {{ card_description_font.fallback_families }};
+    font-weight: {{ card_description_font.weight }};
+    font-style: {{ card_description_font.style }};
+    font-size: {{ section.settings.card_description_fontsize }}px;
+    color: {{ section.settings.card_description_color }} !important;
+    line-height: 1.6;
+    flex-grow: 1;
+  }
+
+  .st_hiw-section-wrapper--{{ section.id }} .st_hiw-step-button {
+    font-family: {{ button_font.family }}, {{ button_font.fallback_families }};
+    font-weight: {{ button_font.weight }};
+    font-style: {{ button_font.style }};
+    font-size: {{ section.settings.button_fontsize }}px;
+    color: {{ section.settings.button_text_color }} !important;
+    {% if section.settings.button_bg_enable %}
+      background: {{ section.settings.button_bg_color }};
+      padding: 10px 20px;
+      border-radius: {{ section.settings.button_border_radius }}px;
+    {% else %}
+      background: none;
+      padding: none;
+      border-radius: 0;
+    {% endif %}
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.4s ease;
+  }
+
+  .st_hiw-section-wrapper--{{ section.id }} .st_hiw-step-button svg{
+    width: 16px;
+    height: 16px;
+    transition: transform 0.4s ease;
+  }
+
+  .st_hiw-section-wrapper--{{ section.id }} .st_hiw-step-button:hover svg{
+    transform: translateX(4px);
+  }
+
+  .st_hiw-section-wrapper--{{ section.id }} .st_hiw-step-button svg *{
+    color: {{ section.settings.button_text_color }} !important;
+  }
+
+  /* Arrow between cards
+  .st_hiw-section-wrapper--{{ section.id }} .st_hiw-arrow-next {
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: {{ section.settings.arrow_color }};
+    flex-shrink: 0;
+  } */
+
+  .st_hiw-section-wrapper--{{ section.id }} .st_hiw-arrow-next svg *{
+    color: {{ section.settings.arrow_color }};
+  }
+
+  .st_hiw-section-wrapper--{{ section.id }} .st_hiw-arrow-next svg {
+    width: 100%;
+    height: 100%;
+  }
+
+  .st_hiw-section-wrapper--{{ section.id }} .st_hiw-cards-grid > *:nth-child(8n) {
+    display: none;;
+  }
+
+  /* Mobile Swiper Styles - Updated for left alignment */
+  .st_hiw-section-wrapper--{{ section.id }} .st_hiw-mobile-swiper {
+    display: none;
+    width: 100vw;
+  }
+
+  .st_hiw-section-wrapper--{{ section.id }} .st_hiw-mobile-swiper .swiper{  
+    overflow: visible;
+  }
+
+  .st_hiw-section-wrapper--{{ section.id }} .st_hiw-mobile-swiper .swiper-wrapper {
+    align-items: stretch;
+    justify-content: flex-start;
+  }
+
+  .st_hiw-section-wrapper--{{ section.id }} .st_hiw-mobile-swiper .swiper-slide {
+    opacity: 1;
+    width: 260px !important;
+    transition: opacity 0.3s ease;
+    height: auto;
+    margin-left: 0;
+  }
+
+  .st_hiw-section-wrapper--{{ section.id }} .st_hiw-mobile-swiper .swiper-slide:first-child {
+    margin-left: 0;
+  }
+
+  .st_hiw-section-wrapper--{{ section.id }} .st_hiw-mobile-swiper .st_hiw-step-card-wrapper {
+    height: 100%;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .st_hiw-section-wrapper--{{ section.id }} .st_hiw-mobile-swiper .st_hiw-step-card {
+   {% if section.settings.horizontal_alignment == 'left' %}
+      align-items: flex-start;
+      text-align: left;
+    {% else %}
+      align-items: center;
+      text-align: center;
+    {% endif %}
+  }
+
+  .st_hiw-section-wrapper--{{ section.id }} .st_hiw-mobile-swiper .st_hiw-arrow-next {
+    display: none;
+  }
+
+  @media (max-width: 1200px) {
+      .st_hiw-section-wrapper--{{ section.id }} .st_hiw-cards-grid {
+      {% if total_blocks == 1 %}
+        grid-template-columns: 3fr;
+      {% elsif total_blocks == 2 %}
+        grid-template-columns: 3fr 3fr;
+      {% else %}
+        grid-template-columns: 3fr 3fr 3fr;
+      {% endif %}
+      }
+
+      .st_hiw-section-wrapper--{{ section.id }} .st_hiw-cards-grid > *:nth-child(8n) {
+        display: flex;
+      }
+
+      .st_hiw-section-wrapper--{{ section.id }} .st_hiw-cards-grid > *:nth-child(6n) {
+        display: none;
+      }
+  }
+
+  /* Mobile responsiveness */
+  @media (max-width: 1000px) {
+    .st_hiw-section-wrapper--{{ section.id }} {
+        padding-inline: 0;
+    }
+
+    .st_hiw-section-wrapper--{{ section.id }} .st_hiw-section {
+        border-radius: 0;
+    }
+
+    {% if section.settings.mobile_layout == 'swiper' %}
+      .st_hiw-section-wrapper--{{ section.id }} .st_hiw-cards-grid {
+        display: none;
+      }
+      
+      .st_hiw-section-wrapper--{{ section.id }} .st_hiw-mobile-swiper {
+        display: block;
+      }
+
+    {% else %}
+      .st_hiw-section-wrapper--{{ section.id }} .st_hiw-cards-grid {
+        display: flex;
+        flex-direction: column;
+        gap: {{ section.settings.card_gap }}px;
+      }
+
+      .st_hiw-section-wrapper--{{ section.id }} .st_hiw-step-card-wrapper {
+        flex-direction: column;
+      }
+
+      .st_hiw-section-wrapper--{{ section.id }} .st_hiw-arrow-next {
+        transform: rotate(90deg);
+      }
+
+      .st_hiw-section-wrapper--{{ section.id }} .st_hiw-cards-grid > *:nth-child(6n) {
+        display: flex;
+      }
+    {% endif %}
+  }
+
+  @media (max-width: 768px) {
+    .st_hiw-section-wrapper--{{ section.id }} .st_hiw-title, .st_hiw-section-wrapper--{{ section.id }} .st_hiw-highlight{
+      font-size: {{ section.settings.header_fontsize_mobile }}px !important;
+    }
+
+    .st_hiw-section-wrapper--{{ section.id }} .st_hiw-subtitle {
+      font-size: {{ section.settings.section_subtitle_fontsize_mobile }}px;
+      margin-top: 12px;
+    }
+
+    .st_hiw-section-wrapper--{{ section.id }} .st_hiw-section {
+      padding: 30px 15px 30px;
+    }
+
+    .st_hiw-section-wrapper--{{ section.id }} .st_hiw-header {
+      margin-bottom: 30px;
+      padding-inline: 10px;
+    }
+  }
+</style>
+
+<div class="st_hiw-section-wrapper--{{ section.id }} st_wrapper st_check-section--{{ section.id }}">
+  <div class="st_hiw-section">
+    <div class="st_hiw-container">
+      {% if section.settings.section_title != blank %}
+        <div class="st_hiw-header">
+          <div class="st_hiw-title">{{ section.settings.section_title | replace: '[', '<div class="st_hiw-highlight">' | replace: ']', '</div>' }}</div>
+          <div class="st_hiw-subtitle">{{ section.settings.section_subtitle }}</div>
+        </div>
+      {% endif %}
+
+      <!-- Desktop/Tablet Grid Layout -->
+      <div class="st_hiw-cards-grid">
+        {% for block in section.blocks %}
+            {% assign idx = forloop.index0 %}
+          <div class="st_hiw-step-card-wrapper">
+            <div class="st_hiw-step-card">
+              
+            {% if section.settings.icon %}
+              <div class="st_hiw-step-icon">
+                {% if block.settings.icon_image %}
+                  <img src="{{ block.settings.icon_image | image_url: width: 200 }}" alt="{{ block.settings.title | escape }}">
+                {% else %}
+                  <div class="st_hiw-step-icon-number">
+                    {{ forloop.index }}
+                  </div>
+                {% endif %}
+              </div>
+            {% endif %}
+
+            {% if block.settings.media_type == 'video' and block.settings.video != blank %}
+              <video
+                class="st_hiw-step-video st_hiw-lazy-video"
+                muted
+                playsinline
+                loop
+                preload="none"
+                data-video-id="{{ block.id }}"
+                {% if block.settings.video.preview_image %}
+                poster="{{ block.settings.video.preview_image | image_url: width: 800 }}"
+                {% endif %}
+              >
+                {% for source in block.settings.video.sources %}
+                  <source data-src="{{ source.url }}" type="{{ source.mime_type }}">
+                {% endfor %}
+              </video>
+
+              {% if section.settings.show_mute_button %}
+              <div class="st_hiw-video-controls">
+                <button class="st_hiw-video-control-btn st_hiw-mute-btn" data-video-id="{{ block.id }}" type="button" aria-label="Mute video">
+                  <svg class="st_hiw-mute-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+                    <line x1="23" y1="9" x2="17" y2="15"></line>
+                    <line x1="17" y1="9" x2="23" y2="15"></line>
+                  </svg>
+                  <svg class="st_hiw-unmute-icon" style="display: none;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+                    <path d="M19.07 4.93a10 10 0 0 1 0 14.14"></path>
+                    <path d="M15.54 8.46a5 5 0 0 1 0 7.07"></path>
+                  </svg>
+                </button>
+              </div>
+              {% endif %}
+            {% elsif block.settings.image %}
+              <img
+                src="{{ block.settings.image | image_url: width: 800 }}"
+                alt="{{ block.settings.title | escape }}"
+                loading="lazy">
+            {% else %}
+            {% if idx == 0 %}
+              <img
+                src="https://cdn.shopify.com/s/files/1/0892/7533/4981/files/Generated_Image_September_24_2025_-_10_15AM.png?v=1758702828"
+                alt="{{ block.settings.title | escape }}"
+                loading="lazy">
+            {% elsif idx == 1 %}
+              <img
+                src="https://cdn.shopify.com/s/files/1/0892/7533/4981/files/Generated_Image_September_24_2025_-_10_24AM.png?v=1758703089"
+                alt="{{ block.settings.title | escape }}"
+                loading="lazy">
+            {% elsif idx == 2 %}
+              <img
+                src="https://cdn.shopify.com/s/files/1/0892/7533/4981/files/Generated_Image_September_24_2025_-_10_26AM.png?v=1758703088"
+                alt="{{ block.settings.title | escape }}"
+                loading="lazy">
+            {% else %}
+              <div style="width: 100%; height:100%; background: #f0f0f0; display: flex; align-items: center; justify-content: center; color: #999; border-radius: {{ section.settings.card_border_radius }}px">
+                No image selected
+              </div>
+            {% endif %}
+            {% endif %}
+
+            </div>
+
+            <div class="st_hiw-step-textContent">
+                <h3 class="st_hiw-step-title">
+                {{ block.settings.title | default: 'Step Title' }}
+                </h3>
+                {% if section.settings.add_line_break %}
+                <hr style="width: 100%; margin: 0; background: {{ section.settings.brakeline_color }} !important;">
+                {% endif %}
+                {% if block.settings.description != blank %}
+                <div class="st_hiw-step-description">
+                    {{ block.settings.description }}
+                </div>
+                {% endif %}
+                {% if block.settings.show_button and block.settings.button_text != blank %}
+                <a href="{{ block.settings.button_link | default: '#' }}" class="st_hiw-step-button">
+                    {{ block.settings.button_text }}
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                    <polyline points="12 5 19 12 12 19"></polyline>
+                    </svg>
+                </a>
+                {% endif %}
+            </div>
+
+          </div>
+        {% endfor %}
+      </div>
+
+      <!-- Mobile Swiper Layout -->
+      <div class="st_hiw-mobile-swiper">
+        <div class="swiper" id="howItWorksSwiper{{ section.id }}">
+          <div class="swiper-wrapper">
+            {% for block in section.blocks %}
+                {% assign idx = forloop.index0 %}
+              <div class="swiper-slide">
+                <div class="st_hiw-step-card-wrapper">
+                    <div class="st_hiw-step-card">
+                    
+                    {% if section.settings.icon %}
+                    <div class="st_hiw-step-icon">
+                        {% if block.settings.icon_image %}
+                        <img src="{{ block.settings.icon_image | image_url: width: 200 }}" alt="{{ block.settings.title | escape }}">
+                        {% else %}
+                        <div class="st_hiw-step-icon-number">
+                            {{ forloop.index }}
+                        </div>
+                        {% endif %}
+                    </div>
+                    {% endif %}
+
+                    {% if block.settings.media_type == 'video' and block.settings.video != blank %}
+                    <video
+                        class="st_hiw-step-video st_hiw-lazy-video"
+                        muted
+                        playsinline
+                        loop
+                        preload="none"
+                        data-video-id="{{ block.id }}"
+                        {% if block.settings.video.preview_image %}
+                        poster="{{ block.settings.video.preview_image | image_url: width: 800 }}"
+                        {% endif %}
+                    >
+                        {% for source in block.settings.video.sources %}
+                        <source data-src="{{ source.url }}" type="{{ source.mime_type }}">
+                        {% endfor %}
+                    </video>
+
+                    {% if section.settings.show_mute_button %}
+                    <div class="st_hiw-video-controls">
+                        <button class="st_hiw-video-control-btn st_hiw-mute-btn" data-video-id="{{ block.id }}" type="button" aria-label="Mute video">
+                        <svg class="st_hiw-mute-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+                            <line x1="23" y1="9" x2="17" y2="15"></line>
+                            <line x1="17" y1="9" x2="23" y2="15"></line>
+                        </svg>
+                        <svg class="st_hiw-unmute-icon" style="display: none;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+                            <path d="M19.07 4.93a10 10 0 0 1 0 14.14"></path>
+                            <path d="M15.54 8.46a5 5 0 0 1 0 7.07"></path>
+                        </svg>
+                        </button>
+                    </div>
+                    {% endif %}
+                    {% elsif block.settings.image %}
+                    <img
+                        src="{{ block.settings.image | image_url: width: 800 }}"
+                        alt="{{ block.settings.title | escape }}"
+                        loading="lazy">
+                    {% else %}
+                    {% if idx == 0 %}
+                    <img
+                        src="https://cdn.shopify.com/s/files/1/0892/7533/4981/files/Generated_Image_September_24_2025_-_10_15AM.png?v=1758702828"
+                        alt="{{ block.settings.title | escape }}"
+                        loading="lazy">
+                    {% elsif idx == 1 %}
+                    <img
+                        src="https://cdn.shopify.com/s/files/1/0892/7533/4981/files/Generated_Image_September_24_2025_-_10_24AM.png?v=1758703089"
+                        alt="{{ block.settings.title | escape }}"
+                        loading="lazy">
+                    {% elsif idx == 2 %}
+                    <img
+                        src="https://cdn.shopify.com/s/files/1/0892/7533/4981/files/Generated_Image_September_24_2025_-_10_26AM.png?v=1758703088"
+                        alt="{{ block.settings.title | escape }}"
+                        loading="lazy">
+                    {% else %}
+                    <div style="width: 100%; height: 100%; background: #f0f0f0; display: flex; align-items: center; justify-content: center; color: #999; border-radius: {{ section.settings.card_border_radius }}px;">
+                        No image selected
+                    </div>
+                    {% endif %}
+                    {% endif %}
+
+                    </div>
+
+                    <div class="st_hiw-step-textContent">
+                        <h3 class="st_hiw-step-title">
+                        {{ block.settings.title | default: 'Step Title' }}
+                        </h3>
+                        {% if section.settings.add_line_break %}
+                        <hr style="width: 100%; margin: 0; background: {{ section.settings.brakeline_color }} !important;">
+                        {% endif %}
+                        {% if block.settings.description != blank %}
+                        <div class="st_hiw-step-description">
+                            {{ block.settings.description }}
+                        </div>
+                        {% endif %}
+                        {% if block.settings.show_button and block.settings.button_text != blank %}
+                        <a href="{{ block.settings.button_link | default: '#' }}" class="st_hiw-step-button">
+                            {{ block.settings.button_text }}
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <line x1="5" y1="12" x2="19" y2="12"></line>
+                            <polyline points="12 5 19 12 12 19"></polyline>
+                            </svg>
+                        </a>
+                        {% endif %}
+                    </div>
+
+                </div>
+              </div>
+            {% endfor %}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+
+  // Initialize on Shopify section load (theme editor)
+  document.addEventListener('shopify:section:load', function(event) {
+    // Check if the loaded section is this specific section
+    if (event.detail.sectionId === '{{ section.id }}') {
+      initHowItWorksSwiper();
+    }
+  });
+
+  // Reinitialize when section settings change in theme editor
+  document.addEventListener('shopify:section:select', function(event) {
+    if (event.detail.sectionId === '{{ section.id }}') {
+      initVideoControls();
+    }
+  });
+
+  // Reinitialize when block settings change in theme editor
+  document.addEventListener('shopify:block:select', function(event) {
+    if (event.detail.sectionId === '{{ section.id }}') {
+      initVideoControls();
+    }
+  });
+
+  // Initialize on first load
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initHowItWorksSwiper);
+  } else {
+    initHowItWorksSwiper();
+  }
+
+  function initHowItWorksSwiper() {
+    {% if section.settings.mobile_layout == 'swiper' %}
+      // Initialize Swiper only if mobile layout is set to swiper
+      const swiperElement = document.querySelector('#howItWorksSwiper{{ section.id }}');
+
+      // Check if swiper element exists and hasn't been initialized yet
+      if (swiperElement && !swiperElement.swiper) {
+        const swiper = new Swiper('#howItWorksSwiper{{ section.id }}', {
+          slidesPerView: 'auto',
+          spaceBetween: {{ section.settings.card_gap }},
+          grabCursor: true,
+          loop: false,
+          initialSlide: 0,
+          // Ensure left alignment
+          centeredSlides: false,
+          slideToClickedSlide: false,
+          // Add proper spacing from container edges
+          slidesOffsetBefore: 20,
+          slidesOffsetAfter: 20,
+        });
+      }
+    {% endif %}
+
+    // Initialize video controls
+    initVideoControls();
+  }
+
+  function initVideoControls() {
+    const sectionId = '{{ section.id }}';
+    const sectionWrapper = document.querySelector('.st_hiw-section-wrapper--' + sectionId);
+    if (!sectionWrapper) return;
+
+    // Lazy-load videos with IntersectionObserver — only load and play when visible
+    var lazyVideos = sectionWrapper.querySelectorAll('video.st_hiw-lazy-video');
+
+    if ('IntersectionObserver' in window) {
+      var videoObserver = new IntersectionObserver(function(entries) {
+        entries.forEach(function(entry) {
+          if (entry.isIntersecting) {
+            var video = entry.target;
+            // Load sources if not yet loaded
+            if (!video.dataset.loaded) {
+              video.querySelectorAll('source[data-src]').forEach(function(source) {
+                source.src = source.dataset.src;
+                source.removeAttribute('data-src');
+              });
+              video.load();
+              video.dataset.loaded = 'true';
+            }
+            video.muted = true;
+            video.play().catch(function() {});
+          } else {
+            // Pause when out of view to save resources
+            entry.target.pause();
+          }
+        });
+      }, { rootMargin: '200px 0px' });
+
+      lazyVideos.forEach(function(video) { videoObserver.observe(video); });
+    } else {
+      // Fallback: load all videos immediately
+      lazyVideos.forEach(function(video) {
+        video.querySelectorAll('source[data-src]').forEach(function(source) {
+          source.src = source.dataset.src;
+          source.removeAttribute('data-src');
+        });
+        video.load();
+        video.muted = true;
+        video.play().catch(function() {});
+      });
+    }
+
+    // Update button icons to match initial muted state
+    sectionWrapper.querySelectorAll('.st_hiw-mute-btn').forEach(function(btn) {
+      var muteIcon = btn.querySelector('.st_hiw-mute-icon');
+      var unmuteIcon = btn.querySelector('.st_hiw-unmute-icon');
+      if (muteIcon && unmuteIcon) {
+        muteIcon.style.display = 'block';
+        unmuteIcon.style.display = 'none';
+      }
+    });
+
+    // Remove existing event listeners by cloning and replacing buttons
+    sectionWrapper.querySelectorAll('.st_hiw-mute-btn').forEach(function(btn) {
+      var newBtn = btn.cloneNode(true);
+      btn.parentNode.replaceChild(newBtn, btn);
+    });
+
+    // Handle mute/unmute buttons with fresh event listeners
+    sectionWrapper.querySelectorAll('.st_hiw-mute-btn').forEach(function(btn) {
+      btn.addEventListener('click', function(e) {
+        e.preventDefault();
+        e.stopPropagation();
+        var videoId = this.getAttribute('data-video-id');
+        var video = sectionWrapper.querySelector('video[data-video-id="' + videoId + '"]');
+        var muteIcon = this.querySelector('.st_hiw-mute-icon');
+        var unmuteIcon = this.querySelector('.st_hiw-unmute-icon');
+
+        if (video.muted) {
+          video.muted = false;
+          muteIcon.style.display = 'none';
+          unmuteIcon.style.display = 'block';
+        } else {
+          video.muted = true;
+          muteIcon.style.display = 'block';
+          unmuteIcon.style.display = 'none';
+        }
+      });
+    });
+  }
+</script>
+
+{% comment %} JSON-LD Structured Data for HowTo Schema {% endcomment %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "HowTo",
+  "name": {{ section.settings.section_title | strip_html | replace: '[', '' | replace: ']', '' | json }},
+  {% if section.settings.section_subtitle != blank %}
+  "description": {{ section.settings.section_subtitle | json }},
+  {% endif %}
+  "step": [
+    {%- for block in section.blocks -%}
+    {
+      "@type": "HowToStep",
+      "position": {{ forloop.index }},
+      "name": {{ block.settings.title | default: 'Step Title' | json }},
+      "text": {{ block.settings.description | strip_html | default: '' | json }}
+      {%- if block.settings.media_type == 'video' and block.settings.video != blank -%}
+        {%- for source in block.settings.video.sources limit: 1 -%}
+      ,"video": {
+        "@type": "VideoObject",
+        "contentUrl": {{ source.url | json }},
+        "name": {{ block.settings.title | default: 'Step Video' | json }},
+        "description": {{ block.settings.description | strip_html | default: '' | json }},
+        "thumbnailUrl": {{ block.settings.video.preview_image | image_url: width: 800 | default: '' | json }},
+        "uploadDate": {{ 'now' | date: '%Y-%m-%d' | json }}
+      }
+        {%- endfor -%}
+      {%- elsif block.settings.image -%}
+      ,"image": {{ block.settings.image | image_url: width: 800 | json }}
+      {%- endif -%}
+    }{% unless forloop.last %},{% endunless %}
+    {%- endfor -%}
+  ]
+}
+</script>
+
+{% schema %}
+{
+  "name": "💫: How It Works Media",
+  "class": "hiw-section",
+  "tag": "section",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Important",
+      "info": "Please ensure that Sternify [App Extensions](https://www.sternify.com/app-extentions) are activated."
+    },
+    {
+      "type": "header",
+      "content": "Section Layout"
+    },
+    {
+      "type": "range",
+      "id": "margin_top",
+      "label": "Top Margin",
+      "min": 0,
+      "max": 150,
+      "step": 5,
+      "default": 50,
+      "unit": "px"
+    },
+    {
+      "type": "range",
+      "id": "margin_bottom",
+      "label": "Bottom Margin",
+      "min": 0,
+      "max": 150,
+      "step": 5,
+      "default": 50,
+      "unit": "px"
+    },
+    {
+      "type": "checkbox",
+      "id": "full_width",
+      "label": "Enable Cardlayout",
+      "default": true
+    },
+    {
+      "type": "range",
+      "id": "max_width",
+      "label": "Section Max Width",
+      "min": 1200,
+      "max": 1600,
+      "step": 50,
+      "default": 1400,
+      "unit": "px"
+    },
+    {
+      "type": "color",
+      "id": "section_bg_color",
+      "label": "Section Background Color",
+      "default": "#F4F4F4"
+    },
+    {
+      "type": "header",
+      "content": "Mobile Layout"
+    },
+    {
+      "type": "select",
+      "id": "mobile_layout",
+      "label": "Mobile Layout Style",
+      "options": [
+        {
+          "value": "vertical",
+          "label": "Vertical Cards (Default)"
+        },
+        {
+          "value": "swiper",
+          "label": "Horizontal Swiper"
+        }
+      ],
+      "default": "swiper",
+      "info": "Choose how cards are displayed on mobile devices"
+    },
+    {
+      "type": "header",
+      "content": "Section Header"
+    },
+    {
+      "type": "font_picker",
+      "id": "header_font",
+      "label": "Header Font",
+      "default": "poppins_n6"
+    },
+    {
+      "type": "text",
+      "id": "section_title",
+      "label": "Section Title",
+      "info": "You can heighlight text by wrapping it in [brackets]",
+      "default": "Glowing Skin in Just [3 Steps]"
+    },
+    {
+      "type": "color",
+      "id": "header_title_highlight_color",
+      "label": "Header Title highlight Color",
+      "default": "#DBBD21",
+      "info": "Color for the highlighted text in the header title (text wrapped in [brackets])"
+    },
+    {
+      "type": "color",
+      "id": "header_color",
+      "label": "Header Text Color",
+      "default": "#1a1a1a"
+    },
+    {
+      "type": "range",
+      "id": "header_fontsize_desktop",
+      "label": "Header Font Size (Desktop)",
+      "min": 20,
+      "max": 60,
+      "step": 2,
+      "default": 40,
+      "unit": "px"
+    },
+    {
+      "type": "range",
+      "id": "header_fontsize_mobile",
+      "label": "Header Font Size (Mobile)",
+      "min": 18,
+      "max": 40,
+      "step": 2,
+      "default": 34,
+      "unit": "px"
+    },
+        {
+      "type": "font_picker",
+      "id": "section_subtitle_font",
+      "label": "Subtitle Font",
+      "default": "poppins_n3"
+    },
+    {
+      "type": "text",
+      "id": "section_subtitle",
+      "label": "Subtitle",
+      "default": "Your Complete Daily Skincare Guide"
+    },
+    {
+      "type": "color",
+      "id": "section_subtitle_color",
+      "label": "Subtitle Color",
+      "default": "#1a1a1a"
+    },
+    {
+      "type": "range",
+      "id": "section_subtitle_fontsize_desktop",
+      "label": "Subtitle Font Size (Desktop)",
+      "min": 10,
+      "max": 50,
+      "step": 2,
+      "default": 26,
+      "unit": "px"
+    },
+    {
+      "type": "range",
+      "id": "section_subtitle_fontsize_mobile",
+      "label": "Subtitle Font Size (Mobile)",
+      "min": 12,
+      "max": 32,
+      "step": 2,
+      "default": 18,
+      "unit": "px"
+    },
+    {
+      "type": "header",
+      "content": "Video Mute Button Settings"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_mute_button",
+      "label": "Show Mute Button",
+      "default": false,
+      "info": "When enabled, video starts unmuted with a mute button. When disabled, video is always muted."
+    },
+    {
+      "type": "range",
+      "id": "mute_button_size",
+      "label": "Mute Button Size",
+      "min": 25,
+      "max": 50,
+      "step": 5,
+      "default": 35,
+      "unit": "px",
+      "visible_if": "{{ section.settings.show_mute_button }}"
+    },
+    {
+      "type": "color",
+      "id": "mute_button_icon_color",
+      "label": "Mute Button Icon Color",
+      "default": "#ffffff",
+      "visible_if": "{{ section.settings.show_mute_button }}"
+    },
+    {
+      "type": "header",
+      "content": "Card Settings"
+    },
+    {
+      "type": "select",
+      "id": "horizontal_alignment",
+      "label": "Card Horizontal Alignment",
+      "options": [
+        {
+          "value": "left",
+          "label": "Left"
+        },
+        {
+          "value": "center",
+          "label": "Center"
+        }
+      ],
+      "default": "left"
+    },
+    {
+      "type": "select",
+      "id": "ratio",
+      "label": "Card height ratio",
+      "options": [
+        {
+          "value": "square",
+          "label": "Square"
+        },
+        {
+          "value": "rectangle",
+          "label": "Wide"
+        },
+        {
+          "value": "rectangle_height",
+          "label": "Tall"
+        }
+      ],
+      "default": "rectangle"
+    },
+    {
+      "type": "range",
+      "id": "card_gap",
+      "label": "Gap Between Cards",
+      "min": 10,
+      "max": 50,
+      "step": 5,
+      "default": 20,
+      "unit": "px"
+    },
+    {
+      "type": "range",
+      "id": "card_border_radius",
+      "label": "Card Border Radius",
+      "min": 0,
+      "max": 30,
+      "step": 2,
+      "default": 8,
+      "unit": "px"
+    },
+    {
+      "type": "checkbox",
+      "id": "add_line_break",
+      "label": "Add Line Break",
+      "info": "Add a line break between title and description",
+      "default": true
+    },
+    {
+      "type": "color",
+      "id": "brakeline_color",
+      "label": "Brake Line Color",
+      "default": "#cccccc",
+      "visible_if": "{{ section.settings.add_line_break }}"
+    },
+    {
+      "type": "checkbox",
+      "id": "card_shadow",
+      "label": "Enable Card Shadow",
+      "default": false
+    },
+    {
+      "type": "header",
+      "content": "Icon Settings"
+    },
+    {
+      "type": "checkbox",
+      "id": "icon",
+      "label": "Enable Icon",
+      "default": true
+    },
+    {
+      "type": "range",
+      "id": "icon_size",
+      "label": "Icon Size",
+      "min": 20,
+      "max": 70,
+      "step": 5,
+      "default": 40,
+      "unit": "px"
+    },
+    {
+      "type": "range",
+      "id": "icon_padding",
+      "label": "Icon Padding",
+      "min": 0,
+      "max": 20,
+      "step": 1,
+      "default": 5,
+      "unit": "px"
+    },
+    {
+      "type": "checkbox",
+      "id": "icon_bg_enable",
+      "label": "Enable Icon Background",
+      "default": true
+    },
+    {
+      "type": "color",
+      "id": "icon_bg_color",
+      "label": "Icon Background Color",
+      "default": "#F0F0F0",
+      "visible_if": "{{ section.settings.icon_bg_enable }}"
+    },
+    {
+      "type": "range",
+      "id": "icon_border_radius",
+      "label": "Icon Border Radius",
+      "min": 0,
+      "max": 50,
+      "step": 5,
+      "default": 50,
+      "unit": "%",
+      "info": "Set to 50 for circle, 0 for square",
+      "visible_if": "{{ section.settings.icon_bg_enable }}"
+    },
+    {
+      "type": "header",
+      "content": "Numbered Icon Settings"
+    },
+    {
+      "type": "color",
+      "id": "number_icon_color",
+      "label": "Number Icon Text Color",
+      "default": "#000000",
+      "info": "Text color for the numbers in numbered icons"
+    },
+    {
+      "type": "header",
+      "content": "Typography"
+    },
+    {
+      "type": "font_picker",
+      "id": "card_title_font",
+      "label": "Card Title Font",
+      "default": "poppins_n5"
+    },
+    {
+      "type": "range",
+      "id": "card_title_fontsize",
+      "label": "Card Title Font Size",
+      "min": 14,
+      "max": 28,
+      "step": 1,
+      "default": 20,
+      "unit": "px"
+    },
+    {
+      "type": "color",
+      "id": "card_title_color",
+      "label": "Card Title Color",
+      "default": "#1a1a1a"
+    },
+    {
+      "type": "checkbox",
+      "id": "card_title_hover_effect",
+      "label": "Enable Card Title Shimmer Hover Effect",
+      "default": true
+    },
+    {
+      "type": "font_picker",
+      "id": "card_description_font",
+      "label": "Card Description Font",
+      "default": "poppins_n4"
+    },
+    {
+      "type": "range",
+      "id": "card_description_fontsize",
+      "label": "Card Description Font Size",
+      "min": 12,
+      "max": 20,
+      "step": 1,
+      "default": 14,
+      "unit": "px"
+    },
+    {
+      "type": "color",
+      "id": "card_description_color",
+      "label": "Card Description Color",
+      "default": "#666666"
+    },
+    {
+      "type": "header",
+      "content": "Button Settings"
+    },
+    {
+      "type": "font_picker",
+      "id": "button_font",
+      "label": "Button Font",
+      "default": "poppins_n5"
+    },
+    {
+      "type": "range",
+      "id": "button_fontsize",
+      "label": "Button Font Size",
+      "min": 12,
+      "max": 18,
+      "step": 1,
+      "default": 15,
+      "unit": "px"
+    },
+    {
+      "type": "color",
+      "id": "button_text_color",
+      "label": "Button Text Color",
+      "default": "#000000"
+    },
+    {
+      "type": "checkbox",
+      "id": "button_bg_enable",
+      "label": "Enable Button Background",
+      "default": false
+    },
+    {
+      "type": "color",
+      "id": "button_bg_color",
+      "label": "Button Background Color",
+      "default": "#DBBD21",
+      "visible_if": "{{ section.settings.button_bg_enable }}"
+    },
+    {
+      "type": "range",
+      "id": "button_border_radius",
+      "label": "Button Border Radius",
+      "min": 0,
+      "max": 30,
+      "step": 2,
+      "default": 6,
+      "unit": "px"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "step",
+      "name": "Step Card",
+      "settings": [
+        {
+          "type": "select",
+          "id": "media_type",
+          "label": "Media Type",
+          "options": [
+            {
+              "value": "image",
+              "label": "Image"
+            },
+            {
+              "value": "video",
+              "label": "Video"
+            }
+          ],
+          "default": "image"
+        },
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Step Image",
+          "visible_if": "{{ block.settings.media_type == 'image' }}"
+        },
+        {
+          "type": "video",
+          "id": "video",
+          "label": "Step Video",
+          "visible_if": "{{ block.settings.media_type == 'video' }}"
+        },
+        {
+          "type": "header",
+          "content": "Icon"
+        },
+        {
+          "type": "image_picker",
+          "id": "icon_image",
+          "label": "Custom Icon Image",
+          "info": "Upload custom icon. If no image is uploaded, a numbered icon will be displayed automatically."
+        },
+        {
+          "type": "header",
+          "content": "Content"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Step Title",
+          "default": "Step Title"
+        },
+        {
+          "type": "richtext",
+          "id": "description",
+          "label": "Step Description",
+          "default": "<p>Describe what happens in this step of the process.</p>"
+        },
+        {
+          "type": "header",
+          "content": "Link Button"
+        },
+        {
+          "type": "checkbox",
+          "id": "show_button",
+          "label": "Show Link Button",
+          "default": false
+        },
+        {
+          "type": "text",
+          "id": "button_text",
+          "label": "Button Text",
+          "default": "Learn More",
+          "visible_if": "{{ block.settings.show_button }}"
+        },
+        {
+          "type": "url",
+          "id": "button_link",
+          "label": "Button Link",
+          "visible_if": "{{ block.settings.show_button }}"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "💫: How It Works Media",
+      "blocks": [
+        {
+          "type": "step",
+          "settings": {
+            "title": "Cleanse Your Canvas",
+            "description": "<p>Start with our gentle cleansing foam to remove impurities and prepare your skin. A clean surface allows for better absorption of the next steps.</p>",
+            "show_button": true,
+            "button_text": "Shop Cleanser"
+          }
+        },
+        {
+          "type": "step",
+          "settings": {
+            "title": "Target & Treat",
+            "description": "<p>Apply our concentrated serum with the dropper to address specific skin concerns. The lightweight formula penetrates deep to deliver active ingredients.</p>",
+            "show_button": false,
+            "button_text": "Discover Serum"
+          }
+        },
+        {
+          "type": "step",
+          "settings": {
+            "title": "Hydrate & Protect",
+            "description": "<p>Finish with our moisturizing cream to lock in hydration and create a protective barrier. Massage gently for smooth, healthy-looking skin.</p>",
+            "show_button": false,
+            "button_text": "Learn More"
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

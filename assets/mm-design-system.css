@@ -1,0 +1,1413 @@
+/*
+ * MEN MANSION — Design System Tokens (Theme-Layer)  ·  DARK-FIRST
+ * Quelle: Design-System/colors_and_type.css (Richtung V2 „Presence").
+ * SICHER: token-only + opt-in .mm-* Helper. KEINE globalen body/h/p-Overrides,
+ * damit das bestehende Refresh-Theme nicht ungewollt umgestylt wird.
+ * Adoption erfolgt schrittweise pro Section/Component.
+ */
+
+/* ---------- Webfonts (assets/ liegen im selben CDN-Ordner → relative URL) ---------- */
+@font-face {
+  font-family: "Saol Standard";
+  src: url("SaolStandard-Semibold.otf") format("opentype");
+  font-weight: 600; font-style: normal; font-display: swap;
+}
+@font-face {
+  font-family: "Suisse Intl";
+  src: url("SuisseIntl-Medium.woff2") format("woff2");
+  font-weight: 500; font-style: normal; font-display: swap;
+}
+@font-face {
+  font-family: "Suisse Intl";
+  src: url("SuisseIntl-Bold.woff2") format("woff2");
+  font-weight: 700; font-style: normal; font-display: swap;
+}
+
+/* ---------- Tokens ---------- */
+:root {
+  /* Brand core */
+  --mm-onyx: #191919; --mm-alabaster: #FAFAF8; --mm-gold: #AF9841;
+  /* Tiefen & Neutrale */
+  --mm-ink: #0E0E0E; --mm-charcoal: #272725; --mm-graphite: #33322F; /* charcoal = Flaechen-Ton (Tatjana), ersetzt #232321 */
+  --mm-stone: #6E6B63; --mm-sand: #EFEDE6; --mm-line: #E2DFD6;
+  /* Gold-Abstufungen */
+  /* gold-soft ist der hellere Akzent (#C6B074), nicht identisch mit --mm-gold.
+     Auf staging stand hier faelschlich #AF9841 - das widersprach der eigenen
+     gold-line rgba(198,176,116) und den lokalen Defs in mm-home-magazin.css
+     und mm-home-vip.css. Live ist #C6B074 korrekt. */
+  --mm-gold-soft: #C6B074; --mm-gold-deep: #8A7733; --mm-gold-line: rgba(198,176,116,0.42);
+
+  /* Semantik: DARK (Default) */
+  --mm-bg: var(--mm-onyx); --mm-surface: var(--mm-charcoal);
+  --mm-fg: var(--mm-alabaster); --mm-fg-muted: #A8A49A; --mm-border: var(--mm-graphite);
+  /* Semantik: LIGHT (Sekundär) */
+  --mm-bg-light: var(--mm-alabaster); --mm-surface-light: #FFFFFF;
+  --mm-fg-on-light: var(--mm-onyx); --mm-fg-on-light-muted: var(--mm-stone); --mm-border-light: var(--mm-line);
+
+  /* Type-Familien */
+  --mm-font-display: "Saol Standard", "Times New Roman", Georgia, serif;
+  --mm-font-body: "Suisse Intl", -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif;
+  /* Type-Skala */
+  --mm-size-hero: clamp(42px,6vw,92px); --mm-size-h1: clamp(20px,4vw,24px);
+  --mm-size-h2: clamp(30px,5vw,40px); --mm-size-h3: clamp(20px,2.2vw,27px);
+  --mm-size-h4: 18px; --mm-size-body: 17px; --mm-size-small: 14px; --mm-size-micro: 12px;
+  --mm-size-eyebrow: 11px; --mm-size-nav: 13px; --mm-size-price: 18px;
+  /* Type-Verhalten */
+  --mm-lh-display: 1.04; --mm-lh-heading: 1.1; --mm-lh-body: 1.6;
+  --mm-ls-display: -0.01em; --mm-ls-eyebrow: 0.14em; --mm-ls-nav: 0.18em; --mm-ls-button: 0.16em;
+  --mm-fw-body: 500; --mm-fw-bold: 700; --mm-fw-display: 600;
+
+  /* Layout */
+  /* --mm-radius-card ist der einheitliche Eck-Radius fuer Karten, Kaesten und
+     Bildcontainer auf den PDPs. Vorher standen dort 0, 12, 16, 18 und 20px
+     nebeneinander. 8px entspricht rund 2% der typischen Kartenbreite. */
+  --mm-radius: 2px; --mm-radius-btn: 9px; --mm-radius-card: 8px; --mm-radius-dot: 999px; --mm-container: 1320px; --mm-container-pad: clamp(20px,5vw,72px);
+  /* Spacing */
+  --mm-space-1: 4px; --mm-space-2: 8px; --mm-space-3: 12px; --mm-space-4: 16px; --mm-space-5: 24px;
+  --mm-space-6: 32px; --mm-space-7: 48px; --mm-space-8: 64px; --mm-space-9: 96px; --mm-space-10: 128px;
+  --mm-section-desktop: 96px; --mm-section-mobile: 56px;
+  /* Komponenten */
+  --mm-btn-pad: 16px 40px; --mm-btn-pad-lg: 19px 56px;
+  /* Borders & Schatten */
+  --mm-hairline: 1px solid var(--mm-border); --mm-hairline-light: 1px solid var(--mm-border-light);
+  --mm-hairline-gold: 1px solid var(--mm-gold-line); --mm-shadow: 0 24px 60px -30px rgba(0,0,0,0.7);
+  /* Motion */
+  --mm-ease: cubic-bezier(0.4,0,0.2,1); --mm-dur-1: 150ms; --mm-dur-2: 300ms; --mm-dur-3: 600ms;
+}
+
+/* ---------- Opt-in Helper (nur wo bewusst .mm-* gesetzt wird) ---------- */
+.mm-section-dark { background: var(--mm-bg); color: var(--mm-fg); }
+.mm-section-light { background: var(--mm-bg-light); color: var(--mm-fg-on-light); }
+
+.mm-display { font-family: var(--mm-font-display); font-weight: var(--mm-fw-display); letter-spacing: var(--mm-ls-display); line-height: var(--mm-lh-heading); }
+.mm-hero { font-family: var(--mm-font-display); font-weight: var(--mm-fw-display); font-size: var(--mm-size-hero); line-height: var(--mm-lh-display); letter-spacing: var(--mm-ls-display); }
+.mm-body-font { font-family: var(--mm-font-body); font-weight: var(--mm-fw-body); letter-spacing: 0.01em; }
+
+.mm-eyebrow { font-family: var(--mm-font-body); font-size: var(--mm-size-eyebrow); font-weight: var(--mm-fw-bold); text-transform: uppercase; letter-spacing: var(--mm-ls-eyebrow); color: var(--mm-gold-soft); }
+.mm-section-light .mm-eyebrow { color: var(--mm-gold-deep); }
+.mm-label, .mm-nav { font-family: var(--mm-font-body); font-size: var(--mm-size-nav); font-weight: var(--mm-fw-body); text-transform: uppercase; letter-spacing: var(--mm-ls-nav); }
+
+/* Buttons (opt-in) */
+.mm-btn { display: inline-block; appearance: none; border: 0; cursor: pointer; font-family: var(--mm-font-body); font-weight: 700; font-size: 12px; text-align: center; text-transform: none; letter-spacing: 0.02em; padding: var(--mm-btn-pad); border-radius: var(--mm-radius-btn); text-decoration: none; transition: background var(--mm-dur-1) var(--mm-ease), color var(--mm-dur-1) var(--mm-ease), border-color var(--mm-dur-1) var(--mm-ease); }
+.mm-btn--primary { background: var(--mm-alabaster); color: var(--mm-onyx); }
+.mm-btn--primary:hover { background: var(--mm-gold); }
+.mm-btn--gold { background: var(--mm-gold); color: var(--mm-onyx); }
+.mm-btn--gold:hover { background: var(--mm-gold-soft); }
+.mm-btn--ghost { background: transparent; color: var(--mm-alabaster); border: 1px solid var(--mm-graphite); }
+.mm-btn--ghost:hover { border-color: var(--mm-gold-soft); color: var(--mm-gold-soft); }
+.mm-section-light .mm-btn--primary { background: var(--mm-onyx); color: var(--mm-alabaster); }
+.mm-section-light .mm-btn--primary:hover { background: var(--mm-charcoal); }
+
+.mm-rule-gold { height: 1px; width: 56px; background: var(--mm-gold-soft); border: 0; margin: 0; }
+
+/* ---------- Mobile-Menu: Kategorie-Thumbnail ---------- */
+.mm-nav-thumb-link { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+.mm-nav-thumb { width: 40px; height: 40px; border-radius: 6px; object-fit: cover; flex-shrink: 0; background: var(--mm-ink); }
+
+/* ---------- Warum-Section (Startseite) ---------- */
+.mm-why2 { background: var(--mm-bg); }
+.mm-why2-wrap { max-width: 1080px; margin-inline: auto; padding: clamp(48px, 8vw, 96px) clamp(20px, 5vw, 72px); }
+.mm-why2-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: clamp(32px, 5vw, 64px); align-items: start; }
+
+.mm-why2-title {
+  font-family: var(--mm-font-display); font-weight: var(--mm-fw-display);
+  font-size: 20px; line-height: var(--mm-lh-heading); letter-spacing: var(--mm-ls-display);
+  color: var(--mm-fg); margin: 0 0 20px;
+}
+@media screen and (min-width: 750px) {
+  .mm-why2-title { font-size: var(--mm-size-h2); }
+}
+.mm-why2-lead { color: var(--mm-fg-muted); font-size: 15px; line-height: 1.6; margin: 0 0 26px; }
+
+.mm-why2-rating { display: flex; align-items: center; gap: 10px; margin-bottom: 26px; }
+.mm-why2-stars { color: var(--mm-gold-soft); font-size: 17px; letter-spacing: 2px; }
+.mm-why2-rating-text { color: var(--mm-fg-muted); font-size: var(--mm-size-small); }
+
+.mm-why2-cta { margin-bottom: 26px; border-radius: var(--mm-radius-btn); font-size: 11.5px; font-weight: 700; text-decoration: none; }
+
+.mm-why2-tags { display: flex; flex-wrap: wrap; gap: var(--mm-space-4); }
+.mm-why2-tag {
+  font-family: var(--mm-font-body); font-size: var(--mm-size-eyebrow); font-weight: 700;
+  text-transform: uppercase; letter-spacing: var(--mm-ls-nav); color: var(--mm-fg-muted);
+  border: 0; padding: 0; display: inline-flex; align-items: center;
+}
+
+.mm-why2-pillars { border-top: 1px solid var(--mm-graphite); }
+.mm-why2-pillar { display: flex; gap: 18px; align-items: flex-start; padding: 24px 0; border-bottom: 1px solid var(--mm-graphite); }
+.mm-why2-pillar-icon { flex: 0 0 auto; width: 40px; color: var(--mm-gold-soft); }
+/* Icons wie auf live: King-Icon, Feder-Icon und Lorbeer als SVG-Datei aus den
+   Shopify Files. Die Dateien sind 1500x1500 mit eigenem Goldverlauf, deshalb
+   quadratisch und ohne color-Vererbung. */
+.mm-why2-pillar-img { display: block; width: 40px; height: 40px; object-fit: contain; }
+.mm-why2-pillar-title { font-family: var(--mm-font-display) !important; font-weight: 400; font-size: 20px; margin: 0 0 6px; color: var(--mm-fg); }
+.mm-why2-pillar-text { font-size: 15px; color: var(--mm-fg-muted); margin: 0; line-height: 1.55; }
+
+/* Startseite: Vergleichstabelle (PDP-Komponente 1:1) */
+.mm-home-compare .mm-pdp-why,
+.mm-home-compare .mm-pdp-compare { padding: 0; border-bottom: 0; max-width: none; margin: 0; }
+.mm-home-compare .mm-pdp-why-title { text-align: left; }
+
+/* Startseite: Tabelle steht allein (Text-Spalte entfernt) -> zentriert und lesbar begrenzt */
+.mm-home-compare--solo .mm-pdp-compare { max-width: 620px; margin-inline: auto; }
+/* Desktop: die Tabelle ist das einzige Element der Section, 620px wirkten darin
+   verloren. 900px plus groessere Labels, Tiegel und Badges. */
+@media screen and (min-width: 750px) {
+  .mm-home-compare--solo .mm-pdp-compare { max-width: 900px; }
+  .mm-home-compare--solo .mm-pdp-compare-label { font-size: 15px; padding: 18px 22px; }
+  .mm-home-compare--solo .mm-pdp-compare-thumb { width: 64px; height: 64px; }
+  .mm-home-compare--solo .mm-pdp-compare-badge { width: 26px; height: 26px; }
+  .mm-home-compare--solo .mm-pdp-compare-badge svg { width: 13px; height: 13px; }
+}
+/* minmax(0,1fr) ist Pflicht: bei "1fr" gilt minmax(auto,1fr), die Mindestbreite
+   ist also die Content-Breite. Lange Labels sprengen dann die Label-Spalte,
+   schieben die Badge-Spalten nach rechts und overflow:hidden schneidet sie ab -
+   jede Zeile bekommt eine andere Spaltenbreite.
+
+   Mobil 100px pro Badge-Spalte (vorher 60px): der Labeltext soll ausdruecklich
+   zweizeilig laufen, damit die Haken-Spalten mit den Bildern darueber nach links
+   rutschen - Verhaeltnis wie bei based (Label rund 48%, Haken je 26%). */
+.mm-home-compare--solo .mm-pdp-compare-row { grid-template-columns: minmax(0, 1fr) 100px 100px; }
+.mm-home-compare--solo .mm-pdp-compare-head span { padding: 10px 4px; }
+@media screen and (min-width: 750px) {
+  .mm-home-compare--solo .mm-pdp-compare-row { grid-template-columns: minmax(0, 1fr) 150px 150px; }
+}
+/* Traegt den freigestellten Tiegel (assets/mm-tallow-tiegel.png, mit Alpha).
+   padding: 0 ist Pflicht - .mm-pdp-compare-head span (padding: 10px 4px) trifft
+   auch diesen Wrapper und wuerde die Box auf 38x26 stauchen. Selektor mit
+   Element + 2 Klassen, damit er die Kopfzeilen-Regel ohne !important schlaegt.
+   Kein Hintergrund: das Alpha-PNG soll mit der Zellfarbe verschmelzen. */
+.mm-pdp-compare-head span.mm-pdp-compare-thumb,
+.mm-pdp-compare-thumb {
+  display: flex; align-items: center; justify-content: center; flex: none;
+  box-sizing: border-box; padding: 0;
+  width: 46px; height: 46px;
+}
+.mm-pdp-compare-thumb img { width: 100%; height: 100%; object-fit: contain; display: block; }
+
+/* Fix: Dawns nativer Menu-Drawer-Abdunkel-Hintergrund nutzt rgba(var(--color-foreground), 0.5)
+   und geht von einer dunklen Vordergrund-/Textfarbe aus (helles Standard-Theme). Bei unserem
+   dunklen Farbschema (background-1) ist die Textfarbe hell (#fafaf8), wodurch aus dem gedachten
+   dunklen Abdunkel-Overlay ein heller Blitz wird, bevor der Drawer selbst sichtbar wird. Fixe,
+   dunkle Abdunklung statt der theme-abhaengigen Variable, site-weit, unabhaengig vom Farbschema. */
+menu-drawer > details > summary::before,
+menu-drawer > details[open] > summary::before {
+  background: rgba(0, 0, 0, 0.5) !important;
+}
+
+/* App-Override: "EU Widerruf Pro" (Footer-Link "Vertrag widerrufen"). Die App findet den
+   Link zur Laufzeit per JS ueber href="/apps/widerruf" und setzt darauf Inline-Styles -
+   dadurch sieht der Link wie ein gefuellter Button aus, obwohl er dieselben Theme-Klassen
+   wie die restlichen, schlicht gestalteten Footer-Links traegt. Kein Rename/Rebuild der
+   App selbst - nur Optik auf den echten Klassen/Attributen zurueckgesetzt, exakt das
+   gleiche Prinzip wie beim Warenkorb-Drawer-Restyle. padding/background-color/border-radius/
+   font-weight setzt die App OHNE !important - per CSS !important hier auf die echten Werte
+   des Sibling-Links (Theme-eigene .list-menu__item--link-Regel, 1rem oben/unten, 0 seitlich)
+   zurueckgesetzt. color setzt die App dagegen inline MIT !important - das schlaegt jede
+   externe CSS-Regel unabhaengig von deren Spezifitaet, daher per JS in
+   assets/mm-footer-widerruf.js korrigiert (echte Inline-Style-Ueberschreibung statt eines
+   aussichtslosen CSS-Duells). text-decoration:none setzt die App bereits passend selbst. */
+a[href="/apps/widerruf"] {
+  display: inline-block !important;
+  padding: 1rem 0 !important;
+  background-color: transparent !important;
+  border-radius: 0 !important;
+  font-weight: inherit !important;
+}
+
+/* Footer-Zahlungslogos: monochrom/zurueckgenommen statt Dawns bunter Standard-SVGs (wirkten unruhig). */
+.list-payment .icon--full-color {
+  filter: grayscale(1) brightness(1.6) contrast(0.85) opacity(0.55);
+}
+
+/* Footer-Social-Icons (Instagram/TikTok): weiss statt Theme-Foreground-Farbe. */
+footer .list-social__link { color: var(--mm-alabaster); }
+
+/* Homepage: natives Dawn-Rich-Text direkt nach dem Hero ("Made in Germany. Made for Men."),
+   optisch an .mm-tallow-title/.mm-tallow-lead angeglichen - Section-ID-gescoped, damit andere
+   Rich-Text-Sections sitewide unangetastet bleiben. */
+@media screen and (max-width: 749px) {
+  [id$="__rich_text_cGxMCR"] .rich-text__heading {
+    font-family: var(--mm-font-display); font-weight: 600; color: var(--mm-alabaster);
+    font-size: 20px; line-height: 1.15;
+  }
+  [id$="__rich_text_cGxMCR"] .rich-text__text {
+    font-size: 14px; line-height: 1.55; color: var(--mm-fg-muted);
+  }
+}
+
+/* ---------- Produktgalerie: Thumbnails links, kleiner, wenig Radius, ohne Pfeile ----------
+   Vorbild: bedrop-PDP (Impact "thumbnails-left"). Dawn/Refresh kann das nicht per Setting,
+   daher CSS. Scope: .mm-gallery-left (nur Tallow-PDP, via main-product.liquid).
+   Mobile bleibt unveraendert (Thumbnails unter dem Bild).                                */
+.mm-gallery-left {
+  --media-radius: 9px;          /* weniger abgerundet als global (20px) */
+  --mm-thumb-col: 78px;         /* Breite der Thumbnail-Spalte */
+}
+
+/* Pfeile: nur auf Mobile aus (dort wird geswiped), auf Desktop sichtbar */
+@media screen and (max-width: 989px) {
+  .mm-gallery-left media-gallery .slider-buttons,
+  .mm-gallery-left media-gallery .slider-button {
+    display: none !important;
+  }
+}
+
+/* Radius konsistent auf Bild + Thumbnails */
+.mm-gallery-left .product__media,
+.mm-gallery-left .product__media img,
+.mm-gallery-left .thumbnail,
+.mm-gallery-left .thumbnail img {
+  border-radius: 9px;
+}
+
+@media screen and (min-width: 990px) {
+  /* Desktop: Hero-Bild oben gross, Thumbnails als Reihe DARUNTER (kein Links-Layout) */
+  .mm-gallery-left media-gallery {
+    display: block;
+  }
+  .mm-gallery-left media-gallery [id^="GalleryViewer"] {
+    width: 100%;
+    margin: 0 0 12px;
+  }
+  /* Thumbnails horizontal unter dem Hero, etwas groesser (5 pro Reihe) */
+  .mm-gallery-left media-gallery [id^="GalleryThumbnails"] {
+    width: 100%;
+    max-width: none;
+    margin: 0;
+  }
+  .mm-gallery-left .thumbnail-list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 10px;
+    margin: 0;
+    padding: 0;
+  }
+  .mm-gallery-left .thumbnail-list__item.slider__slide {
+    width: calc(20% - 8px) !important;   /* 5 pro Reihe = groesser als Dawn-Standard */
+    max-width: none !important;
+    flex: 0 0 auto;
+  }
+  .mm-gallery-left .thumbnail-list__item .thumbnail {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+  }
+  /* aktives Thumbnail dezent in Gold markieren */
+  .mm-gallery-left .thumbnail[aria-current='true'] {
+    box-shadow: 0 0 0 1px var(--mm-gold, #AF9841);
+    border-color: var(--mm-gold, #AF9841);
+  }
+  /* Pfeile am Thumbnail-Slider deutlich sichtbar */
+  .mm-gallery-left media-gallery .slider-button {
+    display: inline-flex !important;
+    color: var(--mm-fg, #FAFAF8);
+  }
+}
+
+/* ---------- Loox Rating-Zeile (Tallow-PDP): groesser & klarer, aber IMMER einzeilig ----------
+   App-Setting contentSize steht auf 14. Der clamp() sichert zusaetzlich, dass die Zeile
+   ("(x Bewertungen) • Dermatologisch getestet") auf jeder Breite in EINER Zeile bleibt.     */
+.mm-pdp-tallow .loox-rating {
+  font-size: clamp(10px, 2.9vw, 14px) !important;
+  display: block;
+}
+.mm-pdp-tallow .loox-rating .loox-rating-content {
+  display: inline-flex;
+  align-items: center;
+  flex-wrap: nowrap;          /* kein Umbruch */
+  white-space: nowrap;
+  gap: 1px;
+}
+.mm-pdp-tallow .loox-rating .loox-rating-label {
+  white-space: nowrap;
+  font-family: var(--mm-font-body);
+  font-weight: 600;           /* klarer lesbar */
+  letter-spacing: 0.01em;
+  margin-left: 6px;
+}
+/* Sterne im Brand-Gold statt Default */
+.mm-pdp-tallow .loox-rating .loox-icon {
+  color: var(--mm-gold, #AF9841);
+  fill: currentColor;
+}
+
+/* ---------- Galerie: Seitenraster-Fix (Mobile < 750px) ----------
+   Dawn zieht die Galerie per negativen Margins ueber den Seitenrand (-1.5rem / -2.5rem)
+   und erzeugt einen "Peek"-Versatz. Dadurch passt das Padding nicht zum Rest der Seite.
+   Hier: Galerie + Hauptbild fluchten exakt mit dem Seitenraster, ein Bild pro Ansicht.  */
+@media screen and (max-width: 749px) {
+  .mm-gallery-left .product__media-wrapper slider-component:not(.thumbnail-slider--no-slide) {
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .mm-gallery-left .product__media-list {
+    margin-left: 0;
+    width: 100%;
+  }
+  .mm-gallery-left .product__media-list .product__media-item {
+    width: 100%;                /* ein Bild pro Ansicht, kein Peek */
+  }
+  .mm-gallery-left .product__media-list.grid--peek .grid__item:first-of-type {
+    margin-left: 0;             /* kein Versatz beim ersten Slide */
+  }
+  .mm-gallery-left .product__media-list.grid--peek .grid__item {
+    min-width: 100%;
+  }
+  /* Thumbnails unter dem Bild auf dasselbe Raster */
+  .mm-gallery-left .thumbnail-list.slider--mobile {
+    padding-left: 0;
+    padding-right: 0;
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+
+/* Rating-Zeile: Abstand nach oben raus (Label, Widget und App-Block-Wrapper) */
+.mm-pdp-tallow .loox-rating-label,
+.mm-pdp-tallow .loox-rating,
+.mm-pdp-tallow .loox-rating-content {
+  margin-top: 0 !important;
+}
+.mm-pdp-tallow .shopify-app-block:has(.loox-rating) {
+  margin-top: 0 !important;
+}
+
+/* Rating-Zeile: auch Abstand nach unten raus */
+.mm-pdp-tallow .loox-rating-label,
+.mm-pdp-tallow .loox-rating,
+.mm-pdp-tallow .loox-rating-content {
+  margin-bottom: 0 !important;
+}
+.mm-pdp-tallow .shopify-app-block:has(.loox-rating) {
+  margin-bottom: 0 !important;
+}
+
+/* USP-Subline ("reines gold für klare und gesunde haut"): Abstand nach oben raus */
+.mm-pdp-tallow .product__text.caption-with-letter-spacing {
+  margin-top: 0 !important;
+}
+
+/* ---------- Announcement Bar (Essential App): dunkel, groesserer Text, nie umbrechen ----------
+   App vergibt dynamische Klassen-IDs -> robustes Targeting per [class*="..."].
+   Gilt global (Bar ist auf allen Seiten).                                                     */
+[class*='essential_annoucement_bar_wrapper'] {
+  background: var(--mm-ink, #0E0E0E) !important;   /* noch dunkleres Schwarz */
+  border: 0 !important;
+}
+[class*='essential_annoucement_main_content_wrapper'],
+[class*='essential_annoucement_titles_outside_wrapper'],
+[class*='essential_annoucement_bar_slide'] {
+  background: transparent !important;
+}
+
+/* Text: groesser, klar, IMMER einzeilig (kein Umbruch auf Mobile) */
+[class*='essential_annoucement_bar_title'] {
+  color: rgba(250, 250, 248, 0.75) !important;
+  font-family: var(--mm-font-body) !important;
+  font-weight: 600 !important;
+  font-size: var(--mm-fs-bar) !important;
+  line-height: 1.2 !important;
+  letter-spacing: 0.01em !important;
+  white-space: nowrap !important;
+  text-align: center;
+}
+[class*='essential_annoucement_titles_wrapper'] {
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+  padding-left: 4px;
+  padding-right: 4px;
+  min-width: 0;
+}
+
+/* Pfeile hell, damit sie auf Dunkel sichtbar sind */
+[class*='essential_annoucement_bar_glide__arrow'] svg path {
+  fill: var(--mm-alabaster, #FAFAF8) !important;
+}
+
+/* Benefits-List (3 USPs unter dem Absatz): Abstand nach oben raus */
+.mm-pdp-tallow .shopify-app-block:has(section-store--benefits-list-block),
+.mm-pdp-tallow section-store--benefits-list-block,
+.mm-pdp-tallow section-store--benefits-list-block .list {
+  margin-top: 0 !important;
+}
+
+/* ============================================================================
+   MEN MANSION — VERBINDLICHE TYPO-SKALA  (Single Source of Truth)
+   ----------------------------------------------------------------------------
+   REGEL: Ab sofort NIE mehr freie px-Werte fuer Text. Immer eines dieser Tokens
+   bzw. die Utility-Klassen darunter verwenden. Neue Groessen nur aufnehmen,
+   wenn sie hier ergaenzt werden.
+
+   Stufe        Token                Wert                     Einsatz
+   ---------------------------------------------------------------------------
+   Display      --mm-fs-display      clamp(34,7vw,56)         Hero / Statement
+   H1           --mm-fs-h1           clamp(26,5.2vw,40)       Seiten-/Produkttitel
+   H2           --mm-fs-h2           clamp(22,4.2vw,32)       Section-Headline
+   H3           --mm-fs-h3           clamp(18,3vw,24)         Sub-Headline / Card
+   H4           --mm-fs-h4           16px                     kleine Ueberschrift
+   Lead         --mm-fs-lead         clamp(15,2.4vw,18)       Intro-/Lead-Text
+   Body         --mm-fs-body         15px                     Fliesstext
+   Small        --mm-fs-small        13px                     Sekundaertext
+   Micro        --mm-fs-micro        11px                     Legal / Meta
+   Eyebrow      --mm-fs-eyebrow      11px                     uppercase, getrackt
+   Nav          --mm-fs-nav          13px                     Navigation
+   Button       --mm-fs-button       13px                     Buttons / CTAs
+   Preis        --mm-fs-price        clamp(18,3vw,22)         Preise
+   Bar          --mm-fs-bar          12px                     Announcement Bar
+   USP          --mm-fs-usp          clamp(11.5,3.4vw,14)     USP-Zeilen (einzeilig)
+   Cert-USP     --mm-fs-cert         clamp(10.5,3vw,12.5)     USP-Bullets Zertifikat-Box
+   ---------------------------------------------------------------------------
+   Hierarchie ist garantiert: display > h1 > h2 > h3 > h4 > body.
+   (Die alten --mm-size-* Tokens sind DEPRECATED und eingefroren, damit
+    bestehende Komponenten sich nicht veraendern. Migration schrittweise.)
+   ============================================================================ */
+:root {
+  --mm-fs-display: clamp(34px, 7vw, 56px);
+  --mm-fs-h1:      clamp(26px, 5.2vw, 40px);
+  --mm-fs-h2:      clamp(22px, 4.2vw, 32px);
+  --mm-fs-h3:      clamp(18px, 3vw, 24px);
+  --mm-fs-h4:      16px;
+  --mm-fs-lead:    clamp(15px, 2.4vw, 18px);
+  --mm-fs-body:    15px;
+  --mm-fs-small:   13px;
+  --mm-fs-micro:   11px;
+  --mm-fs-eyebrow: 11px;
+  --mm-fs-nav:     13px;
+  --mm-fs-button:  13px;
+  --mm-fs-price:   clamp(18px, 3vw, 22px);
+  --mm-fs-bar:     12px;
+  --mm-fs-usp:     clamp(11.5px, 3.4vw, 14px); /* USP-Zeilen: skaliert, bleibt einzeilig */
+  --mm-fs-cert:    clamp(10.5px, 3vw, 12.5px); /* USP-Bullets in der Zertifikat-Box */
+
+  /* Zeilenhoehen passend zur Stufe */
+  --mm-lh-tight:   1.1;   /* Display / H1 / H2 */
+  --mm-lh-snug:    1.25;  /* H3 / H4 */
+  --mm-lh-normal:  1.6;   /* Body / Lead */
+}
+
+/* Utility-Klassen — bevorzugt verwenden statt eigener font-size-Regeln */
+.mm-t-display { font-family: var(--mm-font-display); font-weight: var(--mm-fw-display); font-size: var(--mm-fs-display); line-height: var(--mm-lh-tight); letter-spacing: var(--mm-ls-display); }
+.mm-t-h1      { font-family: var(--mm-font-display); font-weight: var(--mm-fw-display); font-size: var(--mm-fs-h1);      line-height: var(--mm-lh-tight); letter-spacing: var(--mm-ls-display); }
+.mm-t-h2      { font-family: var(--mm-font-display); font-weight: var(--mm-fw-display); font-size: var(--mm-fs-h2);      line-height: var(--mm-lh-tight); letter-spacing: var(--mm-ls-display); }
+.mm-t-h3      { font-family: var(--mm-font-display); font-weight: var(--mm-fw-display); font-size: var(--mm-fs-h3);      line-height: var(--mm-lh-snug); }
+.mm-t-h4      { font-family: var(--mm-font-body);    font-weight: var(--mm-fw-bold);    font-size: var(--mm-fs-h4);      line-height: var(--mm-lh-snug); }
+.mm-t-lead    { font-family: var(--mm-font-body);    font-weight: var(--mm-fw-body);    font-size: var(--mm-fs-lead);    line-height: var(--mm-lh-normal); }
+.mm-t-body    { font-family: var(--mm-font-body);    font-weight: var(--mm-fw-body);    font-size: var(--mm-fs-body);    line-height: var(--mm-lh-normal); }
+.mm-t-small   { font-family: var(--mm-font-body);    font-weight: var(--mm-fw-body);    font-size: var(--mm-fs-small);   line-height: 1.5; }
+.mm-t-micro   { font-family: var(--mm-font-body);    font-weight: var(--mm-fw-body);    font-size: var(--mm-fs-micro);   line-height: 1.45; }
+.mm-t-eyebrow { font-family: var(--mm-font-body);    font-weight: var(--mm-fw-bold);    font-size: var(--mm-fs-eyebrow); text-transform: uppercase; letter-spacing: var(--mm-ls-eyebrow); }
+.mm-t-price   { font-family: var(--mm-font-body);    font-weight: var(--mm-fw-bold);    font-size: var(--mm-fs-price); }
+
+/* ---------- Galerie Mobile: sauberes Snapping + kleinere Thumbnails ----------
+   Ursachen vorher:
+   - .slider--mobile hat scroll-padding-left: 1.5rem -> nach Entfernen der 1.5rem-Margins
+     landete der Snap 15px daneben (links Rest des Vorbilds, rechts abgeschnitten).
+   - .slider--mobile:after erzeugt zusaetzlichen Leerraum am Ende.
+   - Thumbnails waren 33% breit (3 pro Reihe) -> auf ~16,6% (6 pro Reihe) halbiert.        */
+@media screen and (max-width: 749px) {
+  .mm-gallery-left .product__media-list.slider--mobile {
+    scroll-padding-left: 0 !important;
+    gap: 0 !important;
+    column-gap: 0 !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    margin-left: 0 !important;
+  }
+  .mm-gallery-left .product__media-list.slider--mobile::after,
+  .mm-gallery-left .product__media-list.grid--peek::after {
+    content: none !important;
+    display: none !important;
+  }
+  .mm-gallery-left .product__media-list .product__media-item {
+    width: 100% !important;
+    min-width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+    scroll-snap-align: start;
+    scroll-snap-stop: always;      /* springt nie zwei Bilder auf einmal */
+  }
+
+  /* Thumbnails halb so gross: 6 statt 3 pro Reihe (Hoehe folgt via 1:1-Ratio) */
+  .mm-gallery-left .thumbnail-list__item.slider__slide {
+    width: calc(16.6% - 0.5rem) !important;
+  }
+  .mm-gallery-left .thumbnail-list.slider--mobile {
+    scroll-padding-left: 0 !important;
+  }
+}
+
+/* USP-Liste: jede Zeile einzeilig (laengste: "Sichtbare Ergebnisse nach wenigen Anwendungen") */
+.mm-pdp-tallow section-store--benefits-list-block .item .text,
+.mm-pdp-tallow section-store--benefits-list-block .item .text p,
+.mm-pdp-tallow section-store--benefits-list-block .item .text strong {
+  font-size: var(--mm-fs-usp) !important;
+  white-space: nowrap !important;
+  line-height: 1.35 !important;
+}
+.mm-pdp-tallow section-store--benefits-list-block .item {
+  align-items: center;
+}
+
+/* USP-Subline unter dem Titel: normale Schreibweise, etwas groesser, ohne Caps-Tracking */
+.mm-pdp-tallow .product__text {
+  font-family: var(--mm-font-body);
+  font-size: var(--mm-fs-lead) !important;
+  font-weight: var(--mm-fw-body);
+  letter-spacing: 0.01em !important;
+  text-transform: none !important;
+  line-height: var(--mm-lh-normal);
+}
+
+/* Subline: Abstand oben/unten halbiert (Dawn: 1.5rem -> 0.75rem).
+   Nachbarn muessen mit, sonst gewinnt beim Margin-Collapsing der groessere Wert. */
+.mm-pdp-tallow .product__info-container > .product__text {
+  margin-top: 0.75rem !important;
+  margin-bottom: 0.75rem !important;
+}
+.mm-pdp-tallow .product__info-container > .product__title {
+  margin-bottom: 0.75rem !important;
+}
+.mm-pdp-tallow .product__info-container > .product__text + * {
+  margin-top: 0.75rem !important;
+}
+
+/* Abstand Subline -> USP-Liste weiter reduzieren (App-Block bringt eigene Margins mit) */
+.mm-pdp-tallow .product__info-container > .product__text {
+  margin-bottom: 0.25rem !important;
+}
+.mm-pdp-tallow .product__info-container > .product__text + * {
+  margin-top: 0.25rem !important;
+}
+.mm-pdp-tallow .shopify-app-block:has(section-store--benefits-list-block),
+.mm-pdp-tallow section-store--benefits-list-block,
+.mm-pdp-tallow section-store--benefits-list-block .list {
+  margin-top: 0 !important;
+  padding-top: 0 !important;
+}
+
+/* Abstand Bewertungen (Loox) -> Titel reduzieren */
+.mm-pdp-tallow .product__info-container > .product__title {
+  margin-top: 0.25rem !important;
+}
+.mm-pdp-tallow .product__info-container > .shopify-app-block:has(.loox-rating) {
+  margin-top: 0 !important;
+  margin-bottom: 0.25rem !important;
+  padding-bottom: 0 !important;
+}
+
+/* Koala-Bundle auf der Tallow-PDP sicher sichtbar (frueher von der eigenen Buybox versteckt).
+   Die beiden Selektoren ohne .mm-pdp-tallow-Prefix sind hier bewusst NICHT mehr drin:
+   sie galten global und haben das Widget auch auf den PDPs mit eigener Buybox
+   eingeblendet. Auf bartpflegeserum und Aleppo Seife standen dadurch zwei
+   Bundle-Auswahlen uebereinander, wobei die Koala-Stufen dort ueberhaupt keine
+   Preise ausgeben. Wer das Widget auf einer weiteren PDP sichtbar braucht, gibt
+   ihr eine eigene Klasse und nimmt sie hier dazu - kein globaler Selektor. */
+.mm-pdp-tallow koala-quantity-breaks-embed,
+.mm-pdp-tallow .koala-deal {
+  display: block !important;
+}
+
+/* ATC-Button: Abstand nach unten raus */
+.mm-pdp-tallow .product-form__submit,
+.mm-pdp-tallow .product-form__buttons,
+.mm-pdp-tallow product-form .product-form__buttons form {
+  margin-bottom: 0 !important;
+}
+
+/* Koala-Bundle: kein Abstand nach oben, unten halbiert (1.5rem -> 0.75rem).
+   Nachbar oben (USP-Liste) muss mit, sonst gewinnt beim Collapsing der groessere Wert. */
+.mm-pdp-tallow .shopify-app-block:has(section-store--benefits-list-block) {
+  margin-bottom: 0 !important;
+}
+.mm-pdp-tallow .product__info-container > [id*="upsell_koala_bundles_bundle_app_block"],
+.mm-pdp-tallow [id*="upsell_koala_bundles_bundle_app_block"] {
+  margin-top: 0 !important;
+  padding-top: 0 !important;
+  margin-bottom: 0.75rem !important;
+}
+.mm-pdp-tallow koala-quantity-breaks-embed,
+.mm-pdp-tallow .koala-deal {
+  display: block;
+  margin-top: 0 !important;
+  margin-bottom: 0.75rem !important;
+}
+.mm-pdp-tallow .koala-deal__title {
+  margin-top: 0 !important;
+}
+
+/* ---------- Key Ingredients (Kachel-Grid, Vorbild: based.com) ----------
+   Hintergrundbild-Kacheln nebeneinander, darunter Name + einzeiliger Benefit.
+   Groessen ausschliesslich ueber die Typo-Skala.                              */
+.mm-ki {
+  background: var(--mm-bg);
+  padding: clamp(48px, 7vw, 88px) clamp(20px, 5vw, 72px);
+}
+.mm-ki__heading {
+  max-width: var(--mm-container);
+  margin: 0 auto clamp(28px, 4vw, 44px);
+  text-align: center;
+}
+.mm-ki__eyebrow {
+  display: block;
+  font-family: var(--mm-font-body);
+  font-size: var(--mm-fs-eyebrow);
+  font-weight: var(--mm-fw-bold);
+  text-transform: uppercase;
+  letter-spacing: var(--mm-ls-eyebrow);
+  color: var(--mm-gold-soft);
+  margin-bottom: 10px;
+}
+.mm-ki__title {
+  font-family: var(--mm-font-display);
+  font-weight: var(--mm-fw-display);
+  font-size: var(--mm-fs-h2);
+  line-height: var(--mm-lh-tight);
+  letter-spacing: var(--mm-ls-display);
+  color: var(--mm-fg);
+  margin: 0 0 8px;
+}
+.mm-ki__sub {
+  font-family: var(--mm-font-body);
+  font-size: var(--mm-fs-small);
+  font-weight: var(--mm-fw-body);
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  color: var(--mm-fg-muted);
+  margin: 0;
+}
+
+.mm-ki__grid {
+  list-style: none;
+  margin: 0 auto;
+  padding: 0;
+  max-width: var(--mm-container);
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);      /* Mobile: 2 nebeneinander */
+  gap: clamp(14px, 2.4vw, 26px);
+}
+@media screen and (min-width: 750px)  { .mm-ki__grid { grid-template-columns: repeat(4, 1fr); } }
+
+.mm-ki__item { margin: 0; }
+.mm-ki__swatch {
+  aspect-ratio: 1 / 1;
+  background-size: cover;
+  background-position: center;
+  background-color: var(--mm-charcoal);
+  border: 1px solid var(--mm-graphite);
+  border-radius: 9px;                          /* wie die Galerie */
+}
+.mm-ki__caption { padding: 12px 2px 0; }
+.mm-ki__name {
+  font-family: var(--mm-font-display);
+  font-weight: var(--mm-fw-display);
+  font-size: var(--mm-fs-h4);
+  line-height: var(--mm-lh-snug);
+  color: var(--mm-fg);
+  margin: 0 0 4px;
+}
+.mm-ki__benefit {
+  font-family: var(--mm-font-body);
+  font-size: var(--mm-fs-small);
+  line-height: 1.5;
+  color: var(--mm-fg-muted);
+  margin: 0;
+}
+
+/* ---------- USP-/Zertifikat-Box unter dem Warenkorb (Vorbild: bedrop) ----------
+   Zwei Reihen Gold-Haken + Info-Leiste mit Zertifikat-Link.                      */
+.mm-cert {
+  background: var(--mm-charcoal);
+  border: 1px solid var(--mm-graphite);
+  border-radius: 9px;
+  overflow: hidden;
+  margin: 12px 0 0;
+}
+.mm-cert__bullets {
+  display: grid;
+  grid-template-columns: 1fr 1fr;            /* 2 Spalten -> 3 Reihen (Mobile) */
+  gap: 10px 16px;
+  padding: 16px;
+}
+@media screen and (min-width: 750px) {
+  .mm-cert__bullets { grid-template-columns: repeat(3, 1fr); }  /* 3 Spalten = 2 Reihen */
+}
+.mm-cert__bullet {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--mm-font-body);
+  font-size: var(--mm-fs-cert);
+  font-weight: var(--mm-fw-body);
+  line-height: 1.3;
+  color: var(--mm-fg);
+}
+.mm-cert__icon { width: 16px; height: 16px; flex-shrink: 0; }
+
+.mm-cert__info {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: center;
+  gap: 14px;
+  padding: 12px 16px;
+  background: var(--mm-ink);
+  border-top: 1px solid var(--mm-graphite);
+}
+.mm-cert__label {
+  font-family: var(--mm-font-body);
+  font-size: var(--mm-fs-micro);
+  font-weight: var(--mm-fw-bold);
+  color: var(--mm-fg);
+}
+.mm-cert__link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--mm-font-body);
+  font-size: var(--mm-fs-micro);
+  font-weight: var(--mm-fw-bold);
+  color: var(--mm-gold-soft);
+  text-decoration: none;
+  border-bottom: 1px solid var(--mm-gold-line);
+  padding-bottom: 1px;
+  white-space: nowrap;
+}
+.mm-cert__link:hover { color: var(--mm-gold); border-color: var(--mm-gold); }
+
+/* Dermatest-Siegel in der Info-Leiste (Bullets behalten volle Breite) */
+.mm-cert__seal {
+  flex: 0 0 auto;
+  width: 132px;
+  height: auto;
+  background: none;
+  border-radius: 0;
+  padding: 0;
+}
+@media screen and (min-width: 750px) {
+  .mm-cert__seal { width: 168px; }
+}
+.mm-cert__info { flex-wrap: wrap; }
+.mm-cert__info .mm-cert__label { flex: 1 1 auto; }
+
+.mm-cert__info .mm-cert__link { justify-self: end; }
+
+/* Versand-Info: keine Umrandung/kein Hintergrund + naeher an den Warenkorb-Button */
+.mm-pdp-tallow .product__info-container > [id*="9b8c4c92124ab94f"],
+.mm-pdp-tallow [id*="9b8c4c92124ab94f"] {
+  margin-top: 0.25rem !important;
+  padding-top: 0 !important;
+  background: none !important;
+  border: 0 !important;
+}
+.mm-pdp-tallow .product__info-container > [id*="9b8c4c92124ab94f"] * {
+  background: none !important;
+  border-color: transparent !important;
+}
+
+/* ATC-Block: Margin unten zu, damit die Versand-Info direkt anschliesst.
+   Der Block rendert ohne id -> strukturell ueber sein Formular treffen. */
+.mm-pdp-tallow .product__info-container > div:has(product-form),
+.mm-pdp-tallow .product__info-container > div:has(.product-form__buttons),
+.mm-pdp-tallow .product__info-container > div:has(.product-form__submit) {
+  margin-bottom: 0.25rem !important;
+}
+
+/* Garantie-Karte: ohne Hintergrund, feine goldene Umrandung,
+   Text wie die USPs, Headline ohne Uppercase */
+.mm-pdp-tallow .mm-pdp-guarantee {
+  background: none !important;
+  border: 1px solid var(--mm-gold-line) !important;
+  border-radius: 9px !important;
+}
+/* Suisse statt Saol: die Garantie-Karte sitzt zwischen Buybox-Elementen, dort
+   soll keine zweite Schriftart auftauchen. */
+.mm-pdp-tallow .mm-pdp-guarantee-title {
+  font-family: var(--mm-font-body) !important;
+  font-size: var(--mm-fs-h4) !important;
+  font-weight: var(--mm-fw-display) !important;
+  text-transform: none !important;
+  letter-spacing: 0 !important;
+  color: var(--mm-fg) !important;
+}
+.mm-pdp-tallow .mm-pdp-guarantee-text {
+  font-family: var(--mm-font-body) !important;
+  font-size: var(--mm-fs-cert) !important;
+  font-weight: var(--mm-fw-body) !important;
+  color: var(--mm-fg-muted) !important;
+}
+
+/* Garantie-Karte: smooth ausklappbarer "Mehr lesen"-Bereich */
+.mm-guar__toggle {
+  appearance: none;
+  background: none;
+  border: 0;
+  padding: 6px 0 0;
+  margin: 0;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--mm-font-body);
+  font-size: var(--mm-fs-cert);
+  font-weight: var(--mm-fw-bold);
+  /* gedaempft statt gold: Gold bleibt dem Icon und den Kanten vorbehalten */
+  color: var(--mm-fg-muted);
+}
+.mm-guar__toggle:hover { color: var(--mm-fg); }
+.mm-guar__chevron { transition: transform var(--mm-dur-2) var(--mm-ease); }
+.mm-guar.is-open .mm-guar__chevron { transform: rotate(180deg); }
+
+/* Grid-Trick: animiert die Hoehe weich von 0 auf Inhalt */
+.mm-guar__more {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows var(--mm-dur-2) var(--mm-ease);
+}
+.mm-guar.is-open .mm-guar__more { grid-template-rows: 1fr; }
+.mm-guar__more-inner { overflow: hidden; }
+.mm-guar__more-inner p { margin: 8px 0 0; }
+
+/* Garantie-Karte: Icon oben rechts in die Ecke, Text komplett linksbuendig */
+.mm-pdp-tallow .mm-pdp-guarantee {
+  display: block !important;      /* Grid-Spalten aufheben */
+  position: relative;
+  padding: 16px !important;
+}
+.mm-pdp-tallow .mm-pdp-guarantee > svg {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  margin: 0 !important;
+}
+.mm-pdp-tallow .mm-pdp-guarantee > div { text-align: left; }
+.mm-pdp-tallow .mm-pdp-guarantee-title,
+.mm-pdp-tallow .mm-pdp-guarantee-text,
+.mm-pdp-tallow .mm-guar__toggle {
+  text-align: left;
+}
+.mm-pdp-tallow .mm-pdp-guarantee-title { padding-right: 40px; }  /* Platz fuer das Icon */
+
+/* ============================================================================
+   DROPDOWNS / ACCORDION — vereinheitlicht
+   Vorher: 7 verschiedene px-Groessen (10/11/12/13/14/15/18), 4 Caps-Elemente,
+   Farben gemischt. Jetzt: 3 Groessen aus der Skala, 2 Textfarben, kein Uppercase.
+     Ueberschrift  --mm-fs-h4     Saol,   --mm-fg
+     Text/Label    --mm-fs-small  Suisse, --mm-fg-muted (Betonung: --mm-fg)
+     Meta/Notiz    --mm-fs-micro  Suisse, --mm-fg-muted
+     Gold nur als Akzent (Eyebrow, Haken, Links, +/-)
+   ============================================================================ */
+
+/* Zeilen-Kopf: Suisse, normale Schreibweise. Saol war hier die zweite Schriftart
+   in einem Bereich, der sonst komplett in der Body-Font laeuft. */
+.mm-pdp-tallow .mm-pdp-accordion-label {
+  font-family: var(--mm-font-body) !important;
+  font-size: var(--mm-fs-h4) !important;
+  font-weight: var(--mm-fw-display) !important;
+  text-transform: none !important;
+  letter-spacing: 0 !important;
+  color: var(--mm-fg) !important;
+}
+
+/* Fliesstext grau. Im aufgeklappten Tab gelten ausdruecklich ZWEI Farben:
+   weiss fuer Titel, Zwischenlabel und Betonung, grau fuer den Fliesstext.
+   Am 06.08. war hier kurz alles weiss, das war zu viel - Vorgabe ist weiss und
+   grau, nicht nur weiss. Der weisse Fliesstext gilt fuer die uebrigen Sections
+   des Shops, nicht fuer die Tabs. */
+.mm-pdp-tallow .mm-pdp-accordion-body,
+.mm-pdp-tallow .mm-pdp-accordion-body p,
+.mm-pdp-tallow .mm-pdp-accordion-body li,
+.mm-pdp-tallow .mm-pdp-desc-lead,
+.mm-pdp-tallow .mm-pdp-desc-table td {
+  font-family: var(--mm-font-body) !important;
+  font-size: var(--mm-fs-small) !important;
+  line-height: 1.6 !important;
+  color: var(--mm-fg-muted) !important;
+}
+
+/* Ueberschriften im Body: ebenfalls Suisse. Im aufgeklappten Text gilt
+   eine Schriftart und zwei Farben (weiss fuer Ueberschriften und Betonung,
+   grau fuer Fliesstext). */
+/* Vorgabe 10.08.: im aufgeklappten Tab gilt EINE Schriftart, EINE Groesse und
+   EINE Schriftdicke. Der Unterschied zwischen Zwischentitel und Fliesstext ist
+   allein die Farbe - weiss gegen grau. Vorher standen die Titel auf 16px/600
+   und der Text auf 13px/500. */
+.mm-pdp-tallow .mm-pdp-accordion-body h2,
+.mm-pdp-tallow .mm-pdp-accordion-body h3,
+.mm-pdp-tallow .mm-pdp-desc-tagline {
+  font-family: var(--mm-font-body) !important;
+  font-size: var(--mm-fs-small) !important;
+  font-weight: var(--mm-fw-body) !important;
+  color: var(--mm-fg) !important;
+  letter-spacing: 0 !important;
+  margin: 16px 0 6px !important;
+}
+.mm-pdp-tallow .mm-pdp-accordion-body h2:first-child,
+.mm-pdp-tallow .mm-pdp-accordion-body h3:first-child { margin-top: 0 !important; }
+
+/* Eyebrow / Zutaten-Name: Betonung ohne Caps */
+/* Zwischenlabel und Zutatenname: dieselbe Groesse und Dicke wie alles andere,
+   Hervorhebung nur ueber Weiss. Im Zutaten-Tab sind das die Zutatennamen -
+   sie sollen sich klar vom grauen Beschreibungstext abheben. */
+.mm-pdp-tallow .mm-pdp-desc-eyebrow,
+.mm-pdp-tallow .mm-pdp-desc-ingredient-name {
+  font-family: var(--mm-font-body) !important;
+  font-size: var(--mm-fs-small) !important;
+  font-weight: var(--mm-fw-body) !important;
+  text-transform: none !important;
+  letter-spacing: 0 !important;
+  color: var(--mm-fg) !important;
+}
+/* Zwischenlabel in Weiss statt Gold, damit im Text nur zwei Farben stehen. */
+.mm-pdp-tallow .mm-pdp-desc-eyebrow { color: var(--mm-fg) !important; }
+.mm-pdp-tallow .mm-pdp-desc-ingredient-name span {
+  font-weight: var(--mm-fw-body) !important;
+  color: var(--mm-fg-muted) !important;
+}
+
+/* Meta: Notiz, Footer, Scroll-Hinweis - bleibt grau, das ist die zweite Farbe.
+   Selektor mit p davor, weil .mm-pdp-tallow .mm-pdp-accordion-body p (0,2,1)
+   sonst gewinnt und auch die Notiz weiss faerbt. */
+.mm-pdp-tallow .mm-pdp-accordion-body p.mm-pdp-desc-note,
+.mm-pdp-tallow .mm-pdp-accordion-body p.mm-pdp-desc-footer,
+.mm-pdp-tallow .mm-pdp-desc-note,
+.mm-pdp-tallow .mm-pdp-desc-footer,
+.mm-pdp-tallow .mm-pdp-accordion-scroll-label {
+  font-family: var(--mm-font-body) !important;
+  font-size: var(--mm-fs-micro) !important;
+  font-weight: var(--mm-fw-body) !important;
+  text-transform: none !important;
+  letter-spacing: 0 !important;
+  color: var(--mm-fg-muted) !important;
+}
+
+/* Zitat: ohne Kasten und ohne Linie - im aufgeklappten Text soll nichts
+   umrahmt sein, die Betonung macht das Fettgewicht. */
+.mm-pdp-tallow .mm-pdp-desc-quote {
+  background: none !important;
+  border-left: 0 !important;
+  padding-left: 0 !important;
+  font-family: var(--mm-font-body) !important;
+  font-size: var(--mm-fs-body) !important;
+  font-weight: var(--mm-fw-display) !important;
+  color: var(--mm-fg) !important;
+  padding: 4px 0 !important;
+}
+
+/* Links + Akzente */
+.mm-pdp-tallow .mm-pdp-desc-link { color: var(--mm-fg) !important; text-decoration: underline; }
+.mm-pdp-tallow .mm-pdp-desc-checklist li { font-size: var(--mm-fs-small) !important; color: var(--mm-fg-muted) !important; }
+
+/* Dropdowns: Ueberschriften und Betonungen in Weiss, Fliesstext bleibt gedaempft */
+.mm-pdp-tallow .mm-pdp-accordion-body h2,
+.mm-pdp-tallow .mm-pdp-accordion-body h3,
+.mm-pdp-tallow .mm-pdp-desc-tagline,
+.mm-pdp-tallow .mm-pdp-accordion-body strong,
+.mm-pdp-tallow .mm-pdp-accordion-body b,
+.mm-pdp-tallow .mm-pdp-desc-ingredient-name {
+  color: var(--mm-fg) !important;
+}
+/* strong und b erben sonst 700 vom Browser - das waere die zweite Schriftdicke. */
+.mm-pdp-tallow .mm-pdp-accordion-body strong,
+.mm-pdp-tallow .mm-pdp-accordion-body b {
+  font-weight: var(--mm-fw-body) !important;
+}
+
+/* ============================================================================
+   STANDARD-HEADLINE-PATTERN  (Vorbild: Principle-Card "100% natürliche Inhaltsstoffe")
+   ----------------------------------------------------------------------------
+   Fuer ALLE weiteren Sections so bauen:
+     [goldenes Icon 24px]
+     Headline   -> Saol, --mm-fs-h4, weiss, KEIN Uppercase, kein Tracking
+     Text       -> Suisse, --mm-fs-small, gedaempft
+   Optional in einer Card (Charcoal, Radius 9px) oder frei auf dem Hintergrund.
+   ============================================================================ */
+.mm-feat {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.mm-feat--card {
+  background: var(--mm-charcoal);
+  border-radius: 9px;
+  padding: 20px;
+}
+.mm-feat__icon {
+  width: 24px;
+  height: 24px;
+  color: var(--mm-gold-soft);
+  flex-shrink: 0;
+}
+.mm-feat__title {
+  font-family: var(--mm-font-display);
+  font-size: var(--mm-fs-h4);
+  font-weight: var(--mm-fw-display);
+  line-height: var(--mm-lh-snug);
+  letter-spacing: 0;
+  text-transform: none;
+  color: var(--mm-fg);
+  margin: 0;
+}
+.mm-feat__text {
+  font-family: var(--mm-font-body);
+  font-size: var(--mm-fs-small);
+  line-height: 1.5;
+  color: var(--mm-fg-muted);
+  margin: 0;
+}
+/* Grid fuer mehrere Karten nebeneinander */
+.mm-feat-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+  text-align: left;
+}
+@media screen and (min-width: 990px) {
+  .mm-feat-grid--3 { grid-template-columns: repeat(3, 1fr); }
+  .mm-feat-grid--4 { grid-template-columns: repeat(4, 1fr); }
+}
+
+/* ---------- Laufband ueber dem Hero: gleiche Schrift wie der Rest ----------
+   Die App-Einstellung steht auf playfair_display_n4, das ist eine Serif und hat
+   sich mit der Hero-Headline gebissen. Statt die App-Einstellung zu raten wird
+   die Schrift hier ueberschrieben. */
+.ss-announcement-bar__message,
+.ss-announcement-bar__message * {
+  font-family: var(--mm-font-body) !important;
+}
+
+/* ---------- Sterne-Bewertung auf Produktkarten (snippets/mm-rating.liquid) ----------
+   Zwei uebereinanderliegende Sternreihen: die untere in --mm-graphite, die obere
+   in --mm-gold und per Breite beschnitten. So zeigt 4,9 auch 4,9 Sterne und nicht
+   fuenf volle. Werte kommen aus den Loox-Metafeldern.
+
+   Hier global, weil die Karten auf der Startseite und auf den Kollektionsseiten
+   dasselbe Markup nutzen. --mm-gold ist die Icon-Farbe des Loox-Widgets auf der
+   PDP, Karte und Produktseite zeigen damit denselben Goldton. */
+.mm-rating { display: flex; align-items: center; gap: 7px; }
+.mm-rating-stars { position: relative; display: inline-block; line-height: 0; flex: none; }
+.mm-rating-base { display: flex; gap: 2px; color: var(--mm-graphite); }
+.mm-rating-fill {
+  position: absolute; top: 0; left: 0; bottom: 0;
+  display: flex; gap: 2px; overflow: hidden; color: var(--mm-gold);
+}
+.mm-rating-base svg, .mm-rating-fill svg { flex: none; display: block; }
+.mm-rating-count {
+  font-family: var(--mm-font-body); font-size: 11px; font-weight: 400;
+  letter-spacing: 0.01em; color: var(--mm-fg-muted); white-space: nowrap;
+}
+
+/* ---------- Fliesstext shopweit in Weiss ----------
+   Vorgabe von Dominik 06.08.: die grauen Fliesstexte (Beschreibung,
+   Inhaltsstoffe, Section-Texte) sollen in Weiss stehen, nicht in
+   --mm-fg-muted. Grau bleibt nur fuer Sekundaeres: Micro-Labels, Meta-Zeilen,
+   Streichpreise, Notizen, Hinweise.
+
+   Das widerspricht der aelteren Repo-Regel "Fliesstext immer --mm-fg-muted";
+   die neue Vorgabe gilt. CLAUDE.md ist entsprechend angepasst. */
+/* .mm-pdp-desc-lead steht hier absichtlich NICHT: das ist Tab-Fliesstext und
+   bleibt grau, siehe Tab-Block weiter oben. */
+.mm-pdp-routine-sub, .mm-pdp-routine-step-text,
+.mm-pdp-herkunft-text, .mm-pdp-ingredient-text,
+.mm-pdp-principle-sub, .mm-pdp-principle-card-text,
+.mm-pdp-reviews-spotlight-text, .mm-pdp-guarantee-text,
+.mm-hk-lead, .mm-hk-card-text, .mm-hk-more-body p,
+.mm-r3-sub, .mm-r3-body p,
+.mm-why2-lead, .mm-why2-pillar-text,
+.mm-bs-sub, .mm-bs-benefit,
+.mm-tallow-lead, .mm-tallow-sub,
+.mmb-hero__sub, .mmb-faq__item p,
+.mmp-hero__sub, .mmp-faq__item p,
+.mm-feat__text, .mm-ki__benefit,
+.mm-mission .mm-cell--step p {
+  color: var(--mm-fg) !important;
+  font-family: var(--mm-font-body) !important;
+}
+
+/* ---------- Stimmen auf der Startseite ----------
+   Der Spotlight-Kasten und die Stimmen-Rail sind dieselben Bausteine wie auf der
+   PDP (mm-pdp-reviews-spotlight, mm-tst). Auf der Startseite steht der Spotlight
+   ohne den Bewertungskopf darueber, deshalb kein margin-top. Radius wie bei allen
+   Kaesten. */
+.mm-home-voices { padding-bottom: 8px; }
+.mm-home-voices .mm-pdp-reviews-spotlight { margin-top: 0; }
+.mm-pdp-reviews-spotlight { border-radius: var(--mm-radius-card); }
+
+/* ---------- Startseite: Header und Announcement-Bar transparent im Bild ----------
+   Vorgabe 07.08.: auf der Startseite liegen Announcement-Bar und Header ueber
+   dem Hero-Bild, ohne eigene Flaeche. Auf allen anderen Seiten bleibt alles wie
+   es ist - deshalb ist jede Regel auf body.template-index gescoped.
+
+   Der Wrapper .mm-header-group (layout/theme.liquid) wird absolut positioniert,
+   nicht die beiden Sections selbst: die sind Geschwister, mit "absolute" auf
+   beiden lagen sie uebereinander. So bleibt die Bar ueber dem Header gestapelt
+   und der Hero beginnt bei 0.
+
+   z-index 6 liegt ueber dem Hero (der einen eigenen Stacking-Context mit z 0
+   aufspannt) und unter dem Menue-Drawer, der im Header selbst sitzt. */
+body.template-index .mm-header-group {
+  position: absolute; top: 0; left: 0; right: 0; z-index: 6;
+}
+/* Flaechen weg: die Farbe sitzt auf .color-background-1 im Section-Wrapper und
+   zusaetzlich auf .header-wrapper. Beide muessen transparent sein. */
+body.template-index .mm-header-group .color-background-1:not(.menu-drawer),
+body.template-index .mm-header-group .header-wrapper,
+body.template-index .mm-header-group .essential-announcement-block {
+  background: transparent !important;
+  background-color: transparent !important;
+}
+/* Der Mobile-Drawer liegt im Header und traegt dieselbe Farbschema-Klasse
+   .color-background-1 - ohne die Ausnahme oben wurde er auf der Startseite
+   durchsichtig und die Seite schien durch das offene Menue. Flaeche wie in den
+   Menue-Regeln festgelegt: #191919. */
+body.template-index .mm-header-group .menu-drawer {
+  background: var(--mm-onyx) !important;
+  background-color: var(--mm-onyx) !important;
+}
+body.template-index .mm-header-group .header-wrapper--border-bottom { border-bottom: 0 !important; }
+
+/* Sobald der Header beim Hochscrollen einrastet, braucht er wieder eine Flaeche,
+   sonst steht die Navigation unlesbar ueber dem Seiteninhalt. */
+body.template-index .section-header.shopify-section-header-sticky .header-wrapper {
+  background: var(--mm-ink) !important;
+  background-color: var(--mm-ink) !important;
+}
+
+/* ---------- Startseite: Stimmen dichter an die Warum-Section ----------
+   Vorgabe 07.08.: Titelblock, Spotlight und Stimmen-Rail gehoeren optisch
+   zusammen, die 48px Innenabstand auf jeder Seite ergaben 96px Luft dazwischen.
+   Gemessen waren es 122px zwischen CTA und Spotlight und 96px zwischen
+   Spotlight und Rail. */
+/* Nur die Warum-Section enger, nicht jeder .mm-why2-wrap: die Vergleichstabelle
+   nutzt denselben Wrapper und hatte dadurch 24px statt 48px unten. */
+body.template-index .mm-why2 > .mm-why2-wrap { padding-bottom: 24px; }
+body.template-index .mm-home-voices { padding: 0 20px; }
+
+/* ---------- Ein Rhythmus fuer alle Sections ----------
+   Gemessen am 07.08.: die PDP-Sections standen fast alle auf 48px oben und
+   unten, aber die Herkunft-Section hatte 40px unten, die Vergleichstabelle auf
+   der Startseite 24px und die Stimmen-Rail je nach Seite 20px oder 48px.
+   Standard ist 48px oben und unten, 20px seitlich.
+
+   Ausnahme mit Absicht: mm-pdp-ba (24px oben), die Section schliesst direkt an
+   die Buybox an, und die Sticky-Leiste. */
+.mm-tst { padding: 48px 20px !important; }
+.mm-hk { padding-bottom: 48px; }
+.mm-home-compare--solo .mm-pdp-compare { padding-bottom: 48px; }
+
+/* ---------- Sterne in der Announcement-Bar ----------
+   Die App liefert Emoji-Sterne (U+2B50), mm-announcement-stars.js tauscht sie im
+   DOM gegen dieses SVG. Groesse an der Schriftgroesse der Bar, Farbe im Goldton. */
+.mm-ann-stars { display: inline-flex; align-items: center; gap: 2px; vertical-align: -0.12em; }
+.mm-ann-star { width: 0.85em; height: 0.85em; color: var(--mm-gold-soft); flex: none; }
+
+/* ---------- Laufweite und Zeilenumbrueche shopweit ----------
+   Vorgabe 07.08.: im Fliesstext ueberall 1 % Laufweite, und Titel sollen keine
+   einzelnen Woerter auf eine eigene Zeile schieben.
+
+   letter-spacing auf dem body: alles erbt 0.01em, Komponenten mit eigener
+   Laufweite (Eyebrows 0.14em, Buttons 0.16em, Nav 0.18em) behalten ihre.
+   text-wrap: balance verteilt Ueberschriften gleichmaessig auf ihre Zeilen,
+   text-wrap: pretty verhindert einzelne Woerter am Absatzende. */
+body { letter-spacing: 0.01em; }
+
+h1, h2, h3, h4,
+.mm-hero-headline, .mm-why2-title, .mm-tallow-title, .mm-tst-title,
+.mm-pdp-studie-title, .mm-pdp-routine-title, .mm-pdp-principle-title,
+.mm-hk-title, .mm-pdp-compare-title, .mm-pdp-faq-title, .mm-pdp-reviews-title,
+.mm-bs-title, .mm-h2 { text-wrap: balance; }
+
+p, li,
+.mm-tallow-lead, .mm-tallow-sub, .mm-hero-subline, .mm-why2-lead,
+.mm-pdp-principle-sub, .mm-pdp-routine-sub, .mm-hk-lead, .mm-r3-sub,
+.mm-bs-sub, .mm-bs-benefit { text-wrap: pretty; }
+
+/* ---------- Warenkorb-Drawer (App "OCU"): Gold gezielt einsetzen ----------
+   Vorgabe 07.08.: es gab zu viele Goldelemente - Schliessen-Kreuz, Bildrahmen,
+   Rabatt-Chips, Mengenwaehler, Trennlinie, Upsell-Buttons und Kasse-Button
+   waren alle in --mm-gold. Dadurch fuehrte nichts mehr das Auge.
+
+   Gold bleibt nur an zwei Stellen: dem Kasse-Button und dem Fortschrittsbalken
+   zum Gratisartikel. Alles andere wird zu Graphit oder Weiss.
+   !important ist noetig, die App gibt ihr CSS inline nach diesem Asset aus. */
+.ocu-cart-drawer img.ocu-image.border,
+.ocu-cart-drawer .ocu-image.border { border-color: var(--mm-graphite) !important; }
+
+.ocu-cart-drawer .ocu-cart-line-item-product-discount {
+  background: rgba(198, 176, 116, 0.12) !important;
+  color: var(--mm-gold-soft) !important;
+}
+.ocu-cart-drawer .ocu-quantity { border-color: var(--mm-graphite) !important; }
+.ocu-cart-drawer .ocu-cart-footer { border-top-color: var(--mm-graphite) !important; }
+
+/* Upsell-Button auf den Vorschlagskarten: klein und zurueckgenommen.
+   Er war 30x30 in vollem Weiss und damit der lauteste Punkt im Drawer, obwohl
+   er nur ein Nebenweg ist. Jetzt 26x26, nur leicht hinterlegt mit Haarlinie,
+   Icon in Weiss.
+   Die Icon-Farbe setzt die App per Inline-Custom-Property (#262626) - eine
+   !important-Deklaration im Stylesheet schlaegt auch einen Inline-Wert. */
+.ocu-cart-drawer .ocu-add-to-cart__icon {
+  width: 26px !important; height: 26px !important;
+  min-width: 26px !important; min-height: 26px !important;
+  padding: 0 !important;
+  background: rgba(250, 250, 248, 0.10) !important;
+  border: 1px solid var(--mm-graphite) !important;
+  border-radius: 6px !important;
+  color: var(--mm-fg) !important;
+  --ocu-add-icon-color: #FAFAF8 !important;
+  --ocu-add-icon-hover-color: #C6B074 !important;
+}
+.ocu-cart-drawer .ocu-add-to-cart__icon svg {
+  width: 13px !important; height: 13px !important;
+  fill: currentColor !important; color: var(--mm-fg) !important;
+}
+.ocu-cart-drawer .ocu-add-to-cart__icon:hover {
+  background: rgba(250, 250, 248, 0.18) !important;
+  border-color: var(--mm-gold-line) !important;
+}
+
+/* Schliessen-Kreuz ohne Goldrahmen */
+.ocu-cart-drawer [class*="close"] { border-color: var(--mm-graphite) !important; }
+.ocu-cart-drawer [class*="close"] svg { color: var(--mm-fg) !important; fill: currentColor !important; }
+
+/* ---------- Footer: Social-Icons groesser ----------
+   Gemessen waren sie 20x23px und gingen im Footer unter. 2.8rem sind rund 29px,
+   die Tap-Flaeche bleibt durch das Padding des Links bei ueber 44px. */
+/* Die Icons stecken in .svg-wrapper, der in base.css fest auf 20x20 steht -
+   deshalb blieb die Breite bei 20px, egal was auf dem svg stand. Gross gesetzt
+   wird also der Wrapper, das svg fuellt ihn aus. */
+.footer .list-social__link .svg-wrapper { width: 2.8rem !important; height: 2.8rem !important; }
+.footer .list-social__item .icon { height: 100% !important; width: 100% !important; }
+.footer .list-social__link { padding: 0.9rem; }
+
+/* ---------- Footer: kompakter, klare Reihenfolge ----------
+   Vorgabe 07.08.: die Links standen mit rund 94px Zeilenabstand untereinander,
+   der Footer war dadurch 691px hoch. Der Link selbst traegt 1rem Padding oben
+   und unten (Theme-Regel), dazu kam der Listenabstand. Jetzt 0.55rem, die
+   Tap-Flaeche bleibt mit 38px plus Zeilenhoehe ausreichend.
+
+   Reihenfolge im Markup: Links, Social, Trennlinie, Zahlungsarten, Copyright.
+   Die Links kommen aus der Shopify-Navigation "footer". */
+.footer-block__details-content .list-menu__item--link { padding: 0.55rem 0 !important; }
+.footer .footer-block__details-content { margin-bottom: 2rem; }
+.footer .footer__content-top { padding-bottom: 0; }
+.footer .footer__content-bottom { border-top: 1px solid var(--mm-graphite); padding-top: 20px; margin-top: 8px; }
+.footer .footer__copyright { font-size: 11px; letter-spacing: 0.06em; color: var(--mm-fg-muted); }
+
+/* ---------- Rechtsseiten (Impressum, AGB, Datenschutz, Widerruf, Versand) ----------
+   Vorgabe 07.08.: Textgroesse, Hierarchie und Padding. Vorher lief alles in
+   einer Groesse durch, die Zwischentitel waren kaum staerker als der Fliesstext
+   und oben klebte die Ueberschrift mit 15px am Header.
+
+   Gilt fuer die schmalen Inhaltsseiten (.page-width--narrow), also alle
+   Rechtstexte, nicht fuer die gestalteten Landingpages. */
+.template-page .page-width--narrow { padding-top: 28px; padding-bottom: 40px; }
+.template-page .page-width--narrow h1 {
+  font-family: var(--mm-font-display); font-weight: 600;
+  font-size: 34px; line-height: 1.1; margin: 0 0 28px; color: var(--mm-fg);
+}
+.template-page .page-width--narrow .rte h2,
+.template-page .page-width--narrow .rte h3 {
+  font-family: var(--mm-font-display); font-weight: 600;
+  font-size: 21px; line-height: 1.2; margin: 34px 0 10px; color: var(--mm-fg);
+}
+.template-page .page-width--narrow .rte p {
+  font-size: 15px; line-height: 1.65; color: var(--mm-fg-muted); margin: 0 0 16px;
+}
+.template-page .page-width--narrow .rte strong { color: var(--mm-fg); font-weight: 700; }
+.template-page .page-width--narrow .rte a { color: var(--mm-fg); text-decoration: underline; }
+
+/* Impressum: die Einleitungszeile ueber der Firmierung als goldenes Label,
+   damit der Block eine Ueberschrift hat statt direkt loszulaufen. */
+.page-impressum .page-width--narrow .rte > p:first-of-type {
+  font-size: 12px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase;
+  color: var(--mm-gold-soft); margin-bottom: 14px;
+}
+
+/* ---------- Seite "Bestellung verfolgen" ----------
+   Das Formular gehoert zum 17TRACK-Widget und stand vorher als nacktes
+   Browser-Standardfeld mit grauem "TRACK"-Knopf da. Jetzt eine Variante:
+   Feld und Button beide vollflaechig untereinander, wie die Formulare im
+   restlichen Shop. Die Klassen stehen im Seiteninhalt, die Optik hier. */
+.mm-track { max-width: 420px; margin: 0 auto; }
+.mm-track__lead { font-size: 15px; line-height: 1.65; color: var(--mm-fg-muted); margin: 0 0 24px; text-wrap: pretty; }
+.mm-track__lead a { color: var(--mm-fg); text-decoration: underline; }
+.mm-track__label {
+  display: block; margin-bottom: 8px;
+  font-size: 11px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--mm-fg-muted);
+}
+.mm-track__input {
+  display: block; width: 100%; box-sizing: border-box;
+  min-height: 52px; padding: 14px 16px; margin: 0 0 12px;
+  background: var(--mm-charcoal); color: var(--mm-fg);
+  border: 1px solid var(--mm-graphite); border-radius: var(--mm-radius-btn);
+  font-family: var(--mm-font-body); font-size: 15px; letter-spacing: 0.01em;
+}
+.mm-track__input::placeholder { color: var(--mm-stone); }
+.mm-track__input:focus { outline: none; border-color: var(--mm-gold-soft); }
+.mm-track__btn {
+  display: block; width: 100%; min-height: 52px; padding: 15px 26px;
+  background: var(--mm-alabaster); color: var(--mm-onyx);
+  border: 0; border-radius: var(--mm-radius-btn); cursor: pointer;
+  font-family: var(--mm-font-body); font-size: 14px; font-weight: 700; letter-spacing: 0.02em;
+}
+.mm-track__btn:hover { background: var(--mm-gold-soft); }
+.mm-track__result { margin-top: 28px; }
+
+/* ---------- Mobil: der Footer soll beim ersten Laden nicht schon sichtbar sein ----------
+   Auf kurzen Seiten (Bestellung verfolgen, Kontakt) stand er direkt unter dem
+   Inhalt im ersten Viewport. Mit der Mindesthoehe beginnt er immer unterhalb. */
+@media screen and (max-width: 749px) {
+  #MainContent { min-height: calc(100svh - 40px); }
+}
+
+/* ---------- Ein Button-Standard fuer den ganzen Shop ----------
+   Gemessen am 07.08. gab es sechs Varianten: 36px hoch ohne Padding, 40px, 49px
+   mit 17px/18px, 52px mit 16px/40px, 53px, 54px - dazu Radien von 6px, 9px und
+   10px und Schriftgroessen von 10px bis 14px, teils uppercase, teils nicht.
+
+   Standard ab jetzt:
+     Hoehe    min 52px
+     Padding  15px 26px
+     Radius   var(--mm-radius-btn) = 9px
+     Schrift  14px, weight 700, normale Schreibweise, 0.02em Laufweite
+
+   Gilt fuer alle eigenen CTAs und den Warenkorb-Button der PDP. Kleine
+   Sekundaerlinks (Textlinks, "Mehr lesen") sind bewusst nicht dabei. */
+.mm-btn,
+.mm-bs-cta,
+.mm-tallow-cta,
+.mm-why2-cta,
+.mm-tallow-sticky-cta,
+.mm-track__btn,
+.mm-hero-cta,
+.mm-sc-cta,
+.mmb-cta,
+.mmp-cta,
+product-form .product-form__submit {
+  min-height: 52px !important;
+  padding: 15px 26px !important;
+  border-radius: var(--mm-radius-btn) !important;
+  font-family: var(--mm-font-body) !important;
+  font-size: 14px !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.02em !important;
+  text-transform: none !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  text-align: center !important;
+}
+
+/* Karten-CTAs in den Produktkacheln bleiben etwas kompakter, sonst sprengen sie
+   die 170px breite Kachel - aber mit demselben Radius und derselben Schrift. */
+.mm-bs-collection-grid .mm-bs-cta,
+.mm-bs-slider .mm-bs-cta,
+.mm-bs-grid .mm-bs-cta {
+  min-height: 44px !important;
+  padding: 12px 16px !important;
+  font-size: 13px !important;
+}
+
+/* Zusammengesetzte Woerter, die nicht am Bindestrich umbrechen sollen.
+   "Geld-zurück-Garantie." brach sonst nach "Geld-" um und liess
+   "zurück-Garantie." allein auf der letzten Zeile stehen. */
+.mm-nowrap { white-space: nowrap; }

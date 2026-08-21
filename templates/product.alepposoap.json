@@ -1,0 +1,580 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-product",
+      "blocks": {
+        "loox_reviews_loox_rating_Kn3NFm": {
+          "type": "shopify://apps/loox-reviews/blocks/loox-rating/5c3b337f-fd14-4df5-b1d6-80ec13e6e28e",
+          "disabled": true,
+          "settings": {
+            "contentSize": 11,
+            "pattern": "([count] Bewertungen)",
+            "hideText": false,
+            "alignment": "",
+            "layout": "",
+            "textColor": "",
+            "starColor": "",
+            "showAllReviews": false,
+            "looxOpenFloatingWidget": false,
+            "emptyRatingWidget": false
+          }
+        },
+        "custom_liquid_BLVEzX": {
+          "type": "custom_liquid",
+          "name": "Social Proof",
+          "settings": {
+            "custom_liquid": "<div id='ss-social-proof'></div>"
+          },
+          "disabled": true
+        },
+        "6aaec6b2720b47da": {
+          "type": "shopify://apps/section-store/blocks/block-atc-style/d7a2e423-ea88-4344-b866-6d0fb487c3dd",
+          "settings": {
+            "background_color": "#fafaf8",
+            "text_color": "#191919",
+            "hover_background_color": "#c4a265",
+            "hover_text_color": "#191919",
+            "font_size": 0,
+            "font_weight": "default",
+            "border_style": "none",
+            "border_width": 1,
+            "border_color": "#fafaf8",
+            "border_radius": -1,
+            "padding_vertical": 0,
+            "background_effect": "none",
+            "gradient_color_end": "#333333",
+            "hover_effect": "shine_lift",
+            "animation": "none",
+            "button_icon": "arrow_right",
+            "use_custom_text": false,
+            "button_text": "Add to cart",
+            "show_price": false,
+            "round_price": false,
+            "compare_at_price_color": "#666666"
+          }
+        },
+        "title": {
+          "type": "title",
+          "settings": {}
+        },
+        "text_TmqRRT": {
+          "type": "text",
+          "settings": {
+            "text": "Rein gereinigt, spürbar geschmeidig",
+            "text_style": "uppercase"
+          }
+        },
+        "custom_liquid_wKDman": {
+          "type": "custom_liquid",
+          "disabled": true,
+          "settings": {
+            "custom_liquid": "<style>\n  .loox-rating-widget {\n    margin-top: 2px !important;\n    margin-bottom: 2px !important;\n  }\n  \n  [data-loox-rating-widget] {\n    margin-top: 2px !important;\n    margin-bottom: 2px !important;\n  }\n  \n  .loox_reviews_loox_rating_Kn3NFm {\n    margin-top: 2px !important;\n    margin-bottom: 2px !important;\n  }\n</style>"
+          }
+        },
+        "price": {
+          "type": "price",
+          "settings": {},
+          "disabled": true
+        },
+        "mm_pdp_bundle_buybox": {
+          "type": "custom_liquid",
+          "name": "MM PDP Redesign - Bundle Buybox (Mengen, kein Rabatt)",
+          "settings": {
+            "custom_liquid": "{{ 'mm-pdp-bundle-buybox.css' | asset_url | stylesheet_tag }}\n<script src=\"{{ 'mm-pdp-bundle-buybox.js' | asset_url }}\" defer=\"defer\"></script>\n<div class=\"mm-bb\" data-mm-bb>\n  <div class=\"mm-bb-head\"></div>\n  <div class=\"mm-bb-tiers\">\n<button type=\"button\" class=\"mm-bb-tier\" data-mm-bb-tier data-tier-key=\"1er\" data-preselect=\"true\" data-total=\"14.9\" data-items='[{\"id\": 53061778309462, \"quantity\": 1}]' aria-pressed=\"false\">\n<div class=\"mm-bb-tier-head\"><span class=\"mm-bb-tier-thumb\" style=\"background-image:url('https://menmansion.com/cdn/shop/files/menmansion-verlauf-gold-aleppo.png?v=1776688595&width=100')\"></span><span class=\"mm-bb-tier-info\"><span class=\"mm-bb-tier-name\">1x Aleppo Seife 190g</span><span class=\"mm-bb-tier-meta\">6–8 Wochen Vorrat</span></span><span class=\"mm-bb-tier-price\"><span class=\"mm-bb-tier-total\">14,90 €</span></span></div></button>\n<button type=\"button\" class=\"mm-bb-tier\" data-mm-bb-tier data-tier-key=\"2er\" data-preselect=\"false\" data-total=\"29.8\" data-items='[{\"id\": 53061778309462, \"quantity\": 2}]' aria-pressed=\"false\">\n<div class=\"mm-bb-tier-head\"><span class=\"mm-bb-tier-thumb\" style=\"background-image:url('https://menmansion.com/cdn/shop/files/menmansion-verlauf-gold-aleppo.png?v=1776688595&width=100')\"></span><span class=\"mm-bb-tier-info\"><span class=\"mm-bb-tier-name\">2x Aleppo Seife 190g</span><span class=\"mm-bb-tier-meta\">3–4 Monate Vorrat</span></span><span class=\"mm-bb-tier-price\"><span class=\"mm-bb-tier-total\">29,80 €</span></span></div></button>\n<button type=\"button\" class=\"mm-bb-tier\" data-mm-bb-tier data-tier-key=\"3er\" data-preselect=\"false\" data-total=\"44.7\" data-items='[{\"id\": 53061778309462, \"quantity\": 3}]' aria-pressed=\"false\">\n<div class=\"mm-bb-tier-head\"><span class=\"mm-bb-tier-thumb\" style=\"background-image:url('https://menmansion.com/cdn/shop/files/menmansion-verlauf-gold-aleppo.png?v=1776688595&width=100')\"></span><span class=\"mm-bb-tier-info\"><span class=\"mm-bb-tier-name\">3x Aleppo Seife 190g</span><span class=\"mm-bb-tier-meta\">4–6 Monate Vorrat</span></span><span class=\"mm-bb-tier-price\"><span class=\"mm-bb-tier-total\">44,70 €</span></span></div></button>\n  </div>\n<div class=\"mm-bb-static\" data-mm-bb-static>\n  <div class=\"mm-bb-sticky-price\">\n    <span class=\"mm-bb-sticky-price-main\">\n      <span class=\"mm-bb-sticky-total\" data-mm-bb-static-total>14,90 €</span>\n      <span class=\"mm-bb-sticky-compare\" data-mm-bb-static-compare hidden></span>\n    </span>\n    <span class=\"mm-bb-sticky-save\" data-mm-bb-static-save hidden></span>\n  </div>\n  <button type=\"button\" class=\"mm-bb-sticky-cta\" data-mm-bb-static-cta>In den Warenkorb</button>\n  <div class=\"mm-bb-sticky-trust\"><span>Kostenloser Versand</span><span>·</span><span>Handgemacht</span><span>·</span><span>100% Natürlich</span></div>\n</div>\n</div>\n<div class=\"mm-bb-sticky\" data-mm-bb-sticky>\n  <div class=\"mm-bb-sticky-price\">\n    <span class=\"mm-bb-sticky-price-main\">\n      <span class=\"mm-bb-sticky-total\" data-mm-bb-sticky-total>14,90 €</span>\n      <span class=\"mm-bb-sticky-compare\" data-mm-bb-sticky-compare hidden></span>\n    </span>\n    <span class=\"mm-bb-sticky-save\" data-mm-bb-sticky-save hidden></span>\n  </div>\n  <button type=\"button\" class=\"mm-bb-sticky-cta\" data-mm-bb-cta>In den Warenkorb</button>\n  <div class=\"mm-bb-sticky-trust\"><span>Kostenloser Versand</span><span>·</span><span>Handgemacht</span><span>·</span><span>100% Natürlich</span></div>\n</div>"
+          }
+        },
+        "8d701c7b17d361e9": {
+          "type": "shopify://apps/section-store/blocks/block-badge/d7a2e423-ea88-4344-b866-6d0fb487c3dd",
+          "disabled": true,
+          "settings": {
+            "first_title": "🇩🇪 Handmade in Germany",
+            "first_bg_color": "#2a2a2a",
+            "first_title_color": "#fafaf8",
+            "second_title": "🧴 100% Natural Ingredients",
+            "second_bg_color": "#2a2a2a",
+            "second_title_color": "#fafaf8",
+            "third_title": "🛡️ 30-Day Satisfaction Guarantee",
+            "third_bg_color": "#2a2a2a",
+            "third_title_color": "#fafaf8",
+            "title_size": 12,
+            "font_weight": "bold",
+            "card_border": "solid",
+            "card_border_width": 0.5,
+            "card_border_color": "#3a3a3a",
+            "card_radius": 10,
+            "card_align": "left",
+            "background_gradient": "",
+            "padding_vertical": 4,
+            "padding_sides": 0
+          }
+        },
+        "section_store_block_benefits_list_xwp3mB": {
+          "type": "shopify://apps/section-store/blocks/block-benefits-list/d7a2e423-ea88-4344-b866-6d0fb487c3dd",
+          "settings": {
+            "items_gap": 10,
+            "first_text": "<p><strong>1.200 Jahre bewährte Reinigung</strong></p>",
+            "second_text": "<p><strong>Eine Seife ersetzt Gesichtsreiniger, Rasierseife und Körperseife</strong></p>",
+            "third_text": "<p><strong>Dezenter, erdiger Duft – rein aus natürlichem Lorbeeröl</strong></p>",
+            "fourth_text": "<p><strong>Hält bei täglicher Anwendung 6–8 Wochen</strong></p>",
+            "icon_selection": "icon_2",
+            "icon_size": 20,
+            "custom_icon": "shopify://shop_images/menmansion-icon-checkmark_b488c175-ec8e-4d1e-a2f5-5ade59cea816.svg",
+            "icon_color": "#000000",
+            "text_size": 14,
+            "text_color": "#fafaf8",
+            "content_align": "left",
+            "border": "none",
+            "border_thickness": 1,
+            "border_color": "#000000",
+            "radius": 0,
+            "background": "",
+            "background_gradient": "",
+            "padding_vertical": 10,
+            "padding_horizontal": 0
+          },
+          "disabled": true
+        },
+        "custom_liquid_nPaeiV": {
+          "type": "custom_liquid",
+          "name": "Customer Needs",
+          "settings": {
+            "custom_liquid": "<div class=\"mm-skin-types\">\n  <p class=\"mm-skin-types__label\">Geeignet für:</p>\n  <div class=\"mm-skin-types__grid\">\n    <div class=\"mm-skin-types__item\">\n      <div class=\"mm-skin-types__icon\">\n        <img src=\"https://cdn.shopify.com/s/files/1/0779/4583/1766/files/TROCKENE_HAUT.svg?v=1774872404\" alt=\"Normale + trockene Haut\" />\n      </div>\n      <span class=\"mm-skin-types__text\">Normale + trockene Haut</span>\n    </div>\n    <div class=\"mm-skin-types__item\">\n      <div class=\"mm-skin-types__icon\">\n        <img src=\"https://cdn.shopify.com/s/files/1/0779/4583/1766/files/UNREINE_HAUT.svg?v=1774872405\" alt=\"Unreine Haut\" />\n      </div>\n      <span class=\"mm-skin-types__text\">Unreine Haut</span>\n    </div>\n    <div class=\"mm-skin-types__item\">\n      <div class=\"mm-skin-types__icon\">\n        <img src=\"https://cdn.shopify.com/s/files/1/0779/4583/1766/files/RASUR.svg?v=1775647281\" alt=\"Nach der Rasur\" />\n      </div>\n      <span class=\"mm-skin-types__text\">Nach der Rasur</span>\n    </div>\n  </div>\n</div>\n<style>\n  .mm-skin-types {\n    padding: 16px 0 8px;\n    border-top: 1px solid rgba(175, 152, 65, 0.2);\n    margin-top: 4px;\n  }\n  .mm-skin-types__label {\n    font-size: 11px;\n    letter-spacing: 0.12em;\n    text-transform: uppercase;\n    color: #FAFAF8;\n    margin: 0 0 14px 0;\n    font-weight: 700;\n  }\n  .mm-skin-types__grid {\n    display: flex;\n    gap: 0;\n    align-items: flex-start;\n  }\n  .mm-skin-types__item {\n    flex: 1;\n    display: flex;\n    flex-direction: column;\n    align-items: center;\n    gap: 8px;\n    padding: 0 8px;\n    border-right: 1px solid rgba(255, 255, 255, 0.08);\n  }\n  .mm-skin-types__item:last-child {\n    border-right: none;\n  }\n  .mm-skin-types__icon {\n    width: 60px;\n    height: 60px;\n  }\n  .mm-skin-types__icon img {\n    width: 100%;\n    height: 100%;\n    object-fit: contain;\n  }\n  .mm-skin-types__text {\n    font-size: 11px;\n    color: #FAFAF8;\n    text-align: center;\n    letter-spacing: 0.04em;\n    line-height: 1.3;\n  }\n</style>"
+          }
+        },
+        "variant_picker": {
+          "type": "variant_picker",
+          "disabled": true,
+          "settings": {
+            "picker_type": "dropdown",
+            "swatch_shape": "circle"
+          }
+        },
+        "quantity_selector": {
+          "type": "quantity_selector",
+          "disabled": true,
+          "settings": {}
+        },
+        "description": {
+          "type": "description",
+          "disabled": true,
+          "settings": {}
+        },
+        "9b8c4c92124ab94f": {
+          "type": "shopify://apps/section-store/blocks/block-shipping-info/d7a2e423-ea88-4344-b866-6d0fb487c3dd",
+          "settings": {
+            "use_dot": true,
+            "icon_color": "#2e9613",
+            "icon_size": 12,
+            "ships_by_text": "Lieferung am",
+            "shipping_within_days": 3,
+            "include_weekend": false,
+            "ships_by_font_size": 13,
+            "ships_by_text_color": "#fafaf8",
+            "fast_shipping_text": "COUNTRY_FLAG Kostenloser Versand",
+            "allow_all_countries": true,
+            "allowed_countries": "DE,AT,CH,US,FR,IT",
+            "fast_shipping_text_for_rest_countries": "Fast International Shipping",
+            "fast_shipping_text_color": "#fafaf8",
+            "border_style": "solid",
+            "border_width": 0.5,
+            "border_color": "#3a3a3a",
+            "border_radius": 10,
+            "bg_color": "#232323",
+            "padding_vertical": 8,
+            "padding_horizontal": 15
+          }
+        },
+        "custom_liquid_gCgaR8": {
+          "type": "custom_liquid",
+          "name": "Trust Badges",
+          "settings": {
+            "custom_liquid": "<div id='ss-trust-badges-3'></div>"
+          },
+          "disabled": true
+        },
+        "sternify_sternify_bundle_pDeFci": {
+          "type": "shopify://apps/sternify/blocks/sternify_bundle/fcc6e879-7d9e-4924-b387-68cfab68cec6",
+          "settings": {
+            "Abstand_oben": 0,
+            "Abstand_unten": 0,
+            "product": "{{product}}"
+          }
+        },
+        "upsell_koala_bundles_deals_block_MdWfcb": {
+          "type": "shopify://apps/upsell-koala-bundles/blocks/deals-block/2b951f75-113f-4fca-bdf3-c92703235716",
+          "disabled": true,
+          "settings": {
+            "product": "{{product}}"
+          }
+        },
+        "buy_buttons": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_dynamic_checkout": false,
+            "show_gift_card_recipient": false
+          },
+          "disabled": true
+        },
+        "section_store_block_pulse_badge_7CY8ME": {
+          "type": "shopify://apps/section-store/blocks/block-pulse-badge/d7a2e423-ea88-4344-b866-6d0fb487c3dd",
+          "disabled": true,
+          "settings": {
+            "content_align": "left",
+            "use_indicator": false,
+            "pulse_icon_size": 12,
+            "pulse_icon_color": "#2e9613",
+            "text": "<p>Auf Lager | In 2-4 Tagen bei dir</p>",
+            "text_size": 14,
+            "auto_text_weight": "normal",
+            "text_color": "#c5c5c5",
+            "border": "none",
+            "border_thickness": 1,
+            "border_color": "#000000",
+            "radius": 0,
+            "background": "",
+            "padding_top": 0,
+            "padding_bottom": 0,
+            "padding_left": 10,
+            "padding_right": 0
+          }
+        },
+        "custom_liquid_NXtaV6": {
+          "type": "custom_liquid",
+          "name": "Payment Badges",
+          "settings": {
+            "custom_liquid": "<div class=\"ultimate-badges\"></div>"
+          },
+          "disabled": true
+        },
+        "icon_with_text_e6QTFJ": {
+          "type": "icon-with-text",
+          "settings": {
+            "layout": "horizontal",
+            "icon_1": "truck",
+            "image_1": "shopify://shop_images/Lieferwagen-Icon.svg",
+            "heading_1": "Schneller Versand",
+            "icon_2": "return",
+            "image_2": "shopify://shop_images/0010-1888629712853834890.png",
+            "heading_2": "30 Tage Rückgabe-Garantie",
+            "icon_3": "heart",
+            "image_3": "shopify://shop_images/Person.svg",
+            "heading_3": "+10.000 glückliche Kunden"
+          },
+          "disabled": true
+        },
+        "b4cc2f39fdba867b": {
+          "type": "shopify://apps/section-store/blocks/block-comments/d7a2e423-ea88-4344-b866-6d0fb487c3dd",
+          "disabled": true,
+          "settings": {
+            "content_alignment": "center",
+            "comment_verified_badge_position": "inline",
+            "slide_style": "dots",
+            "autoplay": 4,
+            "comment_1": "#(Markus T.) Endlich eine Creme die nicht fettet. Meine Haut fühlt sich nach 2 Wochen deutlich ruhiger und gepflegter an. Absolut empfehlenswert!",
+            "comment_2": "#(Luca S.) Hatte immer Probleme mit trockener Haut nach der Rasur. Diese Creme zieht sofort ein und meine Haut spannt nicht mehr. Top Qualität.",
+            "comment_3": "#(Jonas K.) Bin von Rindertalg-Pflege überzeugt. Rötungen sind deutlich zurückgegangen. Kaufe definitiv nach.",
+            "avatar_border_radius": 100,
+            "avatar_size": 44,
+            "author_font_size": 13,
+            "author_font_color": "#fafaf8",
+            "star_style": "mild",
+            "star_color": "#af9841",
+            "item_border_style": "solid",
+            "item_border_width": 0.5,
+            "item_border_color": "#3a3a3a",
+            "item_border_radius": 12,
+            "item_bg_color": "#232323",
+            "item_padding_vertical": 14,
+            "item_padding_horizontal": 16
+          }
+        },
+        "custom_liquid_ktbqHQ": {
+          "type": "custom_liquid",
+          "name": "Product Tabs",
+          "settings": {
+            "custom_liquid": "<div id='ss-tabs-icon-insert-block'></div>"
+          }
+        },
+        "upsell_koala_bundles_bundle_app_block_i6xPty": {
+          "type": "shopify://apps/upsell-koala-bundles/blocks/bundle-app-block/2b951f75-113f-4fca-bdf3-c92703235716",
+          "settings": {
+            "product": "{{product}}"
+          }
+        },
+        "mm_pdp_assets": {
+          "type": "custom_liquid",
+          "name": "MM PDP Redesign - Assets",
+          "settings": {
+            "custom_liquid": "{{ 'mm-pdp-clearskinset.css' | asset_url | stylesheet_tag }}\n<script src=\"{{ 'mm-pdp-clearskinset.js' | asset_url }}\" defer=\"defer\"></script>\n<style>\n  product-info[data-product-id=\"{{ product.id }}\"] .product__title h2 { font-family: var(--mm-font-display); font-weight: 600; }\n  product-info[data-product-id=\"{{ product.id }}\"] .caption-with-letter-spacing { font-family: var(--mm-font-body); color: var(--mm-gold-soft); letter-spacing: 0.14em; }\n  product-info[data-product-id=\"{{ product.id }}\"] .product-form__submit.button--primary {\n    background: var(--mm-alabaster);\n    color: var(--mm-onyx);\n    border: 0;\n    border-radius: 10px;\n    font-family: var(--mm-font-body);\n    font-weight: 700;\n    font-size: 11px;\n    text-transform: uppercase;\n    letter-spacing: 0.14em;\n    padding: 17px 18px;\n    transition: background 150ms var(--mm-ease);\n  }\n  product-info[data-product-id=\"{{ product.id }}\"] .product-form__submit.button--primary:hover {\n    background: var(--mm-gold);\n  }\n  product-info[data-product-id=\"{{ product.id }}\"] product-form,\n  product-info[data-product-id=\"{{ product.id }}\"] .product-form,\n  product-info[data-product-id=\"{{ product.id }}\"] .product-form__buttons {\n    margin-top: 0;\n  }\n  product-info[data-product-id=\"{{ product.id }}\"] a[href=\"#looxReviewsFrame\"] {\n    display: inline-flex !important;\n    margin: 0 !important;\n    padding: 0 !important;\n  }\n  product-info[data-product-id=\"{{ product.id }}\"] .loox-rating {\n    margin: 0 !important;\n    padding: 0 !important;\n  }\n</style>"
+          }
+        },
+        "mm_pdp_price_cta": {
+          "type": "custom_liquid",
+          "name": "MM PDP Redesign - Preis + Spare-Chip + Einzelwert",
+          "settings": {
+            "custom_liquid": "{%- liquid\n  assign variant = product.selected_or_first_available_variant\n  assign compare = variant.compare_at_price\n-%}\n<div class=\"mm-pdp-price-row\">\n  <div class=\"mm-pdp-price-line\">\n    <span class=\"mm-pdp-price-total\">{{ variant.price | money_without_currency }} €</span>\n    {%- if compare > variant.price -%}\n      {%- assign save = compare | minus: variant.price -%}\n      <span class=\"mm-pdp-price-save\">Spare {{ save | money_without_currency }} €</span>\n    {%- endif -%}\n  </div>\n  {%- if compare > variant.price -%}\n    <span class=\"mm-pdp-price-compare\">(Einzelwert {{ compare | money_without_currency }} €)</span>\n  {%- endif -%}\n</div>"
+          },
+          "disabled": true
+        },
+        "mm_pdp_guarantee_card": {
+          "type": "custom_liquid",
+          "name": "MM PDP Redesign - 30-Tage-Garantie",
+          "settings": {
+            "custom_liquid": "<div class=\"mm-pdp-guarantee\">\n  <svg width=\"28\" height=\"28\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\"><path d=\"M12 3l7 3v5c0 4.5-3 8.5-7 10-4-1.5-7-5.5-7-10V6l7-3z\"></path><path d=\"M9 12l2 2 4-4\"></path></svg>\n  <div>\n    <div class=\"mm-pdp-guarantee-title\">30 Tage Garantie</div>\n    <p class=\"mm-pdp-guarantee-text\">Nicht zufrieden? Kein Problem. Du hast 30 Tage Zeit, das Produkt zurückzuschicken - ohne Wenn und Aber. Das ist unser Versprechen.</p>\n  </div>\n</div>"
+          }
+        },
+        "mm_pdp_trust_row": {
+          "type": "custom_liquid",
+          "name": "MM PDP Redesign - Trust-Zeile",
+          "settings": {
+            "custom_liquid": "<div class=\"mm-pdp-trust-row\">\n  <span><svg width=\"15\" height=\"15\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\"><path d=\"M12 21s-6.5-5.2-6.5-10.2A6.5 6.5 0 0 1 12 4.3a6.5 6.5 0 0 1 6.5 6.5C18.5 15.8 12 21 12 21z\"></path><circle cx=\"12\" cy=\"10.8\" r=\"2.2\"></circle></svg>Handgemacht in Deutschland</span>\n  <span><svg width=\"15\" height=\"15\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\"><path d=\"M3 7h11v10H3z\"></path><path d=\"M14 10h4l3 3v4h-7\"></path><circle cx=\"7\" cy=\"17\" r=\"1.6\"></circle><circle cx=\"17\" cy=\"17\" r=\"1.6\"></circle></svg>Lieferung in 1–3 Werktagen</span>\n</div>"
+          }
+        },
+        "mm_pdp_step2_tiers": {
+          "type": "custom_liquid",
+          "name": "MM PDP Redesign - Schritt 2 Mengen (hidden bis Freigabe)",
+          "disabled": true,
+          "settings": {
+            "custom_liquid": "{%- liquid\n  assign variant = product.selected_or_first_available_variant\n  assign breaks = variant.quantity_price_breaks | sort: 'quantity'\n-%}\n<div class=\"mm-pdp-step-head\"><span></span></div>\n<div class=\"mm-pdp-tiers\" data-mm-tier-group data-section-id=\"{{ section.id }}\">\n  <button type=\"button\" class=\"mm-pdp-tier\" data-mm-tier data-quantity=\"1\" aria-pressed=\"true\">\n    <span class=\"mm-pdp-tier-radio\"></span>\n    <span class=\"mm-pdp-tier-body\">\n      <span class=\"mm-pdp-tier-name-row\"><span class=\"mm-pdp-tier-name\">1× Set</span></span>\n      <span class=\"mm-pdp-tier-sub\">Für den Einstieg</span>\n    </span>\n    <span class=\"mm-pdp-tier-price\"><span class=\"mm-pdp-tier-total\">{{ variant.price | money }}</span></span>\n  </button>\n  {%- for price_break in breaks -%}\n  {%- assign break_total = price_break.price | times: price_break.quantity -%}\n  {%- assign compare_total = variant.price | times: price_break.quantity -%}\n  <button type=\"button\" class=\"mm-pdp-tier\" data-mm-tier data-quantity=\"{{ price_break.quantity }}\" aria-pressed=\"false\">\n    <span class=\"mm-pdp-tier-radio\"></span>\n    <span class=\"mm-pdp-tier-body\">\n      <span class=\"mm-pdp-tier-name-row\">\n        <span class=\"mm-pdp-tier-name\">{{ price_break.quantity }}er Vorrat</span>\n        <span class=\"mm-pdp-tier-save\">Spare {{ compare_total | minus: break_total | money }}</span>\n      </span>\n      <span class=\"mm-pdp-tier-sub\">Mengenvorteil</span>\n    </span>\n    <span class=\"mm-pdp-tier-price\">\n      <span class=\"mm-pdp-tier-total\">{{ break_total | money }}</span>\n      <span class=\"mm-pdp-tier-compare\">{{ compare_total | money }}</span>\n    </span>\n  </button>\n  {%- endfor -%}\n</div>"
+          }
+        },
+        "mm_pdp_description": {
+          "type": "custom_liquid",
+          "name": "MM PDP Redesign - Description",
+          "settings": {
+            "custom_liquid": "<p style=\"font-size: 13px; font-weight: 300; color: #FAFAF8; font-family: var(--font-body); line-height: 1.6; margin: 0; padding: 12px 0 8px;\">\nZwei Inhaltsstoffe, ein Jahrtausend bewährt. Olivenöl reinigt sanft, Lorbeeröl wirkt antibakteriell und beruhigend - ein Produkt statt drei.\n</p>"
+          }
+        },
+        "mm_pdp_trust_bullets": {
+          "type": "custom_liquid",
+          "name": "MM PDP Redesign - Trust-Bullets (Haken-Icon)",
+          "settings": {
+            "custom_liquid": "<div class=\"mm-pdp-trust-bullets\">\n  <span class=\"mm-pdp-trust-bullet\"><span class=\"mm-pdp-trust-check\">✓</span>1.200 Jahre bewährte Reinigung</span>\n  <span class=\"mm-pdp-trust-bullet\"><span class=\"mm-pdp-trust-check\">✓</span>Ersetzt Gesichtsreiniger, Rasierseife und Körperseife</span>\n  <span class=\"mm-pdp-trust-bullet\"><span class=\"mm-pdp-trust-check\">✓</span>Hält bei täglicher Anwendung 6–8 Wochen</span>\n</div>"
+          }
+        },
+        "mm_pdp_details_accordion": {
+          "type": "custom_liquid",
+          "name": "MM PDP Redesign - Produktdetails Akkordeon",
+          "settings": {
+            "custom_liquid": "<div class=\"mm-pdp-accordion\">\n  <div class=\"mm-pdp-accordion-row\" data-mm-accordion>\n    <div class=\"mm-pdp-accordion-head\" data-mm-accordion-toggle>\n      <span class=\"mm-pdp-accordion-label\">Beschreibung</span>\n      <span class=\"mm-pdp-accordion-mark\" data-mm-accordion-mark>+</span>\n    </div>\n    <div class=\"mm-pdp-accordion-body\" data-mm-accordion-body hidden>\n      <h2>Reinigung, die funktioniert. Seit über 1.200 Jahren.</h2>\n      <p>Die meisten Männer waschen ihr Gesicht mit Produkten, die vollgepackt sind mit Schaumstoffen, Konservierungsmitteln und synthetischen Duftstoffen. Sie reinigen die Haut – und trocknen sie gleichzeitig aus.</p>\n      <p>Die Men Mansion Aleppo-Seife macht das Gegenteil.</p>\n      <p>Zwei Inhaltsstoffe. Olivenöl und Lorbeeröl. Mehr braucht es nicht. Das Olivenöl reinigt die Haut sanft, ohne sie auszutrocknen. Das Lorbeeröl wirkt antibakteriell, beruhigt gereizte Haut und pflegt die Hautbarriere.</p>\n      <p>Geeignet für Gesicht, Körper und Rasur. Ein Produkt statt drei.</p>\n      <p>Handgemacht in Aleppo, Syrien. Nach traditioneller Rezeptur. Seit 1.200 Jahren.</p>\n    </div>\n  </div>\n  <div class=\"mm-pdp-accordion-row\" data-mm-accordion>\n    <div class=\"mm-pdp-accordion-head\" data-mm-accordion-toggle>\n      <span class=\"mm-pdp-accordion-label\">Inhaltsstoffe &amp; Wirkung</span>\n      <span class=\"mm-pdp-accordion-mark\" data-mm-accordion-mark>+</span>\n    </div>\n    <div class=\"mm-pdp-accordion-body\" data-mm-accordion-body hidden>\n      <p><strong>Was drin ist – und warum es seit Jahrhunderten funktioniert.</strong></p>\n      <p><strong>Olivenöl (Olea Europaea)</strong><br>Das Fundament der Formel. Reinigt, ohne auszutrocknen und nährt die Hautbarriere mit jedem Waschgang. Reich an natürlichem Vitamin E.</p>\n      <p><strong>Lorbeeröl (Laurus Nobilis)</strong><br>Das Geheimnis der Aleppo-Seife. Wirkt antibakteriell und entzündungshemmend, beruhigt gereizte Haut. Bei der Rasur desinfiziert es kleine Schnitte und verhindert Rasurbrand. Stammt direkt aus syrischer Ernte.</p>\n      <p>INCI: Sodium Olivate, Sodium Laurelate, Aqua, Sodium Hydroxide</p>\n    </div>\n  </div>\n  <div class=\"mm-pdp-accordion-row\" data-mm-accordion>\n    <div class=\"mm-pdp-accordion-head\" data-mm-scroll-to=\"#mm-pdp-routine-anchor\">\n      <span class=\"mm-pdp-accordion-label\">Anwendung</span>\n      <span class=\"mm-pdp-accordion-scroll-hint\"><span class=\"mm-pdp-accordion-scroll-label\">Zur Routine</span><span class=\"mm-pdp-accordion-arrow\">↓</span></span>\n    </div>\n  </div>\n  <div class=\"mm-pdp-accordion-row\" data-mm-accordion>\n    <div class=\"mm-pdp-accordion-head\" data-mm-accordion-toggle>\n      <span class=\"mm-pdp-accordion-label\">Versand &amp; Rückgabe</span>\n      <span class=\"mm-pdp-accordion-mark\" data-mm-accordion-mark>+</span>\n    </div>\n    <div class=\"mm-pdp-accordion-body\" data-mm-accordion-body hidden>\n      <p><strong>Versand aus Deutschland. Schnell und zuverlässig.</strong></p>\n      <p>Alle Bestellungen werden aus unserem Lager in Rottenburg versendet – innerhalb von 1–2 Werktagen nach Auftragseingang.</p>\n      <p><strong>Lieferzeit:</strong><br>Deutschland, Österreich, Schweiz - 2–4 Werktage</p>\n      <p><strong>Kostenloser Versand</strong> ab €60 Bestellwert.</p>\n      <p>Nicht zufrieden? Kein Problem. Du hast 30 Tage Zeit, das Produkt zurückzuschicken – ohne Wenn und Aber.</p>\n    </div>\n  </div>\n</div>"
+          }
+        },
+        "mm_pdp_trust_chips": {
+          "type": "custom_liquid",
+          "name": "MM PDP Redesign - Trust-Chips",
+          "settings": {
+            "custom_liquid": "<div class=\"mm-pdp-trust-chips\">\n  <span class=\"mm-pdp-trust-chip\"><span class=\"mm-pdp-trust-chip-dot\"></span>100% Natürlich</span>\n  <span class=\"mm-pdp-trust-chip\"><span class=\"mm-pdp-trust-chip-dot\"></span>Handgemacht</span>\n  <span class=\"mm-pdp-trust-chip\"><span class=\"mm-pdp-trust-chip-dot\"></span>Made in Germany</span>\n</div>"
+          }
+        },
+        "mm_pdp_social_proof": {
+          "type": "custom_liquid",
+          "name": "MM PDP Redesign - Social Proof",
+          "settings": {
+            "custom_liquid": "<div class=\"mm-pdp-social-proof\">\n  <div class=\"mm-pdp-social-proof-avatars\">\n    <img src=\"https://menmansion.com/cdn/shop/files/IMG_2572.jpg?width=80\" alt=\"\" loading=\"lazy\">\n    <img src=\"https://menmansion.com/cdn/shop/files/0002-8194805062219929543.png?width=80\" alt=\"\" loading=\"lazy\">\n    <img src=\"https://menmansion.com/cdn/shop/files/0003-1890891485917242492.png?width=80\" alt=\"\" loading=\"lazy\">\n  </div>\n  <p class=\"mm-pdp-social-proof-text\">Dermatologisch getestet <span class=\"mm-pdp-social-proof-verified\">✓</span> + <strong>10.000 Männern</strong> benutzen täglich!</p>\n</div>"
+          }
+        }
+      },
+      "block_order": [
+        "mm_pdp_assets",
+        "loox_reviews_loox_rating_Kn3NFm",
+        "title",
+        "text_TmqRRT",
+        "custom_liquid_wKDman",
+        "mm_pdp_description",
+        "mm_pdp_trust_bullets",
+        "custom_liquid_nPaeiV",
+        "mm_pdp_trust_chips",
+        "mm_pdp_social_proof",
+        "price",
+        "mm_pdp_bundle_buybox",
+        "mm_pdp_price_cta",
+        "9b8c4c92124ab94f",
+        "sternify_sternify_bundle_pDeFci",
+        "upsell_koala_bundles_deals_block_MdWfcb",
+        "buy_buttons",
+        "6aaec6b2720b47da",
+        "mm_pdp_guarantee_card",
+        "mm_pdp_trust_row",
+        "b4cc2f39fdba867b",
+        "mm_pdp_details_accordion",
+        "custom_liquid_ktbqHQ",
+        "custom_liquid_BLVEzX",
+        "8d701c7b17d361e9",
+        "section_store_block_benefits_list_xwp3mB",
+        "variant_picker",
+        "quantity_selector",
+        "description",
+        "custom_liquid_gCgaR8",
+        "section_store_block_pulse_badge_7CY8ME",
+        "custom_liquid_NXtaV6",
+        "icon_with_text_e6QTFJ"
+      ],
+      "settings": {
+        "enable_sticky_info": true,
+        "color_scheme": "",
+        "media_size": "small",
+        "constrain_to_viewport": true,
+        "media_fit": "contain",
+        "gallery_layout": "thumbnail_slider",
+        "media_position": "left",
+        "image_zoom": "lightbox",
+        "mobile_thumbnails": "show",
+        "hide_variants": true,
+        "enable_video_looping": true,
+        "padding_top": 20,
+        "padding_bottom": 20
+      }
+    },
+    "1772107123a1310b71": {
+      "type": "apps",
+      "blocks": {
+        "loox_reviews_loox_dynamic_section_LybneF": {
+          "type": "shopify://apps/loox-reviews/blocks/loox-dynamic-section/5c3b337f-fd14-4df5-b1d6-80ec13e6e28e",
+          "settings": {
+            "reviews_to_display": "product_reviews_only",
+            "default_tab": "automatic",
+            "only_photos": false,
+            "aggregated": false,
+            "limit": 10,
+            "hide_thumbnails": false,
+            "maxwidth": 1080,
+            "is_sample": true
+          }
+        }
+      },
+      "block_order": [
+        "loox_reviews_loox_dynamic_section_LybneF"
+      ],
+      "settings": {
+        "include_margins": true
+      }
+    },
+    "45f77b37-82dc-4dcd-aab6-662315b32360": {
+      "type": "rich-text",
+      "blocks": {
+        "template--19956043415894__45f77b37-82dc-4dcd-aab6-662315b32360-heading-1": {
+          "type": "heading",
+          "settings": {
+            "heading": "Oft zusammen gekauft",
+            "heading_size": "h1"
+          }
+        }
+      },
+      "block_order": [
+        "template--19956043415894__45f77b37-82dc-4dcd-aab6-662315b32360-heading-1"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "background-1",
+        "full_width": true,
+        "padding_top": 20,
+        "padding_bottom": 0
+      }
+    },
+    "related-products": {
+      "type": "mm-pdp-related",
+      "settings": {
+        "heading": "",
+        "heading_size": "h1",
+        "products_to_show": 4,
+        "color_scheme": "background-1"
+      }
+    },
+    "mm_pdp_comparison_section": {
+      "type": "custom-liquid",
+      "settings": {
+        "custom_liquid": "<div class=\"mm-pdp-compare\">\n  \n  <h2 class=\"mm-pdp-compare-title\">Men Mansion vs.<br>andere Marken</h2>\n  <div class=\"mm-pdp-compare-table\">\n    <div class=\"mm-pdp-compare-row mm-pdp-compare-head\">\n      <span class=\"mm-pdp-compare-head-why\"><span class=\"mm-pdp-compare-why-label\">Warum</span>{%- if settings.logo != blank -%}<img class=\"mm-pdp-compare-logo\" src=\"{{ settings.logo | image_url: width: 300 }}\" alt=\"{{ shop.name }}\" loading=\"lazy\">{%- else -%}<span class=\"mm-pdp-compare-why-name\">Men Mansion</span>{%- endif -%}</span>\n      <span class=\"mm-pdp-compare-head-mm\"><span class=\"mm-pdp-compare-thumb\"><img src=\"{{ 'mm-tallow-tiegel.png' | asset_url }}\" alt=\"Men Mansion Tallow Gesichtscreme\" loading=\"lazy\" width=\"46\" height=\"46\"></span></span>\n      <span class=\"mm-pdp-compare-head-other\"><span class=\"mm-pdp-compare-thumb\"><img src=\"{{ 'mm-andere-tiegel.png' | asset_url }}\" alt=\"Andere Marken\" loading=\"lazy\" width=\"46\" height=\"46\"></span></span>\n    </div>\n    <div class=\"mm-pdp-compare-row\"><span class=\"mm-pdp-compare-label\">Handgefertigt in kleinen Chargen</span><span class=\"mm-pdp-compare-cell-us\"><span class=\"mm-pdp-compare-badge mm-pdp-compare-badge--yes\"><svg width=\"13\" height=\"13\" viewBox=\"0 0 16 16\" fill=\"none\"><path d=\"M3 8.5L6.5 12L13 4\" stroke=\"currentColor\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg></span></span><span class=\"mm-pdp-compare-cell-them\"><span class=\"mm-pdp-compare-badge mm-pdp-compare-badge--no\"><svg width=\"13\" height=\"13\" viewBox=\"0 0 16 16\" fill=\"none\"><path d=\"M4 4L12 12M12 4L4 12\" stroke=\"currentColor\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg></span></span></div>\n    <div class=\"mm-pdp-compare-row\"><span class=\"mm-pdp-compare-label\">Natürliche Wirkstoffe</span><span class=\"mm-pdp-compare-cell-us\"><span class=\"mm-pdp-compare-badge mm-pdp-compare-badge--yes\"><svg width=\"13\" height=\"13\" viewBox=\"0 0 16 16\" fill=\"none\"><path d=\"M3 8.5L6.5 12L13 4\" stroke=\"currentColor\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg></span></span><span class=\"mm-pdp-compare-cell-them\"><span class=\"mm-pdp-compare-badge mm-pdp-compare-badge--no\"><svg width=\"13\" height=\"13\" viewBox=\"0 0 16 16\" fill=\"none\"><path d=\"M4 4L12 12M12 4L4 12\" stroke=\"currentColor\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg></span></span></div>\n    <div class=\"mm-pdp-compare-row\"><span class=\"mm-pdp-compare-label\">Enthält Silikone &amp; Mineralöl</span><span class=\"mm-pdp-compare-cell-us\"><span class=\"mm-pdp-compare-badge mm-pdp-compare-badge--no\"><svg width=\"13\" height=\"13\" viewBox=\"0 0 16 16\" fill=\"none\"><path d=\"M4 4L12 12M12 4L4 12\" stroke=\"currentColor\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg></span></span><span class=\"mm-pdp-compare-cell-them\"><span class=\"mm-pdp-compare-badge mm-pdp-compare-badge--yes\"><svg width=\"13\" height=\"13\" viewBox=\"0 0 16 16\" fill=\"none\"><path d=\"M3 8.5L6.5 12L13 4\" stroke=\"currentColor\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg></span></span></div>\n    <div class=\"mm-pdp-compare-row\"><span class=\"mm-pdp-compare-label\">Eigene Manufaktur, keine Massenware</span><span class=\"mm-pdp-compare-cell-us\"><span class=\"mm-pdp-compare-badge mm-pdp-compare-badge--yes\"><svg width=\"13\" height=\"13\" viewBox=\"0 0 16 16\" fill=\"none\"><path d=\"M3 8.5L6.5 12L13 4\" stroke=\"currentColor\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg></span></span><span class=\"mm-pdp-compare-cell-them\"><span class=\"mm-pdp-compare-badge mm-pdp-compare-badge--no\"><svg width=\"13\" height=\"13\" viewBox=\"0 0 16 16\" fill=\"none\"><path d=\"M4 4L12 12M12 4L4 12\" stroke=\"currentColor\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg></span></span></div>\n    <div class=\"mm-pdp-compare-row\"><span class=\"mm-pdp-compare-label\">Sichtbare Ergebnisse nach wenigen Tagen</span><span class=\"mm-pdp-compare-cell-us\"><span class=\"mm-pdp-compare-badge mm-pdp-compare-badge--yes\"><svg width=\"13\" height=\"13\" viewBox=\"0 0 16 16\" fill=\"none\"><path d=\"M3 8.5L6.5 12L13 4\" stroke=\"currentColor\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg></span></span><span class=\"mm-pdp-compare-cell-them\"><span class=\"mm-pdp-compare-badge mm-pdp-compare-badge--no\"><svg width=\"13\" height=\"13\" viewBox=\"0 0 16 16\" fill=\"none\"><path d=\"M4 4L12 12M12 4L4 12\" stroke=\"currentColor\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg></span></span></div>\n    <div class=\"mm-pdp-compare-row\"><span class=\"mm-pdp-compare-label\">Künstliche Duft- &amp; Farbstoffe</span><span class=\"mm-pdp-compare-cell-us\"><span class=\"mm-pdp-compare-badge mm-pdp-compare-badge--no\"><svg width=\"13\" height=\"13\" viewBox=\"0 0 16 16\" fill=\"none\"><path d=\"M4 4L12 12M12 4L4 12\" stroke=\"currentColor\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg></span></span><span class=\"mm-pdp-compare-cell-them\"><span class=\"mm-pdp-compare-badge mm-pdp-compare-badge--yes\"><svg width=\"13\" height=\"13\" viewBox=\"0 0 16 16\" fill=\"none\"><path d=\"M3 8.5L6.5 12L13 4\" stroke=\"currentColor\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg></span></span></div>\n  </div>\n</div>",
+        "color_scheme": "background-1",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "mm_pdp_deepdives_section": {
+      "type": "custom-liquid",
+      "settings": {
+        "custom_liquid": "<div class=\"mm-pdp-deepdive-group\">\n  <div class=\"mm-pdp-deepdive\">\n    <img class=\"mm-pdp-deepdive-img\" src=\"https://menmansion.com/cdn/shop/files/menmansion-verlauf-gold-aleppo.png?v=1776688595&width=1445\" alt=\"Aleppo Seife\">\n    <div class=\"mm-pdp-deepdive-body\">\n      \n      <h2 class=\"mm-pdp-deepdive-title\">Aleppo Seife</h2>\n      <p class=\"mm-pdp-deepdive-text\">Traditionell hergestellt auf Basis von Oliven- und Lorbeeröl. Reinigt gründlich, ohne die Haut auszutrocknen - ein Produkt statt drei.</p>\n      <div class=\"mm-pdp-deepdive-checks\">\n        <span><span class=\"mm-pdp-check\">✓</span>Entfernt Schmutz und überschüssigen Talg</span>\n        <span><span class=\"mm-pdp-check\">✓</span>Naturreine Öle, keine synthetischen Tenside</span>\n        <span><span class=\"mm-pdp-check\">✓</span>Trocknet die Haut nicht aus</span>\n      </div>\n    </div>\n  </div>\n</div>",
+        "color_scheme": "background-1",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "mm_pdp_herkunft_section": {
+      "type": "custom-liquid",
+      "settings": {
+        "custom_liquid": "<div class=\"mm-pdp-herkunft\">\n  <img class=\"mm-pdp-herkunft-img\" src=\"https://menmansion.com/cdn/shop/files/menmansion-verlauf-gold-aleppo.png?v=1776688595&width=1200\" alt=\"Die Essenz des Orients\">\n  <div class=\"mm-pdp-herkunft-body\">\n    \n    <h2 class=\"mm-pdp-herkunft-title\">Die Essenz des Orients</h2>\n    <p class=\"mm-pdp-herkunft-text\">Im Jahr 800 n. Chr. wussten Männer bereits, was funktioniert. In den alten Manufakturen von Aleppo, einer Stadt, die Händlern auf der Seidenstraße als Referenz galt, wurde eine Seife hergestellt, deren Rezeptur sich bis heute nicht verändert hat.</p>\n    <details class=\"mm-pdp-herkunft-more\">\n      <summary><span class=\"mm-pdp-herkunft-more-open\">Mehr lesen</span><span class=\"mm-pdp-herkunft-more-close\">Weniger anzeigen</span></summary>\n      <p class=\"mm-pdp-herkunft-text\">Olivenöl und Lorbeeröl, sorgfältig gemischt, monatelang gereift, von Hand gestempelt. Neu definiert für den Gentleman, der auf Qualität besteht.</p>\n    </details></div>\n</div>",
+        "color_scheme": "background-1",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "mm_pdp_ingredients_section": {
+      "type": "custom-liquid",
+      "settings": {
+        "custom_liquid": "<div class=\"mm-pdp-ingredients\">\n  \n  <h2 class=\"mm-pdp-ingredients-title\">Die Magie dahinter</h2>\n  <div class=\"mm-pdp-ingredients-grid\">\n    <div class=\"mm-pdp-ingredient-card\">\n      <img class=\"mm-pdp-ingredient-img\" src=\"https://menmansion.com/cdn/shop/files/1_e639d59c-2556-48b4-aef6-c172181c5d16.png?v=1775740856&width=300\" alt=\"Olivenöl\">\n      <div class=\"mm-pdp-ingredient-body\">\n        <h3 class=\"mm-pdp-ingredient-title\">Olivenöl</h3>\n        <p class=\"mm-pdp-ingredient-text\">Reinigt sanft und nährt die Haut mit natürlichen Lipiden und Vitamin E.</p>\n        <div class=\"mm-pdp-ingredient-origin\"><span class=\"mm-pdp-ingredient-origin-label\">Herkunft</span>Erstpressung aus Aleppo</div>\n      </div>\n    </div>\n    <div class=\"mm-pdp-ingredient-card\">\n      <img class=\"mm-pdp-ingredient-img\" src=\"https://menmansion.com/cdn/shop/files/2_6eaa1df9-a9cf-4713-9a4f-17c9a426f1ed.png?v=1775740856&width=300\" alt=\"Lorbeeröl\">\n      <div class=\"mm-pdp-ingredient-body\">\n        <h3 class=\"mm-pdp-ingredient-title\">Lorbeeröl</h3>\n        <p class=\"mm-pdp-ingredient-text\">Antibakteriell, beruhigend, entzündungshemmend. Das Herzstück der Formel.</p>\n        <div class=\"mm-pdp-ingredient-origin\"><span class=\"mm-pdp-ingredient-origin-label\">Herkunft</span>Traditionell gewonnen aus syrischen Lorbeerbäumen in Aleppo</div>\n      </div>\n    </div>\n  </div>\n</div>",
+        "color_scheme": "background-1",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "mm_pdp_routine_section": {
+      "type": "custom-liquid",
+      "settings": {
+        "custom_liquid": "{{ 'mm-pdp-routine3.css' | asset_url | stylesheet_tag }}\n<section class=\"mm-r3\" id=\"mm-pdp-routine-anchor\">\n  <div class=\"mm-r3-inner\">\n\n    <header class=\"mm-r3-head\">\n      <h2 class=\"mm-r3-title\">Die Routine. <span>In 2 Steps.</span></h2>\n      <p class=\"mm-r3-sub\">Reinigung mit Aleppo-Seife, Pflege mit Tallow - ohne unnötige Schritte</p>\n    </header>\n\n    <ol class=\"mm-r3-track\" id=\"mm-r3-track\">\n      <li class=\"mm-r3-card\">\n        <div class=\"mm-r3-media\">\n          <img src=\"https://menmansion.com/cdn/shop/files/IMG_1680.jpg?v=1775741337&width=800\" alt=\"Reinigen\" loading=\"lazy\" width=\"800\" height=\"600\">\n          <span class=\"mm-r3-fade\"></span>\n          <span class=\"mm-r3-num\">01</span>\n        </div>\n        <div class=\"mm-r3-body\">\n          <div class=\"mm-r3-row\"><h3>Reinigen</h3></div>\n          <p>Reinige dein Gesicht mit der Aleppo-Seife und lauwarmem Wasser, um Schmutz und überschüssigen Talg zu entfernen. Die Haut wird sanft vorbereitet - ohne auszutrocknen.</p>\n        </div>\n      </li>\n      <li class=\"mm-r3-card\">\n        <div class=\"mm-r3-media\">\n          <img src=\"https://menmansion.com/cdn/shop/files/tallow_6717dc4e-91c8-4004-9713-4f01e1b18f4b.png?v=1776688595&width=800\" alt=\"Pflegen\" loading=\"lazy\" width=\"800\" height=\"600\">\n          <span class=\"mm-r3-fade\"></span>\n          <span class=\"mm-r3-num\">02</span>\n        </div>\n        <div class=\"mm-r3-body\">\n          <div class=\"mm-r3-row\"><h3>Pflegen</h3></div>\n          <p>Danach die Tallow Gesichtscreme auftragen und einmassieren. Die hautähnlichen Lipide stärken die Hautbarriere und ziehen vollständig ein.</p>\n        </div>\n      </li>\n    </ol>\n\n    <div class=\"mm-r3-dots\" id=\"mm-r3-dots\" hidden>\n      <button type=\"button\" data-i=\"0\" aria-label=\"Schritt 1\"><span></span></button>\n      <button type=\"button\" data-i=\"1\" aria-label=\"Schritt 2\"><span></span></button>\n    </div>\n\n  </div>\n</section>\n\n<script>\n(function () {\n  var track = document.getElementById('mm-r3-track');\n  var dots  = document.getElementById('mm-r3-dots');\n  if (!track || !dots || !track.children.length) return;\n  var btns = dots.querySelectorAll('button');\n  function stepWidth() {\n    if (track.children.length > 1) return track.children[1].offsetLeft - track.children[0].offsetLeft;\n    return track.children[0].getBoundingClientRect().width;\n  }\n  function sync() {\n    var scrollable = track.scrollWidth - track.clientWidth > 8;\n    dots.hidden = !scrollable;\n    if (!scrollable) return;\n    var step = stepWidth();\n    if (!step) return;\n    var i = Math.min(btns.length - 1, Math.round(track.scrollLeft / step));\n    for (var n = 0; n < btns.length; n++) btns[n].setAttribute('aria-current', n === i ? 'true' : 'false');\n  }\n  for (var b = 0; b < btns.length; b++) {\n    btns[b].addEventListener('click', function () {\n      var el = track.children[+this.dataset.i];\n      if (el) track.scrollTo({ left: el.offsetLeft - track.offsetLeft, behavior: 'smooth' });\n    });\n  }\n  track.addEventListener('scroll', sync, { passive: true });\n  window.addEventListener('resize', sync);\n  sync();\n})();\n</script>",
+        "color_scheme": "background-1",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "mm_pdp_reviews_header_section": {
+      "type": "custom-liquid",
+      "settings": {
+        "custom_liquid": "{%- liquid\n  assign rating = product.metafields.loox.avg_rating\n  assign review_count = product.metafields.loox.num_reviews\n  if rating != blank\n    assign rating_display = rating | replace: '.', ','\n    assign rounded = rating | round\n  else\n    assign rating_display = '4,8'\n    assign review_count = 398\n    assign rounded = 5\n  endif\n-%}\n<div class=\"mm-pdp-reviews\">\n  <div class=\"mm-pdp-reviews-head\">\n    <div>\n      \n      <h2 class=\"mm-pdp-reviews-title\">Was Männer über uns sagen</h2>\n    </div>\n    <div class=\"mm-pdp-reviews-summary\">\n      <span class=\"mm-pdp-reviews-avg\">{{ rating_display }}</span>\n      <div class=\"mm-pdp-reviews-summary-body\">\n        <div class=\"mm-pdp-reviews-stars\">{% for i in (1..5) %}{% if i <= rounded %}★{% else %}<span style=\"color:var(--mm-graphite)\">★</span>{% endif %}{% endfor %}</div>\n        <div class=\"mm-pdp-reviews-total\">{{ review_count }} verifizierte Bewertungen</div>\n      </div>\n    </div>\n  </div>\n\n  <div class=\"mm-pdp-reviews-more-head\">\n    \n    <span class=\"mm-pdp-reviews-swipe-hint\">Wischen →</span>\n  </div>\n\n  <div\n    class=\"mm-pdp-reviews-grid\"\n    data-mm-reviews-grid\n    data-product-id=\"{{ product.id }}\"\n    data-fallback-image=\"{{ product.featured_image | image_url: width: 400 }}\"\n    data-fallback-product-name=\"{{ product.title | escape }}\"\n  ></div>\n  <div class=\"mm-pdp-reviews-more-wrap\">\n    <button type=\"button\" class=\"mm-pdp-reviews-cta mm-pdp-reviews-more\" data-mm-reviews-more hidden>Mehr Bewertungen</button>\n  </div>\n</div>",
+        "color_scheme": "background-1",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "mm_pdp_faq_section": {
+      "type": "custom-liquid",
+      "settings": {
+        "custom_liquid": "<div class=\"mm-pdp-faq\">\n  \n  <h2 class=\"mm-pdp-faq-title\">Deine Fragen. Unsere Antworten.</h2>\n  <div class=\"mm-pdp-accordion\">\n    <div class=\"mm-pdp-accordion-row\" data-mm-accordion>\n      <div class=\"mm-pdp-accordion-head\" data-mm-accordion-toggle>\n        <span class=\"mm-pdp-accordion-label\">Wofür eignet sich die Aleppo-Seife?</span>\n        <span class=\"mm-pdp-accordion-mark\" data-mm-accordion-mark>+</span>\n      </div>\n      <div class=\"mm-pdp-accordion-body\" data-mm-accordion-body hidden>\n        <p>Für Gesicht, Körper und Rasur - sie ersetzt Gesichtsreiniger, Rasierseife und Körperseife in einem einzigen Produkt.</p>\n      </div>\n    </div>\n    <div class=\"mm-pdp-accordion-row\" data-mm-accordion>\n      <div class=\"mm-pdp-accordion-head\" data-mm-accordion-toggle>\n        <span class=\"mm-pdp-accordion-label\">Welche Inhaltsstoffe sind enthalten?</span>\n        <span class=\"mm-pdp-accordion-mark\" data-mm-accordion-mark>+</span>\n      </div>\n      <div class=\"mm-pdp-accordion-body\" data-mm-accordion-body hidden>\n        <p>Nur zwei: Olivenöl (Olea Europaea) und Lorbeeröl (Laurus Nobilis), nach traditioneller Rezeptur handgemacht in Aleppo, Syrien.</p>\n      </div>\n    </div>\n    <div class=\"mm-pdp-accordion-row\" data-mm-accordion>\n      <div class=\"mm-pdp-accordion-head\" data-mm-accordion-toggle>\n        <span class=\"mm-pdp-accordion-label\">Wie lange hält ein Stück Seife?</span>\n        <span class=\"mm-pdp-accordion-mark\" data-mm-accordion-mark>+</span>\n      </div>\n      <div class=\"mm-pdp-accordion-body\" data-mm-accordion-body hidden>\n        <p>Bei täglicher Anwendung 6–8 Wochen.</p>\n      </div>\n    </div>\n    <div class=\"mm-pdp-accordion-row\" data-mm-accordion>\n      <div class=\"mm-pdp-accordion-head\" data-mm-accordion-toggle>\n        <span class=\"mm-pdp-accordion-label\">Wie lange dauert der Versand?</span>\n        <span class=\"mm-pdp-accordion-mark\" data-mm-accordion-mark>+</span>\n      </div>\n      <div class=\"mm-pdp-accordion-body\" data-mm-accordion-body hidden>\n        <p>Versand aus unserem Lager in Rottenburg, Deutschland - innerhalb von 1–2 Werktagen nach Auftragseingang. Lieferzeit in Deutschland, Österreich und der Schweiz: 2–4 Werktage. Kostenloser Versand ab 60 € Bestellwert.</p>\n      </div>\n    </div>\n    <div class=\"mm-pdp-accordion-row\" data-mm-accordion>\n      <div class=\"mm-pdp-accordion-head\" data-mm-accordion-toggle>\n        <span class=\"mm-pdp-accordion-label\">Was, wenn mir das Produkt nicht gefällt?</span>\n        <span class=\"mm-pdp-accordion-mark\" data-mm-accordion-mark>+</span>\n      </div>\n      <div class=\"mm-pdp-accordion-body\" data-mm-accordion-body hidden>\n        <p>Du hast 30 Tage Zeit, das Produkt zurückzuschicken - ohne Wenn und Aber. Das ist unser Versprechen.</p>\n      </div>\n    </div>\n  </div>\n</div>",
+        "color_scheme": "background-1",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "mm_pdp_sticky_cta_section": {
+      "type": "custom-liquid",
+      "settings": {
+        "custom_liquid": "{{ 'mm-pdp-sticky-cta.css' | asset_url | stylesheet_tag }}\n{%- liquid\n  assign sc_variant = product.selected_or_first_available_variant\n  assign sc_price = sc_variant.price\n  assign sc_compare = sc_variant.compare_at_price\n-%}\n<div class=\"mm-sc\" id=\"mm-sc\" aria-hidden=\"true\">\n  <div class=\"mm-sc-info\">\n    <span class=\"mm-sc-title\">{{ product.title }}</span>\n    <span class=\"mm-sc-prices\">\n      <span class=\"mm-sc-price\">{{ sc_price | money_without_currency }} €</span>\n      {%- if sc_compare > sc_price -%}\n        <span class=\"mm-sc-compare\">{{ sc_compare | money_without_currency }} €</span>\n      {%- endif -%}\n    </span>\n  </div>\n  <button type=\"button\" class=\"mm-btn mm-btn--primary mm-sc-cta\" id=\"mm-sc-cta\">Bundle wählen</button>\n</div>\n\n<script>\n(function () {\n  var bar = document.getElementById('mm-sc');\n  // In der Theme-Vorschau liegt die Shopify-Leiste unten drueber und verdeckt die\n  // Sticky-Bar komplett. Nur dort nach oben versetzen, auf dem Shop bleibt sie unten.\n  if (bar && /shopifypreview\\.com$/.test(location.hostname)) bar.classList.add('is-preview');\n  var cta = document.getElementById('mm-sc-cta');\n  if (!bar || !cta) return;\n\n  // Ab hier soll die Leiste erscheinen: die Vorher/Nachher-Section.\n  var trigger = document.querySelector('.mm-pdp-ba') || document.querySelector('.mm-pdp-principle');\n  // Ziel des Klicks: die Bundle-Auswahl in der Buybox (Koala-Widget),\n  // ersatzweise der Kaufbereich.\n  function target() {\n    return document.querySelector('koala-quantity-breaks-embed')\n      || document.querySelector('koala-quantity-breaks-app-block')\n      || document.querySelector('.koala-deal')\n      || document.querySelector('.product-form__buttons')\n      || document.querySelector('.product__info-container');\n  }\n\n  var ticking = false;\n  function sync() {\n    ticking = false;\n    if (!trigger) return;\n    var show = trigger.getBoundingClientRect().top < window.innerHeight * 0.6;\n    bar.classList.toggle('is-visible', show);\n    bar.setAttribute('aria-hidden', show ? 'false' : 'true');\n  }\n  function onScroll() {\n    if (ticking) return;\n    ticking = true;\n    window.requestAnimationFrame(sync);\n  }\n\n  cta.addEventListener('click', function () {\n    var el = target();\n    if (!el) return;\n    var header = document.querySelector('.section-header, sticky-header, header');\n    var offset = header ? header.getBoundingClientRect().height + 12 : 12;\n    var y = el.getBoundingClientRect().top + window.pageYOffset - offset;\n    window.scrollTo({ top: Math.max(0, y), behavior: 'smooth' });\n  });\n\n  window.addEventListener('scroll', onScroll, { passive: true });\n  window.addEventListener('resize', onScroll);\n  sync();\n})();\n</script>",
+        "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    }
+  },
+  "order": [
+    "main",
+    "mm_pdp_deepdives_section",
+    "mm_pdp_herkunft_section",
+    "mm_pdp_ingredients_section",
+    "mm_pdp_routine_section",
+    "mm_pdp_comparison_section",
+    "mm_pdp_reviews_header_section",
+    "mm_pdp_faq_section",
+    "1772107123a1310b71",
+    "45f77b37-82dc-4dcd-aab6-662315b32360",
+    "related-products",
+    "mm_pdp_sticky_cta_section"
+  ]
+}

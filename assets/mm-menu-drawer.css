@@ -1,0 +1,231 @@
+/* ==========================================================================
+   MEN MANSION - Mobile-Menue (Drawer), CRO-Ausbau
+   Umsetzung des Referenz-Markups aus der Mobile-Menue-Spezifikation:
+   Suche, Angebots-Banner, Shop-Navigation mit Thumbnails, Produkt-Rail,
+   Service-Links, Trust-Zeile, Utility-Leiste.
+
+   Praefix mm-md-*. Die Dawn-Klassen (.menu-drawer, .menu-drawer__menu-item,
+   .menu-drawer__utility-links) bleiben bestehen, hier nur Ergaenzungen.
+
+   Werte 1:1 aus der Referenz:
+     Flaeche       #191919 (kommt vom Drawer selbst)
+     Feld/Karte    rgba(250,250,248,0.04)
+     Haarlinie     rgba(250,250,248,0.10)
+     Hover         rgba(250,250,248,0.08)
+     Badge Nav     rgba(250,250,248,0.14)
+     Badge Bild    rgba(14,14,14,0.85)
+     Utility       rgba(250,250,248,0.03)
+     Text          #FAFAF8, sekundaer var(--mm-fg-muted)
+     Einzug        31,5px
+     Transition    var(--duration-default) = 0,2s ease  (nicht --mm-dur-*)
+
+   Schriftgroessen in rem, in diesem Theme ist 1rem = 10,5px:
+     1.8rem = 18,9px   1.4rem = 14,7px   1.2rem = 12,6px   1rem = 10,5px
+
+   Kein Gold, keine Serif, keine Schatten. Verlaeufe nur als Banner-Scrim.
+
+   Zwei bewusste Abweichungen:
+   - Kein border-radius auf dem Drawer-Container. Der Drawer ist hier kein
+     schwebendes Sheet, sondern sitzt full-bleed unter der Header-Leiste
+     (position: absolute, top: 100%, width: 100%).
+   - Trust-Zeile mit "Versand in 1-2 Werktagen" statt "Versand in 24 h". Der
+     Shop sagt an allen anderen Stellen 1-2 Werktage, eine 24-Stunden-Zusage
+     waere eine neue und nicht belegte Aussage.
+   ========================================================================== */
+
+/* ---------- Scrollbereich ----------
+   Referenz: Kopf und Utility-Leiste stehen fest, nur die Mitte scrollt.
+   Dawn laesst dagegen den ganzen Grid-Container scrollen. Deshalb hier das
+   overflow von .menu-drawer__navigation-container auf .mm-md-scroll umziehen -
+   sonst braeuchte die Utility-Leiste position: sticky und ihre halbtransparente
+   Flaeche wuerde den durchlaufenden Inhalt zeigen. */
+.menu-drawer__navigation-container { overflow: hidden; }
+.mm-md-scroll { min-width: 0; min-height: 0; overflow-y: auto; -webkit-overflow-scrolling: touch; }
+/* Standard sind 3rem oben, hier reichen 24px - das Suchfeld bringt eigenen Abstand mit. */
+.mm-md-scroll .menu-drawer__navigation { padding: 24px 0 0; }
+
+/* ---------- 1. Angebots-Banner (das Suchfeld der Vorlage ist auf Wunsch raus) ---------- */
+.mm-md-offer {
+  display: block; margin: 12px 0 0; overflow: hidden;
+  text-decoration: none; color: var(--mm-fg);
+  background: rgba(250, 250, 248, 0.04);
+  border-top: 1px solid rgba(250, 250, 248, 0.1);
+  border-bottom: 1px solid rgba(250, 250, 248, 0.1);
+}
+/* display: block auf den span-Wrappern: die Bloecke liegen in <a>-Elementen und
+   sind deshalb spans, ohne display greift height nicht. */
+/* 176px statt der 150px aus der Spezifikation: gemessen wirkte der Kasten
+   dagegen zu flach. Die Fusszeile bleibt bei min-height 44px. */
+.mm-md-offer-media { display: block; position: relative; height: 176px; overflow: hidden; background: var(--mm-ink); }
+.mm-md-offer-media img { width: 100%; height: 100%; object-fit: cover; display: block; }
+/* Verlauf von links, damit die Copy links lesbar ist und das Motiv rechts steht. */
+.mm-md-offer-scrim {
+  display: block !important; /* base.css: div:empty { display: none } */
+  position: absolute; inset: 0; pointer-events: none;
+  background: linear-gradient(90deg, rgba(14, 14, 14, 0.92) 12%, rgba(14, 14, 14, 0.35) 78%);
+}
+/* font-smoothing: Die Headline stand schon auf font-weight 400, wirkte aber fett.
+   Grund ist die Schrift selbst - SuisseIntl-Medium ist der einzige Schnitt der
+   Body-Font, einen leichteren gibt es im Theme nicht, und Weiss auf dunklem Grund
+   laesst sie zusaetzlich schwerer aussehen. antialiased statt subpixel-antialiased
+   duennt die Strichstaerke aus, ohne die Schriftart zu wechseln. */
+.mm-md-offer-copy {
+  position: absolute; inset: 0; pointer-events: none;
+  display: flex; flex-direction: column; justify-content: center; gap: 6px;
+  padding: 0 31.5px;
+  /* var(--mm-font-body) statt der geerbten SuisseIntl-Medium: der Token loest auf
+     "Suisse Intl" auf, und dieser Name ist im Theme NICHT als @font-face geladen -
+     es greift also der System-Font-Fallback. Genau damit rendert auch die Vorlage,
+     und genauso arbeiten .mm-btn und .mm-hero-trust schon heute. Das ist der Grund,
+     warum die Headline vorher fett wirkte: SuisseIntl-Medium ist der einzige
+     geladene Schnitt der Body-Font und damit deutlich kraeftiger. */
+  font-family: var(--mm-font-body);
+  -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale;
+}
+.mm-md-offer-label { display: block; font-weight: 400; font-size: 1.4rem; line-height: 1.3; letter-spacing: 0.6px; color: var(--mm-fg); }
+.mm-md-offer-title {
+  display: block; max-width: 270px; margin: 0; font-weight: 400;
+  font-size: 1.8rem; line-height: 1.29; letter-spacing: 0.63px; color: var(--mm-fg);
+}
+/* Fusszeile hoeher als die 44px der Spezifikation - in der Vorlage stand sie
+   luftiger, gemessen rund 56px. */
+.mm-md-offer-foot {
+  display: flex; align-items: center; justify-content: space-between; gap: 12px;
+  min-height: 56px; padding: 14px 31.5px;
+  border-top: 1px solid rgba(250, 250, 248, 0.1);
+  font-family: var(--mm-font-body);
+}
+.mm-md-offer-note { display: block; font-size: 1.4rem; line-height: 1.3; letter-spacing: 0.6px; color: var(--mm-fg-muted); }
+.mm-md-offer-cta {
+  flex: none; display: inline-flex; align-items: center; gap: 8px;
+  font-size: 1.2rem; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase;
+  color: var(--mm-fg);
+}
+/* viewBox des Theme-Icons ist 14x10, mit height 8px war der Pfeil gestaucht. */
+.mm-md-offer-cta svg { width: 15px; height: 11px; flex: none; display: block; }
+.mm-md-offer:hover .mm-md-offer-cta { color: var(--mm-fg-muted); }
+
+/* ---------- Sektions-Label ---------- */
+.mm-md-label {
+  margin: 0; padding: 0 31.5px 8px;
+  font-size: 1.4rem; line-height: 1.3; letter-spacing: 0.6px; color: var(--mm-fg-muted);
+}
+
+/* ---------- 3. Shop-Navigation ---------- */
+/* Groesse, Farbe und Padding der Zeile kommen aus .menu-drawer__menu-item,
+   hier nur Zeilenstruktur, Haarlinie und Hover. */
+.mm-md-nav-item,
+.mm-md-service-item {
+  border-top: 1px solid rgba(250, 250, 248, 0.1);
+  transition: background var(--duration-default) ease;
+}
+/* 76px statt der 63px aus der Spezifikation und 16px Innenabstand statt der
+   11,55px aus .menu-drawer__menu-item: mit Badge und Sub-Zeile war die Zeile
+   sonst gequetscht. */
+.mm-md-nav-item { display: flex; align-items: center; gap: 12px; min-height: 76px; padding: 16px 31.5px; }
+/* Gleiche Groesse wie .mm-md-nav-title, sonst waeren die Service-Links groesser als die
+   Kategorien. Ueberschreibt die 1.8rem aus .menu-drawer__menu-item. */
+.mm-md-service-item { display: flex; align-items: center; min-height: 47px; font-size: 1.5rem; }
+.menu-drawer__menu-item:hover { background: rgba(250, 250, 248, 0.08); }
+.mm-md-nav-text { display: flex; flex-direction: column; gap: 4px; min-width: 0; flex: 1; }
+.mm-md-nav-row { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+/* Kategorietitel kleiner als die 1.8rem aus .menu-drawer__menu-item: mit Badge und
+   Sub-Zeile darunter wirkte die Zeile sonst zu wuchtig. Die Service-Links bleiben
+   bei 1.8rem, die haben keine zweite Zeile. */
+.mm-md-nav-title { font-size: 1.5rem; line-height: 1.3; }
+/* 1.2rem und nowrap: "Bart · Gesicht · Körper · Haar" braucht damit gemessen 175px von
+   275px verfuegbarer Breite und bleibt sicher einzeilig. */
+.mm-md-nav-sub {
+  font-size: 1.2rem; line-height: 1.3; letter-spacing: 0.6px; color: var(--mm-fg-muted);
+  white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+}
+.mm-md-badge {
+  display: inline-flex; align-items: center; gap: 5px;
+  padding: 2px 7px; border-radius: 4px;
+  background: rgba(250, 250, 248, 0.14);
+  font-size: 1.2rem; line-height: 1.3; letter-spacing: 0.6px; color: var(--mm-fg);
+}
+.mm-md-badge svg { width: 13px; height: 13px; flex: none; }
+/* 48px auf Wunsch, die Vorlage hatte 40px. */
+.mm-md-thumb {
+  flex: none; width: 48px; height: 48px; border-radius: 10px;
+  object-fit: cover; background: var(--mm-ink); display: block;
+}
+
+/* ---------- 4. Produkt-Rail ---------- */
+.mm-md-rail-head {
+  display: flex; align-items: center; justify-content: space-between; gap: 12px;
+  padding: 16px 31.5px 12px;
+}
+.mm-md-rail-title { margin: 0; font-size: 1.4rem; line-height: 1.3; letter-spacing: 0.6px; color: var(--mm-fg); }
+.mm-md-rail-all { font-size: 1.4rem; line-height: 1.3; letter-spacing: 0.6px; color: var(--mm-fg-muted); text-decoration: none; }
+.mm-md-rail-all:hover { color: var(--mm-fg); }
+.mm-md-rail {
+  display: flex; align-items: stretch; gap: 12px;
+  padding: 0 31.5px 4px; margin: 0; list-style: none;
+  overflow-x: auto; scroll-snap-type: x mandatory;
+  /* scroll-padding-left ist Pflicht: ohne das schnappt der Browser beim Laden auf den
+     Start der ersten Karte (gemessen scrollLeft 32) und das Padding ist weggescrollt -
+     die erste Karte klebt dann am linken Rand. Gleiche Loesung wie .mm-bs-slider. */
+  scroll-padding-left: 31.5px;
+  -webkit-overflow-scrolling: touch; overscroll-behavior-x: contain; scrollbar-width: none;
+}
+.mm-md-rail::-webkit-scrollbar { display: none; }
+/* Flex-Items sind die <li>, nicht die Karten - deshalb liegt die Breite hier. */
+/* 192px statt 168px: bei 168px brach "Tallow Gesichtscreme® 50ml" auf drei Zeilen. */
+.mm-md-rail > li { flex: 0 0 192px; scroll-snap-align: start; display: flex; }
+.mm-md-card {
+  flex: 1; width: 100%;
+  display: flex; flex-direction: column;
+  text-decoration: none; color: var(--mm-fg);
+  background: rgba(250, 250, 248, 0.04);
+  border: 1px solid rgba(250, 250, 248, 0.1);
+  border-radius: 14px; overflow: hidden;
+}
+.mm-md-card-media { display: block; position: relative; height: 192px; background: var(--mm-ink); }
+.mm-md-card-media img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.mm-md-card-badge {
+  display: block; position: absolute; top: 8px; right: 8px; pointer-events: none;
+  padding: 2px 7px; border-radius: 4px;
+  background: rgba(14, 14, 14, 0.85);
+  font-size: 1rem; line-height: 1.35; letter-spacing: 0.4px; color: var(--mm-fg);
+}
+.mm-md-card-body { flex: 1; display: flex; flex-direction: column; gap: 4px; padding: 10px 12px 12px; }
+.mm-md-card-rating { display: block; font-size: 1rem; line-height: 1.35; letter-spacing: 0.4px; color: var(--mm-fg-muted); }
+.mm-md-card-title {
+  flex: 1; min-height: 34px; margin: 0;
+  font-family: var(--mm-font-body); font-weight: 400;
+  font-size: 1.2rem; line-height: 1.35; letter-spacing: 0.5px; color: var(--mm-fg);
+  display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden;
+}
+.mm-md-card-prices { margin-top: auto; display: flex; align-items: baseline; gap: 6px; flex-wrap: wrap; }
+.mm-md-card-price { display: block; font-size: 1.2rem; line-height: 1.35; letter-spacing: 0.5px; color: var(--mm-fg); }
+.mm-md-card-compare { display: block; font-size: 1rem; letter-spacing: 0.4px; color: var(--mm-fg-muted); text-decoration: line-through; }
+
+/* ---------- 5. Service-Block ---------- */
+.mm-md-service { padding-top: 20px; }
+.mm-md-service li:last-child .mm-md-service-item { border-bottom: 1px solid rgba(250, 250, 248, 0.1); }
+
+/* ---------- 6. Trust-Zeile ---------- */
+/* Zwei Spalten statt flex-wrap: so stehen "100 % natuerlich" und "30 Tage Rueckgabe"
+   auf derselben Kante. Die Trennpunkte kommen per ::before an die rechte Spalte,
+   als eigene Zellen wuerden sie das Raster sprengen. */
+.mm-md-trust {
+  display: grid; grid-template-columns: auto auto; justify-content: start;
+  column-gap: 14px; row-gap: 6px;
+  padding: 14px 31.5px 22px;
+  font-size: 1.2rem; line-height: 1.35; letter-spacing: 0.6px; color: var(--mm-fg-muted);
+}
+.mm-md-trust span:nth-child(2n)::before { content: "· "; }
+
+/* ---------- 7. Utility-Leiste ---------- */
+.menu-drawer__utility-links {
+  background: rgba(250, 250, 248, 0.03);
+  border-top: 1px solid rgba(250, 250, 248, 0.1);
+  padding: 20px 31.5px;
+}
+
+/* ---------- Ausnahme von "kein Gold im Menue" ----------
+   Vorgabe von Dominik 07.08.: enthaelt ein Satz das Wort "Gold", steht dieses
+   Wort im Goldton. Gilt nur fuer das Wort selbst, nicht fuer die ganze Zeile. */
+.mm-md-gold { color: var(--mm-gold-soft); }

@@ -1,0 +1,15 @@
+{%- assign labels = product.metafields.custom.labels.value -%}
+
+<div class="product-labels">
+  {%- for label in labels -%}
+    
+    {%- assign background_color = label.color -%}
+    {%- assign color_string = "" | append: background_color -%}
+    {%- assign text_color = color_string | color_lighten: 100 -%}  
+    
+    <small class="product-label" style="background-color: {{ background_color }}; color: {{ text_color }};">
+      {{ label.title }}
+    </small>
+    
+  {%- endfor -%}
+</div>

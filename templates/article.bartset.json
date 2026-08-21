@@ -1,0 +1,369 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-article",
+      "blocks": {
+        "featured_image": {
+          "type": "featured_image",
+          "settings": {
+            "image_height": "small"
+          }
+        },
+        "title": {
+          "type": "title",
+          "settings": {
+            "blog_show_date": false,
+            "blog_show_author": false
+          }
+        },
+        "content": {
+          "type": "content",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "featured_image",
+        "title",
+        "content"
+      ],
+      "disabled": true,
+      "settings": {}
+    },
+    "image_banner_WkrgBN": {
+      "type": "image-banner",
+      "blocks": {
+        "heading_At9CTa": {
+          "type": "heading",
+          "settings": {
+            "heading": "Bekomme einen dichten und gesunden Bart mit unserem Bartwachstumsset",
+            "heading_size": "h1"
+          }
+        },
+        "text_dNXwrY": {
+          "type": "text",
+          "settings": {
+            "text": "",
+            "text_style": "body"
+          }
+        }
+      },
+      "block_order": [
+        "heading_At9CTa",
+        "text_dNXwrY"
+      ],
+      "settings": {
+        "image": "shopify://shop_images/artwork_20.png",
+        "image_2": "shopify://shop_images/artwork_20.png",
+        "image_overlay_opacity": 30,
+        "image_height": "medium",
+        "desktop_content_position": "middle-center",
+        "show_text_box": false,
+        "desktop_content_alignment": "center",
+        "color_scheme": "",
+        "image_behavior": "none",
+        "mobile_content_alignment": "center",
+        "stack_images_on_mobile": true,
+        "show_text_below": false
+      }
+    },
+    "rich_text_iYt8K6": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_jfykCe": {
+          "type": "heading",
+          "settings": {
+            "heading": "Warum ein Bartwachstumsset der Schlüssel zu deinem perfekten Bart ist",
+            "heading_size": "h1"
+          }
+        },
+        "text_bNQTFc": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Ein voller, gesunder Bart steht für Männlichkeit, Stil und Selbstbewusstsein. Doch nicht jeder ist von Natur aus mit dichtem Bartwuchs gesegnet. Genau hier kommt unser <strong>Bartwachstumsset</strong> ins Spiel – die ultimative Lösung für männliche Gesichtspflege und kraftvollen Bartwuchs.</p><p>Unser Bartwachstumsset enthält alles, was du brauchst, um das Wachstum deiner Barthaare zu fördern, lückenhafte Stellen zu reduzieren und deinem Bart die Pflege zu geben, die er verdient. Die Kombination aus hochwertigen Inhaltsstoffen und innovativen Pflege-Tools sorgt dafür, dass dein Bart natürlich dichter und gesünder wächst.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_jfykCe",
+        "text_bNQTFc"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 20,
+        "padding_bottom": 20
+      }
+    },
+    "ss_before_after_5_gGgFQM": {
+      "type": "ss-before-after-5",
+      "settings": {
+        "content_align": "center",
+        "content_align_mobile": "center",
+        "title": "<h3>Das Bartwachstumsset - Vorher und Nachher</h3>",
+        "title_custom": false,
+        "title_font": "josefin_sans_n4",
+        "title_size": 36,
+        "title_size_mobile": 26,
+        "title_height": 130,
+        "text": "",
+        "text_custom": false,
+        "text_font": "josefin_sans_n4",
+        "text_size": 20,
+        "text_size_mobile": 16,
+        "text_height": 130,
+        "text_margin_top": 20,
+        "text_margin_top_mobile": 16,
+        "body_gap": 100,
+        "body_gap_mobile": 24,
+        "body_margin_top": 50,
+        "body_margin_top_mobile": 30,
+        "items_gap": 30,
+        "items_gap_mobile": 30,
+        "item_content_align": "center",
+        "item_content_align_mobile": "center",
+        "icon_size": 44,
+        "icon_size_mobile": 36,
+        "item_title_custom": false,
+        "item_title_font": "josefin_sans_n4",
+        "item_title_size": 18,
+        "item_title_size_mobile": 14,
+        "item_title_height": 130,
+        "item_title_margin_top": 10,
+        "item_title_margin_top_mobile": 10,
+        "item_text_custom": false,
+        "item_text_font": "josefin_sans_n4",
+        "item_text_size": 16,
+        "item_text_size_mobile": 13,
+        "item_text_height": 150,
+        "item_text_margin_top": 10,
+        "item_text_margin_top_mobile": 10,
+        "left_image": "shopify://shop_images/shopify10572973765162068016.png",
+        "right_image": "shopify://shop_images/shopify2980967794696051200.png",
+        "image_radius": 500,
+        "image_border_thickness": 0,
+        "image_ratio": "square",
+        "image_ratio_mobile": "square",
+        "btn_size": 56,
+        "btn_size_mobile": 56,
+        "btn_arrow_size": 80,
+        "btn_arrow_size_mobile": 80,
+        "btn_border_thickness": 0,
+        "title_color": "#fafafa",
+        "text_color": "#fafafa",
+        "icon_color": "#fafafa",
+        "item_title_color": "#fafafa",
+        "item_text_color": "#fafafa",
+        "btn_bg_color": "#ffffff",
+        "btn_arrow_color": "#000000",
+        "btn_border_color": "#000000",
+        "line_color": "#ffffff",
+        "image_border_color": "#000000",
+        "background_color": "#1c1c1e",
+        "background_gradient": "",
+        "border_color": "#000000",
+        "margin_top": 0,
+        "margin_bottom": 0,
+        "margin_horizontal": 0,
+        "margin_horizontal_mobile": 0,
+        "padding_top": 16,
+        "padding_bottom": 20,
+        "padding_horizontal": 5,
+        "padding_horizontal_mobile": 1.5,
+        "full_width": false,
+        "content_width": 120,
+        "border_thickness": 0,
+        "section_radius": 0,
+        "lazy": true
+      }
+    },
+    "rich_text_DGprkz": {
+      "type": "rich-text",
+      "blocks": {
+        "button_t3MNcK": {
+          "type": "button",
+          "settings": {
+            "button_label": "Jetzt entdecken",
+            "button_link": "shopify://products/bartpflege-set",
+            "button_style_secondary": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "button_t3MNcK"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 24,
+        "padding_bottom": 20
+      }
+    },
+    "rich_text_NbcYHE": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_fJb3Rg": {
+          "type": "heading",
+          "settings": {
+            "heading": "Warum unser Bartwachstumsset?",
+            "heading_size": "h1"
+          }
+        },
+        "text_HFqJ9n": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Nicht jedes Produkt hält, was es verspricht. Unser Bartwachstumsset kombiniert <strong>traditionelle Bartpflege mit modernster Wissenschaft</strong>, um sichtbare und nachhaltige Ergebnisse zu liefern. Unsere Formel basiert auf natürlichen Inhaltsstoffen, die speziell darauf ausgelegt sind, das Haarwachstum zu fördern und gleichzeitig die Haut zu pflegen.</p><ul><li><strong>Effektive Inhaltsstoffe</strong> – Mit Bienenwachs, Jojobaöl und Sheabutter für maximale Wirkung.</li><li><strong>Hochwertige Tools</strong> – Ein Dermaroller zur Stimulierung der Haarfollikel und ein Bartserum für tiefgehende Nährstoffversorgung.</li></ul>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_fJb3Rg",
+        "text_HFqJ9n"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 20,
+        "padding_bottom": 20
+      }
+    },
+    "image_with_text_Y6E3az": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_pAKjPh": {
+          "type": "heading",
+          "settings": {
+            "heading": "<strong>Wie unser Bartwachstumsset funktioniert</strong>",
+            "heading_size": "h2"
+          }
+        },
+        "text_7DegBe": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Unser <strong>Bartwachstumsset</strong> setzt auf eine Kombination aus <strong>mechanischer und pflegender Stimulation</strong>:</p><ol><li><strong>Der Dermaroller</strong> regt die Durchblutung der Haut an und aktiviert die Haarfollikel.</li><li><strong>Das Bartserum</strong> versorgt die Haarwurzeln mit essenziellen Nährstoffen, reduziert Juckreiz und sorgt für einen kräftigen, gesunden Bartwuchs.</li></ol>",
+            "text_style": "body"
+          }
+        }
+      },
+      "block_order": [
+        "heading_pAKjPh",
+        "text_7DegBe"
+      ],
+      "settings": {
+        "image": "shopify://shop_images/3164E8E8-4B9E-413A-B285-30BF3ED7E5DF.jpg",
+        "height": "small",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "section_color_scheme": "",
+        "color_scheme": "",
+        "image_behavior": "none",
+        "mobile_content_alignment": "left",
+        "padding_top": 20,
+        "padding_bottom": 20
+      }
+    },
+    "rich_text_cczPPg": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_t9hXJQ": {
+          "type": "heading",
+          "settings": {
+            "heading": "Bartwachstum: Mythen vs. Fakten",
+            "heading_size": "h1"
+          }
+        },
+        "text_EgXxJm": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Es gibt viele Mythen rund um das Thema Bartwachstum. Hier klären wir die wichtigsten Fakten auf:</p><p>🔹 <strong>Mythos:</strong> Rasieren fördert das Bartwachstum.<br/><strong>Fakt:</strong> Die Haarfollikel werden durch Rasieren nicht beeinflusst. Wachstum wird durch Nährstoffe und Durchblutung gefördert.</p><p>🔹 <strong>Mythos:</strong> Nur genetische Veranlagung entscheidet über Bartwuchs.<br/><strong>Fakt:</strong> Während Genetik eine Rolle spielt, kann die richtige Pflege mit unserem <strong>Bartwachstumsset</strong> das Wachstum erheblich unterstützen.</p><p>🔹 <strong>Mythos:</strong> Bartöl reicht aus, um das Wachstum zu fördern.<br/><strong>Fakt:</strong> Bartöl pflegt das Haar, doch die Kombination mit Dermaroller und Serum bringt die besten Ergebnisse.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_t9hXJQ",
+        "text_EgXxJm"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "rich_text_hAi3jX": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_AbYHtb": {
+          "type": "heading",
+          "settings": {
+            "heading": "Dein Weg zum perfekten Bart beginnt heute",
+            "heading_size": "h1"
+          }
+        },
+        "text_mPgg8e": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Ein gesunder, voller Bart braucht die richtige Pflege und gezielte Wachstumsunterstützung. Unser <strong>Bartwachstumsset</strong> gibt dir alles an die Hand, um deinen Bart auf das nächste Level zu bringen. </p>"
+          }
+        },
+        "button_XQAJir": {
+          "type": "button",
+          "settings": {
+            "button_label": "Jetzt entdecken",
+            "button_link": "shopify://products/bartpflege-set",
+            "button_style_secondary": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_AbYHtb",
+        "text_mPgg8e",
+        "button_XQAJir"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 20,
+        "padding_bottom": 20
+      }
+    }
+  },
+  "order": [
+    "main",
+    "image_banner_WkrgBN",
+    "rich_text_iYt8K6",
+    "ss_before_after_5_gGgFQM",
+    "rich_text_DGprkz",
+    "rich_text_NbcYHE",
+    "image_with_text_Y6E3az",
+    "rich_text_cczPPg",
+    "rich_text_hAi3jX"
+  ]
+}

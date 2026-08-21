@@ -1,0 +1,126 @@
+/* ==========================================================================
+   Routine-Section "Gepflegte Haut. In 3 Schritten." (Tallow-PDP)
+   Layout/Design nach Vorlage. Typo 1:1 aus den Nachbar-Sections derselben
+   PDP (mm-pdp-clearskinset.css), Farben/Spacing aus mm-design-system.css.
+
+   Typo-Regel im Theme (assets/base.css:3596ff) mit !important:
+     h1,h2     -> Saol                (Serif)
+     h3,h4     -> SuisseIntl-Bold     (Sans)
+     body,h5,h6-> SuisseIntl-Medium   (Sans)
+   Deshalb bekommen h3-Titel hier - genau wie .mm-pdp-principle-card-title
+   und .mm-why2-pillar-title - font-family mit !important, sonst rendern sie
+   in Sans, waehrend der h2-Sectiontitel in Serif steht.
+
+   Groessen uebernommen aus der Karten-Section derselben PDP
+   (.mm-pdp-principle-*): Sectiontitel 26px, Subline 14px, Kartentitel 16px,
+   Body 14px/1.6. Eigenes Praefix mm-r3-*, weil .mm-pdp-routine von 14
+   Produkt-Templates geteilt wird.
+   ========================================================================== */
+
+.mm-r3 { padding: 48px 20px; border-bottom: var(--mm-hairline); color: var(--mm-fg); }
+.mm-r3-inner { display: flex; flex-direction: column; gap: var(--mm-space-5); }
+
+/* ---------- Kopf (wie .mm-pdp-principle-title / -sub) ---------- */
+.mm-r3-head { text-align: center; }
+/* Fester Umbruch nach "Gepflegte Haut." statt automatischem Fluss: vorher stand
+   "Schritten." allein auf der zweiten Zeile. Der goldene Teil bildet jetzt die
+   ganze zweite Zeile. */
+.mm-r3-title { font-size: 26px; line-height: 1.15; margin: 0 0 10px; color: var(--mm-fg); }
+.mm-r3-title span { color: var(--mm-gold-soft); }
+/* 13px statt 14px: bei 390px Viewport passt die Zeile damit einzeilig unter den
+   Titel, vorher brach "natuerlich." um. */
+.mm-r3-sub { font-size: 13px; color: var(--mm-fg-muted); margin: 0; text-wrap: balance; }
+
+/* ---------- Slider / Karten ---------- */
+.mm-r3-track {
+  list-style: none; margin: 0; padding: 0 0 4px;
+  display: flex; gap: 16px;
+  overflow-x: auto; scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch; overscroll-behavior-x: contain;
+  scrollbar-width: none;
+}
+.mm-r3-track::-webkit-scrollbar { display: none; }
+
+/* Kartenflaeche --mm-ink statt --mm-charcoal: dunkler als der Section-Grund,
+   gleiche Logik wie bei .mm-tst-card. */
+.mm-r3-card {
+  position: relative;
+  flex: 0 0 86%;
+  scroll-snap-align: start;
+  display: flex; flex-direction: column;
+  background: var(--mm-ink);
+  border: var(--mm-hairline);
+  border-top: var(--mm-hairline-gold);
+  border-radius: var(--mm-radius-card);
+  overflow: hidden;
+}
+
+.mm-r3-media { position: relative; aspect-ratio: 4 / 3; overflow: hidden; background: var(--mm-ink); }
+.mm-r3-media img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform var(--mm-dur-3) var(--mm-ease); }
+.mm-r3-card:hover .mm-r3-media img { transform: scale(1.03); }
+.mm-r3-fade { position: absolute; inset: auto 0 0 0; height: 45%; background: linear-gradient(to top, rgba(14,14,14,0.92), rgba(14,14,14,0)); }
+.mm-r3-num {
+  position: absolute; right: 14px; bottom: 4px;
+  font-family: var(--mm-font-display); font-weight: 600;
+  font-size: clamp(52px, 11vw, 72px); line-height: 0.8;
+  color: rgba(250, 250, 248, 0.16);
+}
+
+.mm-r3-body { display: flex; flex-direction: column; gap: 10px; padding: 20px; }
+.mm-r3-row { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; }
+
+/* Kartentitel: identisch zu .mm-pdp-principle-card-title (h3 braucht !important) */
+.mm-r3-row h3 {
+  font-family: var(--mm-font-display) !important;
+  font-size: 16px; font-weight: 600; color: var(--mm-fg); margin: 0;
+}
+/* Gedaempft statt weiss: nur die Ueberschrift soll hervortreten. SuisseIntl-Medium
+   ist der einzige Schnitt der Body-Font, in Weiss auf dunklem Grund wirkt sie
+   fett. Gleiche Farbe wie .mm-pdp-principle-card-text und .mm-pdp-herkunft-text. */
+/* Textspalte 95% der Innenbreite = 248px bei 390px Viewport. Der Wert kommt aus
+   der Messung der gewuenschten Zeilen: die laengste ("Bereitet die Haut sanft
+   vor, ohne sie") braucht 244px. Damit brechen die Zeilen genau so, wie es
+   vorgegeben wurde, und rechts bleibt trotzdem eine ruhige Kante.
+   text-wrap: pretty verhindert einzelne Woerter auf der letzten Zeile. */
+.mm-r3-body p {
+  margin: 0; font-size: 14px; font-weight: 400; line-height: 1.6;
+  color: var(--mm-fg-muted); max-width: 95%; text-wrap: pretty;
+}
+.mm-r3-row h3 { max-width: 95%; text-wrap: balance; }
+
+.mm-r3-tags { display: flex; flex-wrap: wrap; gap: 8px; }
+.mm-r3-tags span {
+  border: var(--mm-hairline); border-radius: var(--mm-radius);
+  padding: 6px 11px; font-size: 11px; letter-spacing: 0.04em; color: var(--mm-fg-muted);
+}
+
+/* ---------- Kartenfuss: Tags links, freigestelltes Produktbild unten rechts ----------
+   Als Flex-Zeile statt absolut positioniert: so kann das Bild den Text nie
+   ueberdecken, egal wie lang er umbricht. Ohne Tags rutscht es ueber
+   margin-left: auto trotzdem nach rechts. */
+.mm-r3-foot { display: flex; align-items: flex-end; gap: 12px; margin-top: auto; padding-top: 4px; }
+.mm-r3-foot .mm-r3-tags { flex: 1 1 auto; }
+.mm-r3-thumb { flex: none; margin-left: auto; width: 64px; height: 64px; object-fit: contain; display: block; }
+
+/* ---------- Dots ---------- */
+.mm-r3-dots { display: flex; align-items: center; justify-content: center; gap: 8px; }
+.mm-r3-dots[hidden] { display: none; }
+.mm-r3-dots button { appearance: none; border: 0; padding: 10px 4px; background: transparent; cursor: pointer; }
+.mm-r3-dots span { display: block; width: 30px; height: 2px; background: var(--mm-graphite); transition: background var(--mm-dur-1) var(--mm-ease); }
+.mm-r3-dots button[aria-current="true"] span { background: var(--mm-gold-soft); }
+
+/* Der Abschluss-CTA-Block (.mm-r3-cta mit Preis, Ersparnis und Set-Button) und
+   der Upsell-Link in Schritt 1 sind auf Wunsch entfernt - die Routine-Section
+   erklaert die Anwendung, das Cross-Selling laeuft ueber die Bundle-Sections.
+   Die zugehoerigen Styles sind mit raus, damit kein toter Code bleibt. */
+
+/* ---------- Desktop: 3 Spalten, kein Slider (wie .mm-pdp-routine-steps) ---------- */
+@media screen and (min-width: 750px) {
+  .mm-r3 { max-width: 960px; margin-inline: auto; }
+  .mm-r3-inner { gap: var(--mm-space-6); }
+  /* auto-fit statt fester Spaltenzahl: die Templates haben 2, 3 oder 4 Schritte. */
+  .mm-r3-track { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; overflow-x: visible; scroll-snap-type: none; padding-bottom: 0; }
+  .mm-r3-card { flex: initial; }
+  .mm-r3-body { padding: 22px; }
+  .mm-r3-dots { display: none; }
+}

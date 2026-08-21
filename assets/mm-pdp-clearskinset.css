@@ -1,0 +1,780 @@
+/*
+ * MEN MANSION — PDP Redesign "Clear Skin Set" (Buybox + Gallery-Intro)
+ * Scoped auf dieses eine Template. Nutzt Tokens aus mm-design-system.css.
+ * Keine Aenderung an sections/main-product.liquid oder anderen Dawn-Core-Dateien —
+ * dieses CSS haengt sich nur an neue, selbst definierte Klassen (.mm-pdp-*).
+ * Die Basis-Dunkelfaerbung der nativen Bloecke (Titel/Preis/Menge/Warenkorb)
+ * kommt ueber den Section-Setting "color_scheme: background-1", nicht ueber Overrides hier.
+ */
+
+/* Produkttitel: Groesse/Gewicht an die echte Live-Optik angeglichen (24px, Semibold) */
+.product__title h1 { font-size: 24px; font-weight: 600; }
+
+/* Abstand Loox-Bewertungswidget -> Titel: Dawns generische Block-Abstandsregel
+   (.product__info-container > * + * { margin:1.5rem 0 }) gibt hier 24px, Live hat nur 6px. */
+[id*="loox_reviews_loox_rating"] { margin-bottom: 6px !important; }
+
+/* Abstand Titel -> Caption ("reines gold für deine haut"): Dawn zieht die beiden per
+   negativem Margin absichtlich zusammen (0px). Etwas Luft ergaenzt. */
+.product__title + .product__text.caption-with-letter-spacing { margin-top: 8px !important; }
+
+/* Subheader "Reines Gold für klare und gesunde Haut" in Gold. Nur auf der
+   Tallow-PDP: die Klasse mm-pdp-tallow sitzt auf <product-info> und wird in
+   main-product.liquid fuer die Tallow-Handles gesetzt.
+   --mm-gold-soft (#C6B074) ist der helle Akzent, nicht --mm-gold (#AF9841). */
+.mm-pdp-tallow .product__text.subtitle { color: var(--mm-gold-soft) !important; }
+
+.mm-pdp-buybox { display: flex; flex-direction: column; gap: var(--mm-space-4); }
+
+/* Eyebrow ueber dem Produkttitel */
+.mm-pdp-buybox .mm-eyebrow { display: block; margin-bottom: var(--mm-space-2); }
+
+/* Preis + Spare-Chip + Einzelwert (aus echten variant.price/compare_at_price Daten) */
+.mm-pdp-price-row { display: flex; flex-direction: column; gap: 4px; margin-top: 22px; margin-bottom: 4px; }
+.mm-pdp-price-line { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+.mm-pdp-price-total { font-size: 24px; font-weight: 700; letter-spacing: 0.01em; color: var(--mm-fg); white-space: nowrap; }
+.mm-pdp-price-save { font-size: 10px; font-weight: 700; letter-spacing: 0.04em; text-align: center; text-transform: uppercase; color: #000000; background: var(--mm-gold-soft); border-radius: 999px; padding: 3px 8px; white-space: nowrap; }
+.mm-pdp-price-compare { font-size: 12px; color: var(--mm-fg-muted); }
+
+/* Trust-Bullets: Gold-Dot statt Haken-Icon (Vorgabe MD-Datei) */
+.mm-pdp-trust-bullets { display: flex; flex-direction: column; gap: 10px; margin-bottom: var(--mm-space-5); }
+.mm-pdp-trust-bullet { display: flex; gap: 10px; align-items: center; font-size: 13px; font-weight: 700; color: var(--mm-fg); }
+.mm-pdp-trust-check { flex-shrink: 0; color: var(--mm-gold-soft); }
+
+/* "Schritt 1 · Dein Set" / "Schritt 2 · Wähle deine Menge" Stufenkopf */
+.mm-pdp-step-head {
+  display: flex; align-items: center; gap: var(--mm-space-3);
+  margin: var(--mm-space-5) 0 var(--mm-space-2);
+}
+.mm-pdp-step-head span:first-child { flex-shrink: 0; }
+.mm-pdp-step-head span:last-child { flex: 1; height: 1px; background: var(--mm-gold-line); }
+
+/* "Enthalten"-Karten (Schritt 1) */
+.mm-pdp-set-items { display: flex; flex-direction: column; gap: var(--mm-space-2); margin-bottom: var(--mm-space-4); }
+.mm-pdp-set-item {
+  display: grid; grid-template-columns: 48px 1fr auto; gap: var(--mm-space-3); align-items: center;
+  background: var(--mm-charcoal); border: var(--mm-hairline); border-radius: var(--mm-radius-card); padding: 10px 12px;
+}
+.mm-pdp-set-item img { display: block; width: 48px; height: 48px; object-fit: cover; border: var(--mm-hairline); border-radius: 8px; }
+.mm-pdp-set-item-name { display: flex; flex-direction: column; }
+.mm-pdp-set-item-title { font-family: var(--mm-font-display); font-size: 15px; color: var(--mm-fg); }
+.mm-pdp-set-item-meta { font-size: 11px; color: var(--mm-fg-muted); }
+.mm-pdp-set-item-tag { font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--mm-gold-soft); white-space: nowrap; }
+
+/* "Schritt 2" Mengen-Tier-Karten (steht per default auf disabled:true im Template) */
+.mm-pdp-tiers { display: flex; flex-direction: column; gap: var(--mm-space-3); padding-top: var(--mm-space-4); }
+.mm-pdp-tier {
+  position: relative; display: flex; align-items: center; gap: 14px; width: 100%; text-align: left;
+  background: var(--mm-charcoal); color: var(--mm-fg); border: var(--mm-hairline); border-radius: var(--mm-radius-card);
+  padding: 16px; cursor: pointer; font-family: var(--mm-font-body); appearance: none;
+  transition: border-color var(--mm-dur-1) var(--mm-ease);
+}
+.mm-pdp-tier:hover { border-color: var(--mm-gold-line); }
+.mm-pdp-tier[aria-pressed="true"] { border: 2px solid var(--mm-gold-soft); padding: 15px; }
+.mm-pdp-tier-radio { flex-shrink: 0; width: 20px; height: 20px; border-radius: 999px; border: 1px solid var(--mm-stone); display: flex; align-items: center; justify-content: center; }
+.mm-pdp-tier[aria-pressed="true"] .mm-pdp-tier-radio::after { content: ""; width: 10px; height: 10px; border-radius: 999px; background: var(--mm-gold-soft); }
+.mm-pdp-tier-body { flex: 1; display: flex; flex-direction: column; gap: 3px; min-width: 0; }
+.mm-pdp-tier-name-row { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
+.mm-pdp-tier-name { font-family: var(--mm-font-display); font-weight: 600; font-size: 17px; }
+.mm-pdp-tier-save { font-size: 10px; font-weight: 700; letter-spacing: 0.04em; text-align: center; text-transform: uppercase; color: var(--mm-gold-soft); border: var(--mm-hairline-gold); padding: 2px 7px; }
+.mm-pdp-tier-sub { font-size: 12px; color: var(--mm-fg-muted); }
+.mm-pdp-tier-price { flex-shrink: 0; text-align: right; display: flex; flex-direction: column; gap: 2px; }
+.mm-pdp-tier-total { font-weight: 700; font-size: 17px; white-space: nowrap; }
+.mm-pdp-tier-compare { font-size: 12px; color: var(--mm-fg-muted); text-decoration: line-through; white-space: nowrap; }
+.mm-pdp-tier-badge {
+  position: absolute; top: -10px; left: 16px; font-size: 9px; font-weight: 700; letter-spacing: 0.16em;
+  text-transform: uppercase; color: var(--mm-onyx); background: var(--mm-gold-soft); border-radius: 999px; padding: 4px 10px;
+}
+
+/* Gallerie: Logo-Intro-Overlay (liegt ueber der bestehenden product-media-gallery) */
+.mm-pdp-gallery-intro {
+  position: absolute; inset: 0; display: flex; align-items: center; justify-content: center;
+  background: rgba(14,14,14,0.45); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px);
+  transition: background 600ms var(--mm-ease), backdrop-filter 600ms var(--mm-ease), -webkit-backdrop-filter 600ms var(--mm-ease);
+  pointer-events: none; z-index: 2; opacity: 1;
+}
+.mm-pdp-gallery-intro span {
+  font-family: var(--mm-font-display); font-weight: 600; font-size: clamp(22px, 4vw, 32px); letter-spacing: 0.18em;
+  white-space: nowrap; color: var(--mm-alabaster); text-shadow: 0 2px 24px rgba(0,0,0,0.5);
+  filter: blur(18px); opacity: 0; transition: filter 650ms var(--mm-ease), opacity 650ms var(--mm-ease);
+}
+.mm-pdp-gallery-intro.is-showing span { filter: blur(0); opacity: 1; }
+.mm-pdp-gallery-intro.is-out { background: rgba(14,14,14,0); backdrop-filter: blur(0); -webkit-backdrop-filter: blur(0); }
+.mm-pdp-gallery-intro.is-done { display: none; }
+.product__media-item.is-active { position: relative; }
+
+/* 30-Tage-Garantie-Karte (ersetzt die alte Zahlungsarten-Sektion an dieser Stelle) */
+.mm-pdp-guarantee {
+  display: grid; grid-template-columns: auto 1fr; gap: 14px; align-items: start;
+  background: var(--mm-charcoal); border: var(--mm-hairline-gold); border-radius: var(--mm-radius-card);
+  padding: 16px; margin-top: 16px;
+}
+.mm-pdp-guarantee svg { color: var(--mm-gold-soft); margin-top: 2px; flex-shrink: 0; }
+.mm-pdp-guarantee-title { font-size: 12px; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; color: var(--mm-gold-soft); margin-bottom: 6px; }
+.mm-pdp-guarantee-text { font-size: 13px; color: var(--mm-fg); line-height: 1.6; margin: 0; }
+
+/* Trust-Zeile unter der Garantie-Karte (Handgemacht / Lieferung / Bestpreisgarantie) */
+.mm-pdp-trust-row { display: flex; flex-wrap: nowrap; justify-content: space-between; gap: 12px 24px; margin-top: 14px; color: var(--mm-fg-muted); font-size: var(--mm-size-micro); letter-spacing: 0.04em; }
+.mm-pdp-trust-row span { display: inline-flex; align-items: center; gap: 8px; flex: 1 1 auto; min-width: 0; }
+.mm-pdp-trust-row svg { color: var(--mm-gold-soft); flex-shrink: 0; }
+
+/* Kleine Utility: Akkordeon "mehr lesen" Toggle-Link */
+.mm-pdp-more-toggle { display: inline-block; color: var(--mm-gold-soft); font-size: 12px; letter-spacing: 0.04em; border-bottom: 1px solid var(--mm-gold-line); padding-bottom: 2px; cursor: pointer; margin-top: 8px; }
+[data-mm-more-body][hidden] { display: none; }
+
+/* Produktdetails-Akkordeon (Beschreibung / Inhaltsstoffe / Anwendung / Versand) */
+.mm-pdp-accordion { display: flex; flex-direction: column; margin-top: 28px; }
+.mm-pdp-accordion-row { border-top: var(--mm-hairline); }
+.mm-pdp-accordion-row:last-child { border-bottom: var(--mm-hairline); }
+.mm-pdp-accordion-head { display: flex; justify-content: space-between; align-items: center; gap: 16px; padding: 15px 0; cursor: pointer; }
+.mm-pdp-accordion-label { font-size: 12px; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; color: var(--mm-fg); }
+.mm-pdp-accordion-mark { color: var(--mm-gold-soft); font-size: 18px; line-height: 1; flex-shrink: 0; }
+.mm-pdp-accordion-scroll-hint { display: flex; align-items: center; gap: 8px; flex-shrink: 0; }
+.mm-pdp-accordion-scroll-label { font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--mm-fg-muted); }
+.mm-pdp-accordion-arrow { color: var(--mm-gold-soft); font-size: 16px; line-height: 1; }
+.mm-pdp-accordion-body { padding: 0 0 16px; font-size: 13px; color: var(--mm-fg); line-height: 1.65; }
+.mm-pdp-accordion-body[hidden] { display: none; }
+.mm-pdp-accordion-body p { margin: 0 0 8px; }
+.mm-pdp-accordion-body p:last-child { margin-bottom: 0; }
+.mm-pdp-accordion-body h2 { font-family: var(--mm-font-display); font-size: 18px; font-weight: 600; color: var(--mm-fg); margin: 0 0 10px; }
+.mm-pdp-accordion-body h3 { font-family: var(--mm-font-display); font-size: 15px; font-weight: 600; margin: 14px 0 6px; }
+.mm-pdp-accordion-body h2:first-child,
+.mm-pdp-accordion-body h3:first-child { margin-top: 0; }
+.mm-pdp-accordion-body a { color: var(--mm-fg); }
+
+/* Strukturierte Beschreibung ("Beschreibung"-Tab, Tallow) */
+.mm-pdp-desc-lead { color: var(--mm-fg-muted); }
+.mm-pdp-desc-tagline { font-family: var(--mm-font-display); font-weight: 600; font-size: 14px; margin: 0 0 12px; }
+.mm-pdp-desc-section { border-top: var(--mm-hairline); padding-top: 12px; margin-top: 12px; }
+.mm-pdp-desc-eyebrow { display: block; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.14em; color: var(--mm-gold-soft); margin: 12px 0 6px; }
+.mm-pdp-desc-section > .mm-pdp-desc-eyebrow:first-child { margin-top: 0; }
+.mm-pdp-desc-table { width: 100%; border-collapse: collapse; border: var(--mm-hairline); margin: 0 0 8px; }
+.mm-pdp-desc-table td { width: 50%; padding: 8px 12px; border: var(--mm-hairline); font-size: 13px; }
+.mm-pdp-desc-quote {
+  margin: 10px 0; padding: 10px 14px; border-left: 2px solid var(--mm-gold-soft); background: var(--mm-charcoal);
+  font-family: var(--mm-font-display); font-weight: 600; font-size: 14px; line-height: 1.4;
+}
+.mm-pdp-desc-checklist { list-style: none; margin: 0 0 8px; padding: 0; }
+.mm-pdp-desc-checklist li { display: flex; align-items: flex-start; gap: 8px; margin: 0 0 4px; }
+.mm-pdp-desc-checklist li:last-child { margin-bottom: 0; }
+.mm-pdp-desc-checklist li span { color: var(--mm-fg-muted); flex-shrink: 0; }
+.mm-pdp-desc-note { font-size: 12px; color: var(--mm-fg-muted); }
+.mm-pdp-desc-footer {
+  margin: 12px 0 0; border-top: var(--mm-hairline); padding-top: 12px;
+  font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.16em; color: var(--mm-fg-muted);
+}
+.mm-pdp-desc-footer span { color: var(--mm-gold-soft); }
+
+.mm-pdp-desc-ingredient { border-top: var(--mm-hairline); padding-top: 10px; margin-top: 10px; }
+.mm-pdp-desc-ingredient:first-child { border-top: 0; padding-top: 0; margin-top: 0; }
+.mm-pdp-desc-ingredient-name { font-weight: 700; margin: 0 0 3px; }
+.mm-pdp-desc-ingredient-name span { font-weight: 500; color: var(--mm-gold-soft); }
+.mm-pdp-desc-link { color: var(--mm-gold-soft); text-decoration: underline; }
+
+/* Deep-Dives: Tallow Gesichtscreme + Aleppo Seife (1:1 aus MD-Datei) */
+.mm-pdp-deepdive-group { margin-top: 32px; border-top: var(--mm-hairline); }
+.mm-pdp-deepdive-img { display: block; width: calc(100% - 32px); margin: 16px auto 0; border-radius: 16px; aspect-ratio: 1; object-fit: cover; }
+.mm-pdp-deepdive-body { padding: 28px 20px 40px; border-bottom: var(--mm-hairline); }
+.mm-pdp-deepdive-title { font-family: var(--mm-font-display); font-size: 26px; font-weight: 600; margin: 0 0 12px; color: var(--mm-fg); }
+.mm-pdp-deepdive-text { font-size: 14px; color: var(--mm-fg); line-height: 1.6; margin: 0 0 16px; }
+.mm-pdp-deepdive-checks { display: flex; flex-direction: column; gap: 8px; }
+.mm-pdp-deepdive-checks span { display: flex; gap: 10px; align-items: center; font-size: 13px; color: var(--mm-fg); }
+.mm-pdp-check { color: var(--mm-gold-soft); flex-shrink: 0; }
+
+/* Kundenstudie */
+.mm-pdp-gold { color: var(--mm-gold-soft); }
+.mm-pdp-studie { padding: 48px 20px; border-bottom: var(--mm-hairline); text-align: center; }
+.mm-pdp-studie-eyebrow { display: block; margin-bottom: 10px; color: var(--mm-fg-muted) !important; }
+.mm-pdp-studie-title { font-size: 26px; margin: 0 0 24px; color: var(--mm-fg); }
+/* Mobile: Peek-Slider - die naechste Karte schaut rechts rein, per Swipe.
+   Die erste Karte steht auf 20px, also auf derselben Kante wie Sectiontitel und
+   die Sections darueber. Vorher war es ein zentrierter Slider mit 8% Innenabstand
+   (31px bei 390px Viewport), dadurch stand die Section sichtbar weiter innen als
+   alle anderen.
+   scroll-padding-left ist bei scroll-snap-type Pflicht: ohne den Wert scrollt der
+   Browser beim Laden ueber das Padding hinweg und die erste Karte klebt am Rand. */
+.mm-pdp-studie-stats {
+  display: flex;
+  gap: 14px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-padding-left: 20px;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  margin: 0 -20px;
+  padding: 4px 20px;
+}
+.mm-pdp-studie-stats::-webkit-scrollbar { display: none; }
+.mm-pdp-studie-stat {
+  flex: 0 0 86%;
+  scroll-snap-align: start;
+  background: var(--mm-alabaster); color: var(--mm-onyx); border-radius: var(--mm-radius-card); padding: 28px 24px;
+  text-align: left;
+}
+.mm-pdp-studie-number { font-family: var(--mm-font-body); font-weight: 700; font-size: 44px; line-height: 1; margin-bottom: 10px; }
+.mm-pdp-studie-desc { font-size: 14px; font-weight: 700; line-height: 1.5; margin-bottom: 8px; }
+.mm-pdp-studie-meta { font-size: 11px; color: var(--mm-stone); }
+
+/* Die Routine in 2 Steps */
+.mm-pdp-routine { padding: 48px 20px; border-bottom: var(--mm-hairline); text-align: center; }
+.mm-pdp-routine-title { font-size: 27px; margin: 0 0 8px; color: var(--mm-fg); }
+.mm-pdp-routine-sub { font-size: 14px; color: var(--mm-fg-muted); margin: 0 0 28px; }
+.mm-pdp-routine-steps { display: flex; flex-direction: column; gap: 32px; text-align: left; }
+.mm-pdp-routine-img-wrap { position: relative; }
+.mm-pdp-routine-img { display: block; width: 100%; aspect-ratio: 4/3; object-fit: cover; border-radius: var(--mm-radius-card); margin-bottom: 16px; }
+.mm-pdp-routine-num { position: absolute; top: 12px; left: 12px; width: 34px; height: 34px; border-radius: 999px; background: var(--mm-gold-soft); color: var(--mm-onyx); font-weight: 700; font-size: 15px; display: flex; align-items: center; justify-content: center; }
+/* font-family mit !important, sonst zieht base.css (h3,h4 -> SuisseIntl-Bold)
+   den Titel auf Sans, waehrend der h2-Sectiontitel darueber Serif bleibt. */
+.mm-pdp-routine-step-title { font-family: var(--mm-font-display) !important; font-weight: 600; font-size: 21px; margin: 0 0 8px; color: var(--mm-fg); }
+.mm-pdp-routine-step-text { font-size: 14px; font-weight: 400; color: var(--mm-fg-muted); line-height: 1.6; margin: 0; }
+
+/* Warum Men Mansion? */
+.mm-pdp-why { padding: 48px 20px; border-bottom: var(--mm-hairline); }
+.mm-pdp-why-title { font-size: 32px; margin: 10px 0 24px; color: var(--mm-fg); }
+.mm-home-compare .mm-pdp-why-title { font-size: 24px; }
+@media screen and (min-width: 750px) {
+  .mm-home-compare .mm-pdp-why-title { font-size: 32px; }
+}
+.mm-pdp-why-list { display: flex; flex-direction: column; }
+.mm-pdp-why-item { border-top: var(--mm-hairline); padding: 14px 0; display: flex; gap: 12px; align-items: center; font-size: 14px; letter-spacing: 0.01em; color: var(--mm-fg); }
+.mm-pdp-why-item:last-child { border-bottom: var(--mm-hairline); }
+.mm-pdp-why-dot { flex-shrink: 0; width: 5px; height: 5px; border-radius: 999px; background: var(--mm-gold-soft); }
+.mm-pdp-why-link { display: inline-block; margin-top: 20px; color: var(--mm-gold-soft); font-size: 14px; border-bottom: 1px solid var(--mm-gold-line); padding-bottom: 4px; text-decoration: none; }
+.mm-pdp-why-link:hover { color: var(--mm-gold); }
+
+/* Unsere Herkunft (Einzelprodukt-spezifisch) */
+.mm-pdp-herkunft { padding: 48px 20px; border-bottom: var(--mm-hairline); }
+.mm-pdp-herkunft-img { display: block; width: 100%; height: auto; border-radius: var(--mm-radius-card); margin-bottom: 24px; }
+.mm-pdp-herkunft-title { font-size: 26px; margin: 10px 0 16px; color: var(--mm-fg); }
+.mm-pdp-herkunft-text { font-size: 14px; color: var(--mm-fg-muted); line-height: 1.65; margin: 0 0 12px; }
+.mm-pdp-herkunft-text:last-child { margin-bottom: 0; }
+
+/* Inhaltsstoffe-Grid (Einzelprodukt-spezifisch) */
+.mm-pdp-ingredients { padding: 48px 20px; border-bottom: var(--mm-hairline); text-align: center; }
+.mm-pdp-ingredients-title { font-family: var(--mm-font-display) !important; font-weight: 600; font-size: 26px; margin: 10px 0 24px; color: var(--mm-fg); }
+.mm-pdp-ingredients-grid { display: flex; flex-direction: column; gap: 14px; text-align: left; }
+.mm-pdp-ingredient-card {
+  background: var(--mm-charcoal); border: var(--mm-hairline); border-radius: 12px;
+  display: flex; flex-direction: row-reverse; align-items: center; justify-content: space-between;
+  gap: 16px; padding: 18px;
+}
+.mm-pdp-ingredient-img {
+  display: block; width: 72px; height: 72px; flex-shrink: 0;
+  border-radius: 999px; object-fit: cover; background: var(--mm-onyx);
+  border: 3px solid var(--mm-graphite);
+}
+.mm-pdp-ingredient-body { display: flex; flex-direction: column; gap: 6px; }
+.mm-pdp-ingredient-title { font-family: var(--mm-font-display) !important; font-weight: 600; font-size: 17px; color: var(--mm-fg); margin: 0; }
+.mm-pdp-ingredient-text { font-size: 13px; line-height: 1.5; color: var(--mm-fg-muted); margin: 0; }
+.mm-pdp-ingredient-origin { display: none; }
+
+/* Koala-Bundles-Mengen-Staffel: nur die native Ueberschrift ("Wähle dein Bundle:")
+   ins Men-Mansion-Design uebernehmen, der Rest bleibt unveraendert native App-Ausgabe. */
+.koala-deal__title {
+  font-family: var(--mm-font-body) !important; font-size: var(--mm-size-eyebrow) !important;
+  font-weight: var(--mm-fw-bold) !important; text-transform: uppercase !important;
+  letter-spacing: var(--mm-ls-eyebrow) !important; color: var(--mm-gold-soft) !important;
+}
+
+/* Routine-Upsell-Link (Einzelprodukt-spezifisch, Cross-Sell auf das Bundle) */
+.mm-pdp-routine-upsell { display: inline-block; margin-top: 10px; font-size: 12px; color: var(--mm-gold-soft); border-bottom: 1px solid var(--mm-gold-line); padding-bottom: 2px; text-decoration: none; }
+.mm-pdp-routine-upsell:hover { color: var(--mm-gold); }
+
+/* Vergleichstabelle */
+.mm-pdp-compare { padding: 48px 20px; border-bottom: var(--mm-hairline); }
+.mm-pdp-compare-title { font-size: 32px; margin: 10px 0 24px; color: var(--mm-fg); }
+/* Full-bleed wie bei based: die Section hat 20px Innenabstand, dadurch stand der
+   Labeltext 34px vom Bildschirmrand. Mit -20px Rand und 16px Label-Padding sitzt er
+   bei 16px, die Badge-Spalten bleiben rechts am Rand. */
+.mm-pdp-compare-table { overflow: hidden; margin-inline: -20px; }
+/* minmax(0,1fr) statt 1fr: bei "1fr" gilt minmax(auto,1fr), die Mindestbreite ist
+   also die Content-Breite. Lange Labels sprengen dann die Label-Spalte, schieben
+   die Badge-Spalten nach rechts und overflow:hidden schneidet sie ab - jede Zeile
+   bekommt eine andere Spaltenbreite. Auf Mobile ausserdem 60px statt 72px, damit
+   dem Label genug Platz bleibt. */
+/* Spaltenverhaeltnis wie bei based: dort ist die Labelspalte rund 42% breit und
+   die beiden Hakenspalten je 29%, der Text laeuft dadurch zweizeilig. Vorher
+   waren es hier 270/60/60 (69% / 15% / 15%), das Label stand einzeilig und die
+   Haken klebten am rechten Rand. Mit 100px pro Hakenspalte bleiben bei 390px
+   Viewport 190px fuer das Label, innen 164px - jedes Label bricht damit auf
+   zwei Zeilen und die rechte Seite rutscht 40px nach links. */
+.mm-pdp-compare-row { display: grid; grid-template-columns: minmax(0, 1fr) 100px 100px; border-bottom: var(--mm-hairline); align-items: stretch; }
+@media screen and (min-width: 750px) {
+  .mm-pdp-compare-row { grid-template-columns: minmax(0, 1fr) 92px 92px; }
+  .mm-pdp-compare-table { margin-inline: 0; }
+  .mm-pdp-compare-label { padding: 15px 12px 15px 18px; font-size: 14px; }
+}
+.mm-pdp-compare-table .mm-pdp-compare-row:last-child { border-bottom: 0; }
+.mm-pdp-compare-head { background: var(--mm-charcoal); }
+.mm-pdp-compare-head span { display: flex; align-items: center; justify-content: center; padding: 12px 4px; font-size: 10px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; }
+.mm-pdp-compare-head-mm { color: var(--mm-gold-soft); background: rgba(198,176,116,0.14); }
+/* Kopfzelle links: "Warum" ueber dem Shop-Logo, wie bei based das "Why choose
+   BASED?". Selektor mit Element plus Klasse, damit er .mm-pdp-compare-head span
+   (padding 12px 4px, zentriert) ohne !important schlaegt - dasselbe Muster nutzt
+   schon .mm-pdp-compare-thumb.
+   Linker Einzug 16px wie bei den Labels darunter, damit Kopf und Zeilen auf einer
+   Kante stehen. */
+.mm-pdp-compare-head span.mm-pdp-compare-head-why {
+  flex-direction: column; align-items: flex-start; justify-content: center; gap: 4px;
+  padding: 12px 10px 12px 16px; text-align: left;
+}
+/* padding: 0 ist Pflicht: .mm-pdp-compare-head span (padding: 12px 4px) trifft
+   auch diese beiden Spans. Das Label war dadurch 38px hoch statt 12px und das
+   Logo stand weit darunter. Gleiche Falle wie bei .mm-pdp-compare-thumb. */
+.mm-pdp-compare-head span.mm-pdp-compare-why-label,
+.mm-pdp-compare-head span.mm-pdp-compare-why-name { padding: 0; display: block; }
+.mm-pdp-compare-why-label { font-size: 10px; font-weight: 700; line-height: 1.2; letter-spacing: 0.1em; text-transform: uppercase; color: var(--mm-fg-muted); }
+.mm-pdp-compare-why-name { font-family: var(--mm-font-display); font-size: 14px; font-weight: 600; line-height: 1.2; letter-spacing: 0.02em; text-transform: none; color: var(--mm-fg); }
+.mm-pdp-compare-logo { display: block; max-width: 100%; width: auto; height: auto; max-height: 13px; }
+.mm-pdp-compare-head-other { color: var(--mm-fg-muted); }
+/* text-wrap: balance teilt die zwei Zeilen gleichmaessig auf, statt eine lange
+   und ein einzelnes Wort darunter zu setzen - so sieht es bei based auch aus.
+   14px oben und unten statt 13px, damit die zweizeiligen Zeilen etwas Luft
+   bekommen und der Abstand zwischen den Hakenfeldern wachst. */
+.mm-pdp-compare-label { display: flex; align-items: center; padding: 14px 10px 14px 16px; font-size: 13px; line-height: 1.3; letter-spacing: 0.01em; color: var(--mm-fg); text-wrap: balance; }
+.mm-pdp-compare-cell-us, .mm-pdp-compare-cell-them {
+  display: flex; align-items: center; justify-content: center;
+}
+.mm-pdp-compare-cell-us { background: rgba(198,176,116,0.08); }
+.mm-pdp-compare-badge {
+  display: flex; align-items: center; justify-content: center;
+  width: 26px; height: 26px; border-radius: 999px;
+}
+.mm-pdp-compare-badge svg { width: 13px; height: 13px; }
+.mm-pdp-compare-badge--yes { background: var(--mm-gold-soft); color: var(--mm-onyx); }
+.mm-pdp-compare-badge--no { background: var(--mm-graphite); color: var(--mm-fg-muted); }
+
+/* Kundenrezensionen (mobile-first: kompakte Summary, gestapeltes Spotlight, Swipe-Slider) */
+.mm-pdp-reviews { padding: 48px 20px; }
+.mm-pdp-reviews-head { margin-bottom: 18px; }
+.mm-pdp-reviews-title { font-size: 27px; line-height: 1.1; margin: 0 0 16px; color: var(--mm-fg); }
+.mm-pdp-reviews-summary { display: flex; align-items: center; gap: 14px; padding: 14px 16px; background: var(--mm-charcoal); border: var(--mm-hairline); }
+.mm-pdp-reviews-avg { font-family: var(--mm-font-display); font-weight: 600; font-size: 30px; line-height: 1; color: var(--mm-fg); }
+.mm-pdp-reviews-summary-body { flex: 1 1 auto; min-width: 0; }
+.mm-pdp-reviews-stars { color: var(--mm-gold-soft); font-size: 13px; letter-spacing: 2px; margin-bottom: 3px; }
+.mm-pdp-reviews-total { font-size: 11px; color: var(--mm-fg-muted); letter-spacing: 0.03em; }
+.mm-pdp-reviews-cta {
+  flex: 0 0 auto; background: var(--mm-alabaster); color: var(--mm-onyx); border: 0;
+  font-family: var(--mm-font-body); font-weight: 700; font-size: 10px; text-transform: none;
+  text-align: center; letter-spacing: 0.02em; padding: 11px 14px; cursor: pointer; transition: background var(--mm-dur-1) var(--mm-ease);
+}
+.mm-pdp-reviews-cta:hover { background: var(--mm-gold-soft); }
+
+.mm-pdp-reviews-more-wrap { text-align: center; margin-top: 20px; }
+.mm-pdp-reviews-more[hidden] { display: none; }
+.mm-pdp-reviews-more[disabled] { opacity: 0.5; cursor: default; pointer-events: none; }
+
+.mm-pdp-reviews-spotlight { margin-top: 20px; padding: 22px 20px; background: var(--mm-charcoal); border: var(--mm-hairline-gold); position: relative; }
+.mm-pdp-reviews-badge {
+  position: absolute; top: -11px; left: 18px; font-size: 10px; font-weight: 700; letter-spacing: 0.16em;
+  text-transform: uppercase; color: var(--mm-onyx); background: var(--mm-gold-soft); padding: 4px 11px;
+}
+.mm-pdp-reviews-spotlight .mm-pdp-reviews-stars { font-size: 16px; margin-bottom: 12px; }
+.mm-pdp-reviews-spotlight-quote { font-family: var(--mm-font-display); font-weight: 600; font-size: 24px; line-height: 1.12; color: var(--mm-fg); margin-bottom: 12px; }
+.mm-pdp-reviews-spotlight-text { margin: 0 0 16px; font-size: 14px; line-height: 1.6; color: var(--mm-fg-muted); }
+.mm-pdp-reviews-spotlight-media { height: 190px; margin-bottom: 16px; overflow: hidden; }
+.mm-pdp-reviews-spotlight-media img { width: 100%; height: 100%; object-fit: cover; }
+.mm-pdp-reviews-author { display: flex; align-items: center; gap: 9px; }
+.mm-pdp-reviews-avatar {
+  flex: 0 0 auto; width: 36px; height: 36px; border-radius: 999px; background: var(--mm-onyx); border: var(--mm-hairline);
+  display: flex; align-items: center; justify-content: center; font-family: var(--mm-font-display); font-size: 15px; color: var(--mm-gold-soft);
+}
+.mm-pdp-reviews-author-name { display: flex; align-items: center; gap: 5px; font-weight: 700; font-size: 14px; color: var(--mm-fg); }
+.mm-pdp-reviews-author-name svg { flex-shrink: 0; }
+.mm-pdp-reviews-author-meta { font-size: 10px; color: var(--mm-fg-muted); letter-spacing: 0.06em; text-transform: uppercase; }
+
+.mm-pdp-reviews-more-head { display: flex; align-items: center; justify-content: space-between; margin: 28px 0 4px; }
+.mm-pdp-reviews-swipe-hint { font-size: 10px; color: var(--mm-fg-muted); letter-spacing: 0.1em; text-transform: uppercase; }
+
+/* Solange die Loox-API noch keine echten Karten geliefert hat, bleibt das Grid
+   leer (kein Fake-Content) - dann "Weitere Stimmen" + leeres Grid komplett
+   ausblenden, damit das native Loox-Widget direkt darunter sichtbar wird.
+   Sobald das Grid echte Karten enthaelt, greifen diese Regeln nicht mehr. */
+.mm-pdp-reviews-more-head:has(+ .mm-pdp-reviews-grid:empty) { display: none; }
+.mm-pdp-reviews-grid:empty { display: none; }
+.mm-pdp-reviews-grid:empty + .mm-pdp-reviews-more-wrap { display: none; }
+
+.mm-pdp-reviews-grid {
+  display: flex; gap: 14px; overflow-x: auto; padding: 14px 20px 6px; margin: 0 -20px;
+  scroll-snap-type: x mandatory; -webkit-overflow-scrolling: touch; scrollbar-width: none;
+}
+.mm-pdp-reviews-grid::-webkit-scrollbar { display: none; }
+.mm-pdp-reviews-card {
+  flex: 0 0 auto; width: 250px; scroll-snap-align: center; background: var(--mm-charcoal);
+  border: var(--mm-hairline); display: flex; flex-direction: column;
+}
+.mm-pdp-reviews-card-media { height: 132px; }
+.mm-pdp-reviews-card-media img { display: block; width: 100%; height: 100%; object-fit: cover; }
+.mm-pdp-reviews-card-body { padding: 16px 16px 14px; display: flex; flex-direction: column; gap: 10px; }
+.mm-pdp-reviews-card-body .mm-pdp-reviews-stars { font-size: 13px; margin-bottom: 0; }
+.mm-pdp-reviews-card-title { font-family: var(--mm-font-display); font-weight: 600; font-size: 17px; line-height: 1.15; color: var(--mm-fg); }
+.mm-pdp-reviews-card-text { margin: 0; font-size: 12px; line-height: 1.55; color: var(--mm-fg-muted); display: -webkit-box; -webkit-line-clamp: 4; -webkit-box-orient: vertical; overflow: hidden; }
+.mm-pdp-reviews-card-footer { margin-top: auto; padding: 12px 16px; border-top: var(--mm-hairline); display: flex; align-items: center; gap: 8px; }
+.mm-pdp-reviews-card-footer .mm-pdp-reviews-avatar { width: 26px; height: 26px; font-size: 11px; }
+.mm-pdp-reviews-card-name { font-size: 11px; font-weight: 700; color: var(--mm-fg); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.mm-pdp-reviews-card-product { font-size: 9px; color: var(--mm-fg-muted); letter-spacing: 0.04em; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+
+/* ---------- Desktop-Struktur fuer die neuen Top-Level-Sections ----------
+   Mobile bleibt unveraendert (alles einspaltig, wie bisher). Ab 750px
+   (Dawn-Standard-Breakpoint) bekommen die Marketing-Sections wieder eine
+   richtige Breite/Struktur statt in der schmalen Buybox-Spalte zu haengen -
+   analog zu den alten, separaten Theme-Sections (Deep-Dive Bild/Text
+   nebeneinander, Studie 3-spaltig, Routine 2-spaltig, wie zuvor). */
+@media screen and (min-width: 750px) {
+  .mm-pdp-deepdive-group,
+  .mm-pdp-studie,
+  .mm-pdp-routine,
+  .mm-pdp-why,
+  .mm-pdp-compare,
+  .mm-pdp-reviews,
+  .mm-pdp-herkunft,
+  .mm-pdp-ingredients {
+    max-width: 960px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .mm-pdp-herkunft { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: center; }
+  .mm-pdp-herkunft-img { margin-bottom: 0; }
+  .mm-pdp-ingredients-grid { max-width: 640px; margin-inline: auto; gap: 16px; }
+
+  /* Kundenrezensionen auf Desktop: Kopfzeile nebeneinander, Spotlight Foto|Text, 3er-Grid statt Slider */
+  .mm-pdp-reviews-head { display: flex; align-items: flex-end; justify-content: space-between; gap: 40px; margin-bottom: 36px; }
+  .mm-pdp-reviews-title { font-size: 38px; margin-bottom: 0; }
+  .mm-pdp-reviews-summary { padding: 16px 20px; gap: 18px; }
+  .mm-pdp-reviews-avg { font-size: 36px; }
+
+  .mm-pdp-reviews-spotlight { display: grid; grid-template-columns: 380px 1fr; padding: 0; margin-top: 0; margin-bottom: 44px; align-items: stretch; }
+  .mm-pdp-reviews-spotlight-media { height: auto; min-height: 300px; margin-bottom: 0; }
+  .mm-pdp-reviews-spotlight-body { padding: 38px 40px 34px; display: flex; flex-direction: column; justify-content: center; gap: 14px; }
+  .mm-pdp-reviews-spotlight .mm-pdp-reviews-stars { font-size: 18px; margin-bottom: 0; }
+  .mm-pdp-reviews-spotlight-quote { font-size: 30px; margin-bottom: 0; }
+  .mm-pdp-reviews-spotlight-text { font-size: 16px; max-width: 56ch; margin-bottom: 0; }
+  .mm-pdp-reviews-swipe-hint { display: none; }
+  .mm-pdp-reviews-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; overflow-x: visible; padding: 0; margin: 0; }
+  .mm-pdp-reviews-card { width: auto; }
+  .mm-pdp-reviews-card-media { height: 150px; }
+  .mm-pdp-reviews-card-body { padding: 18px 18px 16px; }
+  .mm-pdp-reviews-card-body .mm-pdp-reviews-stars { font-size: 13px; }
+  .mm-pdp-reviews-card-title { font-size: 18px; }
+  .mm-pdp-reviews-card-text { font-size: 13px; -webkit-line-clamp: 4; }
+  .mm-pdp-reviews-card-footer { padding: 13px 18px; }
+
+  .mm-pdp-deepdive {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: center;
+  }
+  .mm-pdp-deepdive-img { width: 100%; margin: 0; }
+  .mm-pdp-deepdive-body { padding: 0; border-bottom: 0; }
+  .mm-pdp-deepdive:nth-child(even) .mm-pdp-deepdive-img { order: 2; }
+
+  /* Kundenstudie auf Desktop: statisches 3er-Grid, kein Slider (nur Mobile ist Slider) */
+  .mm-pdp-studie-stats {
+    flex-direction: row;
+    align-items: stretch;
+    overflow-x: visible;
+    scroll-snap-type: none;
+    margin: 0;
+    padding: 0;
+  }
+  .mm-pdp-studie-stat {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    scroll-snap-align: none;
+  }
+
+  .mm-pdp-routine-steps { flex-direction: row; align-items: flex-start; }
+  .mm-pdp-routine-step { flex: 1; }
+
+  .mm-pdp-why-title,
+  .mm-pdp-compare-title { text-align: center; }
+}
+
+/* ---------- Trust-Chips (Buybox) ---------- */
+.mm-pdp-trust-chips { display: flex; flex-wrap: wrap; gap: 8px; padding: 10px 0; border-top: var(--mm-hairline); border-bottom: var(--mm-hairline); margin: 4px 0; }
+.mm-pdp-trust-chip { display: inline-flex; align-items: center; gap: 6px; font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.04em; color: var(--mm-fg); background: var(--mm-charcoal); border: 1.5px solid var(--mm-stone); border-radius: 999px; padding: 6px 11px; }
+.mm-pdp-trust-chip-dot { width: 5px; height: 5px; border-radius: 999px; background: var(--mm-gold-soft); flex-shrink: 0; }
+
+/* ---------- Social Proof (Avatare + Claim) ---------- */
+.mm-pdp-social-proof { display: flex; align-items: center; gap: 12px; padding: 7px 16px; background: var(--mm-charcoal); border: 1.5px solid var(--mm-stone); border-radius: 999px; margin: 8px 0; }
+.mm-pdp-social-proof-avatars { display: flex; flex-shrink: 0; }
+.mm-pdp-social-proof-avatars img { width: 32px; height: 32px; border-radius: 999px; object-fit: cover; border: 2px solid var(--mm-gold-soft); margin-left: -10px; }
+.mm-pdp-social-proof-avatars img:first-child { margin-left: 0; }
+.mm-pdp-social-proof-text {
+  font-size: 11px; line-height: 1.4; color: var(--mm-fg);
+  display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;
+}
+.mm-pdp-social-proof-text strong { font-weight: 700; }
+@media screen and (min-width: 750px) {
+  .mm-pdp-social-proof { padding: 10px 16px; }
+  .mm-pdp-social-proof-text { font-size: var(--mm-size-micro); }
+}
+.mm-pdp-social-proof-verified { color: var(--mm-gold-soft); }
+
+/* ---------- Liefer-Pill (dynamisches Datum) ---------- */
+.mm-pdp-delivery-pill { display: flex; flex-wrap: nowrap; align-items: center; gap: 10px; padding: 10px 14px; background: var(--mm-charcoal); border-radius: 999px; margin: 8px 0; font-size: 11px; overflow-x: auto; white-space: nowrap; }
+.mm-pdp-delivery-date, .mm-pdp-delivery-ship { flex-shrink: 0; }
+.mm-pdp-delivery-date { display: inline-flex; align-items: center; gap: 6px; font-weight: 700; }
+.mm-pdp-delivery-dot { width: 6px; height: 6px; border-radius: 999px; background: #7A9A65; flex-shrink: 0; }
+.mm-pdp-delivery-ship { display: inline-flex; align-items: center; gap: 6px; color: var(--mm-fg-muted); }
+
+/* ---------- 3-in-1-Prinzip (4 Karten) ---------- */
+/* padding-top 24px statt 48px: das ist die erste Content-Section direkt unter der
+   Buybox. Gemessen lagen zwischen dem Social-Proof-Block und dem Sectiontitel
+   71px (mobil) bzw. 76px - zu viel fuer einen Uebergang, der visuell
+   zusammengehoert. Nach unten bleiben 48px wie bei allen anderen Sections. */
+.mm-pdp-principle { padding: 24px 20px 48px; border-bottom: var(--mm-hairline); text-align: center; }
+.mm-pdp-principle-title { font-size: 26px; margin: 10px 0 8px; color: var(--mm-fg); }
+.mm-pdp-principle-sub { font-size: 14px; color: var(--mm-fg-muted); margin: 0 0 28px; }
+.mm-pdp-principle-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; text-align: left; }
+.mm-pdp-principle-card { background: var(--mm-charcoal); border-radius: var(--mm-radius-card); padding: 20px; display: flex; flex-direction: column; gap: 10px; }
+.mm-pdp-principle-icon { color: var(--mm-gold-soft); }
+.mm-pdp-principle-card-title { font-family: var(--mm-font-display) !important; font-size: 16px; font-weight: 600; color: var(--mm-fg); margin: 0; }
+.mm-pdp-principle-card-text { font-size: 13px; color: var(--mm-fg-muted); margin: 0; line-height: 1.5; }
+
+/* ---------- FAQ (wiederverwendet mm-pdp-accordion) ---------- */
+.mm-pdp-faq { padding: 48px 20px; border-bottom: var(--mm-hairline); }
+.mm-pdp-faq .mm-eyebrow { display: block; text-align: center; }
+.mm-pdp-faq-title { font-size: 26px; margin: 10px 0 24px; color: var(--mm-fg); text-align: center; }
+
+/* ---------- Koala Bundles Reskin (native App-Output, nur Kosmetik) ---------- */
+.koala-deal { font-family: var(--mm-font-body) !important; }
+.koala-deal__content { padding-top: 8px !important; }
+.koala-deal__tier__input:checked + * ,
+.koala-deal__tiers__list-item[aria-pressed="true"] { border-color: var(--mm-gold-soft) !important; }
+
+@media screen and (min-width: 750px) {
+  .mm-pdp-principle-grid { grid-template-columns: repeat(2, 1fr); max-width: 640px; margin-inline: auto; }
+  .mm-pdp-faq { text-align: center; }
+  .mm-pdp-faq .mm-pdp-accordion { max-width: 640px; margin-inline: auto; text-align: left; }
+  .mm-pdp-faq .mm-pdp-accordion-head { justify-content: space-between; }
+  .mm-pdp-faq .mm-pdp-accordion-label { flex: 1 1 auto; padding-right: 16px; }
+  .mm-pdp-faq .mm-pdp-accordion-mark { flex: none; }
+}
+
+/* FAQ-Fragen in normaler Schreibweise. .mm-pdp-accordion-label ist ein
+   Micro-Label (12px, uppercase, 0.16em) und wird auch ausserhalb der FAQ
+   genutzt, deshalb hier nur innerhalb von .mm-pdp-faq ueberschrieben.
+   14px statt 12px, weil gesperrte Kleinbuchstaben sonst zu klein wirken. */
+.mm-pdp-faq .mm-pdp-accordion-label {
+  font-size: 14px; font-weight: 700; letter-spacing: 0.01em; text-transform: none;
+}
+
+/* ---------- "Geeignet fuer" (Hauttyp/Haartyp-Icons) ---------- */
+.mm-skin-types { padding: 8px 0; border-top: 1px solid rgba(175, 152, 65, 0.2); margin-top: 2px; }
+.mm-skin-types__label { font-size: 12px; letter-spacing: 0.12em; color: var(--mm-fg); margin: 0 0 12px 0; font-weight: 700; }
+.mm-skin-types__grid { display: flex; gap: 0; align-items: flex-start; }
+.mm-skin-types__item { flex: 1; display: flex; flex-direction: column; align-items: center; gap: 8px; padding: 0 8px; border-right: 1px solid rgba(255, 255, 255, 0.08); }
+.mm-skin-types__item:last-child { border-right: none; }
+.mm-skin-types__icon { width: 48px; height: 48px; }
+.mm-skin-types__icon img { width: 100%; height: 100%; object-fit: contain; }
+.mm-skin-types__text { font-size: 11px; color: var(--mm-fg); text-align: center; letter-spacing: 0.04em; line-height: 1.3; }
+
+/* ---------- Vorher/Nachher Drag-Slider ---------- */
+.mm-pdp-ba {
+  position: relative; max-width: 480px; margin: 0 auto 32px; aspect-ratio: 1 / 1;
+  border-radius: var(--mm-radius-card); overflow: hidden; cursor: ew-resize; user-select: none;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+.mm-pdp-ba-after, .mm-pdp-ba-before { position: absolute; inset: 0; }
+.mm-pdp-ba-after img, .mm-pdp-ba-before img { width: 100%; height: 100%; object-fit: cover; display: block; pointer-events: none; }
+.mm-pdp-ba-before { clip-path: inset(0 50% 0 0); }
+.mm-pdp-ba-handle {
+  position: absolute; top: 0; bottom: 0; left: 50%; width: 2px; background: var(--mm-alabaster);
+  transform: translateX(-50%); pointer-events: none;
+}
+.mm-pdp-ba-handle-grip {
+  position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);
+  width: 40px; height: 40px; border-radius: 999px; background: var(--mm-alabaster); color: var(--mm-onyx);
+  display: flex; align-items: center; justify-content: center; box-shadow: 0 0 7px rgba(0,0,0,0.35);
+  pointer-events: auto; touch-action: none; cursor: ew-resize;
+}
+.mm-pdp-ba-handle-grip svg { width: 16px; height: 16px; }
+.mm-pdp-ba-label {
+  position: absolute; top: 12px; z-index: 2;
+  font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em;
+  color: var(--mm-alabaster); background: rgba(14,14,14,0.6); padding: 6px 12px; border-radius: var(--mm-radius);
+}
+.mm-pdp-ba-label--before { left: 12px; }
+.mm-pdp-ba-label--after { right: 12px; }
+
+/* ---------- Zwei-Spalten-Split (Desktop): Vorher/Nachher + Inhaltsstoffe, Warum + Vergleich ---------- */
+.mm-pdp-principle-split, .mm-pdp-split { display: flex; flex-direction: column; gap: 40px; margin: 32px 0; text-align: left; }
+.mm-pdp-principle-split-col, .mm-pdp-split-col { width: 100%; }
+.mm-pdp-ingredients-inline { text-align: center; }
+.mm-pdp-ingredients-inline .mm-pdp-ingredients-title { font-size: 22px; margin: 8px 0 20px; color: var(--mm-fg); }
+.mm-pdp-ingredients-inline .mm-pdp-ingredients-grid { text-align: left; }
+
+@media screen and (min-width: 750px) {
+  .mm-pdp-principle-split, .mm-pdp-split { flex-direction: row; align-items: flex-start; gap: 56px; max-width: 1040px; margin-inline: auto; margin-top: 40px; margin-bottom: 40px; }
+  .mm-pdp-principle-split-col, .mm-pdp-split-col { flex: 1; min-width: 0; }
+}
+
+/* ---------- "Oft zusammen gekauft": eigene Section (sections/mm-pdp-related.liquid)
+   rendert bereits echtes .mm-bs-card-Markup ueber {{ recommendations }} - Styling kommt
+   komplett aus mm-home-bestseller.css, hier nur der (aktuell leere) Heading-Fallback. ---------- */
+.related-products__heading { font-size: 20px; margin: 0 0 16px; text-align: left; }
+
+/* ---------- Tallow-PDP: Vorher/Nachher groesser, USP-Karten 1x4 statt 2x2 ----------
+   Bewusst als Modifier, damit jawline-gum (2 Karten) und texture-spray
+   unveraendert bleiben.
+
+   Mobile: 1x4 als Swipe-Slider. Vier echte Spalten sind auf 390px nicht
+   darstellbar - nach Section-Padding und Gaps blieben 75px pro Karte, davon
+   35px Textbreite. Der Slider zeigt die vier Karten in einer Reihe und laesst
+   die naechste anschneiden, damit erkennbar ist, dass es weitergeht. Gleiche
+   Mechanik wie die Routine-Section darunter (scroll-snap, kein JS noetig). */
+/* Aenderung 06.08.: kein Slider mehr, sondern 2x2 wie bei based - die vier
+   Vorteile stehen zusammen unter dem Bild, ohne Wischen. Dafuer kleiner:
+   Karten 14px Innenabstand statt 20px, Titel 13.5px statt 16px, Text 12px. */
+.mm-pdp-principle-grid--4 {
+  display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px;
+  overflow: visible; scroll-snap-type: none; padding-bottom: 0;
+}
+.mm-pdp-principle-grid--4 > .mm-pdp-principle-card { padding: 14px; gap: 6px; }
+.mm-pdp-principle-grid--4 .mm-pdp-principle-card-title { font-size: 13.5px; line-height: 1.2; }
+.mm-pdp-principle-grid--4 .mm-pdp-principle-card-text { font-size: 12px; line-height: 1.45; }
+.mm-pdp-principle-grid--4 .mm-pdp-principle-icon svg { width: 15px; height: 15px; }
+
+@media screen and (min-width: 750px) {
+  .mm-pdp-ba--wide { max-width: 760px; margin-bottom: 44px; }
+  .mm-pdp-principle-grid--4 {
+    display: grid; grid-template-columns: repeat(4, 1fr);
+    max-width: 1040px; gap: 20px;
+    overflow-x: visible; scroll-snap-type: none; padding-bottom: 0;
+  }
+  .mm-pdp-principle-grid--4 > .mm-pdp-principle-card { flex: initial; }
+}
+
+/* ---------- Herkunft: zweiter Absatz aufklappbar ("Mehr lesen") ----------
+   Nativer <details>-Toggle, kein JS. Die Label-Texte stehen im HTML, nicht in
+   CSS-content, damit sie uebersetzbar bleiben. */
+.mm-pdp-herkunft-more { margin-top: 4px; }
+.mm-pdp-herkunft-more > summary {
+  display: inline-block; cursor: pointer; list-style: none;
+  font-size: 12px; color: var(--mm-gold-soft);
+  border-bottom: 1px solid var(--mm-gold-line); padding-bottom: 2px;
+}
+.mm-pdp-herkunft-more > summary::-webkit-details-marker { display: none; }
+.mm-pdp-herkunft-more > summary:hover { color: var(--mm-gold); }
+.mm-pdp-herkunft-more-close { display: none; }
+.mm-pdp-herkunft-more[open] > summary .mm-pdp-herkunft-more-open { display: none; }
+.mm-pdp-herkunft-more[open] > summary .mm-pdp-herkunft-more-close { display: inline; }
+.mm-pdp-herkunft-more .mm-pdp-herkunft-text { margin-top: 12px; }
+
+/* Die frueheren !important-Korrekturen fuer die App-Section
+   "ss-product-ingredients-6" sind entfallen: die Inhaltsstoffe laufen jetzt
+   ueber die eigene Section mm-ig-* (assets/mm-pdp-ingredients-grid.css). */
+
+
+/* ---------- Tabs und Garantie-Karte: eine Schriftart, Gold nur als Akzent ----------
+   Die entsprechenden Regeln in mm-design-system.css sind auf .mm-pdp-tallow
+   gescoped und greifen deshalb nur auf einer PDP. Hier ungescoped, damit die
+   Tab-Titel und die Garantie ueberall in der Body-Font stehen und "Mehr lesen"
+   nicht golden ist. */
+.mm-pdp-accordion-label,
+.mm-pdp-guarantee-title,
+.mm-pdp-accordion-body h2,
+.mm-pdp-accordion-body h3,
+.mm-pdp-desc-tagline,
+.mm-pdp-desc-quote {
+  font-family: var(--mm-font-body) !important;
+}
+.mm-guar__toggle { color: var(--mm-fg-muted) !important; }
+.mm-guar__toggle:hover { color: var(--mm-fg) !important; }
+.mm-guar__chevron { color: var(--mm-fg-muted) !important; }
+
+/* ---------- Beschreibungstabs: ruhig, zwei Farben, eine Schrift ----------
+   Vorgabe 06.08.: aufgeklappt nur Weiss und Grau, nur Suisse, keine Tabellen,
+   keine Kaesten, kein Gold. Steht am Dateiende, damit es die Einzelregeln
+   darueber schlaegt, ohne sie zu loeschen (andere Templates nutzen dieselben
+   Klassen fuer denselben Zweck). */
+.mm-pdp-accordion-body,
+.mm-pdp-accordion-body * { font-family: var(--mm-font-body) !important; }
+
+/* Eine Schriftart, eine Groesse, eine Dicke im ganzen Tab - der Unterschied ist
+   allein die Farbe. Gilt fuer alle PDPs, nicht nur Tallow: auf der
+   Clear-Skin-PDP standen die Zwischentitel sonst weiter auf 18px/600.
+   13px und 500 sind die Werte des Fliesstextes (--mm-fs-small, --mm-fw-body). */
+.mm-pdp-accordion-body,
+.mm-pdp-accordion-body p,
+.mm-pdp-accordion-body li,
+.mm-pdp-accordion-body td,
+.mm-pdp-accordion-body h2,
+.mm-pdp-accordion-body h3,
+.mm-pdp-accordion-body strong,
+.mm-pdp-accordion-body b,
+.mm-pdp-desc-lead,
+.mm-pdp-desc-tagline,
+.mm-pdp-desc-quote,
+.mm-pdp-desc-eyebrow,
+.mm-pdp-desc-ingredient-name,
+.mm-pdp-desc-note,
+.mm-pdp-desc-footer {
+  font-size: 13px !important;
+  font-weight: 500 !important;
+  line-height: 1.6 !important;
+  letter-spacing: 0.01em !important;
+}
+
+/* Zwei Farben: Fliesstext grau, Titel und Betonung weiss */
+.mm-pdp-accordion-body,
+.mm-pdp-accordion-body p,
+.mm-pdp-accordion-body li,
+.mm-pdp-accordion-body td,
+.mm-pdp-desc-lead { color: var(--mm-fg-muted) !important; }
+
+.mm-pdp-accordion-body h2,
+.mm-pdp-accordion-body h3,
+.mm-pdp-accordion-body strong,
+.mm-pdp-accordion-body b,
+.mm-pdp-desc-tagline,
+.mm-pdp-desc-quote,
+.mm-pdp-desc-eyebrow,
+.mm-pdp-desc-ingredient-name { color: var(--mm-fg) !important; }
+
+/* Nur Sekundaeres bleibt grau */
+.mm-pdp-desc-note,
+.mm-pdp-desc-footer,
+.mm-pdp-desc-footer span,
+.mm-pdp-desc-ingredient-name span,
+.mm-pdp-desc-checklist li span { color: var(--mm-fg-muted) !important; }
+
+/* Eyebrow ohne Gold, kleinere Sperrung - es bleibt ein Label, kein Akzent */
+.mm-pdp-desc-eyebrow { letter-spacing: 0.08em; font-size: 11px; }
+
+/* Zitat ohne Kasten und ohne Goldkante */
+.mm-pdp-desc-quote {
+  margin: 12px 0 !important; padding: 0 !important;
+  background: transparent !important; border-left: 0 !important;
+  font-size: 13px !important; font-weight: 700 !important; line-height: 1.65 !important;
+}
+
+/* Tabellen zu einfachen Zeilen: keine Rahmen, keine Zellenkaesten */
+.mm-pdp-desc-table,
+.mm-pdp-desc-table td { border: 0 !important; }
+.mm-pdp-desc-table td { padding: 3px 0 !important; }
+.mm-pdp-desc-table td:first-child { color: var(--mm-fg-muted) !important; }
+
+/* Links schlicht unterstrichen statt golden */
+.mm-pdp-accordion-body a,
+.mm-pdp-desc-link { color: var(--mm-fg) !important; text-decoration: underline; }
+
+/* ---------- Zutatennamen im Tab "Inhaltsstoffe & Wirkung" ----------
+   Vorgabe 10.08.: die einzelnen Zutaten sollen weiss UND fett stehen, damit man
+   sie im Fliesstext sofort findet. Das ist die einzige gewollte Ausnahme von der
+   Regel "eine Schriftdicke im Tab" - deshalb hier gezielt und nicht global.
+   Selektor mit p davor, damit er die 500er-Regel weiter oben schlaegt.
+   Die Herkunftsangabe im span bleibt grau und normal. */
+.mm-pdp-accordion-body p.mm-pdp-desc-ingredient-name {
+  font-weight: 700 !important;
+  color: var(--mm-fg) !important;
+}
+.mm-pdp-accordion-body p.mm-pdp-desc-ingredient-name span {
+  font-weight: 500 !important;
+  color: var(--mm-fg-muted) !important;
+}

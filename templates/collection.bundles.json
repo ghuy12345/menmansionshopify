@@ -1,0 +1,65 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "banner": {
+      "type": "main-collection-banner",
+      "disabled": true,
+      "settings": {
+        "show_collection_description": true,
+        "show_collection_image": false,
+        "color_scheme": "background-1"
+      }
+    },
+    "mm_collection_bundles_intro_section": {
+      "type": "custom-liquid",
+      "name": "MM Bundles Collection - Intro (Banner/Trust/Filter)",
+      "settings": {
+        "custom_liquid": "{{ 'mm-collection-bundles.css' | asset_url | stylesheet_tag }}\n<script src=\"{{ 'mm-collection-bundles.js' | asset_url }}\" defer=\"defer\"></script>\n<div class=\"mmb-announce\">\n  <span>Handmade in Germany</span>\n  <span class=\"mmb-announce__sep\">·</span>\n  <span class=\"mmb-announce__ship\">Versandkostenfrei ab 60 €</span>\n</div>\n\n<section class=\"mmb-hero\">\n  <img\n    class=\"mmb-hero__img\"\n    src=\"https://menmansion.com/cdn/shop/files/0002-489106615637134933.png?v=1747643657&width=1600\"\n    alt=\"Men Mansion Bundles\"\n    width=\"1600\" height=\"900\" fetchpriority=\"high\" decoding=\"async\">\n  <div class=\"mmb-hero__scrim\"></div>\n  <div class=\"mmb-hero__copy\">\n    \n    <h1 class=\"mmb-hero__title\">Die komplette Pflegeroutine.<br><span class=\"mmb-hero__save\">Spare bis zu 32 %</span></h1>\n    <p class=\"mmb-hero__sub\">100 % natürlich, handgefertigt und perfekt aufeinander abgestimmt.</p>\n  </div>\n</section>\n\n<ul class=\"mmb-trust\">\n  <li><span class=\"mmb-trust__ic\">✓</span>100 % natürlich</li>\n  <li><span class=\"mmb-trust__ic\">✓</span>Schnelle Lieferung</li>\n  <li><span class=\"mmb-trust__ic\">✓</span>30 Tage Rückgabe</li>\n  <li><span class=\"mmb-trust__ic\">✓</span>4,8/5 · +2.400 Bewertungen</li>\n</ul>",
+        "color_scheme": "background-1",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "product-grid": {
+      "type": "custom-liquid",
+      "name": "MM Collection Grid - Bestseller-Karten-Stil",
+      "settings": {
+        "custom_liquid": "{{ 'mm-home-bestseller.css' | asset_url | stylesheet_tag }}\n<script src=\"{{ 'mm-home-bestseller.js' | asset_url }}\" defer=\"defer\"></script>\n<section class=\"mm-bs mm-bs-collection\">\n  {%- liquid\n    assign image_overrides_json = image_overrides_json | default: ''\n  -%}\n  {%- if collection.products.size == 0 -%}\n    <p class=\"mm-bs-collection-empty\">Aktuell sind keine Produkte in dieser Kategorie verfügbar.</p>\n  {%- else -%}\n  <div class=\"mm-bs-collection-grid\" data-mmb-grid>\n    {%- for product in collection.products -%}\n      {%- assign variant = product.selected_or_first_available_variant -%}\n      {%- assign compare = variant.compare_at_price -%}\n      {%- assign card_image = product.featured_image -%}\n      {%- case product.handle -%}\n        {%- when 'clear-skin-set' -%}\n          {%- assign card_image_url = 'https://menmansion.com/cdn/shop/files/3AFA3753-3FDA-433E-982D-042241CC2475_46bba72e-9862-4bfa-b6b1-f81c65ca0414.jpg' -%}\n        {%- else -%}\n          {%- assign card_image_url = card_image | image_url: width: 800 -%}\n      {%- endcase -%}\n      {%- case product.handle -%}\n        {%- when 'clear-skin-set' or 'arctic-skin-set' -%}\n          {%- assign card_cat = 'haut' -%}\n        {%- when 'skin-hair-duo' -%}\n          {%- assign card_cat = 'haare' -%}\n        {%- when 'skin-beard-set' or 'bartpflege-set' -%}\n          {%- assign card_cat = 'bart' -%}\n        {%- when 'daily-care-essentials' or 'hot-season-edition-1' -%}\n          {%- assign card_cat = 'komplett' -%}\n        {%- else -%}\n          {%- assign card_cat = 'komplett' -%}\n      {%- endcase -%}\n      {%- assign card_save = 0 -%}\n      {%- if compare > variant.price -%}\n        {%- assign card_save = compare | minus: variant.price | divided_by: 100.0 -%}\n      {%- endif -%}\n      {%- case product.handle -%}\n        {%- when 'arctic-skin-set' -%}\n          {%- assign card_usp = 'Wacher Blick, klare Haut' -%}\n        {%- when 'hot-season-edition-1' -%}\n          {%- assign card_usp = 'Kühlung, Pflege, Definition' -%}\n        {%- when 'skin-beard-set' -%}\n          {%- assign card_usp = 'Geschmeidige Haut & Bart' -%}\n        {%- when 'skin-hair-duo' -%}\n          {%- assign card_usp = 'Gepflegte Haut, mehr Volumen' -%}\n        {%- when 'clear-skin-set' -%}\n          {%- assign card_usp = 'Ruhigere, reinere Haut' -%}\n        {%- when 'daily-care-essentials' -%}\n          {%- assign card_usp = 'Die komplette Routine' -%}\n        {%- when 'aleppo-seife-190g' -%}\n          {%- assign card_usp = 'Rein gereinigt, spürbar geschmeidig' -%}\n        {%- when 'tallow-gesichtscreme-o-50ml' or 'tallow-gesichtscreme-y-50ml' -%}\n          {%- assign card_usp = 'Reines Gold für klare und gesunde Haut' -%}\n        {%- when 'bartpflegeserum' -%}\n          {%- assign card_usp = 'Weicherer, geschmeidiger Bart' -%}\n        {%- when 'sea-texture-spray' -%}\n          {%- assign card_usp = 'Mehr Textur, mehr Volumen' -%}\n        {%- when 'jawline-gum' -%}\n          {%- assign card_usp = 'Definierte Kieferlinie in Minuten' -%}\n        {%- when 'gua-sha-jade-roller' -%}\n          {%- assign card_usp = 'Straffere Konturen, sichtbar' -%}\n        {%- when 'eisroller-pro' -%}\n          {%- assign card_usp = 'Weniger Schwellungen &amp;&nbsp;Rötungen' -%}\n        {%- when 'bartpflege-set' -%}\n          {%- assign card_usp = 'Voller, definierter Bart' -%}\n        {%- else -%}\n          {%- assign card_usp = '' -%}\n      {%- endcase -%}\n      <article class=\"mm-bs-card\" data-cat=\"{{ card_cat }}\" data-price=\"{{ variant.price | divided_by: 100.0 }}\" data-save=\"{{ card_save }}\">\n        <div class=\"mm-bs-card-media\">\n          <a href=\"{{ product.url }}\" class=\"mm-bs-media-link\">\n            {%- if card_image_url contains 'menmansion.com' and card_image_url contains '3AFA3753' -%}\n              <img src=\"{{ card_image_url }}?width=800\" alt=\"{{ product.title | escape }}\" loading=\"lazy\">\n            {%- else -%}\n              <img src=\"{{ card_image_url }}\" alt=\"{{ product.title | escape }}\" loading=\"lazy\">\n            {%- endif -%}\n          </a>\n          {%- if product.handle == 'daily-care-essentials' -%}\n            <div class=\"mm-bs-badges\"><span class=\"mm-bs-badge-save\" style=\"margin-left:auto;\">Beliebt</span></div>\n          {%- elsif compare > variant.price -%}\n            <div class=\"mm-bs-badges\"><span class=\"mm-bs-badge-save\" style=\"margin-left:auto;\">Spare {{ compare | minus: variant.price | money_without_currency }} €</span></div>\n          {%- endif -%}\n        </div>\n        <div class=\"mm-bs-card-body\">\n          <h3 class=\"mm-bs-name\"><a href=\"{{ product.url }}\" class=\"mm-bs-name-link\">{{ product.title }}</a></h3>\n            {%- render 'mm-rating', product: product, fallback: all_products['skin-beard-set'] -%}\n            {%- if card_usp != blank -%}<p class=\"mm-bs-benefit\">{{ card_usp }}</p>{%- endif -%}\n          <div class=\"mm-bs-buy\">\n            <div class=\"mm-bs-price-row\">\n              <span class=\"mm-bs-price\">{{ variant.price | money_without_currency }} €</span>\n              {%- if compare > variant.price -%}<span class=\"mm-bs-compare\">{{ compare | money_without_currency }} €</span>{%- endif -%}\n            </div>\n            {%- if compare > variant.price -%}<span class=\"mm-bs-saving\">Du sparst {{ compare | minus: variant.price | money_without_currency }} €</span>{%- endif -%}\n          </div>\n        </div>\n      </article>\n    {%- endfor -%}\n  </div>\n  {%- endif -%}\n</section>",
+        "color_scheme": "background-1",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "mm_collection_bundles_outro_section": {
+      "type": "custom-liquid",
+      "name": "MM Bundles Collection - Outro (Kaufberatung/FAQ/Sticky-Cart)",
+      "settings": {
+        "custom_liquid": "<section class=\"mmb-guide\">\n  \n  <h2 class=\"mmb-guide__title\">Welches Set passt zu dir?</h2>\n  <div class=\"mmb-guide__grid\">\n    <button class=\"mmb-guide__item\" data-filter=\"haare\">\n      <span class=\"mmb-guide__need\">Ich fange an</span>\n      <span class=\"mmb-guide__pick\">Skin &amp; Hair Duo</span>\n      <span class=\"mmb-guide__why\">Zwei Produkte, zwei Minuten am Morgen.</span>\n    </button>\n    <button class=\"mmb-guide__item\" data-filter=\"haut\">\n      <span class=\"mmb-guide__need\">Unreine Haut</span>\n      <span class=\"mmb-guide__pick\">Clear Skin Set</span>\n      <span class=\"mmb-guide__why\">Antibakteriell, sichtbar ab Woche 2.</span>\n    </button>\n    <button class=\"mmb-guide__item\" data-filter=\"bart\">\n      <span class=\"mmb-guide__need\">Dichterer Bart</span>\n      <span class=\"mmb-guide__pick\">Bartpflege-Set</span>\n      <span class=\"mmb-guide__why\">Serum plus Dermaroller im Duo.</span>\n    </button>\n    <button class=\"mmb-guide__item\" data-filter=\"komplett\">\n      <span class=\"mmb-guide__need\">Alles auf einmal</span>\n      <span class=\"mmb-guide__pick\">Daily Care Essentials</span>\n      <span class=\"mmb-guide__why\">Größte Ersparnis, komplette Routine.</span>\n    </button>\n  </div>\n</section>\n\n<section class=\"mmb-faq\">\n  \n  <div class=\"mmb-faq__list\">\n    <details class=\"mmb-faq__item\" open>\n      <summary>Warum ein Set statt Einzelprodukten?<span class=\"mmb-faq__sign\"></span></summary>\n      <p>Die Produkte sind aufeinander abgestimmt: Reinigung, Pflege und Serum arbeiten zusammen\n        statt gegeneinander. Im Set zahlst du bis zu 32 % weniger als bei Einzelkauf.</p>\n    </details>\n    <details class=\"mmb-faq__item\">\n      <summary>Wie lange reicht ein Set?<span class=\"mmb-faq__sign\"></span></summary>\n      <p>Das hängt von der Anwendungshäufigkeit ab - bei täglicher Nutzung hält ein Set in der Regel mehrere Wochen.</p>\n    </details>\n    <details class=\"mmb-faq__item\">\n      <summary>Was, wenn es meiner Haut nicht passt?<span class=\"mmb-faq__sign\"></span></summary>\n      <p>30 Tage Rückgaberecht - auch geöffnet. Schreib uns kurz, wir erstatten den vollen Betrag.</p>\n    </details>\n    <details class=\"mmb-faq__item\">\n      <summary>Wann kommt meine Bestellung?<span class=\"mmb-faq__sign\"></span></summary>\n      <p>Versand aus unserem Lager in Rottenburg - innerhalb von 1–2 Werktagen nach Auftragseingang.\n        Lieferzeit in Deutschland, Österreich und der Schweiz: 2–4 Werktage.</p>\n    </details>\n  </div>\n</section>\n\n<div class=\"mmb-sticky\" data-mmb-sticky hidden>\n  <div class=\"mmb-sticky__track\"><div class=\"mmb-sticky__fill\" data-mmb-fill style=\"width:0%\"></div></div>\n  <div class=\"mmb-sticky__inner\">\n    <div class=\"mmb-sticky__text\">\n      <span class=\"mmb-sticky__ship\" data-mmb-ship>Noch 55,00 € bis Gratisversand</span>\n      <span class=\"mmb-sticky__total\" data-mmb-total>0,00 € · 0 Artikel</span>\n    </div>\n    <a class=\"mmb-sticky__cta\" href=\"/checkout\">Zur Kasse</a>\n  </div>\n</div>",
+        "color_scheme": "background-1",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "zegsu-alireviews-collection": {
+      "type": "apps",
+      "settings": {
+        "include_margins": true
+      }
+    }
+  },
+  "order": [
+    "banner",
+    "mm_collection_bundles_intro_section",
+    "product-grid",
+    "mm_collection_bundles_outro_section",
+    "zegsu-alireviews-collection"
+  ]
+}

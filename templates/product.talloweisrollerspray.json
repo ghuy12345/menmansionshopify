@@ -1,0 +1,554 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-product",
+      "blocks": {
+        "loox_reviews_loox_rating_Kn3NFm": {
+          "type": "shopify://apps/loox-reviews/blocks/loox-rating/5c3b337f-fd14-4df5-b1d6-80ec13e6e28e",
+          "settings": {
+            "contentSize": 10,
+            "pattern": "([count] Bewertungen) • Dermatologisch getestet",
+            "hideText": false,
+            "alignment": "",
+            "layout": "",
+            "textColor": "",
+            "starColor": "",
+            "showAllReviews": false,
+            "looxOpenFloatingWidget": false,
+            "emptyRatingWidget": false
+          }
+        },
+        "6aaec6b2720b47da": {
+          "type": "shopify://apps/section-store/blocks/block-atc-style/d7a2e423-ea88-4344-b866-6d0fb487c3dd",
+          "settings": {
+            "background_color": "#fafaf8",
+            "text_color": "#191919",
+            "hover_background_color": "#af9841",
+            "hover_text_color": "#191919",
+            "font_size": 0,
+            "font_weight": "default",
+            "border_style": "none",
+            "border_width": 1,
+            "border_color": "#fafaf8",
+            "border_radius": -1,
+            "padding_vertical": 0,
+            "background_effect": "none",
+            "gradient_color_end": "#333333",
+            "hover_effect": "shine_lift",
+            "animation": "none",
+            "button_icon": "arrow_right",
+            "use_custom_text": true,
+            "button_text": "In den Warenkorb",
+            "show_price": false,
+            "round_price": false,
+            "compare_at_price_color": "#666666"
+          }
+        },
+        "title": {
+          "type": "title",
+          "settings": {}
+        },
+        "text_TmqRRT": {
+          "type": "text",
+          "settings": {
+            "text": "<strong>Kühlung, Pflege, Definition</strong>",
+            "text_style": "uppercase"
+          }
+        },
+        "custom_liquid_YjXmkL": {
+          "type": "custom_liquid",
+          "name": "Description",
+          "settings": {
+            "custom_liquid": "<p style=\"font-size: 13px; font-weight: 300; color: #FAFAF8; font-family: var(--font-body); line-height: 1.6; margin: 0; padding: 12px 0 8px;\">\nEisroller Pro, Tallow Gesichtscreme und Sea Texture Spray – drei Produkte, eine Routine. Morgens aktivieren, pflegen, stylen. Fertig.\n</p>"
+          }
+        },
+        "section_store_block_benefits_list_xwp3mB": {
+          "type": "shopify://apps/section-store/blocks/block-benefits-list/d7a2e423-ea88-4344-b866-6d0fb487c3dd",
+          "settings": {
+            "items_gap": 10,
+            "first_text": "<p>1x Eisroller Pro + 1x Tallow Gesichtscreme + 1x Sea Texture Spray</p>",
+            "second_text": "<p>Handgefertigt & zertifiziert in Deutschland</p>",
+            "third_text": "<p>Sichtbare Ergebnisse nach wenigen Anwendungen</p>",
+            "fourth_text": "",
+            "icon_selection": "icon_2",
+            "icon_size": 20,
+            "custom_icon": "shopify://shop_images/menmansion-icon-checkmark_b488c175-ec8e-4d1e-a2f5-5ade59cea816.svg",
+            "icon_color": "#000000",
+            "text_size": 14,
+            "text_color": "#fafaf8",
+            "content_align": "left",
+            "border": "none",
+            "border_thickness": 1,
+            "border_color": "#000000",
+            "radius": 0,
+            "background": "",
+            "background_gradient": "",
+            "padding_vertical": 0,
+            "padding_horizontal": 0
+          },
+          "disabled": true
+        },
+        "custom_liquid_nPaeiV": {
+          "type": "custom_liquid",
+          "name": "Customer Needs",
+          "disabled": true,
+          "settings": {
+            "custom_liquid": "<div class=\"mm-skin-types\">\n  <p class=\"mm-skin-types__label\">Geeignet für:</p>\n  <div class=\"mm-skin-types__grid\">\n\n    <div class=\"mm-skin-types__item\">\n      <div class=\"mm-skin-types__icon\">\n        <img src=\"https://cdn.shopify.com/s/files/1/0779/4583/1766/files/NORMALE_HAUT.svg?v=1774872404\" alt=\"Normale Haut\" />\n      </div>\n      <span class=\"mm-skin-types__text\">Normale Haut</span>\n    </div>\n\n    <div class=\"mm-skin-types__item\">\n      <div class=\"mm-skin-types__icon\">\n        <img src=\"https://cdn.shopify.com/s/files/1/0779/4583/1766/files/TROCKENE_HAUT.svg?v=1774872404\" alt=\"Trockene Haut\" />\n      </div>\n      <span class=\"mm-skin-types__text\">Trockene Haut</span>\n    </div>\n\n    <div class=\"mm-skin-types__item\">\n      <div class=\"mm-skin-types__icon\">\n        <img src=\"https://cdn.shopify.com/s/files/1/0779/4583/1766/files/UNREINE_HAUT.svg?v=1774872405\" alt=\"Unreine Haut\" />\n      </div>\n      <span class=\"mm-skin-types__text\">Unreine Haut</span>\n    </div>\n\n  </div>\n</div>\n\n<style>\n  .mm-skin-types {\n    padding: 8px 0 8px;\n    border-top: 1px solid rgba(175, 152, 65, 0.2);\n    margin-top: 2px;\n  }\n\n  .mm-skin-types__label {\n    font-size: 12px;\n    letter-spacing: 0.12em;\n    text-transform: uppercase;\n    color: #FAFAF8;\n    margin: 0 0 12px 0;\n    font-weight: 900;\n  }\n\n  .mm-skin-types__grid {\n    display: flex;\n    gap: 0;\n    align-items: flex-start;\n  }\n\n  .mm-skin-types__item {\n    flex: 1;\n    display: flex;\n    flex-direction: column;\n    align-items: center;\n    gap: 8px;\n    padding: 0 8px;\n    border-right: 1px solid rgba(255, 255, 255, 0.08);\n  }\n\n  .mm-skin-types__item:last-child {\n    border-right: none;\n  }\n\n  .mm-skin-types__icon {\n    width: 60px;\n    height: 60px;\n  }\n\n  .mm-skin-types__icon img {\n    width: 100%;\n    height: 100%;\n    object-fit: contain;\n  }\n\n  .mm-skin-types__text {\n    font-size: 11px;\n    color: #FAFAF8;\n    text-align: center;\n    letter-spacing: 0.04em;\n    line-height: 1.3;\n  }\n</style>"
+          }
+        },
+        "sternify_sternify_bundle_pDeFci": {
+          "type": "shopify://apps/sternify/blocks/sternify_bundle/fcc6e879-7d9e-4924-b387-68cfab68cec6",
+          "settings": {
+            "Abstand_oben": 0,
+            "Abstand_unten": 0,
+            "product": "{{product}}"
+          },
+          "disabled": true
+        },
+        "buy_buttons": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_dynamic_checkout": false,
+            "show_gift_card_recipient": false
+          }
+        },
+        "custom_liquid_t4UhKL": {
+          "type": "custom_liquid",
+          "name": "Payment Badges",
+          "settings": {
+            "custom_liquid": "<div id='ss-payment-icons'></div>"
+          },
+          "disabled": true
+        },
+        "9b8c4c92124ab94f": {
+          "type": "shopify://apps/section-store/blocks/block-shipping-info/d7a2e423-ea88-4344-b866-6d0fb487c3dd",
+          "settings": {
+            "use_dot": true,
+            "icon_color": "#2e9613",
+            "icon_size": 10,
+            "ships_by_text": "Lieferung am",
+            "shipping_within_days": 3,
+            "include_weekend": false,
+            "ships_by_font_size": 12,
+            "ships_by_text_color": "#fafaf8",
+            "fast_shipping_text": "COUNTRY_FLAG Kostenloser Versand",
+            "allow_all_countries": true,
+            "allowed_countries": "DE,AT,CH,US,FR,IT",
+            "fast_shipping_text_for_rest_countries": "Fast International Shipping",
+            "fast_shipping_text_color": "#fafaf8",
+            "border_style": "solid",
+            "border_width": 0.5,
+            "border_color": "#3a3a3a",
+            "border_radius": 10,
+            "bg_color": "#232323",
+            "padding_vertical": 8,
+            "padding_horizontal": 10
+          }
+        },
+        "custom_liquid_MaM6Eg": {
+          "type": "custom_liquid",
+          "name": "Urgency",
+          "disabled": true,
+          "settings": {
+            "custom_liquid": "<div style=\"text-align: center; padding: 0px 10px;\">\n  <p style=\"font-size: 11px; font-weight: 600; color: #f0ede6; margin-bottom: 1px; font-family: var(--font-body);\">\n    Handgefertigt in Deutschland. Limitierte Chargen.\n  </p>\n  <p style=\"font-size: 9px; color: #b0ada8; font-family: var(--font-body); letter-spacing: 0.03em; margin: 0;\">\n    Alle Preise inkl. MwSt. &middot; Grundpreis &euro;798,00&nbsp;/&nbsp;L\n  </p>\n</div>"
+          }
+        },
+        "b4cc2f39fdba867b": {
+          "type": "shopify://apps/section-store/blocks/block-comments/d7a2e423-ea88-4344-b866-6d0fb487c3dd",
+          "settings": {
+            "content_alignment": "center",
+            "comment_verified_badge_position": "inline",
+            "verified_badge_color": "#187bfc",
+            "verified_badge_text": "Verified Customer",
+            "slide_style": "dots",
+            "autoplay": 4,
+            "comment_name_1": "Robert K.",
+            "comment_1": "Eisroller zuerst, dann die Creme. Haut fühlt sich sofort frischer an.",
+            "comment_name_2": "Karl M.",
+            "comment_2": "Den Eisroller hatte ich unterschätzt. In Kombination mit der Tallow Creme ist der Unterschied morgens wirklich spürbar.",
+            "comment_name_3": "Jakob S.",
+            "comment_3": "Perfekte Sommerroutine. Alles aufeinander abgestimmt – kühlen, pflegen, stylen. Mehr brauche ich nicht.",
+            "avatar_border_radius": 100,
+            "avatar_size": 44,
+            "author_font_size": 14,
+            "author_font_weight": 500,
+            "author_font_color": "#fafaf8",
+            "star_style": "mild",
+            "star_color": "#af9841",
+            "star_size": 14,
+            "item_border_style": "solid",
+            "item_border_width": 0.5,
+            "item_border_color": "#3a3a3a",
+            "item_border_radius": 12,
+            "item_bg_color": "#232323",
+            "effect": "none",
+            "item_padding_vertical": 14,
+            "item_padding_horizontal": 16
+          }
+        },
+        "custom_liquid_ktbqHQ": {
+          "type": "custom_liquid",
+          "name": "Product Tabs",
+          "settings": {
+            "custom_liquid": "<div id='ss-tabs-icon-insert-block'></div>"
+          }
+        },
+        "custom_liquid_BLVEzX": {
+          "type": "custom_liquid",
+          "name": "Social Proof",
+          "disabled": true,
+          "settings": {
+            "custom_liquid": "<div id='ss-social-proof'></div>"
+          }
+        },
+        "custom_liquid_iyFn8D": {
+          "type": "custom_liquid",
+          "name": "Price per Day",
+          "disabled": true,
+          "settings": {
+            "custom_liquid": "<div style=\"position: relative; height: 0; overflow: visible;\">\n  <span style=\"\n    position: absolute;\n    right: 0;\n    top: -80px;\n    border: 1px solid #ffffff;\n    color: #ffffff;\n    font-size: 11px;\n    font-weight: 500;\n    padding: 4px 10px;\n    border-radius: 5px;\n    white-space: nowrap;\n  \">€0,50 / Tag &nbsp;·&nbsp; 2 Monate Vorrat</span>\n</div>"
+          }
+        },
+        "price": {
+          "type": "price",
+          "disabled": true,
+          "settings": {}
+        },
+        "custom_liquid_CMRyxj": {
+          "type": "custom_liquid",
+          "name": "inkl.MwSt",
+          "disabled": true,
+          "settings": {
+            "custom_liquid": "<p style=\"font-size: 11px; color: #b0ada8; text-align: center; margin-top: 12px; font-family: var(--font-body); letter-spacing: 0.03em;\">\n inkl. MwSt. &middot; &euro;798,00&nbsp;/&nbsp;L\n</p>"
+          }
+        },
+        "667354250fe073fc": {
+          "type": "shopify://apps/section-store/blocks/block-banner/d7a2e423-ea88-4344-b866-6d0fb487c3dd",
+          "name": "Urgency",
+          "disabled": true,
+          "settings": {
+            "gap": 1,
+            "text_align": "center",
+            "link": "",
+            "use_image": false,
+            "icon": "rocket",
+            "image_size": 30,
+            "image_position": "left",
+            "icon_color": "#c4a265",
+            "title_text": "<p><strong>Handgefertigt in Deutschland. In limitierten Chargen.</strong></p>",
+            "title_size": 13,
+            "title_color": "#fafaf8",
+            "body_text": "",
+            "body_size": 13,
+            "body_color": "#999999",
+            "border": "solid",
+            "border_thickness": 0.5,
+            "border_color": "#3a3a3a",
+            "radius": 10,
+            "background": "#232323",
+            "background_gradient": "",
+            "shadow": "none",
+            "padding_vertical": 6,
+            "padding_horizontal": 16
+          }
+        },
+        "section_store_block_pulse_badge_7CY8ME": {
+          "type": "shopify://apps/section-store/blocks/block-pulse-badge/d7a2e423-ea88-4344-b866-6d0fb487c3dd",
+          "disabled": true,
+          "settings": {
+            "content_align": "left",
+            "use_indicator": false,
+            "pulse_icon_size": 12,
+            "pulse_icon_color": "#2e9613",
+            "text": "<p>Auf Lager | In 2-4 Tagen bei dir</p>",
+            "text_size": 14,
+            "auto_text_weight": "normal",
+            "text_color": "#c5c5c5",
+            "border": "none",
+            "border_thickness": 1,
+            "border_color": "#000000",
+            "radius": 0,
+            "background": "",
+            "padding_top": 0,
+            "padding_bottom": 0,
+            "padding_left": 10,
+            "padding_right": 0
+          }
+        },
+        "custom_liquid_NXtaV6": {
+          "type": "custom_liquid",
+          "name": "Payment Badges",
+          "disabled": true,
+          "settings": {
+            "custom_liquid": "<div class=\"ultimate-badges\"></div>"
+          }
+        },
+        "custom_liquid_gCgaR8": {
+          "type": "custom_liquid",
+          "name": "Trust Badges",
+          "disabled": true,
+          "settings": {
+            "custom_liquid": "<div id='ss-trust-badges-3'></div>"
+          }
+        },
+        "upsell_koala_bundles_bundle_app_block_i6xPty": {
+          "type": "shopify://apps/upsell-koala-bundles/blocks/bundle-app-block/2b951f75-113f-4fca-bdf3-c92703235716",
+          "disabled": true,
+          "settings": {
+            "product": "{{product}}"
+          }
+        },
+        "mm_pdp_assets": {
+          "type": "custom_liquid",
+          "name": "MM PDP Redesign - Assets",
+          "settings": {
+            "custom_liquid": "{{ 'mm-pdp-clearskinset.css' | asset_url | stylesheet_tag }}\n<script src=\"{{ 'mm-pdp-clearskinset.js' | asset_url }}\" defer=\"defer\"></script>\n<style>\n  product-info[data-product-id=\"{{ product.id }}\"] .product__title h2 { font-family: var(--mm-font-display); font-weight: 600; }\n  product-info[data-product-id=\"{{ product.id }}\"] .caption-with-letter-spacing { font-family: var(--mm-font-body); color: var(--mm-gold-soft); letter-spacing: 0.14em; }\n  product-info[data-product-id=\"{{ product.id }}\"] .product-form__submit.button--primary {\n    background: var(--mm-alabaster);\n    color: var(--mm-onyx);\n    border: 0;\n    border-radius: 10px;\n    font-family: var(--mm-font-body);\n    font-weight: 700;\n    font-size: 11px;\n    text-transform: uppercase;\n    letter-spacing: 0.14em;\n    padding: 17px 18px;\n    transition: background 150ms var(--mm-ease);\n  }\n  product-info[data-product-id=\"{{ product.id }}\"] .product-form__submit.button--primary:hover {\n    background: var(--mm-gold);\n  }\n  product-info[data-product-id=\"{{ product.id }}\"] product-form,\n  product-info[data-product-id=\"{{ product.id }}\"] .product-form,\n  product-info[data-product-id=\"{{ product.id }}\"] .product-form__buttons {\n    margin-top: 0;\n  }\n  product-info[data-product-id=\"{{ product.id }}\"] a[href=\"#looxReviewsFrame\"] {\n    display: inline-flex !important;\n    margin: 0 !important;\n    padding: 0 !important;\n  }\n  product-info[data-product-id=\"{{ product.id }}\"] .loox-rating {\n    margin: 0 !important;\n    padding: 0 !important;\n  }\n</style>"
+          }
+        },
+        "mm_pdp_price_cta": {
+          "type": "custom_liquid",
+          "name": "MM PDP Redesign - Preis + Spare-Chip + Einzelwert",
+          "settings": {
+            "custom_liquid": "{%- liquid\n  assign variant = product.selected_or_first_available_variant\n  assign compare = variant.compare_at_price\n-%}\n<div class=\"mm-pdp-price-row\">\n  <div class=\"mm-pdp-price-line\">\n    <span class=\"mm-pdp-price-total\">{{ variant.price | money_without_currency }} €</span>\n    {%- if compare > variant.price -%}\n      {%- assign save = compare | minus: variant.price -%}\n      <span class=\"mm-pdp-price-save\">Spare {{ save | money_without_currency }} €</span>\n    {%- endif -%}\n  </div>\n  {%- if compare > variant.price -%}\n    <span class=\"mm-pdp-price-compare\">(Einzelwert {{ compare | money_without_currency }} €)</span>\n  {%- endif -%}\n</div>"
+          }
+        },
+        "mm_pdp_guarantee_card": {
+          "type": "custom_liquid",
+          "name": "MM PDP Redesign - 30-Tage-Garantie",
+          "settings": {
+            "custom_liquid": "<div class=\"mm-pdp-guarantee\">\n  <svg width=\"28\" height=\"28\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\"><path d=\"M12 3l7 3v5c0 4.5-3 8.5-7 10-4-1.5-7-5.5-7-10V6l7-3z\"></path><path d=\"M9 12l2 2 4-4\"></path></svg>\n  <div>\n    <div class=\"mm-pdp-guarantee-title\">30 Tage Garantie</div>\n    <p class=\"mm-pdp-guarantee-text\">Nicht zufrieden? Kein Problem. Du hast 30 Tage Zeit, das Produkt zurückzuschicken - ohne Wenn und Aber. Das ist unser Versprechen.</p>\n  </div>\n</div>"
+          }
+        },
+        "mm_pdp_trust_row": {
+          "type": "custom_liquid",
+          "name": "MM PDP Redesign - Trust-Zeile",
+          "settings": {
+            "custom_liquid": "<div class=\"mm-pdp-trust-row\">\n  <span><svg width=\"15\" height=\"15\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\"><path d=\"M12 21s-6.5-5.2-6.5-10.2A6.5 6.5 0 0 1 12 4.3a6.5 6.5 0 0 1 6.5 6.5C18.5 15.8 12 21 12 21z\"></path><circle cx=\"12\" cy=\"10.8\" r=\"2.2\"></circle></svg>Handgemacht in Deutschland</span>\n  <span><svg width=\"15\" height=\"15\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\"><path d=\"M3 7h11v10H3z\"></path><path d=\"M14 10h4l3 3v4h-7\"></path><circle cx=\"7\" cy=\"17\" r=\"1.6\"></circle><circle cx=\"17\" cy=\"17\" r=\"1.6\"></circle></svg>Lieferung in 1–3 Werktagen</span>\n</div>"
+          }
+        },
+        "mm_pdp_trust_bullets": {
+          "type": "custom_liquid",
+          "name": "MM PDP Redesign - Trust-Bullets (Haken-Icon)",
+          "settings": {
+            "custom_liquid": "<div class=\"mm-pdp-trust-bullets\">\n  <span class=\"mm-pdp-trust-bullet\"><span class=\"mm-pdp-trust-check\">✓</span>Offiziell zertifizierte Premium-Qualität</span>\n  <span class=\"mm-pdp-trust-bullet\"><span class=\"mm-pdp-trust-check\">✓</span>Sichtbare Ergebnisse nach wenigen Anwendungen</span>\n  <span class=\"mm-pdp-trust-bullet\"><span class=\"mm-pdp-trust-check\">✓</span>100% natürlich - handgemacht in Deutschland</span>\n</div>"
+          }
+        },
+        "mm_pdp_step2_tiers": {
+          "type": "custom_liquid",
+          "name": "MM PDP Redesign - Schritt 2 Mengen (hidden bis Freigabe)",
+          "disabled": true,
+          "settings": {
+            "custom_liquid": "{%- liquid\n  assign variant = product.selected_or_first_available_variant\n  assign breaks = variant.quantity_price_breaks | sort: 'quantity'\n-%}\n<div class=\"mm-pdp-step-head\"><span></span></div>\n<div class=\"mm-pdp-tiers\" data-mm-tier-group data-section-id=\"{{ section.id }}\">\n  <button type=\"button\" class=\"mm-pdp-tier\" data-mm-tier data-quantity=\"1\" aria-pressed=\"true\">\n    <span class=\"mm-pdp-tier-radio\"></span>\n    <span class=\"mm-pdp-tier-body\">\n      <span class=\"mm-pdp-tier-name-row\"><span class=\"mm-pdp-tier-name\">1× Set</span></span>\n      <span class=\"mm-pdp-tier-sub\">Für den Einstieg</span>\n    </span>\n    <span class=\"mm-pdp-tier-price\"><span class=\"mm-pdp-tier-total\">{{ variant.price | money }}</span></span>\n  </button>\n  {%- for price_break in breaks -%}\n  {%- assign break_total = price_break.price | times: price_break.quantity -%}\n  {%- assign compare_total = variant.price | times: price_break.quantity -%}\n  <button type=\"button\" class=\"mm-pdp-tier\" data-mm-tier data-quantity=\"{{ price_break.quantity }}\" aria-pressed=\"false\">\n    <span class=\"mm-pdp-tier-radio\"></span>\n    <span class=\"mm-pdp-tier-body\">\n      <span class=\"mm-pdp-tier-name-row\">\n        <span class=\"mm-pdp-tier-name\">{{ price_break.quantity }}er Vorrat</span>\n        <span class=\"mm-pdp-tier-save\">Spare {{ compare_total | minus: break_total | money }}</span>\n      </span>\n      <span class=\"mm-pdp-tier-sub\">Mengenvorteil</span>\n    </span>\n    <span class=\"mm-pdp-tier-price\">\n      <span class=\"mm-pdp-tier-total\">{{ break_total | money }}</span>\n      <span class=\"mm-pdp-tier-compare\">{{ compare_total | money }}</span>\n    </span>\n  </button>\n  {%- endfor -%}\n</div>"
+          }
+        },
+        "mm_pdp_step1_set": {
+          "type": "custom_liquid",
+          "name": "MM PDP Redesign - Schritt 1 Dein Set",
+          "settings": {
+            "custom_liquid": "<div class=\"mm-pdp-step-head\"><span></span></div>\n<div class=\"mm-pdp-set-items\">\n  <div class=\"mm-pdp-set-item\">\n    <img src=\"https://menmansion.com/cdn/shop/files/Eisroller3.png?v=1764671578&width=200\" alt=\"Eisroller Pro\">\n    <span class=\"mm-pdp-set-item-name\"><span class=\"mm-pdp-set-item-title\">Eisroller Pro</span><span class=\"mm-pdp-set-item-meta\">Kühlung</span></span>\n    <span class=\"mm-pdp-set-item-tag\">Enthalten</span>\n  </div>\n  <div class=\"mm-pdp-set-item\">\n    <img src=\"https://menmansion.com/cdn/shop/files/tallow_6717dc4e-91c8-4004-9713-4f01e1b18f4b.png?v=1776688595&width=200\" alt=\"Tallow Gesichtscreme\">\n    <span class=\"mm-pdp-set-item-name\"><span class=\"mm-pdp-set-item-title\">Tallow Gesichtscreme</span><span class=\"mm-pdp-set-item-meta\">Pflege · 50 ml</span></span>\n    <span class=\"mm-pdp-set-item-tag\">Enthalten</span>\n  </div>\n  <div class=\"mm-pdp-set-item\">\n    <img src=\"https://menmansion.com/cdn/shop/files/L1007650.jpg?v=1764268972&width=200\" alt=\"Sea Texture Spray\">\n    <span class=\"mm-pdp-set-item-name\"><span class=\"mm-pdp-set-item-title\">Sea Texture Spray</span><span class=\"mm-pdp-set-item-meta\">Styling · 200 ml</span></span>\n    <span class=\"mm-pdp-set-item-tag\">Enthalten</span>\n  </div>\n</div>"
+          }
+        },
+        "mm_pdp_details_accordion": {
+          "type": "custom_liquid",
+          "name": "MM PDP Redesign - Produktdetails Akkordeon",
+          "settings": {
+            "custom_liquid": "<div class=\"mm-pdp-accordion\">\n  <div class=\"mm-pdp-accordion-row\" data-mm-accordion>\n    <div class=\"mm-pdp-accordion-head\" data-mm-accordion-toggle>\n      <span class=\"mm-pdp-accordion-label\">Beschreibung</span>\n      <span class=\"mm-pdp-accordion-mark\" data-mm-accordion-mark>+</span>\n    </div>\n    <div class=\"mm-pdp-accordion-body\" data-mm-accordion-body hidden>\n      <p>Drei Produkte für deine Morgenroutine – Kühle, Pflege und Styling in einem Set.</p>\n      <p>Der Eisroller Pro aktiviert die Durchblutung, kühlt die Haut und bereitet sie optimal auf die nachfolgende Pflege vor. Täglich angewendet, direkt nach dem Waschen – für einen frischen Start in den Tag.</p>\n      <p>Die Tallow Gesichtscreme basiert auf hochwertigem Rindertalg von der Schwäbischen Alb. Zieht schnell ein, ohne Fettfilm und ohne Rückstände - nach dem Eisroller besonders effektiv.</p>\n      <p>Das Sea Texture Spray verleiht deinem Haar Struktur, Volumen und natürlichen Halt – für einen definierten Look, ohne zu beschweren.</p>\n      <p>Handgefertigt in Deutschland. In limitierten Chargen. Made in Germany. Made for Men.</p>\n      <p><a href=\"{{ 'sicherheitsbericht-tallow-2026-07.pdf' | asset_url }}\">Laborbericht zum Download</a></p>\n    </div>\n  </div>\n  <div class=\"mm-pdp-accordion-row\" data-mm-accordion>\n    <div class=\"mm-pdp-accordion-head\" data-mm-accordion-toggle>\n      <span class=\"mm-pdp-accordion-label\">Inhaltsstoffe &amp; Wirkung</span>\n      <span class=\"mm-pdp-accordion-mark\" data-mm-accordion-mark>+</span>\n    </div>\n    <div class=\"mm-pdp-accordion-body\" data-mm-accordion-body hidden>\n      <p><strong>Was drin ist.</strong></p>\n      <p><strong>Eisroller Pro</strong><br>Hochwertiges Gummi-Rollkopf-Element mit ergonomischem Griff. Kein Gel, keine Chemie. Kühlt die Haut durch gezielte Kälteanwendung, aktiviert die Mikrozirkulation und bereitet die Haut optimal auf die nachfolgende Pflege vor.</p>\n      <p><strong>Tallow Gesichtscreme (50 ml)</strong><br>Mit Rindertalg, Traubenkernöl, Schwarzkümmelöl, Bienenwachs und Zedernholzöl.<br>INCI: Tallow, Vitis Vinifera Seed Oil, Nigella Sativa Seed Oil, Cera Alba, Cedrus Atlantica Wood Oil</p>\n      <p><strong>Sea Texture Spray (200 ml)</strong><br>Mit Rosmarin-Hydrolat, Aloe Vera, Zedernholzöl, Meersalz und Rizinusöl.<br>INCI: Rosmarinus Officinalis Leaf Water, Aloe Barbadensis Leaf Juice, Maris Sal, Ricinus Communis Seed Oil, Cedrus Atlantica Wood Oil, Glycerin</p>\n      <p>Dermatologisch getestet. Ohne Alkohol. Ohne künstliche Zusätze. Handgefertigt &amp; zertifiziert in Deutschland.</p>\n    </div>\n  </div>\n  <div class=\"mm-pdp-accordion-row\" data-mm-accordion>\n    <div class=\"mm-pdp-accordion-head\" data-mm-scroll-to=\"#mm-pdp-routine-anchor\">\n      <span class=\"mm-pdp-accordion-label\">Anwendung</span>\n      <span class=\"mm-pdp-accordion-scroll-hint\"><span class=\"mm-pdp-accordion-scroll-label\">Zur Routine</span><span class=\"mm-pdp-accordion-arrow\">↓</span></span>\n    </div>\n  </div>\n  <div class=\"mm-pdp-accordion-row\" data-mm-accordion>\n    <div class=\"mm-pdp-accordion-head\" data-mm-accordion-toggle>\n      <span class=\"mm-pdp-accordion-label\">Versand &amp; Rückgabe</span>\n      <span class=\"mm-pdp-accordion-mark\" data-mm-accordion-mark>+</span>\n    </div>\n    <div class=\"mm-pdp-accordion-body\" data-mm-accordion-body hidden>\n      <p><strong>Versand aus Deutschland. Schnell und zuverlässig.</strong></p>\n      <p>Alle Bestellungen werden aus unserem Lager in Rottenburg versendet – innerhalb von 1–2 Werktagen nach Auftragseingang.</p>\n      <p><strong>Lieferzeit:</strong><br>Deutschland, Österreich, Schweiz - 2–4 Werktage</p>\n      <p><strong>Kostenloser Versand</strong> ab €60 Bestellwert.</p>\n      <p>Nicht zufrieden? Kein Problem. Du hast 30 Tage Zeit, das Produkt zurückzuschicken – ohne Wenn und Aber.</p>\n    </div>\n  </div>\n</div>"
+          }
+        },
+        "mm_pdp_social_proof": {
+          "type": "custom_liquid",
+          "name": "MM PDP Redesign - Social Proof",
+          "settings": {
+            "custom_liquid": "<div class=\"mm-pdp-social-proof\">\n  <div class=\"mm-pdp-social-proof-avatars\">\n    <img src=\"https://menmansion.com/cdn/shop/files/IMG_2572.jpg?width=80\" alt=\"\" loading=\"lazy\">\n    <img src=\"https://menmansion.com/cdn/shop/files/0002-8194805062219929543.png?width=80\" alt=\"\" loading=\"lazy\">\n    <img src=\"https://menmansion.com/cdn/shop/files/0003-1890891485917242492.png?width=80\" alt=\"\" loading=\"lazy\">\n  </div>\n  <p class=\"mm-pdp-social-proof-text\">Dermatologisch getestet <span class=\"mm-pdp-social-proof-verified\">✓</span> + <strong>10.000 Männern</strong> benutzen täglich!</p>\n</div>"
+          }
+        }
+      },
+      "block_order": [
+        "mm_pdp_assets",
+        "loox_reviews_loox_rating_Kn3NFm",
+        "title",
+        "text_TmqRRT",
+        "custom_liquid_YjXmkL",
+        "mm_pdp_trust_bullets",
+        "section_store_block_benefits_list_xwp3mB",
+        "mm_pdp_step1_set",
+        "mm_pdp_step2_tiers",
+        "price",
+        "mm_pdp_price_cta",
+        "buy_buttons",
+        "6aaec6b2720b47da",
+        "custom_liquid_t4UhKL",
+        "9b8c4c92124ab94f",
+        "mm_pdp_guarantee_card",
+        "mm_pdp_trust_row",
+        "b4cc2f39fdba867b",
+        "mm_pdp_social_proof",
+        "mm_pdp_details_accordion",
+        "custom_liquid_ktbqHQ",
+        "custom_liquid_nPaeiV",
+        "custom_liquid_CMRyxj",
+        "custom_liquid_MaM6Eg",
+        "custom_liquid_BLVEzX",
+        "custom_liquid_iyFn8D",
+        "667354250fe073fc",
+        "section_store_block_pulse_badge_7CY8ME",
+        "custom_liquid_NXtaV6",
+        "custom_liquid_gCgaR8",
+        "upsell_koala_bundles_bundle_app_block_i6xPty",
+        "sternify_sternify_bundle_pDeFci"
+      ],
+      "settings": {
+        "enable_sticky_info": true,
+        "color_scheme": "",
+        "media_size": "small",
+        "constrain_to_viewport": true,
+        "media_fit": "contain",
+        "gallery_layout": "thumbnail_slider",
+        "media_position": "left",
+        "image_zoom": "none",
+        "mobile_thumbnails": "show",
+        "hide_variants": true,
+        "enable_video_looping": true,
+        "padding_top": 20,
+        "padding_bottom": 20
+      }
+    },
+    "169800360473363ca0": {
+      "type": "apps",
+      "settings": {
+        "include_margins": true
+      }
+    },
+    "45f77b37-82dc-4dcd-aab6-662315b32360": {
+      "type": "rich-text",
+      "blocks": {
+        "template--19956043415894__45f77b37-82dc-4dcd-aab6-662315b32360-heading-1": {
+          "type": "heading",
+          "settings": {
+            "heading": "Oft zusammen gekauft",
+            "heading_size": "h1"
+          }
+        }
+      },
+      "block_order": [
+        "template--19956043415894__45f77b37-82dc-4dcd-aab6-662315b32360-heading-1"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "background-1",
+        "full_width": true,
+        "padding_top": 20,
+        "padding_bottom": 0
+      }
+    },
+    "related-products": {
+      "type": "mm-pdp-related",
+      "settings": {
+        "heading": "",
+        "heading_size": "h1",
+        "products_to_show": 4,
+        "color_scheme": "background-1"
+      }
+    },
+    "mm_pdp_comparison_section": {
+      "type": "custom-liquid",
+      "settings": {
+        "custom_liquid": "<div class=\"mm-pdp-compare\">\n  \n  <h2 class=\"mm-pdp-compare-title\">Men Mansion vs.<br>andere Marken</h2>\n  <div class=\"mm-pdp-compare-table\">\n    <div class=\"mm-pdp-compare-row mm-pdp-compare-head\">\n      <span class=\"mm-pdp-compare-head-why\"><span class=\"mm-pdp-compare-why-label\">Warum</span>{%- if settings.logo != blank -%}<img class=\"mm-pdp-compare-logo\" src=\"{{ settings.logo | image_url: width: 300 }}\" alt=\"{{ shop.name }}\" loading=\"lazy\">{%- else -%}<span class=\"mm-pdp-compare-why-name\">Men Mansion</span>{%- endif -%}</span>\n      <span class=\"mm-pdp-compare-head-mm\"><span class=\"mm-pdp-compare-thumb\"><img src=\"{{ 'mm-tallow-tiegel.png' | asset_url }}\" alt=\"Men Mansion Tallow Gesichtscreme\" loading=\"lazy\" width=\"46\" height=\"46\"></span></span>\n      <span class=\"mm-pdp-compare-head-other\"><span class=\"mm-pdp-compare-thumb\"><img src=\"{{ 'mm-andere-tiegel.png' | asset_url }}\" alt=\"Andere Marken\" loading=\"lazy\" width=\"46\" height=\"46\"></span></span>\n    </div>\n    <div class=\"mm-pdp-compare-row\"><span class=\"mm-pdp-compare-label\">Handgefertigt in kleinen Chargen</span><span class=\"mm-pdp-compare-cell-us\"><span class=\"mm-pdp-compare-badge mm-pdp-compare-badge--yes\"><svg width=\"13\" height=\"13\" viewBox=\"0 0 16 16\" fill=\"none\"><path d=\"M3 8.5L6.5 12L13 4\" stroke=\"currentColor\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg></span></span><span class=\"mm-pdp-compare-cell-them\"><span class=\"mm-pdp-compare-badge mm-pdp-compare-badge--no\"><svg width=\"13\" height=\"13\" viewBox=\"0 0 16 16\" fill=\"none\"><path d=\"M4 4L12 12M12 4L4 12\" stroke=\"currentColor\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg></span></span></div>\n    <div class=\"mm-pdp-compare-row\"><span class=\"mm-pdp-compare-label\">Natürliche Wirkstoffe</span><span class=\"mm-pdp-compare-cell-us\"><span class=\"mm-pdp-compare-badge mm-pdp-compare-badge--yes\"><svg width=\"13\" height=\"13\" viewBox=\"0 0 16 16\" fill=\"none\"><path d=\"M3 8.5L6.5 12L13 4\" stroke=\"currentColor\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg></span></span><span class=\"mm-pdp-compare-cell-them\"><span class=\"mm-pdp-compare-badge mm-pdp-compare-badge--no\"><svg width=\"13\" height=\"13\" viewBox=\"0 0 16 16\" fill=\"none\"><path d=\"M4 4L12 12M12 4L4 12\" stroke=\"currentColor\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg></span></span></div>\n    <div class=\"mm-pdp-compare-row\"><span class=\"mm-pdp-compare-label\">Enthält Silikone &amp; Mineralöl</span><span class=\"mm-pdp-compare-cell-us\"><span class=\"mm-pdp-compare-badge mm-pdp-compare-badge--no\"><svg width=\"13\" height=\"13\" viewBox=\"0 0 16 16\" fill=\"none\"><path d=\"M4 4L12 12M12 4L4 12\" stroke=\"currentColor\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg></span></span><span class=\"mm-pdp-compare-cell-them\"><span class=\"mm-pdp-compare-badge mm-pdp-compare-badge--yes\"><svg width=\"13\" height=\"13\" viewBox=\"0 0 16 16\" fill=\"none\"><path d=\"M3 8.5L6.5 12L13 4\" stroke=\"currentColor\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg></span></span></div>\n    <div class=\"mm-pdp-compare-row\"><span class=\"mm-pdp-compare-label\">Eigene Manufaktur, keine Massenware</span><span class=\"mm-pdp-compare-cell-us\"><span class=\"mm-pdp-compare-badge mm-pdp-compare-badge--yes\"><svg width=\"13\" height=\"13\" viewBox=\"0 0 16 16\" fill=\"none\"><path d=\"M3 8.5L6.5 12L13 4\" stroke=\"currentColor\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg></span></span><span class=\"mm-pdp-compare-cell-them\"><span class=\"mm-pdp-compare-badge mm-pdp-compare-badge--no\"><svg width=\"13\" height=\"13\" viewBox=\"0 0 16 16\" fill=\"none\"><path d=\"M4 4L12 12M12 4L4 12\" stroke=\"currentColor\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg></span></span></div>\n    <div class=\"mm-pdp-compare-row\"><span class=\"mm-pdp-compare-label\">Sichtbare Ergebnisse nach wenigen Tagen</span><span class=\"mm-pdp-compare-cell-us\"><span class=\"mm-pdp-compare-badge mm-pdp-compare-badge--yes\"><svg width=\"13\" height=\"13\" viewBox=\"0 0 16 16\" fill=\"none\"><path d=\"M3 8.5L6.5 12L13 4\" stroke=\"currentColor\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg></span></span><span class=\"mm-pdp-compare-cell-them\"><span class=\"mm-pdp-compare-badge mm-pdp-compare-badge--no\"><svg width=\"13\" height=\"13\" viewBox=\"0 0 16 16\" fill=\"none\"><path d=\"M4 4L12 12M12 4L4 12\" stroke=\"currentColor\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg></span></span></div>\n    <div class=\"mm-pdp-compare-row\"><span class=\"mm-pdp-compare-label\">Künstliche Duft- &amp; Farbstoffe</span><span class=\"mm-pdp-compare-cell-us\"><span class=\"mm-pdp-compare-badge mm-pdp-compare-badge--no\"><svg width=\"13\" height=\"13\" viewBox=\"0 0 16 16\" fill=\"none\"><path d=\"M4 4L12 12M12 4L4 12\" stroke=\"currentColor\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg></span></span><span class=\"mm-pdp-compare-cell-them\"><span class=\"mm-pdp-compare-badge mm-pdp-compare-badge--yes\"><svg width=\"13\" height=\"13\" viewBox=\"0 0 16 16\" fill=\"none\"><path d=\"M3 8.5L6.5 12L13 4\" stroke=\"currentColor\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg></span></span></div>\n  </div>\n</div>",
+        "color_scheme": "background-1",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "mm_pdp_reviews_loox_section": {
+      "type": "apps",
+      "blocks": {
+        "mm_pdp_reviews_loox": {
+          "type": "shopify://apps/loox-reviews/blocks/loox-dynamic-section/5c3b337f-fd14-4df5-b1d6-80ec13e6e28e",
+          "settings": {
+            "reviews_to_display": "product_reviews_only",
+            "default_tab": "automatic",
+            "only_photos": false,
+            "aggregated": false,
+            "limit": 10,
+            "hide_thumbnails": false,
+            "maxwidth": 1080
+          }
+        }
+      },
+      "block_order": [
+        "mm_pdp_reviews_loox"
+      ],
+      "settings": {
+        "include_margins": true
+      }
+    },
+    "mm_pdp_deepdives_section": {
+      "type": "custom-liquid",
+      "settings": {
+        "custom_liquid": "<div class=\"mm-pdp-deepdive-group\">\n  <div class=\"mm-pdp-deepdive\">\n    <img class=\"mm-pdp-deepdive-img\" src=\"https://menmansion.com/cdn/shop/files/Eisroller3.png?v=1764671578&width=1445\" alt=\"Eisroller Pro\">\n    <div class=\"mm-pdp-deepdive-body\">\n      \n      <h2 class=\"mm-pdp-deepdive-title\">Eisroller Pro</h2>\n      <p class=\"mm-pdp-deepdive-text\">Aktiviert die Durchblutung, kühlt die Haut und bereitet sie optimal auf die nachfolgende Pflege vor.</p>\n      <div class=\"mm-pdp-deepdive-checks\">\n        <span><span class=\"mm-pdp-check\">✓</span>Reduziert Schwellungen und Augenringe</span>\n        <span><span class=\"mm-pdp-check\">✓</span>Aktiviert die Mikrozirkulation</span>\n        <span><span class=\"mm-pdp-check\">✓</span>Kein Gel, keine Chemie</span>\n      </div>\n    </div>\n  </div>\n  <div class=\"mm-pdp-deepdive\">\n    <img class=\"mm-pdp-deepdive-img\" src=\"https://menmansion.com/cdn/shop/files/tallow_6717dc4e-91c8-4004-9713-4f01e1b18f4b.png?v=1776688595&width=1445\" alt=\"Tallow Gesichtscreme\">\n    <div class=\"mm-pdp-deepdive-body\">\n      \n      <h2 class=\"mm-pdp-deepdive-title\">Tallow Gesichtscreme</h2>\n      <p class=\"mm-pdp-deepdive-text\">Zieht vollständig ein, ohne Fettfilm und ohne Rückstände und stärkt spürbar die Hautbarriere.</p>\n      <div class=\"mm-pdp-deepdive-checks\">\n        <span><span class=\"mm-pdp-check\">✓</span>Stärkt die Hautbarriere</span>\n        <span><span class=\"mm-pdp-check\">✓</span>Beruhigt und nährt - ohne Fettfilm</span>\n        <span><span class=\"mm-pdp-check\">✓</span>Zieht vollständig ein</span>\n      </div>\n    </div>\n  </div>\n  <div class=\"mm-pdp-deepdive\">\n    <img class=\"mm-pdp-deepdive-img\" src=\"https://menmansion.com/cdn/shop/files/L1007650.jpg?v=1764268972&width=1445\" alt=\"Sea Texture Spray\">\n    <div class=\"mm-pdp-deepdive-body\">\n      \n      <h2 class=\"mm-pdp-deepdive-title\">Sea Texture Spray</h2>\n      <p class=\"mm-pdp-deepdive-text\">Verleiht dem Haar Struktur, Griff und Leichtigkeit - ohne es zu beschweren. Mit Rosmarin-Hydrolat, Aloe Vera und Meersalz.</p>\n      <div class=\"mm-pdp-deepdive-checks\">\n        <span><span class=\"mm-pdp-check\">✓</span>Mehr Volumen und Struktur</span>\n        <span><span class=\"mm-pdp-check\">✓</span>Natürliches Finish, kein steifer Look</span>\n        <span><span class=\"mm-pdp-check\">✓</span>Ohne Alkohol und künstliche Duftstoffe</span>\n      </div>\n    </div>\n  </div>\n</div>",
+        "color_scheme": "background-1",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "mm_pdp_studie_section": {
+      "type": "custom-liquid",
+      "settings": {
+        "custom_liquid": "<div class=\"mm-pdp-studie\">\n  \n  <h2 class=\"mm-pdp-studie-title\">Bewiesene Wirkung,<br><span class=\"mm-pdp-gold\">sichtbare Ergebnisse</span></h2>\n  <div class=\"mm-pdp-studie-stats\">\n    <div class=\"mm-pdp-studie-stat\">\n      <div class=\"mm-pdp-studie-number\">99%</div>\n      <div class=\"mm-pdp-studie-desc\">Sichtbare Ergebnisse bei regelmäßiger Anwendung</div>\n      <div class=\"mm-pdp-studie-meta\">Ergebnisse einer 4-wöchigen Kundenstudie</div>\n    </div>\n    <div class=\"mm-pdp-studie-stat\">\n      <div class=\"mm-pdp-studie-number\">96%</div>\n      <div class=\"mm-pdp-studie-desc\">Berichten von einer spürbar einfacheren Morgenroutine</div>\n      <div class=\"mm-pdp-studie-meta\">Ergebnisse einer 4-wöchigen Kundenstudie</div>\n    </div>\n    <div class=\"mm-pdp-studie-stat\">\n      <div class=\"mm-pdp-studie-number\">98%</div>\n      <div class=\"mm-pdp-studie-desc\">Würden die Routine weiterempfehlen</div>\n      <div class=\"mm-pdp-studie-meta\">Ergebnisse einer 4-wöchigen Kundenstudie</div>\n    </div>\n  </div>\n</div>",
+        "color_scheme": "background-1",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "mm_pdp_routine_section": {
+      "type": "custom-liquid",
+      "settings": {
+        "custom_liquid": "{{ 'mm-pdp-routine3.css' | asset_url | stylesheet_tag }}\n<section class=\"mm-r3\" id=\"mm-pdp-routine-anchor\">\n  <div class=\"mm-r3-inner\">\n\n    <header class=\"mm-r3-head\">\n      <h2 class=\"mm-r3-title\">Die Routine. <span>In 3 Steps.</span></h2>\n      <p class=\"mm-r3-sub\">Deine tägliche Routine - einfach, effektiv, natürlich</p>\n    </header>\n\n    <ol class=\"mm-r3-track\" id=\"mm-r3-track\">\n      <li class=\"mm-r3-card\">\n        <div class=\"mm-r3-media\">\n          <img src=\"https://menmansion.com/cdn/shop/files/hf_20260519_073141_3ae58255-d2da-42d9-833c-f175892665bb.png?v=1779175980&width=800\" alt=\"Kühlen\" loading=\"lazy\" width=\"800\" height=\"600\">\n          <span class=\"mm-r3-fade\"></span>\n          <span class=\"mm-r3-num\">01</span>\n        </div>\n        <div class=\"mm-r3-body\">\n          <div class=\"mm-r3-row\"><h3>Kühlen</h3></div>\n          <p>Eisroller für 15–20 Minuten ins Gefrierfach legen. Anschließend sanft über das Gesicht rollen - Stirn, Wangen, Kinn. Aktiviert die Durchblutung und bereitet die Haut optimal auf die Pflege vor.</p>\n        </div>\n      </li>\n      <li class=\"mm-r3-card\">\n        <div class=\"mm-r3-media\">\n          <img src=\"https://menmansion.com/cdn/shop/files/IMG_1502_3.jpg?v=1775510634&width=800\" alt=\"Auftragen\" loading=\"lazy\" width=\"800\" height=\"600\">\n          <span class=\"mm-r3-fade\"></span>\n          <span class=\"mm-r3-num\">02</span>\n        </div>\n        <div class=\"mm-r3-body\">\n          <div class=\"mm-r3-row\"><h3>Auftragen</h3></div>\n          <p>Eine kleine Menge der Tallow Gesichtscreme auf das leicht feuchte Gesicht auftragen und einmassieren. Die hautähnlichen Lipide stärken die Hautbarriere und ziehen vollständig ein.</p>\n        </div>\n      </li>\n      <li class=\"mm-r3-card\">\n        <div class=\"mm-r3-media\">\n          <img src=\"https://menmansion.com/cdn/shop/files/IMG_2135.jpg?v=1778059623&width=800\" alt=\"In Form bringen\" loading=\"lazy\" width=\"800\" height=\"600\">\n          <span class=\"mm-r3-fade\"></span>\n          <span class=\"mm-r3-num\">03</span>\n        </div>\n        <div class=\"mm-r3-body\">\n          <div class=\"mm-r3-row\"><h3>In Form bringen</h3></div>\n          <p>Sea Texture Spray ins handtuchtrockene Haar sprühen, einarbeiten und in Form bringen. Sorgt für mehr Struktur, Halt und ein natürliches Finish.</p>\n        </div>\n      </li>\n    </ol>\n\n    <div class=\"mm-r3-dots\" id=\"mm-r3-dots\" hidden>\n      <button type=\"button\" data-i=\"0\" aria-label=\"Schritt 1\"><span></span></button>\n      <button type=\"button\" data-i=\"1\" aria-label=\"Schritt 2\"><span></span></button>\n      <button type=\"button\" data-i=\"2\" aria-label=\"Schritt 3\"><span></span></button>\n    </div>\n\n  </div>\n</section>\n\n<script>\n(function () {\n  var track = document.getElementById('mm-r3-track');\n  var dots  = document.getElementById('mm-r3-dots');\n  if (!track || !dots || !track.children.length) return;\n  var btns = dots.querySelectorAll('button');\n  function stepWidth() {\n    if (track.children.length > 1) return track.children[1].offsetLeft - track.children[0].offsetLeft;\n    return track.children[0].getBoundingClientRect().width;\n  }\n  function sync() {\n    var scrollable = track.scrollWidth - track.clientWidth > 8;\n    dots.hidden = !scrollable;\n    if (!scrollable) return;\n    var step = stepWidth();\n    if (!step) return;\n    var i = Math.min(btns.length - 1, Math.round(track.scrollLeft / step));\n    for (var n = 0; n < btns.length; n++) btns[n].setAttribute('aria-current', n === i ? 'true' : 'false');\n  }\n  for (var b = 0; b < btns.length; b++) {\n    btns[b].addEventListener('click', function () {\n      var el = track.children[+this.dataset.i];\n      if (el) track.scrollTo({ left: el.offsetLeft - track.offsetLeft, behavior: 'smooth' });\n    });\n  }\n  track.addEventListener('scroll', sync, { passive: true });\n  window.addEventListener('resize', sync);\n  sync();\n})();\n</script>",
+        "color_scheme": "background-1",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "mm_pdp_reviews_header_section": {
+      "type": "custom-liquid",
+      "settings": {
+        "custom_liquid": "{%- liquid\n  assign rating = product.metafields.loox.avg_rating\n  assign review_count = product.metafields.loox.num_reviews\n  if rating != blank\n    assign rating_display = rating | replace: '.', ','\n    assign rounded = rating | round\n  else\n    assign rating_display = '4,8'\n    assign review_count = 398\n    assign rounded = 5\n  endif\n-%}\n<div class=\"mm-pdp-reviews\">\n  <div class=\"mm-pdp-reviews-head\">\n    <div>\n      \n      <h2 class=\"mm-pdp-reviews-title\">Was Männer über uns sagen</h2>\n    </div>\n    <div class=\"mm-pdp-reviews-summary\">\n      <span class=\"mm-pdp-reviews-avg\">{{ rating_display }}</span>\n      <div class=\"mm-pdp-reviews-summary-body\">\n        <div class=\"mm-pdp-reviews-stars\">{% for i in (1..5) %}{% if i <= rounded %}★{% else %}<span style=\"color:var(--mm-graphite)\">★</span>{% endif %}{% endfor %}</div>\n        <div class=\"mm-pdp-reviews-total\">{{ review_count }} verifizierte Bewertungen</div>\n      </div>\n    </div>\n  </div>\n\n  <div class=\"mm-pdp-reviews-spotlight\">\n    <span class=\"mm-pdp-reviews-badge\">Top-Bewertung</span>\n    <div class=\"mm-pdp-reviews-spotlight-body\">\n      <div class=\"mm-pdp-reviews-stars\">★★★★★</div>\n      <div class=\"mm-pdp-reviews-spotlight-quote\">„Perfekte Sommerroutine“</div>\n      <p class=\"mm-pdp-reviews-spotlight-text\">Alles aufeinander abgestimmt – kühlen, pflegen, stylen. Mehr brauche ich nicht.</p>\n      <div class=\"mm-pdp-reviews-author\">\n        <span class=\"mm-pdp-reviews-avatar\">J</span>\n        <div>\n          <div class=\"mm-pdp-reviews-author-name\">Jakob S. <svg width=\"13\" height=\"13\" viewBox=\"0 0 24 24\"><circle cx=\"12\" cy=\"12\" r=\"11\" fill=\"var(--mm-gold-soft)\"></circle><path d=\"M7 12.5l3 3 7-7\" fill=\"none\" stroke=\"var(--mm-onyx)\" stroke-width=\"2.6\" stroke-linecap=\"round\" stroke-linejoin=\"round\"></path></svg></div>\n          <div class=\"mm-pdp-reviews-author-meta\">Verifiziert · 3 Essentials Set</div>\n        </div>\n      </div>\n    </div>\n  </div>\n\n  <div class=\"mm-pdp-reviews-more-head\">\n    \n    <span class=\"mm-pdp-reviews-swipe-hint\">Wischen →</span>\n  </div>\n\n  <div\n    class=\"mm-pdp-reviews-grid\"\n    data-mm-reviews-grid\n    data-product-id=\"{{ product.id }}\"\n    data-fallback-image=\"{{ product.featured_image | image_url: width: 400 }}\"\n    data-fallback-product-name=\"{{ product.title | escape }}\"\n  ></div>\n  <div class=\"mm-pdp-reviews-more-wrap\">\n    <button type=\"button\" class=\"mm-pdp-reviews-cta mm-pdp-reviews-more\" data-mm-reviews-more hidden>Mehr Bewertungen</button>\n  </div>\n</div>",
+        "color_scheme": "background-1",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "mm_pdp_sticky_cta_section": {
+      "type": "custom-liquid",
+      "settings": {
+        "custom_liquid": "{{ 'mm-pdp-sticky-cta.css' | asset_url | stylesheet_tag }}\n{%- liquid\n  assign sc_variant = product.selected_or_first_available_variant\n  assign sc_price = sc_variant.price\n  assign sc_compare = sc_variant.compare_at_price\n-%}\n<div class=\"mm-sc\" id=\"mm-sc\" aria-hidden=\"true\">\n  <div class=\"mm-sc-info\">\n    <span class=\"mm-sc-title\">{{ product.title }}</span>\n    <span class=\"mm-sc-prices\">\n      <span class=\"mm-sc-price\">{{ sc_price | money_without_currency }} €</span>\n      {%- if sc_compare > sc_price -%}\n        <span class=\"mm-sc-compare\">{{ sc_compare | money_without_currency }} €</span>\n      {%- endif -%}\n    </span>\n  </div>\n  <button type=\"button\" class=\"mm-btn mm-btn--primary mm-sc-cta\" id=\"mm-sc-cta\">Bundle wählen</button>\n</div>\n\n<script>\n(function () {\n  var bar = document.getElementById('mm-sc');\n  // In der Theme-Vorschau liegt die Shopify-Leiste unten drueber und verdeckt die\n  // Sticky-Bar komplett. Nur dort nach oben versetzen, auf dem Shop bleibt sie unten.\n  if (bar && /shopifypreview\\.com$/.test(location.hostname)) bar.classList.add('is-preview');\n  var cta = document.getElementById('mm-sc-cta');\n  if (!bar || !cta) return;\n\n  // Ab hier soll die Leiste erscheinen: die Vorher/Nachher-Section.\n  var trigger = document.querySelector('.mm-pdp-ba') || document.querySelector('.mm-pdp-principle');\n  // Ziel des Klicks: die Bundle-Auswahl in der Buybox (Koala-Widget),\n  // ersatzweise der Kaufbereich.\n  function target() {\n    return document.querySelector('koala-quantity-breaks-embed')\n      || document.querySelector('koala-quantity-breaks-app-block')\n      || document.querySelector('.koala-deal')\n      || document.querySelector('.product-form__buttons')\n      || document.querySelector('.product__info-container');\n  }\n\n  var ticking = false;\n  function sync() {\n    ticking = false;\n    if (!trigger) return;\n    var show = trigger.getBoundingClientRect().top < window.innerHeight * 0.6;\n    bar.classList.toggle('is-visible', show);\n    bar.setAttribute('aria-hidden', show ? 'false' : 'true');\n  }\n  function onScroll() {\n    if (ticking) return;\n    ticking = true;\n    window.requestAnimationFrame(sync);\n  }\n\n  cta.addEventListener('click', function () {\n    var el = target();\n    if (!el) return;\n    var header = document.querySelector('.section-header, sticky-header, header');\n    var offset = header ? header.getBoundingClientRect().height + 12 : 12;\n    var y = el.getBoundingClientRect().top + window.pageYOffset - offset;\n    window.scrollTo({ top: Math.max(0, y), behavior: 'smooth' });\n  });\n\n  window.addEventListener('scroll', onScroll, { passive: true });\n  window.addEventListener('resize', onScroll);\n  sync();\n})();\n</script>",
+        "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    }
+  },
+  "order": [
+    "main",
+    "mm_pdp_deepdives_section",
+    "mm_pdp_studie_section",
+    "mm_pdp_routine_section",
+    "mm_pdp_comparison_section",
+    "mm_pdp_reviews_header_section",
+    "mm_pdp_reviews_loox_section",
+    "169800360473363ca0",
+    "45f77b37-82dc-4dcd-aab6-662315b32360",
+    "related-products",
+    "mm_pdp_sticky_cta_section"
+  ]
+}

@@ -1,0 +1,303 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "gp_section_624083350839100372": {
+      "settings": {
+        "checksum": "766414f9b9cbf9dcfe1e65795c379b128eab5687e7859594ab1379139feb306d_1_1_0_0__1",
+        "ggN3QG4SGWa_label": "<p><span style=\"font-size:18px;\">jetzt risikofrei testen</span></p>"
+      },
+      "type": "gp-section-624083350839100372"
+    },
+    "gp_section_624083350839165908": {
+      "settings": {
+        "checksum": "25d14064e7a91d99bafe9b63ae3a2b8a4e9a27b988e68452e889416dab8965d3_1_1_0_0__1",
+        "gg-DrFngEc0_text": "<p><span style=\"color:rgb(255,255,255);font-size:14px;\">Wir setzen auf hochkonzentrierte, ausgewählte Inhaltsstoffe statt auf wasserbasierte Massenformulierungen. Entwickelt und hergestellt in Deutschland – unter kontrollierten Bedingungen.</span></p>",
+        "ggAzDLcwvj7_text": "<p>Die meisten Männer sehen nach 2-3 Wochen deutliche Verbesserungen.</p>",
+        "ggBhYVFd-1Z_text": "<p><span style=\"color:rgb(255,255,255);font-size:14px;\">Ja. Tallow verstopft die Poren nicht und wirkt antibakteriell (durch Schwarzkümmelöl). Viele Männer berichten von deutlich weniger Unreinheiten.</span></p>",
+        "ggKX_Zg7ttk_text": "<p><span style=\"font-size:14px;\">Hautidentische Lipide aus Tallow und ausgewählte Öle wie Traubenkernöl, Bienenwachs und Zedernholzöl ähneln der natürlichen Hautstruktur. </span><span style=\"color:rgb(255,255,255);font-size:14px;\">Die Textur zieht schnell ein, unterstützt die Hautbarriere und </span><span style=\"font-size:14px;\">sorgt</span><span style=\"color:rgb(255,255,255);font-size:14px;\"> für </span><span style=\"font-size:14px;\">stabile, gepflegte Haut</span><span style=\"color:rgb(255,255,255);font-size:14px;\"> – ohne Fettfilm.</span></p>",
+        "ggfEhRkWr7o_text": "<p>Fragen? Wir haben die Antworten.</p>",
+        "ggjPaJjfcvh_text": "<p><span style=\"background-color:transparent;color:#FAFAFB;font-size:11pt;\">Sollte es nicht passen, wird der Kaufbetrag innerhalb von 30 Tagen erstattet – unkompliziert und transparent.</span></p>",
+        "gglWB1wXFwS_text": "<p>Dezent nach Zedernholzöl – maskulin, aber nicht aufdringlich.</p>",
+        "ggvQFSv9Y5i_text": "<p><span style=\"font-size:14px;\">Bei täglicher Anwendung (morgens &amp; abends) ca. 6-8 Wochen.</span></p>",
+        "ggwxufO1XfM_childItem_0": "<p>Wie lange hält eine Creme?</p>",
+        "ggwxufO1XfM_childItem_1": "<p>Was sorgt für den sichtbaren Glow?</p>",
+        "ggwxufO1XfM_childItem_2": "<p>Ich habe empfindliche Haut – funktioniert das?</p>",
+        "ggwxufO1XfM_childItem_3": "<p>Was ist, wenn es nicht funktioniert?</p>",
+        "ggwxufO1XfM_childItem_4": "<p>Warum ist es teurer als Drogerie-Cremes?</p>",
+        "ggwxufO1XfM_childItem_5": "<p>Wie rieche ich danach?</p>",
+        "ggwxufO1XfM_childItem_6": "<p>Kann ich es auch bei Akne verwenden?</p>",
+        "ggwxufO1XfM_childItem_7": "<p>Wie schnell sehe ich Ergebnisse?</p>",
+        "ggzBT3VdBTM_text": "<p>Ja. Die Rezeptur ist 100 % natürlich und bewusst reduziert gehalten. Viele Männer mit empfindlicher oder sensibler Haut berichten von guter Verträglichkeit</p><p>– auch bei regelmäßiger Anwendung.</p>"
+      },
+      "type": "gp-section-624083350839165908"
+    },
+    "gp_section_624083350839231444": {
+      "settings": {
+        "checksum": "b8f8301e561e1fd201f89e0730a311a3a96641de89259eb1651c27dd007e653b_1_1_0_0__1",
+        "gg-fL72kWVn_text": "<p>berichten von mehr Komplimenten im Alltag</p>",
+        "ggCtpcVWdhy_text": "<p><span style=\"color:#AF9841;font-size:24px;\"><strong>Ergebnisse</strong> einer Umfrage mit <strong>über 500 Nutzern</strong></span></p>",
+        "ggJAFD2jOcn_text": "<p>berichten von cleanerer Haut nach 2-3 Wochen</p>",
+        "ggbIP73SOL1_label": "<p><span style=\"font-size:18px;\">jetzt risikofrei testen</span></p>",
+        "ggnCoUUdg7l_text": "<p>bestätigen, dass sie sich gepflegter und attraktiver fühlen</p>",
+        "gguijtXaGro_srcSet_desktop_src": "https://cdn.shopify.com/s/files/1/0779/4583/1766/files/L1007484_jpg.webp",
+        "gguijtXaGro_srcSet_tablet_src": "https://cdn.shopify.com/s/files/1/0779/4583/1766/files/L1007484_jpg.webp"
+      },
+      "type": "gp-section-624083350839231444"
+    },
+    "gp_section_624083350839296980": {
+      "settings": {
+        "checksum": "3ad5fcac0f1d0b02cbc2b1a565ee0089f4494bdda3d15b33fb165b2a4089ec92_1_1_0_0__1",
+        "gg0fakjZsYf_background_desktop_image_src": "https://cdn.shopify.com/s/files/1/0775/6326/5315/files/123.png?v=1706334386",
+        "gg3fcVPoQQp_text": "<p>Greenselect Phytosome® is a registered trademark of Indena S.p.A</p>",
+        "gg8F_BlrTED_text": "<p>Nach 2-3 Wochen</p>",
+        "ggDGwwUBAbd_text": "<p><span style=\"color:#AF9841;font-size:medium;\"><strong>Nach 7 Tagen</strong></span></p>",
+        "ggGbnxJRxVi_text": "<p>Science backed ingredients proven to <span style=\"color:#AF9841;\">lower BMI</span> and waist circumference.*</p>",
+        "ggJSvpgAW8P_text": "<p><span style=\"color:rgb(255,255,255);font-size:14px;\"><strong>Weniger neue Unreinheiten.</strong></span><br><span style=\"color:rgb(255,255,255);font-size:14px;\"><strong>Erste sichtbare Ergebnisse.</strong></span></p>",
+        "ggKgxi7b-vt_text": "<p><span style=\"font-size:30px;\">3</span></p>",
+        "ggQ4w1hH2dn_text": "<p>3</p>",
+        "ggQfq2gnmmm_text": "<p><span style=\"font-size:30px;\">1</span></p>",
+        "ggQoxbquk7Y_text": "<p>Dein <span style=\"color:#AF9841;\">Glow-Up</span> beginnt hier</p>",
+        "ggVOHfOthRZ_text": "<p><strong>Klareres Hautbild.</strong><br><strong>Natürlicher Glow wird sichtbar.</strong></p>",
+        "ggWzBWCiZjE_text": "<p>Haut fühlt sich geschmeidiger an<br>Spannungsgefühl lässt nach<br>Erste Rötungen klingen ab</p>",
+        "ggXA9dmtELO_text": "<p>1</p>",
+        "ggZBz_xpRkZ_text": "<p>Kaum noch Unreinheiten<br>Haut wirkt sichtbar clean<br>Du bekommst Komplimente</p>",
+        "ggaDlUJN954_text": "<p><span style=\"color:rgb(255,255,255);font-size:14px;\"><strong>Spürbar glattere, gepflegte Haut.</strong></span></p>",
+        "ggc3vPV5DBe_text": "<p><span style=\"color:#AF9841;font-size:medium;\"><strong>Nach 3–4 Wochen</strong></span></p>",
+        "ggeXudWzq5R_text": "<p>Nach 4-6 Wochen</p>",
+        "gglLxSTf0jt_srcSet_desktop_src": "https://cdn.shopify.com/s/files/1/0775/6326/5315/files/124.png?v=1706334630&width=1800",
+        "ggnmCRPFsVa_text": "<p>Nach 7 Tagen</p>",
+        "ggsoa-YBKX2_text": "<p>2</p>",
+        "gguu4R2UsGb_text": "<p><span style=\"color:#AF9841;font-size:medium;\"><strong>Nach der ersten Anwendung</strong></span></p>",
+        "ggyJ219vlmT_text": "<p><span style=\"font-size:30px;\">2</span></p>",
+        "ggzpvvHBIZG_text": "<p>Unreinheiten gehen zurück<br>Weniger Reizungen<br>Haut sieht gepflegter aus</p>"
+      },
+      "type": "gp-section-624083350839296980"
+    },
+    "gp_section_624083350839362516": {
+      "settings": {
+        "checksum": "967d601522fee93452a3bc6b4ff19d13c26b6615af2edffa1a7a981279325943_1_1_0_0__1",
+        "gg39vHTeRvr_srcSet_desktop_src": "https://cdn.shopify.com/s/files/1/0779/4583/1766/files/gemini-image-2_Create_a_highly_realistic_smartphone_photo_of_a_young_man_20_25_years_old_show-1.jpg",
+        "gg39vHTeRvr_srcSet_mobile_src": "https://cdn.shopify.com/s/files/1/0779/4583/1766/files/gemini-image-2_Create_a_highly_realistic_smartphone_photo_of_a_young_man_20_25_years_old_show-1.jpg",
+        "ggB0_W4hnTJ_text": "<p><span style=\"color:#191919;font-size:13px;\">„Benutze die Creme jetzt seit 2 Wochen und bin echt positiv überrascht. Meine Haut fühlt sich deutlich besser an. Werde wieder bestellen.“</span></p>",
+        "ggOaT9r4w--_text": "<p><span style=\"color:#191919;font-size:14px;\">„Meine Haut hat einen richtig gesunden Glow bekommen – meine Freundin liebt’s. Bleibe dabei.“</span></p>",
+        "ggSM8Q5LN_h_srcSet_desktop_src": "https://cdn.shopify.com/s/files/1/0779/4583/1766/files/gemini-image-2_Create_a_very_realistic_smartphone_mirror_selfie_of_a_young_couple_around_20_2-0.jpg",
+        "ggSM8Q5LN_h_srcSet_mobile_src": "https://cdn.shopify.com/s/files/1/0779/4583/1766/files/gemini-image-2_Create_a_very_realistic_smartphone_mirror_selfie_of_a_young_couple_around_20_2-0.jpg",
+        "ggVJIKlZMBq_text": "<p><span style=\"color:#191919;font-size:13px;\">„Ich benutze wirklich nur noch diese Creme. Meine Haut sieht einfach makellos aus und fühlt sich auch so an.“</span></p>",
+        "ggagEE4I5s7_text": "<p>&nbsp;Das sagen unsere Gentlemen.</p>",
+        "ggdBgcPDFhX_text": "<p><span style=\"font-size:16px;\"><strong>Tobias</strong></span></p>",
+        "ggdsgBFb_l9_text": "<p><span style=\"font-size:16px;\"><strong>Julien</strong></span></p>",
+        "gggUjUg-n8I_text": "<p><span style=\"font-size:16px;\"><strong>Jonas</strong></span></p>",
+        "ggl0zEtWU0L_srcSet_desktop_src": "https://cdn.shopify.com/s/files/1/0779/4583/1766/files/gemini-image-2___Spiegel-Selfie___Clean_Skin_Result_UGC-Style_Textprompt_Create_a_realisti-0.jpg",
+        "ggl0zEtWU0L_srcSet_mobile_src": "https://cdn.shopify.com/s/files/1/0779/4583/1766/files/gemini-image-2___Spiegel-Selfie___Clean_Skin_Result_UGC-Style_Textprompt_Create_a_realisti-0.jpg",
+        "ggp5wEdTpo3_srcSet_desktop_src": "https://cdn.shopify.com/s/files/1/0779/4583/1766/files/gemini-image-2_Create_a_very_realistic_smartphone_mirror_selfie_of_a_young_man_around_18_21_y-0.jpg",
+        "ggp5wEdTpo3_srcSet_mobile_src": "https://cdn.shopify.com/s/files/1/0779/4583/1766/files/gemini-image-2_Create_a_very_realistic_smartphone_mirror_selfie_of_a_young_man_around_18_21_y-0.jpg",
+        "ggqbCJpg5uD_text": "<p><span style=\"color:#191919;font-size:13px;\">„Meine Haut fühlt sich komplett anders an als vorher. Bin echt positiv überrascht, wurde sogar darauf angesprochen.“</span></p>",
+        "ggr9-RBYXKp_text": "<p><span style=\"font-size:16px;\"><strong>Can</strong></span></p>"
+      },
+      "type": "gp-section-624083350839362516"
+    },
+    "gp_section_624083350839428052": {
+      "settings": {
+        "checksum": "a37df379da484ea9d88254ed05f93aebb065dba9837c4ef622d8d5e5deec467d_1_1_0_0__1",
+        "gg9Hl8rUnEP_text": "<p>+10.000 zufriedene Kunden</p>",
+        "ggDEYkB8XF6_text": "<p>Kostenloser Versand ab 60€</p>",
+        "ggOSxWe4y52_text": "<p>30 Tage Rückgabe-Garantie</p>",
+        "ggRwyw4i6Xp_text": "<p>Made in Germany. Made for Men.</p>",
+        "ggoBIXEcjAh_label": "<p><span style=\"font-size:12px;\"><strong>Deal entdecken</strong></span></p>",
+        "ggpPT5uCk8N_text": "<p><span style=\"font-size:12px;\"><strong>Spare 34% im Valentinstag-Sale</strong></span></p>",
+        "section_preload": "true"
+      },
+      "type": "gp-section-624083350839428052"
+    },
+    "gp_section_624083350839493588": {
+      "settings": {
+        "checksum": "4556f32b2511ed5b734757a518763c1b5c41f5f4d5ccc787b30873152470e98f_1_1_0_0__1",
+        "gg362IXEu-h_text": "<p>More incredible results!</p>",
+        "gg4qT4Qikz__text": "<p>Denise B.</p>",
+        "ggAEaDt_g9U_text": "<p>I absolutely love this product! Gives me the energy to tackle my day and 2 year old and less aches/pains, all while burning fat!</p>",
+        "ggAggvLYB3M_text": "<p>Alice M.</p>",
+        "ggGjWSRBSqb_text": "<p>Brittany J.</p>",
+        "ggJCiavISJn_text": "<p>The Obvi collagenic Burn is working great for me. I feel better and have less hot flashes. I can see the difference in how I look and feel!</p>",
+        "ggJWTg1LWo4_text": "<p>I've been using Obvi for 5 weeks now, I could notice a difference with just one capsule, week 2 I started taking 2 capsules and I feel amazing, mood improved and my energy has been great! I can't wait to see what happens when I start the full daily dosage.</p>",
+        "ggK3VEVzovi_srcSet_desktop_src": "https://cdn.shopify.com/s/files/1/0775/6326/5315/t/2/assets/img06.jpg?v=1706270249&width=1800",
+        "ggOXQGj_Ym1_text": "<p>I've been using Obvi for 5 weeks now, I could notice a difference with just one capsule, week 2 I started taking 2 capsules and I feel amazing, mood improved and my energy has been great! I can't wait to see what happens when I start the full daily dosage.</p>",
+        "ggQJbMim76L_srcSet_desktop_src": "https://cdn.shopify.com/s/files/1/0775/6326/5315/t/2/assets/img08.jpg?v=1706270249&width=1800",
+        "ggS4S_vsWaL_srcSet_desktop_src": "https://cdn.shopify.com/s/files/1/0775/6326/5315/t/2/assets/img05.jpg?v=1706270249&width=1800",
+        "ggUjPHwInB0_text": "<p>Denise B.</p>",
+        "ggWW7DRKZE1_srcSet_desktop_src": "https://cdn.shopify.com/s/files/1/0775/6326/5315/t/2/assets/img05.jpg?v=1706270249&width=1800",
+        "ggZd2JRwUKF_srcSet_desktop_src": "https://cdn.shopify.com/s/files/1/0775/6326/5315/t/2/assets/img06.jpg?v=1706270249&width=1800",
+        "ggarrTmdTp1_srcSet_desktop_src": "https://cdn.shopify.com/s/files/1/0775/6326/5315/t/2/assets/img08.jpg?v=1706270249&width=1800",
+        "ggh0-9CfUWv_text": "<p>The Obvi collagenic Burn is working great for me. I feel better and have less hot flashes. I can see the difference in how I look and feel!</p>",
+        "gglPxHGL3_X_text": "<p>Alice M.</p>",
+        "ggobDwOqEm4_text": "<p>Brittany J.</p>",
+        "ggtQO1jwkHW_text": "<p>*These statements have not been evaluated by the Food and Drug Administration. This product is not intended to diagnose, treat, cure, or prevent any disease. Results may vary. Oral consumption of 150 mg of Greenselect Phytosome® twice daily, combined with a reduced calorie diet resulted in an average of over 30 pounds weight difference in 90 days.</p>",
+        "ggxXaacnxlH_text": "<p>I absolutely love this product! Gives me the energy to tackle my day and 2 year old and less aches/pains, all while burning fat!</p>"
+      },
+      "type": "gp-section-624083350839493588"
+    },
+    "gp_section_624083350839559124": {
+      "settings": {
+        "checksum": "032d511101928d4ea63f68a89914746f6871bd0c97b74e8fd508d90f52aac4bf_1_1_0_0__1",
+        "gg3nRxQ-UBE_text": "<p>($1.16 per serving)</p>",
+        "gg6LcfWibM7_text": "<p>(1,914 Reviews)</p>",
+        "gg71KTzK2zo_text": "<p>($1.16 per serving)</p>",
+        "gg7zabRxVJO_srcSet_desktop_src": "https://cdn.shopify.com/s/files/1/0031/8101/9185/files/AP_logo_badge_6328x2204_blackmint_png.png?v=1710788217",
+        "gg9GOJOueyz_srcSet_desktop_src": "https://cdn.shopify.com/s/files/1/0031/8101/9185/files/AP_logo_badge_6328x2204_blackmint_png.png?v=1710788217",
+        "ggAnCtC3XuR_text": "<p>or 4 interest-free payments of $8.75 with</p>",
+        "ggBPlL2CWBx_text": "<p>or 4 interest-free payments of $8.75 with</p>",
+        "ggFZr96EUZp_text": "<p>Due to High Demand</p>",
+        "ggH7_RMdDkm_errorMessage": "Cannot add product to cart",
+        "ggH7_RMdDkm_label": "Buy Now",
+        "ggH7_RMdDkm_outOfStockLabel": "Out of stock",
+        "ggH7_RMdDkm_successMessage": "Add product to cart successfully",
+        "ggH7_RMdDkm_unavailableLabel": "Unavailable",
+        "ggH7_RMdDkm_variantSelectionRequiredMessage": "Please select a variant to add product to cart",
+        "ggIRCUYg7QF_srcSet_desktop_src": "https://assets.replocdn.com/projects/28dab0f3-51cf-4a6e-85c3-8e3720ba7c7f/bdc53fc4-6cbb-4b4e-aa17-f7ba647a2d10?width=1800",
+        "ggIW-5qRpOt_text": "<p>STARTER ORDER | SAVE 30%</p>",
+        "ggM61T_H6Ic_errorMessage": "Cannot add product to cart",
+        "ggM61T_H6Ic_label": "Buy Now",
+        "ggM61T_H6Ic_outOfStockLabel": "Out of stock",
+        "ggM61T_H6Ic_successMessage": "Add product to cart successfully",
+        "ggM61T_H6Ic_unavailableLabel": "Unavailable",
+        "ggM61T_H6Ic_variantSelectionRequiredMessage": "Please select a variant to add product to cart",
+        "ggM9Y5Yd2Yi_text": "<p>Due to High Demand</p>",
+        "ggMrqcoZAhs_text": "<p>Get Started For Under $1.16 Per Day</p>",
+        "ggNTnYxa2Ey_text": "<p>90 Day Supply</p>",
+        "ggOCY_OSXth_text": "<p>Includes Free Shipping</p>",
+        "ggOfgZKm9jT_srcSet_desktop_src": "https://cdn.shopify.com/s/files/1/0031/8101/9185/files/3-month-img_3f9619a1-0a40-4e90-baca-4f021b7466f2.png?v=1706944651&width=1800",
+        "ggOmQubPpsv_text": "<p>• Reserve Yours Before We Sell Out Again</p>",
+        "ggP-SLaZ8Wg_srcSet_desktop_src": "https://cdn.shopify.com/s/files/1/0031/8101/9185/files/1-month-img_672d900d-7634-4d41-bd3e-39fe49cee6c4.png?v=1706944660&width=1800",
+        "ggQS5V745P-_srcSet_desktop_src": "https://cdn.shopify.com/s/files/1/0031/8101/9185/files/AP_logo_badge_6328x2204_blackmint_png.png?v=1710788217",
+        "ggS7MrrAS7G_srcSet_desktop_src": "https://cdn.shopify.com/s/files/1/0031/8101/9185/files/AP_logo_badge_6328x2204_blackmint_png.png?v=1710788217",
+        "ggT7bAyuwyn_text": "<p>or 4 interest-free payments of $8.75 with</p>",
+        "ggTGUZMidkJ_text": "<p>• Reserve Yours Before We Sell Out Again</p>",
+        "ggVeU4hSQxC_text": "<p>Includes Free Shipping</p>",
+        "ggW3lzgBT3d_text": "<p>• 30% OFF ALL 30 Day Supply Reservations</p>",
+        "ggW6yEg4u-1_text": "<p>Next Orders Ship 01/30</p>",
+        "ggYU_378VYo_text": "<p>or 4 interest-free payments of $8.75 with</p>",
+        "ggZqXPFltHy_text": "<p>Next Orders Ship 01/30</p>",
+        "ggdNi8Bv6St_text": "<p>• 30% OFF ALL 30 Day Supply Reservations</p>",
+        "ggddGU6Eh3f_text": "<p>60 Day Supply</p>",
+        "ggf0M__vrAh_text": "<p>(1,914 Reviews)</p>",
+        "ggfg3oHosMh_srcSet_desktop_src": "https://cdn.shopify.com/s/files/1/0031/8101/9185/files/AP_logo_badge_6328x2204_blackmint_png.png?v=1710788217",
+        "ggh8NoT6Coj_text": "<p>($1.16 per serving)</p>",
+        "ggiPaLu-lN2_text": "<p>• 30% OFF ALL 30 Day Supply Reservations</p>",
+        "ggjaNfMMQqP_text": "<p>Protected By Our 90 Day Money Back Guarantee</p>",
+        "ggkPFtNOf2k_text": "<p>STARTER ORDER | SAVE 30%</p>",
+        "ggkucGKJ-ML_text": "<p>30 Day Supply</p>",
+        "ggoOkWqQLNM_text": "<p>or 4 interest-free payments of $8.75 with</p>",
+        "ggoVGjCe5GG_text": "<p>Next Orders Ship 01/30</p>",
+        "ggq2yojlBQA_text": "<p>Protected By Our 90 Day Money Back Guarantee</p>",
+        "ggqAGSvZuVI_errorMessage": "Cannot add product to cart",
+        "ggqAGSvZuVI_label": "Buy Now",
+        "ggqAGSvZuVI_outOfStockLabel": "Out of stock",
+        "ggqAGSvZuVI_successMessage": "Add product to cart successfully",
+        "ggqAGSvZuVI_unavailableLabel": "Unavailable",
+        "ggqAGSvZuVI_variantSelectionRequiredMessage": "Please select a variant to add product to cart",
+        "ggryBOSiNPD_text": "<p>Protected By Our 90 Day Money Back Guarantee</p>",
+        "ggw1u5JkAB3_text": "<p>• Reserve Yours Before We Sell Out Again</p>",
+        "ggw6ikfn2RX_text": "<p>Includes Free Shipping</p>",
+        "ggwJDmT5qaJ_text": "<p>(1,914 Reviews)</p>",
+        "ggwk7x-56Wl_text": "<p>or 4 interest-free payments of $8.75 with</p>",
+        "ggy59wBWVSd_text": "<p>Due to High Demand</p>",
+        "ggz8pMVMdQc_srcSet_desktop_src": "https://cdn.shopify.com/s/files/1/0031/8101/9185/files/AP_logo_badge_6328x2204_blackmint_png.png?v=1710788217",
+        "ggztmyYsuon_text": "<p>STARTER ORDER | SAVE 30%</p>"
+      },
+      "type": "gp-section-624083350839559124"
+    },
+    "gp_section_624083350839624660": {
+      "settings": {
+        "checksum": "4c2b32ad308eee74396ff515b20a0a7bfdb0ea24600ce0fd0f8a6d7f0da146dd_1_1_0_0__1",
+        "gg6Hh0vXoyJ_srcSet_desktop_src": "https://cdn.shopify.com/s/files/1/0775/6326/5315/files/Untitled-3.png?v=1706328421&width=1800",
+        "gg6Hh0vXoyJ_srcSet_mobile_src": "https://cdn.shopify.com/s/files/1/0779/4583/1766/files/Landing-Titel_result.webp",
+        "ggCJpeQGBDy_childItem_0": "<p><span style=\"font-size:14px;\">30 Tage Geld-zurück-Garantie</span></p>",
+        "ggGuxDG2nlY_text": "<p>4,8 von 5 Sternen (1,397+ Bewertungen)</p>",
+        "ggTZ7lqWtk7_text": "<p><strong>Sie liegt nicht in 5 verschiedenen Skincare-Produkten - sondern in dem, was deine Haut wirklich erkennt. Die meisten Cremes stecken voller Chemie, und deine Haut antwortet mit Trockenheit, Unreinheiten und Irritationen. Men Mansion Tallow ist anders: 100 % natürlich und hautidentisch. Das Ergebnis ist sichtbar cleane, strahlende Haut.</strong></p>",
+        "ggUjiF7CEqd_text": "<p>Die Lösung für klare,&nbsp;</p><p>gepflegte Haut.</p>",
+        "ggaB_OqzFcp_label": "<p><span style=\"font-size:18px;\">Jetzt risikofrei testen</span></p>",
+        "ggkvzzP4C3Z_srcSet_desktop_src": "https://cdn.shopify.com/s/files/1/0779/4583/1766/files/edewd.png",
+        "ggwfw-CCt3A_childItem_0": "<p><span style=\"color:rgb(255,255,255);font-size:16px;\"><strong>Spürbar geschmeidigere Haut</strong></span></p><p><span style=\"color:#AF9841;font-size:16px;\"><strong>–</strong></span><span style=\"color:rgb(255,255,255);font-size:16px;\"><strong> </strong></span><span style=\"color:#AF9841;font-size:16px;\"><strong>ab der ersten Anwendung</strong></span></p>",
+        "ggwfw-CCt3A_childItem_1": "<p><span style=\"color:rgb(255,255,255);font-size:medium;\"><strong>Sichtbare Ergebnisse </strong></span><span style=\"color:#AF9841;font-size:medium;\"><strong>in 2 Wochen</strong></span></p>",
+        "ggwfw-CCt3A_childItem_2": "<p><span style=\"color:rgb(255,255,255);font-size:medium;\"><strong>Zieht schnell ein </strong></span><span style=\"color:#AF9841;font-size:medium;\"><strong>– ohne zu fetten</strong></span></p>"
+      },
+      "type": "gp-section-624083350839624660"
+    },
+    "gp_section_624083350839755732": {
+      "settings": {
+        "checksum": "374aec177a21677f5c4a38bbfc44c683c05f13d66d955a6bd2cbc2b1393cd318_1_1_0_0__1",
+        "gg9F-bEbcM9_text": "<p><span style=\"color:#AF9841;font-size:21px;\"><strong>Edler, maskuliner Duft.</strong></span></p>",
+        "ggAmkyHYuwc_srcSet_desktop_src": "https://cdn.shopify.com/s/files/1/0779/4583/1766/files/menmansion-icon-lab-tested-de.svg",
+        "ggAmkyHYuwc_srcSet_mobile_src": "https://cdn.shopify.com/s/files/1/0779/4583/1766/files/MadeinGermany-Icon_ac5e38b7-e4b4-4ce4-b2ad-59422d95f5bd.svg",
+        "ggCNujeOWUA_text": "<p><span style=\"color:#AF9841;font-size:20px;\"><strong>Handgemacht in Deutschland</strong></span></p>",
+        "ggGFjr27emr_text": "<p><span style=\"color:rgb(255,255,255);font-size:medium;\">Grasgefütterter Rindertalg von Weiderindern, kombiniert mit Schwarzkümmelöl, Traubenkernöl, Zedernholzöl und Bienenwachs – in Duft, Wirkung und Konsistenz veredelt.</span></p>",
+        "ggKhFdvpv1n_srcSet_desktop_src": "https://cdn.shopify.com/s/files/1/0779/4583/1766/files/L1007484_jpg.webp",
+        "ggKhFdvpv1n_srcSet_mobile_src": "https://cdn.shopify.com/s/files/1/0779/4583/1766/files/gemini-image-2_upscale_this_image._please_reproduce_everything_as_accurately_as_possible_keepin-1.jpg",
+        "ggYrGzi9FDj_text": "<p><span style=\"color:rgb(255,255,255);font-size:16px;\">Wir stellen jede Charge selbst her - von Hand, auf der Schwäbischen Alb. Keine externe Produktion, keine anonyme Fabrik. Unser Name steht drauf, weil wir für jedes Glas geradestehen.</span></p>",
+        "ggey4JbrBSG_srcSet_desktop_src": "https://cdn.shopify.com/s/files/1/2005/9307/files/image_demo.jpg",
+        "ggey4JbrBSG_srcSet_mobile_src": "https://cdn.shopify.com/s/files/1/0779/4583/1766/files/L1007643_copy.jpg",
+        "ggl0TtviMUV_text": "<p><span style=\"color:#AF9841;font-size:20px;\"><strong>100% natürliche Inhaltsstoffe</strong></span></p>",
+        "ggo5HrInaKy_srcSet_desktop_src": "https://cdn.shopify.com/s/files/1/0779/4583/1766/files/menmansion-icon-leaf.svg",
+        "ggo5HrInaKy_srcSet_mobile_src": "https://cdn.shopify.com/s/files/1/0779/4583/1766/files/menmansion-icon-natural-ingredients.svg",
+        "ggpFtnrAJon_text": "<p>Made in Germany. Made for Men.&nbsp;</p>",
+        "ggr9pekHW5Y_srcSet_desktop_src": "https://cdn.shopify.com/s/files/1/0779/4583/1766/files/Dezent.svg",
+        "ggr9pekHW5Y_srcSet_mobile_src": "https://cdn.shopify.com/s/files/1/0779/4583/1766/files/Dezent.svg",
+        "ggx_6Z_bYxE_text": "<p><span style=\"color:rgb(255,255,255);font-size:medium;\">Zedernholzöl v</span><span style=\"background-color:rgb(25,25,25);color:rgb(250,250,250);font-size:17px;\">erleiht der Creme einen edlen, leicht holzigen Duft und sorgt für ein angenehmes Gefühl.</span></p>"
+      },
+      "type": "gp-section-624083350839755732"
+    },
+    "gp_section_624097584780149716": {
+      "settings": {
+        "checksum": "6398219cf6c2679363b1dd78b77577b96803662091a20d3714f8c21772faedec_1_1_0_0__1",
+        "gg-floDTgWi_childItem_0": "<p><span style=\"font-size:14px;\">30 Tage-Geld-zurück Garantie</span></p>",
+        "gg-floDTgWi_childItem_1": "<p><span style=\"font-size:14px;\">Made in Germany. Made for Men.</span></p>",
+        "gg1J4I8YaKn_text": "<p>Du kennst den Moment: kurzer Blick in den Spiegel, bevor du rausgehst. Die Stelle, die du auf Fotos wegdrehst. Der Gedanke, ob es jemand als Erstes sieht.</p><p>Dabei hast du längst alles versucht. <strong>Waschgele, Anti-Pickel-Mittel aus der Drogerie, das Serum</strong>, das auf TikTok jeder empfiehlt. Ein paar Tage fühlt sich die Haut trockener an - und dann ist alles wieder da. Geld weg, Hoffnung weg.</p><p>Das Frustrierende ist nicht der einzelne Pickel. Es ist, dass es nie aufhört. Dass es ständig mitläuft, egal wie diszipliniert du sonst bist - im Gym, beim Essen, im Schlaf.</p><p>Und irgendwann denkst du, es liegt an dir. Tut es nicht. Es liegt an etwas, das fast jedes dieser Produkte falsch macht.</p>",
+        "gg6xxecy5Ns_text": "<p>Warum Men Mansion <span style=\"color:#AF9841;\">Tallow?</span></p>",
+        "gg841H6mdjV_text": "<p><span style=\"color:#FAFAFB;font-size:16px;\"><strong>Speziell für Männer abgestimmt</strong></span></p>",
+        "gg9NhhNMoeD_text": "<p><span style=\"color:#FAFAFB;font-size:16px;\"><strong>Für ein sichtbar ruhigeres Hautbild</strong></span></p>",
+        "ggBWu8KXVCQ_label": "<p><span style=\"font-size:16px;\">Jetzt risikofrei testen</span></p>",
+        "ggCfAxxd5kZ_text": "<p>Rindertalg - Das Geheimnis der alten Römer</p>",
+        "ggFAvN_ysQc_srcSet_desktop_src": "https://cdn.shopify.com/s/files/1/0779/4583/1766/files/check_4.png",
+        "ggHdXB4rvHh_srcSet_desktop_src": "https://cdn.shopify.com/s/files/1/0779/4583/1766/files/IMG_2639.jpg",
+        "ggHdXB4rvHh_srcSet_mobile_src": "https://cdn.shopify.com/s/files/1/0779/4583/1766/files/IMG_2639.jpg",
+        "ggNK9VZql2k_text": "<p><span style=\"color:#FAFAFB;font-size:16px;\"><strong>Premium-Rindertalg</strong></span><span style=\"color:#FAFAFB;font-size:20px;\"><strong>&nbsp;</strong></span></p>",
+        "ggPEjeDyZCd_srcSet_desktop_src": "https://cdn.shopify.com/s/files/1/0779/4583/1766/files/L1007643_copy.jpg",
+        "ggZ-i36UGKB_text": "<p>Deine Haut produziert von Natur aus ein eigenes Fett - Sebum. Rindertalg ist diesem Fett näher als fast jeder andere Inhaltsstoff auf dem Markt. Deshalb nimmt deine Haut ihn auf, statt ihn abzuweisen.</p><p>Normale Cremes sitzen auf der Oberfläche oder trocknen aus. Rindertalg dringt ein - und gibt der Hautbarriere zurück, woraus sie besteht. Dazu kommen vier fettlösliche Vitamine, die in keiner Drogerie-Creme auf Wasserbasis überhaupt ankommen:</p><p><strong>Vitamin A</strong> - beschleunigt die Hauterneuerung, das Hautbild wird ruhiger und gleichmäßiger.<br><strong>Vitamin D</strong> - beruhigt Rötungen und Reizreaktionen von innen.<br><strong>Vitamin E</strong> - schützt die aufgebaute Barriere als Antioxidans gegen Umwelteinflüsse.<br><strong>Vitamin K</strong> - reduziert sichtbare Reizungen, die Haut sieht tatsächlich ruhiger aus - nicht überdeckt.</p><p>Keine Füllstoffe, kein Wasser, keine Inhaltsstoffe, die du nicht aussprechen kannst.</p>",
+        "gge8aeVIA-9_text": "<p>Unreine Haut – obwohl&nbsp;</p><p>du alles richtig machst?</p>",
+        "ggfUw9ELFG3_text": "<p>Der Grund heißt Hautbarriere. Und fast jede Creme zerstört sie.</p>",
+        "gggwPEdmEVy_text": "<p><span style=\"color:#FAFAFB;font-size:16px;\"><strong>Kombiniert mit ausgewählten Naturölen</strong></span></p>",
+        "ggmFoX8aq1u_text": "<p>Discover the age defying benefits of our collagen enriched thermogenic fat burner.*</p>",
+        "ggmOLXtUux5_srcSet_desktop_src": "https://cdn.shopify.com/s/files/1/0779/4583/1766/files/check_4.png",
+        "ggmgZK2CR7n_background_mobile_image_src": "https://cdn.shopify.com/s/files/1/0779/4583/1766/files/B9941455-gold_59a502df-b9e4-4302-8c5d-bb1210006704.png",
+        "ggqHFdTPdmJ_srcSet_desktop_src": "https://cdn.shopify.com/s/files/1/0779/4583/1766/files/check_4.png",
+        "ggqrq2sdI8y_text": "<p>Deine Haut hat eine Schutzschicht, die Feuchtigkeit hält und alles im Gleichgewicht hält: die Hautbarriere. Die meisten Anti-Pickel-Produkte tun nur eins - sie trocknen aus, bis die Haut weniger glänzt. Aggressive Wirkstoffe, Alkohol, Tenside. Sie greifen genau diese Barriere an.</p><p>Kurzfristig wirkt das wie Fortschritt. In Wahrheit verliert die geschwächte Barriere Feuchtigkeit, gerät aus dem Gleichgewicht - und die Haut antwortet mit noch mehr Unreinheiten. Du bekämpfst das Symptom und fütterst die Ursache. Das ist das Karussell.</p>",
+        "ggty1Or62AR_srcSet_desktop_src": "https://cdn.shopify.com/s/files/1/0779/4583/1766/files/check_4.png",
+        "ggwia3pAP2u_srcSet_desktop_src": "https://cdn.shopify.com/s/files/1/0779/4583/1766/files/IMG_2638_2.jpg",
+        "ggwia3pAP2u_srcSet_mobile_src": "https://cdn.shopify.com/s/files/1/0779/4583/1766/files/IMG_2638_2.jpg",
+        "ggxq11PNCxg_srcSet_desktop_src": "https://cdn.shopify.com/s/files/1/0775/6326/5315/files/Untitled-3.png?v=1706328421&width=1800",
+        "ggxq11PNCxg_srcSet_mobile_src": "https://cdn.shopify.com/s/files/1/0779/4583/1766/files/L1007484_jpg.webp"
+      },
+      "type": "gp-section-624097584780149716"
+    }
+  },
+  "order": [
+    "gp_section_624083350839428052",
+    "gp_section_624083350839624660",
+    "gp_section_624097584780149716",
+    "gp_section_624083350839755732",
+    "gp_section_624083350839231444",
+    "gp_section_624083350839362516",
+    "gp_section_624083350839296980",
+    "gp_section_624083350839100372",
+    "gp_section_624083350839493588",
+    "gp_section_624083350839559124",
+    "gp_section_624083350839165908"
+  ]
+}

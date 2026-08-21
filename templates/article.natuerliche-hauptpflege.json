@@ -1,0 +1,286 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-article",
+      "blocks": {
+        "featured_image": {
+          "type": "featured_image",
+          "settings": {
+            "image_height": "small"
+          }
+        },
+        "title": {
+          "type": "title",
+          "settings": {
+            "blog_show_date": false,
+            "blog_show_author": false
+          }
+        },
+        "content": {
+          "type": "content",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "featured_image",
+        "title",
+        "content"
+      ],
+      "disabled": true,
+      "settings": {}
+    },
+    "image_banner_WkrgBN": {
+      "type": "image-banner",
+      "blocks": {
+        "heading_At9CTa": {
+          "type": "heading",
+          "settings": {
+            "heading": "Natürliche Hautpflege für Männer",
+            "heading_size": "h1"
+          }
+        },
+        "text_dNXwrY": {
+          "type": "text",
+          "settings": {
+            "text": "",
+            "text_style": "body"
+          }
+        }
+      },
+      "block_order": [
+        "heading_At9CTa",
+        "text_dNXwrY"
+      ],
+      "settings": {
+        "image": "shopify://shop_images/Neueste_Fotos_anzeigen.jpg",
+        "image_2": "shopify://shop_images/Neueste_Fotos_anzeigen.jpg",
+        "image_overlay_opacity": 30,
+        "image_height": "medium",
+        "desktop_content_position": "middle-center",
+        "show_text_box": false,
+        "desktop_content_alignment": "center",
+        "color_scheme": "",
+        "image_behavior": "none",
+        "mobile_content_alignment": "center",
+        "stack_images_on_mobile": true,
+        "show_text_below": false
+      }
+    },
+    "rich_text_iYt8K6": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_jfykCe": {
+          "type": "heading",
+          "settings": {
+            "heading": "Warum Tallow die beste Wahl ist",
+            "heading_size": "h1"
+          }
+        },
+        "text_bNQTFc": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Viele Männer haben keinen Bock auf Cremes, die nach Parfümerie riechen oder voller Chemie sind. Verständlich. Die Haut ist ein sensibles Thema – gerade bei Männern, die viel Wert auf ihr Aussehen legen, aber keine Lust auf komplizierte Pflege haben.</p><p>Wenn du eine einfache, natürliche und starke Lösung suchst: <strong>Tallow (Rindertalg)</strong> ist genau das Richtige. Klingt erstmal ungewöhnlich – wirkt aber besser als viele teure Cremes.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_jfykCe",
+        "text_bNQTFc"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 20,
+        "padding_bottom": 20
+      }
+    },
+    "rich_text_DGprkz": {
+      "type": "rich-text",
+      "blocks": {
+        "button_t3MNcK": {
+          "type": "button",
+          "settings": {
+            "button_label": "Jetzt entdecken",
+            "button_link": "shopify://products/tallow-pflege-fuer-maenner",
+            "button_style_secondary": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "button_t3MNcK"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 24,
+        "padding_bottom": 20
+      }
+    },
+    "rich_text_NbcYHE": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_fJb3Rg": {
+          "type": "heading",
+          "settings": {
+            "heading": "Warum natürliche Hautpflege bei Männern immer beliebter wird",
+            "heading_size": "h1"
+          }
+        },
+        "text_HFqJ9n": {
+          "type": "text",
+          "settings": {
+            "text": "<h3>Männerhaut ist anders</h3><p>Sie ist dicker, fettiger und muss beim Rasieren oft mehr aushalten. Deshalb braucht sie besondere Pflege – aber bitte ohne Chemie.</p><h3>Viele Cremes schaden mehr als sie helfen</h3><p>In normalen Produkten steckt oft Zeug drin, das deine Haut reizt oder verstopft: Parabene, Silikone, Parfum… das ist nichts für echte Kerle. Und schon gar nicht für empfindliche Haut.</p><h3>Männer achten heute mehr auf sich</h3><p>Gute Ernährung, Fitness, Style – und eben auch gute Hautpflege. Aber bitte ehrlich, effektiv und natürlich.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_fJb3Rg",
+        "text_HFqJ9n"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 20,
+        "padding_bottom": 20
+      }
+    },
+    "image_with_text_Y6E3az": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_pAKjPh": {
+          "type": "heading",
+          "settings": {
+            "heading": "Was ist Tallow – und warum ist es so gut?",
+            "heading_size": "h2"
+          }
+        },
+        "text_7DegBe": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Tallow ist gereinigter <strong>Rindertalg</strong> – also tierisches Fett, das der menschlichen Haut extrem ähnlich ist. Es wird seit Jahrhunderten verwendet und erlebt gerade ein echtes Comeback.</p><ul><li>Es pflegt tief, ohne zu fetten</li><li>Es ist frei von Chemie</li><li>Es ist perfekt für empfindliche, trockene oder unreine Haut</li></ul><p>Weil Tallow so „hautähnlich“ ist, nimmt deine Haut es super auf – ohne zu glänzen oder sich „cremig“ anzufühlen.</p>",
+            "text_style": "body"
+          }
+        }
+      },
+      "block_order": [
+        "heading_pAKjPh",
+        "text_7DegBe"
+      ],
+      "settings": {
+        "image": "shopify://shop_images/0015-4759632926109515502.png",
+        "height": "small",
+        "desktop_image_width": "small",
+        "layout": "image_first",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "section_color_scheme": "",
+        "color_scheme": "",
+        "image_behavior": "none",
+        "mobile_content_alignment": "left",
+        "padding_top": 20,
+        "padding_bottom": 20
+      }
+    },
+    "rich_text_cczPPg": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_t9hXJQ": {
+          "type": "heading",
+          "settings": {
+            "heading": "5 starke Gründe für Tallow in deiner Pflege",
+            "heading_size": "h1"
+          }
+        },
+        "text_EgXxJm": {
+          "type": "text",
+          "settings": {
+            "text": "<h3>Es pflegt intensiv</h3><p>Tallow macht deine Haut weich und versorgt sie mit Feuchtigkeit – ganz ohne künstliche Zusatzstoffe.</p><h3> Kein Stress bei sensibler Haut</h3><p>Es beruhigt gereizte Stellen und hilft bei Pickeln oder Rasurbrand – ideal für Männerhaut.</p><h3> 100 % natürlich</h3><p>Keine Chemie, keine Konservierungsmittel. Nur das, was du wirklich brauchst.</p><h3> Auch für Bartträger top</h3><p>Tallow pflegt nicht nur die Haut, sondern auch die Haut <strong>unter dem Bart</strong>. Kein Jucken, kein Austrocknen.</p><h3> Gegen Falten & trockene Stellen</h3><p>Dank natürlicher Vitamine bleibt deine Haut länger jung, glatt und gesund</p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_t9hXJQ",
+        "text_EgXxJm"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 52
+      }
+    },
+    "rich_text_hAi3jX": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_AbYHtb": {
+          "type": "heading",
+          "settings": {
+            "heading": "Unsere Empfehlung: Die Tallow Gesichtscreme von Men Mansion",
+            "heading_size": "h1"
+          }
+        },
+        "text_mPgg8e": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Wir haben eine Gesichtscreme entwickelt, die genau zu dir passt:</p><p>✅ Reines Tallow + natürliche Öle<br/>✅ Männlicher Duft, kein Firlefanz<br/>✅ Kommt im hochwertigen Glastiegel (kein Plastik)<br/>✅ Ideal für jeden Tag – morgens, abends oder nach dem Rasieren</p>"
+          }
+        },
+        "button_XQAJir": {
+          "type": "button",
+          "settings": {
+            "button_label": "Jetzt entdecken",
+            "button_link": "shopify://products/tallow-pflege-fuer-maenner",
+            "button_style_secondary": false,
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_secondary_2": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_AbYHtb",
+        "text_mPgg8e",
+        "button_XQAJir"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 20,
+        "padding_bottom": 20
+      }
+    }
+  },
+  "order": [
+    "main",
+    "image_banner_WkrgBN",
+    "rich_text_iYt8K6",
+    "rich_text_DGprkz",
+    "rich_text_NbcYHE",
+    "image_with_text_Y6E3az",
+    "rich_text_cczPPg",
+    "rich_text_hAi3jX"
+  ]
+}

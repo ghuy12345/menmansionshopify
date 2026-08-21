@@ -1,0 +1,267 @@
+/* ==========================================================================
+   MEN MANSION - Bundle-Boxen: Optik der alten Buybox auf dem Koala-Widget.
+
+   Reine Darstellung. An der Mechanik wird nichts angefasst:
+   - kein Verschieben des Widgets (ein DOM-Umzug des Custom Elements zerstoert
+     die Bindung an die gewaehlte Stufe, dann landet immer die vorausgewaehlte
+     Stufe im Warenkorb)
+   - keine eigenen Preise, keine eigenen Warenkorb-Aufrufe
+   - kein Dauer-Observer, der auf jede Mutation reagiert
+
+   Alle Regeln brauchen !important: die App gibt ihr CSS inline in der Section
+   aus, also nach diesem Asset, und gewinnt sonst bei gleicher Spezifitaet.
+
+   Zuordnung zum alten Design (Commit 822dac6):
+     .mm-bb-tier         -> .koala-deal__tier
+     .mm-bb-tier-flag    -> .koala-deal__tier__label
+     .mm-bb-tier-thumb   -> .koala-deal__tier__image
+     .mm-bb-tier-name    -> .koala-deal__tier__title
+     .mm-bb-tier-meta    -> .koala-deal__tier__subtitle
+     .mm-bb-tier-total   -> .koala-deal__tier__price
+     .mm-bb-tier-compare -> .koala-deal__tier__regular-price
+     .mm-bb-tier-perunit -> .koala-deal__tier__per-item-price
+     .mm-bb-tier-items   -> selbst gebaut, ersetzt .koala-deal__tier__gift-container
+   ========================================================================== */
+
+/* Kopfzeile "Waehle dein Bundle" mit den Linien links und rechts */
+.koala-deal__title {
+  display: flex !important; align-items: center !important; gap: 12px !important;
+  padding: 4px 0 12px !important; margin: 0 !important;
+  font-family: var(--mm-font-body) !important;
+  font-size: 11px !important; font-weight: 700 !important;
+  letter-spacing: var(--mm-ls-eyebrow) !important; text-transform: uppercase !important;
+  color: var(--mm-gold-soft) !important;
+}
+.koala-deal__title::before,
+.koala-deal__title::after {
+  content: "" !important; flex: 1 1 auto !important; height: 1px !important;
+  background: var(--mm-gold-line) !important;
+}
+
+/* Karten */
+.koala-deal__tier {
+  position: relative !important; display: block !important; width: 100% !important;
+  text-align: left !important; padding: 0 !important; margin: 0 !important;
+  background: var(--mm-charcoal) !important; color: var(--mm-alabaster) !important;
+  border: 1px solid var(--mm-graphite) !important;
+  border-radius: 10px !important; overflow: hidden !important;
+  font-family: var(--mm-font-body) !important;
+  transition: border-color 150ms ease !important;
+}
+.koala-deal__tier:hover { border-color: var(--mm-gold-line) !important; }
+/* Der Radio steht als Geschwister direkt vor dem Label. */
+.koala-deal__tier__input:checked + .koala-deal__tier {
+  border-color: var(--mm-gold) !important;
+  box-shadow: 0 0 0 2px var(--mm-gold) !important;
+}
+
+/* Flag-Leiste */
+.koala-deal__tier__label {
+  display: flex !important; align-items: center !important; width: 100% !important;
+  padding: 8px 16px !important; margin: 0 !important;
+  background: var(--mm-ink) !important; border: 0 !important; border-radius: 0 !important;
+  font-family: var(--mm-font-body) !important;
+  font-size: 13px !important; font-weight: 700 !important;
+  letter-spacing: 0.02em !important; text-transform: none !important;
+  color: var(--mm-alabaster) !important;
+}
+
+/* Flag-Leiste, Variante 2: koala-ribbon
+   Manche Deals sind mit Label-Typ "Rechteck" angelegt und rendern statt
+   .koala-deal__tier__label ein .koala-ribbon. Das kommt von der App absolut
+   positioniert und als kleine Ecke - es ragte oben rechts aus der Karte heraus
+   und der Text war abgeschnitten. Hier wird daraus die gleiche volle Leiste wie
+   bei der Label-Variante, damit beide Deal-Typen identisch aussehen. */
+.koala-deal__tier .koala-ribbon {
+  position: static !important;
+  display: flex !important; align-items: center !important; width: 100% !important;
+  padding: 8px 16px !important; margin: 0 !important;
+  inset: auto !important; top: auto !important; right: auto !important;
+  bottom: auto !important; left: auto !important;
+  transform: none !important; clip-path: none !important;
+  background: var(--mm-ink) !important; border: 0 !important; border-radius: 0 !important;
+  box-shadow: none !important; overflow: visible !important;
+  min-width: 0 !important; max-width: none !important;
+  width: 100% !important; height: auto !important;
+}
+.koala-deal__tier .koala-ribbon {
+  justify-content: flex-start !important;
+  text-align: left !important;
+}
+.koala-deal__tier .koala-ribbon span {
+  font-family: var(--mm-font-body) !important;
+  font-size: 13px !important; font-weight: 700 !important;
+  letter-spacing: 0.02em !important; text-transform: none !important;
+  color: var(--mm-alabaster) !important;
+  white-space: nowrap !important; overflow: visible !important;
+  transform: none !important; writing-mode: horizontal-tb !important;
+}
+
+/* Der Titel liegt bei manchen Deals in einem zusaetzlichen Wrapper. */
+.koala-deal__tier__title-container {
+  min-width: 0 !important; padding: 0 !important; margin: 0 !important;
+}
+
+/* Stueckpreis ("22,32 pro Flasche"). Die App blendet ihn bei der 1er-Stufe
+   selbst aus, das bleibt so - dort gibt es keinen Stueckpreis-Vorteil. */
+.koala-deal__tier__per-item-price {
+  font-size: 11px !important; font-weight: 400 !important;
+  color: var(--mm-gold-soft) !important;
+}
+.koala-deal__tier__per-item-price span { font-size: 11px !important; color: var(--mm-gold-soft) !important; }
+
+/* Streichpreis, den die App als ausgeblendet markiert, bleibt ausgeblendet. */
+.koala-deal__tier__regular-price--hidden { display: none !important; }
+
+/* Listen-Container: Abstand und kein Listenpunkt, unabhaengig vom App-CSS. */
+.koala-deal__tiers__list {
+  display: flex !important; flex-direction: column !important; gap: 10px !important;
+  margin: 0 !important; padding: 0 !important; list-style: none !important;
+}
+.koala-deal__tiers__list-item {
+  display: block !important; margin: 0 !important; padding: 0 !important;
+  list-style: none !important;
+}
+
+/* Kartenkopf: Bild, Name, Meta, Preisblock */
+.koala-deal__tier__body {
+  display: flex !important; align-items: center !important; gap: 12px !important;
+  padding: 18px 16px 12px !important; margin: 0 !important;
+}
+.koala-deal__tier__content-container {
+  display: flex !important; align-items: center !important; gap: 12px !important;
+  flex: 1 1 auto !important; min-width: 0 !important; padding: 0 !important;
+}
+/* Kein background-Shorthand hier! Koala haengt das Stufenbild als background-image
+   an dieses div. "background: transparent" hat es deshalb geloescht - links waren
+   keine Bilder mehr zu sehen. Nur Groesse und Darstellung setzen, die Bildquelle
+   bleibt bei der App. */
+.koala-deal__tier__image {
+  flex: none !important; width: 48px !important; height: 48px !important;
+  border-radius: 0 !important;
+  background-size: cover !important;
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+}
+.koala-deal__tier__image img { width: 100% !important; height: 100% !important; object-fit: cover !important; }
+.koala-deal__tier__description-container {
+  flex: 1 1 auto !important; min-width: 0 !important;
+  display: flex !important; flex-direction: column !important; gap: 2px !important;
+}
+.koala-deal__tier__title {
+  font-family: var(--mm-font-display) !important; font-weight: 600 !important;
+  font-size: 16px !important; line-height: 1.1 !important; color: var(--mm-alabaster) !important;
+  white-space: nowrap !important; overflow: hidden !important; text-overflow: ellipsis !important;
+}
+.koala-deal__tier__subtitle {
+  font-family: var(--mm-font-body) !important; font-weight: 400 !important;
+  font-size: 11px !important; color: var(--mm-fg-muted) !important;
+  white-space: nowrap !important; overflow: hidden !important; text-overflow: ellipsis !important;
+}
+.koala-deal__tier__pricing-container {
+  flex: none !important; display: flex !important; flex-direction: column !important;
+  align-items: flex-end !important; gap: 1px !important; padding: 0 !important;
+}
+.koala-deal__tier__price {
+  font-family: var(--mm-font-body) !important; font-weight: 700 !important;
+  font-size: 13px !important; letter-spacing: 0.01em !important; color: var(--mm-alabaster) !important;
+}
+.koala-deal__tier__regular-price {
+  font-size: 13px !important; color: var(--mm-fg-muted) !important; text-decoration: line-through !important;
+}
+/* Der Pro-Stueck-Preis bleibt unangetastet, genau wie auf live: die App stellt
+   Betrag und Label untereinander (Block 68x37) und blendet Stufenpreis und
+   Streichpreis per display:none aus - das ist auf live und staging identisch.
+   Ein erzwungenes flex-direction: row hat den Block auf 137px verbreitert, damit
+   war der Untertitel "4 Mon. Vorrat · €0,37 / Tag" abgeschnitten (155/115). */
+
+/* Varianten-Nummerierung der App wird nicht gebraucht */
+.koala-deal__tier__variant-groups { display: none !important; }
+
+/* ---------- "Das bekommst Du" ----------
+   Die Zeilen der App werden ausgeblendet, mm-bundle-skin.js baut die Liste im
+   alten Design nach: Bild, Name, rechts Menge bzw. Streichwert + GRATIS, unten
+   "Dein Gesamt-Vorteil". Die Werte kommen weiter alle aus dem App-Markup.
+
+   Farben, Schriftgroessen und Abstaende sind hier unveraendert die des alten
+   Designs (mm-pdp-bundle-buybox.css, Commit accc358, Zeile 54ff) - nur
+   .mm-bb-item-thumb hat keine Flaeche und keinen Rahmen mehr, weil die
+   Gratisartikel freigestellt sind. */
+.koala-deal__tier__gift-container { display: none !important; }
+
+.mm-bb-tier-items {
+  display: flex !important; flex-direction: column !important; gap: 0 !important;
+  border-top: 1px solid var(--mm-graphite) !important; padding: 10px 16px 12px !important;
+  font-family: var(--mm-font-body) !important;
+}
+.mm-bb-tier-items-toggle {
+  display: flex !important; align-items: center !important; justify-content: space-between !important;
+  padding: 2px 0 8px !important; cursor: pointer !important;
+}
+.mm-bb-tier-items-label {
+  font-size: 10px !important; font-weight: 700 !important; letter-spacing: 0.14em !important;
+  text-transform: uppercase !important; color: var(--mm-fg-muted) !important;
+}
+.mm-bb-tier-chevron { flex: none !important; color: var(--mm-fg-muted) !important; transition: transform 200ms !important; }
+.mm-bb-tier-items.is-collapsed .mm-bb-tier-chevron { transform: rotate(-90deg) !important; }
+.mm-bb-tier-items.is-collapsed .mm-bb-tier-items-body { display: none !important; }
+
+.mm-bb-item-row { display: flex !important; align-items: center !important; gap: 10px !important; padding: 4px 0 !important; }
+/* background-size: contain statt cover und ohne Flaeche/Rahmen: die Bilder sind
+   freigestellte PNGs mit Transparenz (mm-r3-aleppo, mm-gift-spray,
+   mm-tallow-tiegel), cover wuerde sie anschneiden. */
+.mm-bb-item-thumb {
+  flex: none !important; width: 30px !important; height: 30px !important;
+  background-size: contain !important; background-position: center !important;
+  background-repeat: no-repeat !important; background-color: transparent !important;
+  border: 0 !important; border-radius: 0 !important;
+}
+.mm-bb-item-name {
+  flex: 1 1 auto !important; min-width: 0 !important;
+  font-size: 13px !important; font-weight: 400 !important; line-height: 1.3 !important;
+  color: var(--mm-alabaster) !important; text-align: left !important;
+}
+.mm-bb-item-value { flex: none !important; font-size: 12px !important; color: var(--mm-fg-muted) !important; text-decoration: line-through !important; }
+.mm-bb-item-gratis {
+  flex: none !important; font-size: 10px !important; font-weight: 700 !important;
+  letter-spacing: 0.04em !important; text-align: center !important; text-transform: uppercase !important;
+  color: var(--mm-onyx) !important; background: var(--mm-gold-soft) !important; padding: 2px 7px !important;
+}
+.mm-bb-item-qty { flex: none !important; font-size: 12px !important; color: var(--mm-fg-muted) !important; }
+
+/* "Dein Gesamt-Vorteil" ist auf Wunsch entfernt (10.08.). */
+
+/* ---------- Preiszeile ueber dem Warenkorb-Button ----------
+   Entspricht .mm-bb-static aus dem alten Design: Gesamtpreis, Streichpreis und
+   "Du sparst". Der Button darunter bleibt reiner Text ohne Preis. */
+.mm-kb-sum {
+  display: flex; align-items: baseline; justify-content: space-between; gap: 12px;
+  flex-wrap: wrap;
+  margin: 16px 0 10px; padding-top: 14px;
+  border-top: 1px solid var(--mm-graphite);
+}
+.mm-kb-sum[hidden] { display: none; }
+.mm-kb-sum-main { display: flex; align-items: baseline; gap: 8px; }
+.mm-kb-sum-total { font-size: 22px; font-weight: 700; color: var(--mm-alabaster); }
+.mm-kb-sum-compare { font-size: 14px; color: var(--mm-fg-muted); text-decoration: line-through; }
+.mm-kb-sum-compare[hidden] { display: none; }
+.mm-kb-sum-save {
+  font-size: 12px; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase;
+  color: var(--mm-gold-soft);
+}
+.mm-kb-sum-save[hidden] { display: none; }
+
+/* ---------- Koalas eigene Summenleiste ausblenden ----------
+   Die App haengt unter die Karten eine zweite Leiste
+   (.koala-deal__bundle-total.koala-qb-total-injected) mit "Spare 14,90€",
+   Streichpreis und Gesamtpreis. Unsere Preiszeile ueber dem Warenkorb-Button
+   zeigt genau dasselbe, deshalb ist die App-Leiste doppelt. Nur ausgeblendet,
+   an der Mechanik aendert das nichts - das Element traegt bereits
+   aria-hidden="true", es ist reine Anzeige. */
+.koala-deal__bundle-total,
+.koala-qb-total-injected { display: none !important; }
+
+/* Die Umschaltzeile liegt im <label> der Stufe. Ein Klick darauf soll nur
+   auf- und zuklappen, nicht die Stufe wechseln - das macht das JS per
+   preventDefault. Der Zeiger zeigt trotzdem, dass die Zeile klickbar ist. */
+.mm-bb-tier-items-toggle:hover .mm-bb-tier-items-label { color: var(--mm-alabaster) !important; }

@@ -1,0 +1,60 @@
+/* MEN MANSION — Homepage Magazin-Rail (Spec: Men-Mansion-Magazin-VIP-Footer.md) */
+/* Ersetzt die App-Sektion "ss-blog-slider" (Swiper) durch eine reine CSS-scroll-snap-Rail,
+   gespeist aus echten blogs.news.articles - kein JS noetig. */
+
+.mm {
+  --mm-onyx:#191919; --mm-ink:#0E0E0E; --mm-charcoal:#272725; --mm-graphite:#33322F;
+  --mm-alabaster:#FAFAF8; --mm-gold:#AF9841; --mm-gold-soft:#C6B074;
+  --mm-gold-line:rgba(198,176,116,.42); --mm-muted:#A8A49A; --mm-stone:#6E6B63;
+  --mm-display:"Saol Standard","Times New Roman",Georgia,serif;
+  --mm-body:"Suisse Intl",-apple-system,BlinkMacSystemFont,"Helvetica Neue",Arial,sans-serif;
+}
+.mm *, .mm *::before, .mm *::after { box-sizing: border-box; }
+.mm { font-family: var(--mm-body); font-weight: 500; letter-spacing: 0.01em; }
+.mm a { text-decoration: none; }
+.mm-wrap { max-width: 1320px; margin-inline: auto; padding-inline: clamp(20px,5vw,72px); }
+
+.mm-eyebrow { display: flex; align-items: center; gap: 14px; }
+.mm-eyebrow i { width: 40px; height: 1px; background: var(--mm-gold-soft); display: block; }
+.mm-eyebrow span { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: .14em; color: var(--mm-gold-soft); }
+.mm-h2 { font-family: var(--mm-display); font-weight: 600; font-size: clamp(30px,4vw,48px);
+  line-height: 1.1; letter-spacing: -.015em; margin: 0; text-wrap: balance; }
+.mm-mag .mm-h2 { font-size: 20px !important; }
+@media screen and (min-width: 750px) {
+  .mm-mag .mm-h2 { font-size: clamp(30px,4vw,48px) !important; }
+}
+.mm-micro { font-size: 12px; line-height: 1.45; text-transform: uppercase; letter-spacing: .16em; margin: 0; }
+
+.mm-mag { background: var(--mm-onyx); color: var(--mm-alabaster);
+  padding: clamp(48px,8vw,96px) 0 clamp(48px,7vw,88px); border-top: 1px solid var(--mm-graphite); }
+.mm-mag .mm-wrap { display: flex; flex-direction: column; gap: clamp(24px,4vw,36px); }
+.mm-maghead { display: flex; flex-wrap: wrap; align-items: flex-end; justify-content: space-between; gap: 16px; }
+.mm-maghead > div { display: flex; flex-direction: column; gap: 14px; }
+.mm-maghead .mm-h2 { max-width: 20em; }
+.mm-all { display: inline-flex; align-items: center; gap: 10px; min-height: 44px; font-size: 11px; font-weight: 700;
+  text-transform: uppercase; letter-spacing: .18em; color: var(--mm-gold-soft);
+  border-bottom: 1px solid var(--mm-gold-line); padding-bottom: 4px; }
+.mm-all:hover { color: var(--mm-alabaster); border-color: var(--mm-alabaster); }
+
+.mm-rail { display: grid; grid-auto-flow: column; grid-auto-columns: minmax(272px,1fr); gap: 16px;
+  overflow-x: auto; overscroll-behavior-x: contain; scroll-snap-type: x mandatory;
+  scrollbar-width: none; -ms-overflow-style: none; padding-bottom: 2px; }
+.mm-rail::-webkit-scrollbar { display: none; }
+.mm-card { scroll-snap-align: start; background: var(--mm-ink); display: flex; flex-direction: column;
+  min-width: 0; color: var(--mm-alabaster); border: 1px solid var(--mm-graphite);
+  transition: background 150ms cubic-bezier(.4,0,.2,1); }
+.mm-card:hover { background: var(--mm-charcoal); }
+.mm-card figure { margin: 0; width: 100%; aspect-ratio: 4/3; overflow: hidden; background: var(--mm-charcoal); }
+.mm-card img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.mm-cardbody { padding: clamp(18px,2.4vw,24px); display: flex; flex-direction: column; gap: 12px; flex: 1; }
+.mm-cat { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: .2em; color: var(--mm-gold-soft); }
+.mm-card h3 { margin: 0; font-family: var(--mm-display) !important; font-weight: 400;
+  font-size: 20px; line-height: 1.25; text-wrap: pretty; }
+@media screen and (min-width: 750px) {
+  .mm-card h3 { font-size: clamp(18px,1.8vw,21px); }
+}
+.mm-hint { color: var(--mm-muted); }
+
+@media (prefers-reduced-motion: reduce) {
+  .mm-card { transition: none; }
+}

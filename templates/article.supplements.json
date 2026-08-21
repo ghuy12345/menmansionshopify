@@ -1,0 +1,384 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-article",
+      "blocks": {
+        "featured_image": {
+          "type": "featured_image",
+          "settings": {
+            "image_height": "small"
+          }
+        },
+        "title": {
+          "type": "title",
+          "settings": {
+            "blog_show_date": false,
+            "blog_show_author": false
+          }
+        },
+        "content": {
+          "type": "content",
+          "settings": {}
+        }
+      },
+      "block_order": [
+        "featured_image",
+        "title",
+        "content"
+      ],
+      "disabled": true,
+      "settings": {}
+    },
+    "image_banner_4ex8mb": {
+      "type": "image-banner",
+      "blocks": {
+        "heading_hmPTJy": {
+          "type": "heading",
+          "settings": {
+            "heading": "Wie Supplements dich auf das nächste Level bringen!",
+            "heading_size": "h1"
+          }
+        },
+        "text_UFB6tU": {
+          "type": "text",
+          "settings": {
+            "text": "Die Vorteile und Anwendung unserer Supplements",
+            "text_style": "body"
+          }
+        }
+      },
+      "block_order": [
+        "heading_hmPTJy",
+        "text_UFB6tU"
+      ],
+      "settings": {
+        "image": "shopify://shop_images/Unknown-6.jpg",
+        "image_2": "shopify://shop_images/0003-8489739843339218114.png",
+        "image_overlay_opacity": 30,
+        "image_height": "medium",
+        "desktop_content_position": "middle-center",
+        "show_text_box": false,
+        "desktop_content_alignment": "center",
+        "color_scheme": "",
+        "image_behavior": "none",
+        "mobile_content_alignment": "center",
+        "stack_images_on_mobile": false,
+        "show_text_below": false
+      }
+    },
+    "rich_text_6traAK": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_wEakkQ": {
+          "type": "heading",
+          "settings": {
+            "heading": "Warum Supplements sinnvoll sind",
+            "heading_size": "h1"
+          }
+        },
+        "text_naBaCf": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Unser Körper benötigt viele Nährstoffe, um richtig zu funktionieren. Doch selbst bei einer ausgewogenen Ernährung kann es schwer sein, immer alles abzudecken. Stress, Sport oder bestimmte Lebensphasen können den Bedarf an Vitaminen und Mineralstoffen erhöhen. Supplements sind eine einfache Möglichkeit, deinen Körper gezielt zu unterstützen und Nährstofflücken zu schließen.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_wEakkQ",
+        "text_naBaCf"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 20,
+        "padding_bottom": 20
+      }
+    },
+    "image_with_text_8CgywJ": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_cWBCpn": {
+          "type": "heading",
+          "settings": {
+            "heading": "<strong>Vitamin D3K2</strong>",
+            "heading_size": "h2"
+          }
+        },
+        "text_VEKffB": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Gerade in den Wintermonaten ist Vitamin D ein Must-have. Es stärkt das Immunsystem, fördert gesunde Knochen und kann sogar die Stimmung verbessern. Durch die Kombination mit Vitamin K2 wird sichergestellt, dass dein Körper das Vitamin D optimal verwerten kann.</p>",
+            "text_style": "body"
+          }
+        },
+        "button_hBR7wF": {
+          "type": "button",
+          "settings": {
+            "button_label": "Jetzt entdecken",
+            "button_link": "shopify://products/vitamin-d3-k2",
+            "button_style_secondary": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_cWBCpn",
+        "text_VEKffB",
+        "button_hBR7wF"
+      ],
+      "settings": {
+        "image": "shopify://shop_images/2_fde5dcf7-8a49-4de0-b979-f3f6e69bb395.png",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "section_color_scheme": "",
+        "color_scheme": "",
+        "image_behavior": "none",
+        "mobile_content_alignment": "center",
+        "padding_top": 20,
+        "padding_bottom": 20
+      }
+    },
+    "image_with_text_LJznAT": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_t4QLmF": {
+          "type": "heading",
+          "settings": {
+            "heading": "<strong>Ashwagandha</strong>",
+            "heading_size": "h2"
+          }
+        },
+        "text_jnjFMf": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Ashwagandha ist ein pflanzliches Supplement, das bekannt dafür ist, Stress zu reduzieren und die mentale Stärke zu fördern. Es kann dir helfen, auch in hektischen Zeiten fokussiert zu bleiben und dich besser zu fühlen.</p>",
+            "text_style": "body"
+          }
+        },
+        "button_HkVjaD": {
+          "type": "button",
+          "settings": {
+            "button_label": "Jetzt entdecken",
+            "button_link": "shopify://products/ashwagandha-pure-500g",
+            "button_style_secondary": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_t4QLmF",
+        "text_jnjFMf",
+        "button_HkVjaD"
+      ],
+      "settings": {
+        "image": "shopify://shop_images/shopify15721948916851744262.png",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "text_first",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "section_color_scheme": "",
+        "color_scheme": "",
+        "image_behavior": "none",
+        "mobile_content_alignment": "center",
+        "padding_top": 20,
+        "padding_bottom": 20
+      }
+    },
+    "image_with_text_QnCH6X": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_nHrwnb": {
+          "type": "heading",
+          "settings": {
+            "heading": "<strong>Magnesium Komplex</strong>",
+            "heading_size": "h2"
+          }
+        },
+        "text_zkbRGz": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Magnesium ist besonders wichtig für deine Muskeln und dein Nervensystem. Wenn du viel Sport machst oder dich oft müde und ausgelaugt fühlst, kann ein Magnesium Komplex helfen. Es unterstützt die Regeneration nach dem Training und wirkt vorbeugend gegen Muskelkrämpfe.</p>",
+            "text_style": "body"
+          }
+        },
+        "button_XKYmAw": {
+          "type": "button",
+          "settings": {
+            "button_label": "Jetzt entdecken",
+            "button_link": "shopify://products/magnesium-komplex-kapseln",
+            "button_style_secondary": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_nHrwnb",
+        "text_zkbRGz",
+        "button_XKYmAw"
+      ],
+      "settings": {
+        "image": "shopify://shop_images/shopify9265356243952124240.png",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "image_first",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "section_color_scheme": "",
+        "color_scheme": "",
+        "image_behavior": "none",
+        "mobile_content_alignment": "center",
+        "padding_top": 20,
+        "padding_bottom": 20
+      }
+    },
+    "image_with_text_yxH3y4": {
+      "type": "image-with-text",
+      "blocks": {
+        "heading_xhVjrN": {
+          "type": "heading",
+          "settings": {
+            "heading": "<strong>Kreatin Monohydrat</strong>",
+            "heading_size": "h2"
+          }
+        },
+        "text_nj4znb": {
+          "type": "text",
+          "settings": {
+            "text": "<p>Kreatin ist ideal für alle, die sportlich aktiv sind. Es gibt deinen Muskeln die Energie, die sie brauchen, um mehr Leistung zu bringen – sei es beim Krafttraining, beim Laufen oder bei anderen intensiven Aktivitäten. Außerdem fördert es die Regeneration, sodass du dich schneller erholst.</p>",
+            "text_style": "body"
+          }
+        },
+        "button_3bQUrU": {
+          "type": "button",
+          "settings": {
+            "button_label": "Jetzt entdecken",
+            "button_link": "shopify://products/kreatin-monohydrat-1kg",
+            "button_style_secondary": false
+          }
+        }
+      },
+      "block_order": [
+        "heading_xhVjrN",
+        "text_nj4znb",
+        "button_3bQUrU"
+      ],
+      "settings": {
+        "image": "shopify://shop_images/shopify5871616319639201025.png",
+        "height": "adapt",
+        "desktop_image_width": "medium",
+        "layout": "text_first",
+        "desktop_content_position": "top",
+        "desktop_content_alignment": "left",
+        "content_layout": "no-overlap",
+        "section_color_scheme": "",
+        "color_scheme": "",
+        "image_behavior": "none",
+        "mobile_content_alignment": "center",
+        "padding_top": 20,
+        "padding_bottom": 20
+      }
+    },
+    "rich_text_Ptj7NK": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_MW36rg": {
+          "type": "heading",
+          "settings": {
+            "heading": "<strong>Tipps für die richtige Einnahme</strong>",
+            "heading_size": "h1"
+          }
+        }
+      },
+      "block_order": [
+        "heading_MW36rg"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 24,
+        "padding_bottom": 20
+      }
+    },
+    "multicolumn_MypxhD": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_AkmKyz": {
+          "type": "column",
+          "settings": {
+            "title": "Achte auf die Dosierung",
+            "text": "<p>Mehr ist nicht immer besser. Halte dich an die empfohlenen Mengen auf der Verpackung.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_4XGtKG": {
+          "type": "column",
+          "settings": {
+            "title": "Achte auf eine ausgewogene Ernährung",
+            "text": "<p>Supplements ersetzen keine gesunde Ernährung, sondern ergänzen sie.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_UQr7BQ": {
+          "type": "column",
+          "settings": {
+            "title": "Trinke genug Wasser",
+            "text": "<p>Eine ausreichende Flüssigkeitszufuhr unterstützt die Wirkung der Supplements und hilft deinem Körper, optimal zu arbeiten.</p>",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "column_AkmKyz",
+        "column_4XGtKG",
+        "column_UQr7BQ"
+      ],
+      "settings": {
+        "title": "",
+        "heading_size": "h1",
+        "image_width": "third",
+        "image_ratio": "adapt",
+        "columns_desktop": 3,
+        "column_alignment": "center",
+        "background_style": "none",
+        "button_label": "Jetzt entdecken",
+        "button_link": "shopify://collections/supplements",
+        "color_scheme": "",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 20,
+        "padding_bottom": 20
+      }
+    }
+  },
+  "order": [
+    "main",
+    "image_banner_4ex8mb",
+    "rich_text_6traAK",
+    "image_with_text_8CgywJ",
+    "image_with_text_LJznAT",
+    "image_with_text_QnCH6X",
+    "image_with_text_yxH3y4",
+    "rich_text_Ptj7NK",
+    "multicolumn_MypxhD"
+  ]
+}

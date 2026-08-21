@@ -1,0 +1,92 @@
+{{ 'mm-home-bestseller.css' | asset_url | stylesheet_tag }}
+
+<div class="color-{{ section.settings.color_scheme }} gradient">
+  <product-recommendations
+    class="related-products mm-bs mm-bs-collection page-width isolate"
+    data-url="{{ routes.product_recommendations_url }}?limit={{ section.settings.products_to_show }}"
+    data-section-id="{{ section.id }}"
+    data-product-id="{{ product.id }}"
+  >
+    {% if recommendations.performed and recommendations.products_count > 0 %}
+      {% if section.settings.heading != blank %}
+        <h2 class="related-products__heading inline-richtext {{ section.settings.heading_size }}">
+          {{ section.settings.heading }}
+        </h2>
+      {% endif %}
+      <div class="mm-bs-collection-grid mm-bs-related" data-mmp-grid>
+        {% for recommendation in recommendations.products %}
+          {%- assign variant = recommendation.selected_or_first_available_variant -%}
+          {%- assign compare = variant.compare_at_price -%}
+          <article class="mm-bs-card">
+            <div class="mm-bs-card-media">
+              <a href="{{ recommendation.url }}" class="mm-bs-media-link">
+                <img src="{{ recommendation.featured_image | image_url: width: 800 }}" alt="{{ recommendation.title | escape }}" loading="lazy">
+              </a>
+              {%- if compare > variant.price -%}
+                <div class="mm-bs-badges"><span class="mm-bs-badge-save" style="margin-left:auto;">Spare {{ compare | minus: variant.price | money_without_currency }} €</span></div>
+              {%- endif -%}
+            </div>
+            <div class="mm-bs-card-body">
+              <h3 class="mm-bs-name"><a href="{{ recommendation.url }}" class="mm-bs-name-link">{{ recommendation.title }}</a></h3>
+              {%- render 'mm-rating', product: recommendation, fallback: all_products['skin-beard-set'] -%}
+              <div class="mm-bs-buy">
+                <div class="mm-bs-price-row">
+                  <span class="mm-bs-price">{{ variant.price | money_without_currency }} €</span>
+                  {%- if compare > variant.price -%}<span class="mm-bs-compare">{{ compare | money_without_currency }} €</span>{%- endif -%}
+                </div>
+                {%- if compare > variant.price -%}<span class="mm-bs-saving">Du sparst {{ compare | minus: variant.price | money_without_currency }} €</span>{%- endif -%}
+              </div>
+            </div>
+          </article>
+        {% endfor %}
+      </div>
+    {% endif %}
+  </product-recommendations>
+</div>
+
+{% schema %}
+{
+  "name": "MM PDP Related",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+    {
+      "type": "inline_richtext",
+      "id": "heading",
+      "default": "Oft zusammen gekauft",
+      "label": "Heading"
+    },
+    {
+      "type": "select",
+      "id": "heading_size",
+      "options": [
+        { "value": "h2", "label": "Small" },
+        { "value": "h1", "label": "Medium" },
+        { "value": "h0", "label": "Large" }
+      ],
+      "default": "h1",
+      "label": "Heading size"
+    },
+    {
+      "type": "range",
+      "id": "products_to_show",
+      "min": 2,
+      "max": 10,
+      "step": 1,
+      "default": 4,
+      "label": "Max products to show"
+    },
+    {
+      "type": "color_scheme",
+      "id": "color_scheme",
+      "label": "Color scheme",
+      "default": "scheme-1"
+    }
+  ],
+  "presets": [
+    {
+      "name": "MM PDP Related"
+    }
+  ]
+}
+{% endschema %}

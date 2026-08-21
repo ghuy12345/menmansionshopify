@@ -1,0 +1,226 @@
+/* ==========================================================================
+   MEN MANSION - Startseiten-Hero "Sommer-Special"
+   Aufbau nach Hero-Spezifikation.md und der Mobile-Vorschau.
+
+   Mobil (Hero-Mobile-Spezifikation, Stand 03.08.): Das Bild laeuft unbeschnitten
+   im Fluss und bestimmt die Hero-Hoehe. Die Copy liegt als absolutes Overlay
+   darueber - Reihenfolge auf dem Screen: Headline, Subline, CTA im oberen
+   (leeren) Bilddrittel, Ticker-Band bei 46%, Produkte darunter.
+   Lesbarkeit ueber zwei Ebenen: flaechiges 40%-Overlay plus Scrim oben.
+   Ab 750px: Bild fuellt die Stage, Copy liegt links darueber.
+
+   Nur drei Textfarben laut Spec:
+     --mm-fg        #FAFAF8  Headline, Subline, CTA-Text und -Rahmen
+     --mm-fg-muted  #A8A49A  Ticker-Band
+     --mm-gold-soft #C6B074  Highlights
+   Dazu Struktur: --mm-gold-line (Bandkanten), rgba(14,14,14,..) fuer Overlay
+   und Scrim, #14170E als Stage-Flaeche.
+   ========================================================================== */
+
+/* isolation + z-index 0 erzeugen einen eigenen Stacking-Context. Ohne das
+   konkurrieren die inneren z-index (Ribbon 2, Copy 3) mit Header und
+   Menue-Drawer - die Hero-Copy lag dann ueber dem offenen Mobile-Menue. */
+/* Namenskollision: mm-design-system.css hat einen Typo-Helper .mm-hero mit
+   font-family: var(--mm-font-display) und font-size: var(--mm-size-hero).
+   Unsere Section-Wurzel heisst genauso, deshalb erbte die Subline die Serif.
+   Hier wird die Schrift fuer die ganze Section wieder auf die Body-Font gesetzt. */
+.mm-hero {
+  position: relative; z-index: 0; isolation: isolate;
+  background: #14170E; overflow: hidden;
+  font-family: var(--mm-font-body);
+  font-size: var(--mm-size-small); font-weight: 400; letter-spacing: 0.01em;
+}
+
+/* ---------- Copy (mobil als Overlay ueber dem Bild) ----------
+   inset: 0 auf die Stage, padding 16px 18px, horizontal zentriert. Vertikal
+   bewusst NICHT zentriert: laut Spec-Reihenfolge stehen Headline, Subline und
+   CTA oben im leeren Bilddrittel, das Band folgt bei 46%, die Produkte darunter.
+   gap 12px zwischen den drei Elementen, deshalb haben sie keine eigenen margins. */
+.mm-hero-copy {
+  position: absolute; inset: 0; z-index: 3;
+  display: flex; justify-content: center;
+  /* 34px oben statt 16px: die Headline sass sonst zu dicht unter der Header-Kante.
+     Seit Header und Announcement-Bar transparent im Bild liegen, kommt die
+     gemessene Hoehe beider Leisten dazu - mm-home-hero.js schreibt sie als
+     --mm-header-h. Der Fallback 99px entspricht dem mobilen Stand (46 + 53). */
+  padding: calc(var(--mm-header-h, 99px) + 56px) 18px 16px; pointer-events: none;
+}
+.mm-hero-col {
+  display: flex; flex-direction: column; align-items: center; text-align: center;
+  gap: var(--mm-space-3); pointer-events: auto;
+}
+
+/* Headline: Groesse aus --mm-size-h1 = clamp(20px,4vw,24px), line-height 1.15
+   laut Spec. Saol kommt ueber die h1-Regel aus base.css, keine eigene
+   family-Regel noetig. Einzeilig: bei 360px Viewport steht die kurze Variante
+   auf 20px und braucht gemessen 266px von 324px. */
+/* Suisse statt Saol: die Serif hat sich mit dem Laufband darueber gebissen.
+   !important ist noetig, weil base.css h1 auf Saol zwingt. */
+/* Zeile ueber der Headline (Vorlage: "PICK 4. SAVE 20%. GET 2 FREE GIFTS").
+   Bewusst ohne Gold - die Regel "keine goldenen Eyebrow-Kicker" bleibt damit
+   gewahrt, es ist eine weisse Einordnungszeile, kein Akzent.
+   Der Satz stand vorher als Trust-Zeile unter dem Bild; er steht jetzt nur noch
+   hier, sonst haette derselbe Satz zweimal auf einem Screen gestanden. */
+.mm-hero-eyebrow {
+  margin: 0; font-size: 10px; font-weight: 700; line-height: 1.3;
+  letter-spacing: 0.16em; text-transform: uppercase; color: var(--mm-fg);
+}
+
+.mm-hero-headline {
+  font-family: var(--mm-font-body) !important;
+  font-weight: 700; color: var(--mm-fg);
+  font-size: var(--mm-size-h1); line-height: 1.15;
+  letter-spacing: var(--mm-ls-display); margin: 0; white-space: nowrap;
+}
+.mm-hero-headline-highlight { color: var(--mm-gold-soft); }
+.mm-hero-headline-desktop { display: none; }
+
+/* 12.5px statt 14px: die Zeile soll unter der Headline zuruecktreten, wie in
+   der Vorlage. */
+.mm-hero-subline {
+  font-size: 12.5px; line-height: 1.5; color: var(--mm-fg);
+  margin: 0; max-width: 34ch;
+}
+/* Kein Gold mehr in der Subline (Vorgabe 07.08.), die Betonung macht nur noch
+   das Fettgewicht. 700 statt 900: die Body-Font hat nur einen Schnitt, 900
+   erzeugt synthetisches Fett. SuisseIntl-Bold ist der echte Schnitt. */
+.mm-hero-subline-highlight { font-weight: 700; color: inherit; }
+
+/* ---------- CTA ----------
+   Typo kommt aus der Komponente .mm-btn mm-btn--ghost (12px, weight 700,
+   text-transform none, letter-spacing 0.02em) - so wie bei allen anderen
+   Buttons im Shop. Hier nur Layout und die Rahmenwerte der Spec:
+   1px --mm-fg statt --mm-graphite, radius 6px statt --mm-radius-btn. */
+/* Gefuellter Goldbutton (Vorlage: "BUILD MY SET"). Statt des transparenten
+   Ghost-Buttons jetzt .mm-btn--gold mit einem leichten Verlauf aus unseren
+   beiden Goldtoenen: --mm-gold-soft (#C6B074) oben, --mm-gold (#AF9841) unten.
+   Schrift auf Wunsch abweichend von der Button-Regel des Repos: weiss statt
+   dunkel, normale Schreibweise statt Grossbuchstaben (Vorgabe 07.08.). */
+.mm-hero-cta {
+  display: inline-flex; align-items: center; justify-content: center;
+  width: 100%; max-width: 340px; min-height: 52px;
+  margin: 0; padding: 15px 26px;
+  border: 0; border-radius: 6px;
+  background: linear-gradient(180deg, var(--mm-gold-soft) 0%, var(--mm-gold) 100%);
+  color: var(--mm-fg);
+  font-size: 14px; font-weight: 700;
+  letter-spacing: 0.02em; text-transform: none;
+}
+.mm-hero-cta:hover {
+  background: linear-gradient(180deg, #D3C08C 0%, var(--mm-gold-soft) 100%);
+  color: var(--mm-fg);
+}
+
+/* ---------- Stage mit Bild ---------- */
+/* Bildformat statt Beschnitt: das Motiv ist 1792x2400 (Verhaeltnis 0.746) und
+   fuellte die Stage fast genau aus - deshalb liess sich per object-position und
+   object-fit nichts verschieben, ohne ins Bild zu zoomen.
+   Jetzt ist die Stage hoeher als das Bild, das Bild steht in seiner natuerlichen
+   Hoehe unten, und der Raum darueber traegt #191B0D. Das ist die exakte Farbe
+   der obersten 20 Bildzeilen (gemessen), die Kante ist damit unsichtbar.
+   Ergebnis: die Copy sitzt auf freier Flaeche, die Produkte stehen komplett
+   darunter und nichts wird beschnitten. */
+.mm-hero-stage {
+  position: relative; overflow: hidden;
+  aspect-ratio: 430 / 720;
+  background: #191B0D;
+}
+
+/* 116% Breite und -8% Rand laut Spec: das Motiv wird ueberbreit angeschnitten,
+   damit die Produkte formatfuellend stehen. Im Fluss, also bestimmt das Bild die
+   Hero-Hoehe; keine schwarze Restflaeche.
+   margin-top: -14% zieht das Motiv nach oben. Prozentwerte beziehen sich auf die
+   Container-BREITE, bei 390px also -55px. Gemessen war zwischen CTA-Unterkante
+   (153px) und Oberkante der Sprayflasche (216px) genau diese Luecke; der
+   Beschnitt trifft nur den leeren Oliv-Verlauf, die Produkte bleiben komplett. */
+/* Hoehe wie bei based (mobil 430x560, Verhaeltnis 0.77) statt der vollen
+   Bildhoehe - vorher war die Stage bei 390px Breite 551px hoch, jetzt 508px.
+   Das Bild fuellt die Stage per cover, object-position 78% zeigt den unteren
+   Bildteil mit den Produkten, der leere Oliv-Verlauf oben faellt weg. */
+/* Das Bild ist 1792x2400, die Stage 390x508. Bei object-fit cover skaliert es
+   ueber die Breite und ist damit nur 14px hoeher als die Stage - object-position
+   hat deshalb praktisch keinen Spielraum (78%, 70% und 88% sahen fast gleich
+   aus), und eine groessere Hoehe zoomt bei cover nur ins Motiv.
+   Der einzige Hebel, der das Motiv wirklich verschiebt, ist translateY. Die
+   Luecke, die oben entsteht, liegt unter dem Scrim und der Stage-Flaeche
+   #14170E und faellt nicht auf. */
+.mm-hero-img {
+  position: absolute; left: 0; right: 0; bottom: 0; top: auto; display: block;
+  width: 100%; height: auto; margin: 0;
+}
+.mm-hero-img-desktop { display: none; }
+
+.mm-hero-dim { position: absolute; inset: 0; background: rgba(14, 14, 14, 0.40); }
+/* Scrim mobil laut Spec: 85% -> 50% bei 26% -> 0 bei 44% Hoehe */
+.mm-hero-scrim {
+  position: absolute; inset: 0;
+  background: linear-gradient(180deg, rgba(14, 14, 14, 0.85) 0%, rgba(14, 14, 14, 0.5) 26%, rgba(14, 14, 14, 0) 44%);
+}
+
+/* ---------- Diagonales Ticker-Band ---------- */
+/* top: 65% statt urspruenglich 46%: das Band lief quer durch den CTA. Durch die
+   Drehung um -7 Grad beginnt es 6 Prozentpunkte oberhalb seines top-Werts.
+   Gemessen endet der Button bei 55% der Stage (mit der Zeile ueber der Headline),
+   Bei jeder Aenderung an der Copy-Hoehe muss dieser Wert mitwandern: aktuell
+   72%, das laesst rund 20px Luft unter dem Button. Der Desktop-Wert steht in
+   der Media Query weiter unten. */
+.mm-hero-ribbon {
+  position: absolute; left: -14%; right: -14%; top: 72%;
+  transform: rotate(-7deg); z-index: 2;
+  background: rgba(14, 14, 14, 0.55);
+  border-top: var(--mm-hairline-gold); border-bottom: var(--mm-hairline-gold);
+  overflow: hidden; pointer-events: none;
+}
+/* Statisch, kein Lauf: der Ueberhang wird vom overflow des Bandes abgeschnitten. */
+.mm-hero-ribbon-track { display: flex; width: max-content; gap: 12px; padding: 4px 0; }
+.mm-hero-ribbon-track span {
+  flex: none;
+  font-size: 7.5px; font-weight: 700; letter-spacing: 0.18em;
+  text-transform: uppercase; color: var(--mm-fg-muted); white-space: nowrap;
+}
+/* ---------- Trust-Zeile unter dem Hero ----------
+   Flaeche und Abstaende wie vor dem Umbau: --mm-ink, nicht die gruenliche
+   Stage-Flaeche #14170E, und kein border-bottom.
+   Textfarbe auf --mm-fg gesetzt. Zuvor stand hier --mm-fg-muted. */
+.mm-hero-trust {
+  background: var(--mm-ink);
+  display: flex; flex-wrap: wrap; align-items: center; justify-content: center;
+  gap: 12px 20px; padding: 16px 20px 20px;
+  font-family: var(--mm-font-body); font-size: 10px; font-weight: 700;
+  text-transform: uppercase; letter-spacing: 0.1em; color: var(--mm-fg);
+  text-align: center;
+}
+
+/* ---------- Desktop ab 750px: Bild fuellt, Copy liegt links darueber ---------- */
+@media screen and (min-width: 750px) {
+  .mm-hero-stage { margin-top: 0; min-height: 700px; aspect-ratio: auto; }
+  .mm-hero-img { display: none; }
+  .mm-hero-img-desktop {
+    display: block; position: absolute; inset: 0;
+    width: 100%; height: 100%; margin: 0;
+    object-fit: cover; object-position: 100% 50%;
+  }
+  .mm-hero-dim { display: none; }
+  /* Scrim von links, 100 Grad, 90% auf 0 bei 62% */
+  .mm-hero-scrim {
+    background: linear-gradient(100deg, rgba(14, 14, 14, 0.90) 0%, rgba(14, 14, 14, 0) 62%);
+  }
+
+  .mm-hero-ribbon { left: 54%; right: -20%; top: 2%; transform: rotate(19deg); background: transparent; }
+  .mm-hero-ribbon-track { gap: 36px; }
+  .mm-hero-ribbon-track span { font-size: 15px; letter-spacing: 0.04em; }
+
+  .mm-hero-copy {
+    align-items: center; justify-content: flex-start;
+    padding: 0 var(--mm-container-pad);
+  }
+  /* 440 statt der in der Spec genannten 400px: die lange Desktop-Headline
+     braucht bei 24px gemessen 411px. */
+  .mm-hero-col { align-items: flex-start; text-align: left; max-width: 440px; gap: var(--mm-space-4); }
+  .mm-hero-headline-mobile { display: none; }
+  .mm-hero-headline-desktop { display: inline; }
+  .mm-hero-subline { font-size: 14px; }
+  .mm-hero-cta { width: auto; max-width: none; padding: 18px 44px; }
+  /* Abstaende der Trust-Zeile wie vor dem Umbau */
+  .mm-hero-trust { gap: 32px 48px; padding: 18px 20px; }
+}

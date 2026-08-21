@@ -1,0 +1,45 @@
+{%- comment -%}
+  Sterne-Bewertung fuer Produktkarten.
+
+  Aufruf:  {%- render 'mm-rating', product: all_products['handle'] -%}
+  Optional: fallback: all_products['anderer-handle']
+
+  Die Werte kommen aus den Loox-Metafeldern (metafields.loox.avg_rating und
+  num_reviews), genau wie im Mobile-Menue. Es wird nichts eingetippt.
+
+  fallback greift nur, wenn das Produkt selbst keine Loox-Werte hat. Loox fuehrt
+  fuer Skin & Hair Duo, Hot Season Edition und Arctic Skin Set keine eigene
+  Bewertung (per Admin-API geprueft: die Metafelder fehlen komplett), waehrend
+  Daily Care Essentials, Clear Skin Set und Skin & Beard Set alle dieselben
+  5,0 / 592 zeigen - das ist die gemeinsame Bewertung der Sets. Auf Wunsch von
+  Dominik (2026-08-06) zeigen die drei Sets ohne eigene Werte dieselbe Zahl.
+  Die Angabe bezieht sich damit auf die Sets insgesamt, nicht auf das einzelne
+  Produkt. Sobald Loox eigene Werte liefert, gewinnen immer die eigenen.
+
+  Fuellstand ueber die Breite der goldenen Ebene, damit 4,9 nicht auf 5 Sterne
+  aufrundet. Sternfarbe --mm-gold (#AF9841) - das ist auch die Icon-Farbe des
+  Loox-Widgets auf der PDP, damit sehen Karte und Produktseite gleich aus.
+
+  Optional: compact = true laesst die Zahl weg (nur Sterne).
+{%- endcomment -%}
+{%- liquid
+  assign r = product.metafields.loox.avg_rating
+  assign n = product.metafields.loox.num_reviews
+  if r == blank or n == blank
+    assign r = fallback.metafields.loox.avg_rating
+    assign n = fallback.metafields.loox.num_reviews
+  endif
+-%}
+{%- if r != blank and n != blank -%}
+  {%- capture star -%}<svg viewBox="0 0 20 20" width="13" height="13" aria-hidden="true" focusable="false"><path fill="currentColor" d="M10 1.6l2.55 5.17 5.7.83-4.12 4.02.97 5.68L10 14.62l-5.1 2.68.97-5.68L1.75 7.6l5.7-.83z"/></svg>{%- endcapture -%}
+  {%- assign fill = r | times: 20.0 -%}
+  <span class="mm-rating" title="{{ r | round: 1 }} von 5 Sternen bei {{ n }} Bewertungen">
+    <span class="mm-rating-stars">
+      <span class="mm-rating-base">{{ star }}{{ star }}{{ star }}{{ star }}{{ star }}</span>
+      <span class="mm-rating-fill" style="width: {{ fill }}%">{{ star }}{{ star }}{{ star }}{{ star }}{{ star }}</span>
+    </span>
+    {%- unless compact -%}
+      <span class="mm-rating-count">{{ r | round: 1 | replace: '.', ',' }} · {{ n }}</span>
+    {%- endunless -%}
+  </span>
+{%- endif -%}

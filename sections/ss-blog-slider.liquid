@@ -1,0 +1,479 @@
+{% comment %}
+---------------------------------------------------------
+Copyright © 2025 Section Store. All rights reserved.
+Unauthorized copying, modification, distribution, or use
+of this code or any portion of it, is strictly prohibited.
+Violators will be prosecuted to the fullest extent of the law.
+For inquiries or permissions, contact daniel@section.store
+---------------------------------------------------------
+{% endcomment %}
+
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
+/>
+
+{% style %}
+{{ section.settings.type_header_font | font_face: font_display: 'swap' }}
+{{ section.settings.slide_title_font | font_face: font_display: 'swap' }}
+{{ section.settings.slide_desc_font | font_face: font_display: 'swap' }}
+
+  .section-{{ section.id }}-padding {
+    margin: 0 auto;
+    padding: 0 1.5rem;
+    padding-top: {{ section.settings.padding_top | times: 0.75 | round: 0 }}px;
+    padding-bottom: {{ section.settings.padding_bottom | times: 0.75 | round: 0 }}px;
+  }
+
+.item-slider__image {
+    background-color: {{section.settings.slide_bg_color}};
+  }
+
+.wrapper {
+    min-height: 100%;
+  }
+  .swiper_title {
+    font-family: {{section.settings.type_header_font.family}};
+    font-weight: {{section.settings.type_header_font.weight}};
+    font-size: {{section.settings.section_title_font_size}}px;
+    line-height: 1.32;
+    letter-spacing: 0.5px;
+    color: {{section.settings.section_title_color}};
+    padding: 0px 0px 20px 0px;
+  }
+  .item-slider {
+    position: relative;
+	overflow: hidden;
+  }
+  .item-slider__image {
+	overflow:hidden;
+    text-align: center;
+	margin-bottom:-10px;
+  }
+  .item-slider__image img {
+    object-fit: cover;
+    object-position: center;
+    max-width: 100%;
+    width: 100%;
+    height: auto;
+    transition: all .3s;
+  }  
+  .item-slider .swiper-button-next,
+  .item-slider .swiper-button-prev {
+    display: flex;
+    -webkit-box-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    align-items: center;
+    border: 1px solid rgb(211, 212, 213);
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background-color: rgb(255, 255, 255);
+    box-shadow: rgb(0 0 0 / 25%) 0px 0px 24px 0px;
+    transition: border-color 125ms ease-in-out 0s;
+	top: calc(50% - 45px);
+  }
+  .item-slider .swiper-button-next:hover,
+  .item-slider .swiper-button-prev:hover {
+    border-color: rgb(116, 121, 124);
+  }
+  
+  .item-slider .swiper-button-prev::after,
+  .item-slider .swiper-button-next::after {
+    color: rgb(77, 85, 89);
+    font-size: 0px;
+  }
+  .item-slider .swiper-button-next::before {
+    content: '';
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    transform: rotate(-45deg);
+    border-bottom: 3px solid rgb(77, 85, 89);
+    border-right: 3px solid rgb(77, 85, 89);
+    margin-left: -5px;
+  }
+  .item-slider .swiper-button-prev::before {
+    content: '';
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    transform: rotate(135deg);
+    border-bottom: 3px solid rgb(77, 85, 89);
+    border-right: 3px solid rgb(77, 85, 89);
+    margin-left: 5px;
+  }
+  .item-slider .swiper-slide {
+    width: auto;
+    height: auto;
+    box-shadow: rgb(0 0 0 / 12%) 0px 8px 24px 0px;
+  }
+  .item-slider__image img:hover {
+    transform: scale(1.1);
+  }
+  .swiper-button-next.swiper-button-disabled, .swiper-button-prev.swiper-button-disabled {
+    display: none;
+  }
+  .swiper-button-prev {
+    left: 2%;
+  }
+  .swiper-button-next {
+    right: 0%;
+  }
+  .slide_info {
+    background-color: {{section.settings.slide_info_color}};
+    padding: 18px;
+  }
+  .slider-links {
+    text-decoration: none;
+  }
+  .slide_info-name {
+    font-family: {{section.settings.slide_title_font.family}};
+    font-weight: {{section.settings.slide_title_font.weight}};
+    font-size: {{section.settings.slide_title_font_size}}px;
+    line-height: 1.33;
+    letter-spacing: 0.5px;
+    color: {{section.settings.slide_title_color}};
+	margin:0;
+	padding-bottom: 2px;
+  }
+  .slide_info-description {
+    font-family: {{section.settings.slide_desc_font.family}};
+    font-weight: {{section.settings.slide_desc_font.weight}};
+    color:{{section.settings.slide_desc_color}};
+    line-height: 1.5;
+    font-size: {{section.settings.slide_desc_font_size}}px;
+    margin-top: 6px;
+    letter-spacing: 0.5px;
+	margin:0;	
+  }
+  
+  /* Media */
+  
+  @media (max-width: 992px) {
+
+	.wrapper {
+	}
+    .swiper_title {
+      padding-left: 0;
+    }
+    .item-slider {
+      padding-left: 0;
+    }
+    .item-slider .swiper-button-prev,
+    .item-slider .swiper-button-next {
+      display: none;
+  }
+  }
+
+  @media screen and (min-width: 750px) {
+    .section-{{ section.id }}-padding {
+      {% if section.settings.set_max_width %}max-width: {{ section.settings.section_width }}rem;{% endif %}
+      padding: 0 {{ section.settings.padding_sides }}rem;
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+{% endstyle %}
+
+<div class="section-{{ section.id }}-padding wrapper" style="background:{{ section.settings.background-color }};overflow:hidden">
+  {% if section.settings.header != blank %}
+    <div class="swiper_title">
+      {{ section.settings.header }}
+    </div>
+  {% endif %}
+  <div class="slider-{{section.id}} item-slider swiper-container" style="overflow:visible">
+    <div class="item-slider__wrapper swiper-wrapper">
+      {%- for block in section.blocks -%}
+        <div class="item-slider__slide swiper-slide">
+          {%- if block.settings.article.url != blank -%}<a class="slider-links" href="{{block.settings.article.url}}">{%-endif-%}
+            <div class="item-slider__image">
+              {%- if block.settings.article.image -%}
+                  {{ block.settings.article.image | image_url: width: block.settings.article.image.width | image_tag: loading: 'lazy', class: 'cover-image', alt: block.settings.article.title }}
+              {%- else -%}
+                  {{ 'image' | placeholder_svg_tag }}
+              {%- endif -%}
+            </div>
+            <div class="swiper-slide_info slide_info">
+              <p class="slide_info-name">{%- if block.settings.article.title -%}{{block.settings.article.title}}{%-else-%}Article title{%-endif-%}</p>
+              <p class="slide_info-description">{{block.settings.slide_description}}</p>
+            </div>
+          {%- if block.settings.article.url != blank -%}</a>{%-endif-%}
+        </div>
+      {%- endfor -%}
+    </div>
+
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-button-next"></div>
+
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+                
+<script>
+  function initBlogSlider() {
+    new Swiper('.slider-{{section.id}}', {
+    navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev'
+    },
+
+        simulateTouch: true,
+        touchRatio: 1,
+        touchAngle: 45,
+        grabCursor: true,
+        slidesPerView: {{section.settings.slider_per_view}},
+        watchOverflow: true,
+        spaceBetween: 30,
+        loop: false,
+        freeMode: true,
+        speed: 300,
+        effect: 'slide',
+
+        breakpoints: {
+        320: {
+            slidesPerView: 1.1,
+        },
+        768: {
+            slidesPerView: 2.2,
+        },
+        992: {
+            slidesPerView: {{section.settings.slider_per_view}},
+        }
+        },  
+    });
+  }
+
+  document.addEventListener('DOMContentLoaded', initBlogSlider);
+
+  if (Shopify.designMode) {
+    document.addEventListener('shopify:section:unload', initBlogSlider);
+    document.addEventListener('shopify:section:load', initBlogSlider);
+  }
+</script>
+
+  {% schema %}
+{
+    "name": "SS - Blog #3 (slider)",
+    "tag": "section",
+    "class": "slider-product-section",
+    "settings": [
+      {
+          "type": "header",
+          "content": "Header"
+      },
+      {
+          "type": "text",
+          "id": "header",
+          "label": "Section Header",
+          "default": "Articles"
+      },
+      {
+          "type": "header",
+          "content": "Font&Color settings"
+      },
+      {
+          "type": "font_picker",
+          "id": "type_header_font",
+          "default": "assistant_n7",
+          "label": "Select Section Header Font",
+          "info": "Selecting a different font can affect the speed of your store. [Learn more about system fonts.](https:\/\/help.shopify.com\/en\/manual\/online-store\/os\/store-speed\/improving-speed#fonts)"
+      },
+      {
+          "type": "range",
+          "id": "section_title_font_size",
+          "min": 12,
+          "max": 100,
+          "step": 2,
+          "unit": "px",
+          "label": "Section Title Font Size",
+          "default": 32
+      },
+      {
+          "type": "color",
+          "id": "section_title_color",
+          "label": "Section Title Color",
+          "default": "#1a1b18"
+      },
+      {
+          "type": "color",
+          "id": "slide_bg_color",
+          "label": "Slide Image Item Background Color",
+          "default": "#f5f5f5"
+      },
+      {
+          "type": "color",
+          "id": "slide_info_color",
+          "label": "Slide Info Background Color",
+          "default": "#fff"
+      },
+      {
+          "type": "font_picker",
+          "id": "slide_title_font",
+          "default": "assistant_n7",
+          "label": "Seect Item Title Font",
+          "info": "Selecting a different font can affect the speed of your store. [Learn more about system fonts.](https:\/\/help.shopify.com\/en\/manual\/online-store\/os\/store-speed\/improving-speed#fonts)"
+      },
+      {
+          "type": "range",
+          "id": "slide_title_font_size",
+          "min": 12,
+          "max": 100,
+          "step": 2,
+          "unit": "px",
+          "label": "Section Title Font Size",
+          "default": 18
+      },
+      {
+          "type": "color",
+          "id": "slide_title_color",
+          "label": "Slide Description Color",
+          "default": "#212a2f"
+      },
+      {
+          "type": "font_picker",
+          "id": "slide_desc_font",
+          "default": "assistant_n4",
+          "label": "Seect Item Description Font",
+          "info": "Selecting a different font can affect the speed of your store. [Learn more about system fonts.](https:\/\/help.shopify.com\/en\/manual\/online-store\/os\/store-speed\/improving-speed#fonts)"
+      },
+      {
+          "type": "range",
+          "id": "slide_desc_font_size",
+          "min": 12,
+          "max": 100,
+          "step": 2,
+          "unit": "px",
+          "label": "Section Description Font Size",
+          "default": 16
+      },
+      {
+          "type": "color",
+          "id": "slide_desc_color",
+          "label": "Slide Description Color",
+          "default": "#212a2f"
+      },
+      {
+          "type": "header",
+          "content": "Slider Settings"
+      },
+      {
+          "type": "range",
+          "id": "slider_per_view",
+          "min": 1,
+          "max": 10,
+          "step": 0.1,
+          "unit": "pic",
+          "label": "Slider Per View",
+          "default": 3.3
+      },
+      {
+        "type": "header",
+        "content": "Background color"
+      },
+      {
+  	  "type": "color",
+  	  "label": "Section background color",
+  	  "id": "background-color",
+  	  "default": "#ffffff"
+      },
+      {
+        "type": "header",
+        "content": "Section padding"
+      },
+      {
+        "type": "range",
+        "id": "padding_top",
+        "min": 0,
+        "max": 100,
+        "step": 4,
+        "unit": "px",
+        "label": "Padding top",
+        "default": 36
+      },
+      {
+           "type": "range",
+           "id": "padding_bottom",
+           "min": 0,
+           "max": 100,
+           "step": 4,
+           "unit": "px",
+           "label": "Padding bottom",
+           "default": 36
+      },
+      {
+         "type": "range",
+           "id": "padding_sides",
+           "min": 0,
+           "max": 20,
+           "step": 1,
+           "unit": "rem",
+           "label": "Padding sides",
+           "default": 5
+      },
+      {
+        "type": "header",
+        "content": "Section width"
+      },
+      {
+        "type": "checkbox",
+        "id":"set_max_width",
+        "default":true,
+        "label":"Set max width"
+      },
+      {
+           "type": "range",
+           "id": "section_width",
+           "min": 50,
+           "max": 200,
+           "step": 5,
+           "unit": "rem",
+           "label": "Section width",
+           "default": 120
+      }
+    ],
+    "blocks": [
+      {
+        "type": "Article",
+        "name": "Slide article items",
+        "settings": [
+          {
+            "type": "article",
+            "id": "article",
+            "label": "Slide article"
+          },
+          {
+            "type": "text",
+            "id": "slide_description",
+            "label": "Slide Description",
+            "default": "Some description text"
+          }
+        ]
+      }
+    ],
+    "presets": [
+      {
+        "name": "SS - Blog #3 (slider)",
+        "blocks": [
+          {
+            "type": "Article"
+          },
+          {
+            "type": "Article"
+          },
+          {
+            "type": "Article"
+          },
+          {
+            "type": "Article"
+          },
+          {
+            "type": "Article"
+          }
+        ]
+      }
+    ]
+  }
+{% endschema %}

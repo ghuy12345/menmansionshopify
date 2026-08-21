@@ -1,0 +1,977 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-product",
+      "blocks": {
+        "mm_pdp_assets": {
+          "type": "custom_liquid",
+          "name": "MM PDP Redesign - Assets",
+          "settings": {
+            "custom_liquid": "{{ 'mm-pdp-clearskinset.css' | asset_url | stylesheet_tag }}\n<script src=\"{{ 'mm-pdp-clearskinset.js' | asset_url }}\" defer=\"defer\"></script>\n<style>\n  product-info[data-product-id=\"{{ product.id }}\"] .product__title h2 { font-family: var(--mm-font-display); font-weight: 600; }\n  product-info[data-product-id=\"{{ product.id }}\"] .caption-with-letter-spacing { font-family: var(--mm-font-body); color: var(--mm-gold-soft); letter-spacing: 0.14em; }\n  product-info[data-product-id=\"{{ product.id }}\"] .product-form__submit.button--primary {\n    background: var(--mm-alabaster);\n    color: var(--mm-onyx);\n    border: 0;\n    border-radius: 10px;\n    font-family: var(--mm-font-body);\n    font-weight: 700;\n    font-size: 11px;\n    text-transform: uppercase;\n    letter-spacing: 0.14em;\n    padding: 17px 18px;\n    transition: background 150ms var(--mm-ease);\n  }\n  product-info[data-product-id=\"{{ product.id }}\"] .product-form__submit.button--primary:hover {\n    background: var(--mm-gold);\n  }\n  product-info[data-product-id=\"{{ product.id }}\"] product-form,\n  product-info[data-product-id=\"{{ product.id }}\"] .product-form,\n  product-info[data-product-id=\"{{ product.id }}\"] .product-form__buttons {\n    margin-top: 0;\n  }\n  product-info[data-product-id=\"{{ product.id }}\"] a[href=\"#looxReviewsFrame\"] {\n    display: inline-flex !important;\n    margin: 0 !important;\n    padding: 0 !important;\n  }\n  product-info[data-product-id=\"{{ product.id }}\"] .loox-rating {\n    margin: 0 !important;\n    padding: 0 !important;\n  }\n</style>"
+          }
+        },
+        "mm_pdp_step1_set": {
+          "type": "custom_liquid",
+          "name": "MM PDP Redesign - Schritt 1 Dein Set",
+          "settings": {
+            "custom_liquid": "<div class=\"mm-pdp-step-head\"><span></span></div>\n<div class=\"mm-pdp-set-items\">\n  <div class=\"mm-pdp-set-item\">\n    <img src=\"https://menmansion.com/cdn/shop/files/tallow_6717dc4e-91c8-4004-9713-4f01e1b18f4b.png?v=1776688595&amp;width=200\" alt=\"Tallow Gesichtscreme\">\n    <span class=\"mm-pdp-set-item-name\"><span class=\"mm-pdp-set-item-title\">Tallow Gesichtscreme</span><span class=\"mm-pdp-set-item-meta\">Pflege · 50 ml</span></span>\n    <span class=\"mm-pdp-set-item-tag\">Enthalten</span>\n  </div>\n  <div class=\"mm-pdp-set-item\">\n    <img src=\"https://menmansion.com/cdn/shop/files/menmansion-verlauf-gold-aleppo.png?v=1776688595&amp;width=200\" alt=\"Aleppo Seife\">\n    <span class=\"mm-pdp-set-item-name\"><span class=\"mm-pdp-set-item-title\">Aleppo Seife</span><span class=\"mm-pdp-set-item-meta\">Reinigung · ca. 200 g</span></span>\n    <span class=\"mm-pdp-set-item-tag\">Enthalten</span>\n  </div>\n</div>"
+          }
+        },
+        "mm_pdp_step2_tiers": {
+          "type": "custom_liquid",
+          "name": "MM PDP Redesign - Schritt 2 Mengen (hidden bis Freigabe)",
+          "disabled": true,
+          "settings": {
+            "custom_liquid": "{%- liquid\n  assign variant = product.selected_or_first_available_variant\n  assign breaks = variant.quantity_price_breaks | sort: 'quantity'\n-%}\n<div class=\"mm-pdp-step-head\"><span></span></div>\n<div class=\"mm-pdp-tiers\" data-mm-tier-group data-section-id=\"{{ section.id }}\">\n  <button type=\"button\" class=\"mm-pdp-tier\" data-mm-tier data-quantity=\"1\" aria-pressed=\"true\">\n    <span class=\"mm-pdp-tier-radio\"></span>\n    <span class=\"mm-pdp-tier-body\">\n      <span class=\"mm-pdp-tier-name-row\"><span class=\"mm-pdp-tier-name\">1× Set</span></span>\n      <span class=\"mm-pdp-tier-sub\">Für den Einstieg</span>\n    </span>\n    <span class=\"mm-pdp-tier-price\"><span class=\"mm-pdp-tier-total\">{{ variant.price | money }}</span></span>\n  </button>\n  {%- for price_break in breaks -%}\n  {%- assign break_total = price_break.price | times: price_break.quantity -%}\n  {%- assign compare_total = variant.price | times: price_break.quantity -%}\n  <button type=\"button\" class=\"mm-pdp-tier\" data-mm-tier data-quantity=\"{{ price_break.quantity }}\" aria-pressed=\"false\">\n    <span class=\"mm-pdp-tier-radio\"></span>\n    <span class=\"mm-pdp-tier-body\">\n      <span class=\"mm-pdp-tier-name-row\">\n        <span class=\"mm-pdp-tier-name\">{{ price_break.quantity }}er Vorrat</span>\n        <span class=\"mm-pdp-tier-save\">Spare {{ compare_total | minus: break_total | money }}</span>\n      </span>\n      <span class=\"mm-pdp-tier-sub\">Mengenvorteil</span>\n    </span>\n    <span class=\"mm-pdp-tier-price\">\n      <span class=\"mm-pdp-tier-total\">{{ break_total | money }}</span>\n      <span class=\"mm-pdp-tier-compare\">{{ compare_total | money }}</span>\n    </span>\n  </button>\n  {%- endfor -%}\n</div>"
+          }
+        },
+        "loox_reviews_loox_rating_Kn3NFm": {
+          "type": "shopify://apps/loox-reviews/blocks/loox-rating/5c3b337f-fd14-4df5-b1d6-80ec13e6e28e",
+          "settings": {
+            "contentSize": 10,
+            "pattern": "([count] Bewertungen) • Dermatologisch getestet",
+            "hideText": false,
+            "alignment": "",
+            "layout": "",
+            "textColor": "",
+            "starColor": "",
+            "showAllReviews": false,
+            "looxOpenFloatingWidget": false,
+            "emptyRatingWidget": false
+          }
+        },
+        "6aaec6b2720b47da": {
+          "type": "shopify://apps/section-store/blocks/block-atc-style/d7a2e423-ea88-4344-b866-6d0fb487c3dd",
+          "disabled": true,
+          "settings": {
+            "background_color": "#fafaf8",
+            "text_color": "#191919",
+            "hover_background_color": "#af9841",
+            "hover_text_color": "#191919",
+            "font_size": 0,
+            "font_weight": "default",
+            "border_style": "none",
+            "border_width": 1,
+            "border_color": "#fafaf8",
+            "border_radius": -1,
+            "padding_vertical": 0,
+            "background_effect": "none",
+            "gradient_color_end": "#333333",
+            "hover_effect": "shine_lift",
+            "animation": "none",
+            "button_icon": "arrow_right",
+            "use_custom_text": true,
+            "button_text": "In den Warenkorb",
+            "show_price": false,
+            "round_price": false,
+            "compare_at_price_color": "#666666"
+          }
+        },
+        "title": {
+          "type": "title",
+          "settings": {}
+        },
+        "text_TmqRRT": {
+          "type": "text",
+          "settings": {
+            "text": "<strong>Ruhigere, reinere Haut</strong>",
+            "text_style": "uppercase"
+          }
+        },
+        "price": {
+          "type": "price",
+          "disabled": true,
+          "settings": {}
+        },
+        "mm_pdp_price_cta": {
+          "type": "custom_liquid",
+          "name": "MM PDP Redesign - Preis + Spare-Chip + Einzelwert",
+          "settings": {
+            "custom_liquid": "{%- liquid\n  assign variant = product.selected_or_first_available_variant\n  assign compare = variant.compare_at_price\n-%}\n<div class=\"mm-pdp-price-row\">\n  <div class=\"mm-pdp-price-line\">\n    <span class=\"mm-pdp-price-total\">{{ variant.price | money_without_currency }} €</span>\n    {%- if compare > variant.price -%}\n      {%- assign save = compare | minus: variant.price -%}\n      <span class=\"mm-pdp-price-save\">Spare {{ save | money_without_currency }} €</span>\n    {%- endif -%}\n  </div>\n  {%- if compare > variant.price -%}\n    <span class=\"mm-pdp-price-compare\">(Einzelwert {{ compare | money_without_currency }} €)</span>\n  {%- endif -%}\n</div>"
+          }
+        },
+        "custom_liquid_YjXmkL": {
+          "type": "custom_liquid",
+          "name": "Description",
+          "settings": {
+            "custom_liquid": "<p style=\"font-size: 13px; font-weight: 300; color: #FAFAF8; font-family: var(--font-body); line-height: 1.6; margin: 0; padding: 12px 0 8px;\">\nTallow Gesichtscreme und Aleppo Seife – die zwei Produkte, die deine Hautpflege auf das Wesentliche reduzieren. Reinigung und Pflege in einem Set.\n</p>"
+          }
+        },
+        "mm_pdp_trust_bullets": {
+          "type": "custom_liquid",
+          "name": "MM PDP Redesign - Trust-Bullets (Haken-Icon)",
+          "settings": {
+            "custom_liquid": "<div class=\"mm-pdp-trust-bullets\">\n  <span class=\"mm-pdp-trust-bullet\"><span class=\"mm-pdp-trust-check\">✓</span>Offiziell zertifizierte Premium-Qualität</span>\n  <span class=\"mm-pdp-trust-bullet\"><span class=\"mm-pdp-trust-check\">✓</span>Sichtbare Ergebnisse nach wenigen Anwendungen</span>\n  <span class=\"mm-pdp-trust-bullet\"><span class=\"mm-pdp-trust-check\">✓</span>100% natürlich - handgemacht in Deutschland</span>\n</div>"
+          }
+        },
+        "section_store_block_benefits_list_xwp3mB": {
+          "type": "shopify://apps/section-store/blocks/block-benefits-list/d7a2e423-ea88-4344-b866-6d0fb487c3dd",
+          "disabled": true,
+          "settings": {
+            "items_gap": 10,
+            "first_text": "<p>Enthält: 1x Tallow Gesichtscreme + 1x Aleppo Seife</p>",
+            "second_text": "<p>Offiziell zertifizierte Premium-Qualität</p>",
+            "third_text": "<p>Sichtbare Ergebnisse nach wenigen Anwendungen</p>",
+            "fourth_text": "",
+            "icon_selection": "icon_2",
+            "icon_size": 20,
+            "custom_icon": "shopify://shop_images/menmansion-icon-checkmark_b488c175-ec8e-4d1e-a2f5-5ade59cea816.svg",
+            "icon_color": "#000000",
+            "text_size": 14,
+            "text_color": "#fafaf8",
+            "content_align": "left",
+            "border": "none",
+            "border_thickness": 1,
+            "border_color": "#000000",
+            "radius": 0,
+            "background": "",
+            "background_gradient": "",
+            "padding_vertical": 0,
+            "padding_horizontal": 0
+          }
+        },
+        "custom_liquid_nPaeiV": {
+          "type": "custom_liquid",
+          "name": "Customer Needs",
+          "disabled": true,
+          "settings": {
+            "custom_liquid": "<div class=\"mm-skin-types\">\n  <p class=\"mm-skin-types__label\">Geeignet für:</p>\n  <div class=\"mm-skin-types__grid\">\n\n    <div class=\"mm-skin-types__item\">\n      <div class=\"mm-skin-types__icon\">\n        <img src=\"https://cdn.shopify.com/s/files/1/0779/4583/1766/files/NORMALE_HAUT.svg?v=1774872404\" alt=\"Normale Haut\" />\n      </div>\n      <span class=\"mm-skin-types__text\">Normale Haut</span>\n    </div>\n\n    <div class=\"mm-skin-types__item\">\n      <div class=\"mm-skin-types__icon\">\n        <img src=\"https://cdn.shopify.com/s/files/1/0779/4583/1766/files/TROCKENE_HAUT.svg?v=1774872404\" alt=\"Trockene Haut\" />\n      </div>\n      <span class=\"mm-skin-types__text\">Trockene Haut</span>\n    </div>\n\n    <div class=\"mm-skin-types__item\">\n      <div class=\"mm-skin-types__icon\">\n        <img src=\"https://cdn.shopify.com/s/files/1/0779/4583/1766/files/UNREINE_HAUT.svg?v=1774872405\" alt=\"Unreine Haut\" />\n      </div>\n      <span class=\"mm-skin-types__text\">Unreine Haut</span>\n    </div>\n\n  </div>\n</div>\n\n<style>\n  .mm-skin-types {\n    padding: 8px 0 8px;\n    border-top: 1px solid rgba(175, 152, 65, 0.2);\n    margin-top: 2px;\n  }\n\n  .mm-skin-types__label {\n    font-size: 12px;\n    letter-spacing: 0.12em;\n    text-transform: uppercase;\n    color: #FAFAF8;\n    margin: 0 0 12px 0;\n    font-weight: 900;\n  }\n\n  .mm-skin-types__grid {\n    display: flex;\n    gap: 0;\n    align-items: flex-start;\n  }\n\n  .mm-skin-types__item {\n    flex: 1;\n    display: flex;\n    flex-direction: column;\n    align-items: center;\n    gap: 8px;\n    padding: 0 8px;\n    border-right: 1px solid rgba(255, 255, 255, 0.08);\n  }\n\n  .mm-skin-types__item:last-child {\n    border-right: none;\n  }\n\n  .mm-skin-types__icon {\n    width: 60px;\n    height: 60px;\n  }\n\n  .mm-skin-types__icon img {\n    width: 100%;\n    height: 100%;\n    object-fit: contain;\n  }\n\n  .mm-skin-types__text {\n    font-size: 11px;\n    color: #FAFAF8;\n    text-align: center;\n    letter-spacing: 0.04em;\n    line-height: 1.3;\n  }\n</style>"
+          }
+        },
+        "buy_buttons": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_dynamic_checkout": false,
+            "show_gift_card_recipient": false
+          }
+        },
+        "custom_liquid_t4UhKL": {
+          "type": "custom_liquid",
+          "name": "Payment Badges",
+          "disabled": true,
+          "settings": {
+            "custom_liquid": "<div id='ss-payment-icons'></div>"
+          }
+        },
+        "custom_liquid_CMRyxj": {
+          "type": "custom_liquid",
+          "name": "inkl.MwSt",
+          "disabled": true,
+          "settings": {
+            "custom_liquid": "<p style=\"font-size: 11px; color: #b0ada8; text-align: center; margin-top: 12px; font-family: var(--font-body); letter-spacing: 0.03em;\">\n inkl. MwSt. &middot; &euro;798,00&nbsp;/&nbsp;L\n</p>"
+          }
+        },
+        "9b8c4c92124ab94f": {
+          "type": "shopify://apps/section-store/blocks/block-shipping-info/d7a2e423-ea88-4344-b866-6d0fb487c3dd",
+          "settings": {
+            "use_dot": true,
+            "icon_color": "#2e9613",
+            "icon_size": 10,
+            "ships_by_text": "Lieferung am",
+            "shipping_within_days": 3,
+            "include_weekend": false,
+            "ships_by_font_size": 12,
+            "ships_by_text_color": "#fafaf8",
+            "fast_shipping_text": "COUNTRY_FLAG Kostenloser Versand",
+            "allow_all_countries": true,
+            "allowed_countries": "DE,AT,CH,US,FR,IT",
+            "fast_shipping_text_for_rest_countries": "Fast International Shipping",
+            "fast_shipping_text_color": "#fafaf8",
+            "border_style": "solid",
+            "border_width": 0.5,
+            "border_color": "#3a3a3a",
+            "border_radius": 10,
+            "bg_color": "#232323",
+            "padding_vertical": 8,
+            "padding_horizontal": 10
+          }
+        },
+        "mm_pdp_guarantee_card": {
+          "type": "custom_liquid",
+          "name": "MM PDP Redesign - 30-Tage-Garantie",
+          "settings": {
+            "custom_liquid": "<div class=\"mm-pdp-guarantee\">\n  <svg width=\"28\" height=\"28\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\"><path d=\"M12 3l7 3v5c0 4.5-3 8.5-7 10-4-1.5-7-5.5-7-10V6l7-3z\"></path><path d=\"M9 12l2 2 4-4\"></path></svg>\n  <div>\n    <div class=\"mm-pdp-guarantee-title\">30 Tage Garantie</div>\n    <p class=\"mm-pdp-guarantee-text\">Nicht zufrieden? Kein Problem. Du hast 30 Tage Zeit, das Produkt zurückzuschicken - ohne Wenn und Aber. Das ist unser Versprechen.</p>\n  </div>\n</div>"
+          }
+        },
+        "mm_pdp_trust_row": {
+          "type": "custom_liquid",
+          "name": "MM PDP Redesign - Trust-Zeile",
+          "settings": {
+            "custom_liquid": "<div class=\"mm-pdp-trust-row\">\n  <span><svg width=\"15\" height=\"15\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\"><path d=\"M12 21s-6.5-5.2-6.5-10.2A6.5 6.5 0 0 1 12 4.3a6.5 6.5 0 0 1 6.5 6.5C18.5 15.8 12 21 12 21z\"></path><circle cx=\"12\" cy=\"10.8\" r=\"2.2\"></circle></svg>Handgemacht in Deutschland</span>\n  <span><svg width=\"15\" height=\"15\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\"><path d=\"M3 7h11v10H3z\"></path><path d=\"M14 10h4l3 3v4h-7\"></path><circle cx=\"7\" cy=\"17\" r=\"1.6\"></circle><circle cx=\"17\" cy=\"17\" r=\"1.6\"></circle></svg>Lieferung in 1–3 Werktagen</span>\n</div>"
+          }
+        },
+        "mm_pdp_details_accordion": {
+          "type": "custom_liquid",
+          "name": "MM PDP Redesign - Produktdetails-Akkordeon",
+          "settings": {
+            "custom_liquid": "<div class=\"mm-pdp-accordion\">\n  <div class=\"mm-pdp-accordion-row\" data-mm-accordion>\n    <div class=\"mm-pdp-accordion-head\" data-mm-accordion-toggle>\n      <span class=\"mm-pdp-accordion-label\">Beschreibung</span>\n      <span class=\"mm-pdp-accordion-mark\" data-mm-accordion-mark>+</span>\n    </div>\n    <div class=\"mm-pdp-accordion-body\" data-mm-accordion-body hidden>\n      <p><strong>Clean Skin Routine Set – Aleppo Seife + Tallow Gesichtscreme</strong></p>\n      <p>Die einzige 2-Step-Routine, die deine Haut wirklich braucht.</p>\n      <p>Die meisten Männer überspringen den ersten Schritt. Sie cremen ein – aber reinigen nie richtig. Das Ergebnis: verstopfte Poren, Unreinheiten, Creme die nicht einzieht.</p>\n      <p>Dieses Set macht es richtig.</p>\n      <p><strong>Schritt 1 – Aleppo Seife:</strong> Jahrtausendealte Formel aus Olivenöl und Lorbeeröl. Reinigt tief, entfernt Schmutz, Talg und Unreinheiten – ohne die natürliche Hautbarriere zu zerstören. Keine synthetischen Zusätze. Kein Mikroplastik. Nur was deine Haut kennt.</p>\n      <p><strong>Schritt 2 – Tallow Gesichtscreme:</strong> Grasgefüttertes Bio-Rindertalg von der Schwäbischen Alb. Versorgt die Haut nach der Reinigung sofort mit Feuchtigkeit, beruhigt Rötungen und zieht in Sekunden ein – kein Fettfilm, kein Warten. 96% unserer Kunden spürten sofort weniger Trockenheit.</p>\n      <p>Beide Produkte. 100% natürliche Inhaltsstoffe. Handgemacht in Deutschland. Dermatologisch getestet.</p>\n      <p>Unter 60 Sekunden morgens. Klare Haut in 14 Tagen.</p>\n    </div>\n  </div>\n  <div class=\"mm-pdp-accordion-row\" data-mm-accordion>\n    <div class=\"mm-pdp-accordion-head\" data-mm-accordion-toggle>\n      <span class=\"mm-pdp-accordion-label\">Inhaltsstoffe &amp; Wirkung</span>\n      <span class=\"mm-pdp-accordion-mark\" data-mm-accordion-mark>+</span>\n    </div>\n    <div class=\"mm-pdp-accordion-body\" data-mm-accordion-body hidden>\n      <h2>Zutatenliste</h2>\n      <h3>🫒 Aleppo Seife</h3>\n      <p><strong>Olivenöl</strong> - Schützt die natürliche Hautbarriere, spendet Feuchtigkeit, reinigt sanft ohne auszutrocknen. Kaltgepresst, unraffiniert.</p>\n      <p><strong>Lorbeeröl</strong> - Der aktive Wirkstoff. Antibakteriell, entzündungshemmend, reguliert die Talgproduktion. Der Grund warum Aleppo Seife seit Jahrtausenden gegen Unreinheiten wirkt.</p>\n      <h3>🫙 Tallow Gesichtscreme</h3>\n      <p><strong>Bio-Rindertalg (Tallow)</strong> - Grasgefüttert, von der Schwäbischen Alb. Imitiert die natürliche Struktur deiner Haut - reich an Omega-3, Omega-6 und den Vitaminen A, D, E und K. Zieht in Sekunden ein.</p>\n      <p><strong>Traubenkernöl</strong> - Leichtes, nicht-komedogenes Öl. Straffend, antioxidativ, ideal für unreine und Mischhaut.</p>\n      <p><strong>Schwarzkümmelöl</strong> - Entzündungshemmend, antibakteriell. Bekämpft Unreinheiten aktiv und beruhigt gereizte Stellen.</p>\n      <p><strong>Bienenwachs</strong> - Natürliche Schutzbarriere. Versiegelt die Feuchtigkeit in der Haut, ohne sie zu ersticken.</p>\n      <p><strong>Zedernholzöl</strong> - Reguliert den Talgfluss, wirkt leicht antiseptisch. Gibt der Creme ihren charakteristischen, dezenten Duft.</p>\n      <p><em>5 Zutaten. Handgemacht in Deutschland. Dermatologisch getestet.</em></p>\n      <p><em>INCI Tallow Gesichtscreme: </em>Tallow, Vitis Vinifera Seed Oil, Nigella Sativa Seed Oil, Cera Alba, Cedrus Atlantica Bark Oil</p>\n      <p>INCI Aleppo Seife: Olea Europaea Fruit Oil,Laurus Nobilis Fruit Oil</p>\n    </div>\n  </div>\n  <div class=\"mm-pdp-accordion-row\">\n    <div class=\"mm-pdp-accordion-head mm-pdp-accordion-head--scroll\" data-mm-scroll-to=\"#mm-pdp-routine-anchor\">\n      <span class=\"mm-pdp-accordion-label\">Anwendung</span>\n      <span class=\"mm-pdp-accordion-scroll-hint\"><span class=\"mm-pdp-accordion-scroll-label\">Zur Routine</span><span class=\"mm-pdp-accordion-arrow\">↓</span></span>\n    </div>\n  </div>\n  <div class=\"mm-pdp-accordion-row\" data-mm-accordion>\n    <div class=\"mm-pdp-accordion-head\" data-mm-accordion-toggle>\n      <span class=\"mm-pdp-accordion-label\">Versand &amp; Rückgabe</span>\n      <span class=\"mm-pdp-accordion-mark\" data-mm-accordion-mark>+</span>\n    </div>\n    <div class=\"mm-pdp-accordion-body\" data-mm-accordion-body hidden>\n      <p><strong>Versand aus Deutschland. Schnell und zuverlässig.</strong></p>\n      <p>Alle Bestellungen werden aus unserem Lager in Rottenburg versendet – innerhalb von 1–2 Werktagen nach Auftragseingang.</p>\n      <p><strong>Lieferzeit:</strong><br>Deutschland, Österreich, Schweiz - 2–4 Werktage</p>\n      <p><strong>Kostenloser Versand</strong> ab €60 Bestellwert.</p>\n      <p>Du erhältst eine Versandbestätigung mit Tracking-Link, sobald deine Bestellung das Lager verlässt.</p>\n      <p>Nicht zufrieden? Kein Problem. Du hast 30 Tage Zeit, das Produkt zurückzuschicken – ohne Wenn und Aber. Das ist unser Versprechen.</p>\n      <p>Bei Fragen: <a href=\"mailto:info@menmansion.com\">info@menmansion.com</a></p>\n    </div>\n  </div>\n</div>"
+          }
+        },
+        "custom_liquid_MaM6Eg": {
+          "type": "custom_liquid",
+          "name": "Urgency",
+          "disabled": true,
+          "settings": {
+            "custom_liquid": "<div style=\"text-align: center; padding: 0px 10px;\">\n  <p style=\"font-size: 11px; font-weight: 600; color: #f0ede6; margin-bottom: 1px; font-family: var(--font-body);\">\n    Handgefertigt in Deutschland. Limitierte Chargen.\n  </p>\n  <p style=\"font-size: 9px; color: #b0ada8; font-family: var(--font-body); letter-spacing: 0.03em; margin: 0;\">\n    Alle Preise inkl. MwSt. &middot; Grundpreis &euro;798,00&nbsp;/&nbsp;L\n  </p>\n</div>"
+          }
+        },
+        "b4cc2f39fdba867b": {
+          "type": "shopify://apps/section-store/blocks/block-comments/d7a2e423-ea88-4344-b866-6d0fb487c3dd",
+          "settings": {
+            "content_alignment": "center",
+            "comment_verified_badge_position": "inline",
+            "verified_badge_color": "#187bfc",
+            "verified_badge_text": "Verified Customer",
+            "slide_style": "dots",
+            "autoplay": 4,
+            "comment_name_1": "Elias G.",
+            "comment_1": "Habe das Set jetzt seit drei Wochen. Haut ist deutlich ruhiger, Rötungen fast weg.",
+            "comment_name_2": "Marlon N.",
+            "comment_2": "Die Seife zur Reinigung, danach die Creme. Einfachste Routine die ich je hatte. Ergebnis ist besser als mit allem davor.",
+            "comment_name_3": "Artem M.",
+            "comment_3": "Hatte vorher fünf verschiedene Produkte. Jetzt nur noch diese zwei. Meine Haut ist viel besser geworden.",
+            "avatar_border_radius": 100,
+            "avatar_size": 44,
+            "author_font_size": 14,
+            "author_font_weight": 500,
+            "author_font_color": "#fafaf8",
+            "star_style": "mild",
+            "star_color": "#af9841",
+            "star_size": 14,
+            "item_border_style": "solid",
+            "item_border_width": 0.5,
+            "item_border_color": "#3a3a3a",
+            "item_border_radius": 12,
+            "item_bg_color": "#232323",
+            "effect": "none",
+            "item_padding_vertical": 14,
+            "item_padding_horizontal": 16
+          }
+        },
+        "custom_liquid_ktbqHQ": {
+          "type": "custom_liquid",
+          "name": "Product Tabs",
+          "settings": {
+            "custom_liquid": "<div id='ss-tabs-icon-insert-block'></div>"
+          }
+        },
+        "custom_liquid_BLVEzX": {
+          "type": "custom_liquid",
+          "name": "Social Proof",
+          "disabled": true,
+          "settings": {
+            "custom_liquid": "<div id='ss-social-proof'></div>"
+          }
+        },
+        "custom_liquid_iyFn8D": {
+          "type": "custom_liquid",
+          "name": "Price per Day",
+          "disabled": true,
+          "settings": {
+            "custom_liquid": "<div style=\"position: relative; height: 0; overflow: visible;\">\n  <span style=\"\n    position: absolute;\n    right: 0;\n    top: -80px;\n    border: 1px solid #ffffff;\n    color: #ffffff;\n    font-size: 11px;\n    font-weight: 500;\n    padding: 4px 10px;\n    border-radius: 5px;\n    white-space: nowrap;\n  \">€0,50 / Tag &nbsp;·&nbsp; 2 Monate Vorrat</span>\n</div>"
+          }
+        },
+        "667354250fe073fc": {
+          "type": "shopify://apps/section-store/blocks/block-banner/d7a2e423-ea88-4344-b866-6d0fb487c3dd",
+          "name": "Urgency",
+          "disabled": true,
+          "settings": {
+            "gap": 1,
+            "text_align": "center",
+            "link": "",
+            "use_image": false,
+            "icon": "rocket",
+            "image_size": 30,
+            "image_position": "left",
+            "icon_color": "#c4a265",
+            "title_text": "<p><strong>Handgefertigt in Deutschland. In limitierten Chargen.</strong></p>",
+            "title_size": 13,
+            "title_color": "#fafaf8",
+            "body_text": "",
+            "body_size": 13,
+            "body_color": "#999999",
+            "border": "solid",
+            "border_thickness": 0.5,
+            "border_color": "#3a3a3a",
+            "radius": 10,
+            "background": "#232323",
+            "background_gradient": "",
+            "shadow": "none",
+            "padding_vertical": 6,
+            "padding_horizontal": 16
+          }
+        },
+        "section_store_block_pulse_badge_7CY8ME": {
+          "type": "shopify://apps/section-store/blocks/block-pulse-badge/d7a2e423-ea88-4344-b866-6d0fb487c3dd",
+          "disabled": true,
+          "settings": {
+            "content_align": "left",
+            "use_indicator": false,
+            "pulse_icon_size": 12,
+            "pulse_icon_color": "#2e9613",
+            "text": "<p>Auf Lager | In 2-4 Tagen bei dir</p>",
+            "text_size": 14,
+            "auto_text_weight": "normal",
+            "text_color": "#c5c5c5",
+            "border": "none",
+            "border_thickness": 1,
+            "border_color": "#000000",
+            "radius": 0,
+            "background": "",
+            "padding_top": 0,
+            "padding_bottom": 0,
+            "padding_left": 10,
+            "padding_right": 0
+          }
+        },
+        "custom_liquid_NXtaV6": {
+          "type": "custom_liquid",
+          "name": "Payment Badges",
+          "disabled": true,
+          "settings": {
+            "custom_liquid": "<div class=\"ultimate-badges\"></div>"
+          }
+        },
+        "custom_liquid_gCgaR8": {
+          "type": "custom_liquid",
+          "name": "Trust Badges",
+          "disabled": true,
+          "settings": {
+            "custom_liquid": "<div id='ss-trust-badges-3'></div>"
+          }
+        },
+        "upsell_koala_bundles_bundle_app_block_i6xPty": {
+          "type": "shopify://apps/upsell-koala-bundles/blocks/bundle-app-block/2b951f75-113f-4fca-bdf3-c92703235716",
+          "disabled": true,
+          "settings": {
+            "product": "{{product}}"
+          }
+        },
+        "mm_pdp_social_proof": {
+          "type": "custom_liquid",
+          "name": "MM PDP Redesign - Social Proof",
+          "settings": {
+            "custom_liquid": "<div class=\"mm-pdp-social-proof\">\n  <div class=\"mm-pdp-social-proof-avatars\">\n    <img src=\"https://menmansion.com/cdn/shop/files/IMG_2572.jpg?width=80\" alt=\"\" loading=\"lazy\">\n    <img src=\"https://menmansion.com/cdn/shop/files/0002-8194805062219929543.png?width=80\" alt=\"\" loading=\"lazy\">\n    <img src=\"https://menmansion.com/cdn/shop/files/0003-1890891485917242492.png?width=80\" alt=\"\" loading=\"lazy\">\n  </div>\n  <p class=\"mm-pdp-social-proof-text\">Dermatologisch getestet <span class=\"mm-pdp-social-proof-verified\">✓</span> + <strong>10.000 Männern</strong> benutzen täglich!</p>\n</div>"
+          }
+        }
+      },
+      "block_order": [
+        "mm_pdp_assets",
+        "loox_reviews_loox_rating_Kn3NFm",
+        "title",
+        "text_TmqRRT",
+        "custom_liquid_YjXmkL",
+        "mm_pdp_trust_bullets",
+        "section_store_block_benefits_list_xwp3mB",
+        "mm_pdp_step1_set",
+        "mm_pdp_step2_tiers",
+        "price",
+        "mm_pdp_price_cta",
+        "buy_buttons",
+        "6aaec6b2720b47da",
+        "custom_liquid_t4UhKL",
+        "9b8c4c92124ab94f",
+        "mm_pdp_guarantee_card",
+        "mm_pdp_trust_row",
+        "b4cc2f39fdba867b",
+        "mm_pdp_social_proof",
+        "mm_pdp_details_accordion",
+        "custom_liquid_ktbqHQ",
+        "custom_liquid_nPaeiV",
+        "custom_liquid_CMRyxj",
+        "custom_liquid_MaM6Eg",
+        "custom_liquid_BLVEzX",
+        "custom_liquid_iyFn8D",
+        "667354250fe073fc",
+        "section_store_block_pulse_badge_7CY8ME",
+        "custom_liquid_NXtaV6",
+        "custom_liquid_gCgaR8",
+        "upsell_koala_bundles_bundle_app_block_i6xPty"
+      ],
+      "settings": {
+        "enable_sticky_info": true,
+        "color_scheme": "background-1",
+        "media_size": "small",
+        "constrain_to_viewport": true,
+        "media_fit": "contain",
+        "gallery_layout": "thumbnail_slider",
+        "media_position": "left",
+        "image_zoom": "none",
+        "mobile_thumbnails": "show",
+        "hide_variants": true,
+        "enable_video_looping": true,
+        "padding_top": 20,
+        "padding_bottom": 20
+      }
+    },
+    "mm_pdp_deepdives_section": {
+      "type": "custom-liquid",
+      "settings": {
+        "custom_liquid": "<div class=\"mm-pdp-deepdive-group\">\n  <div class=\"mm-pdp-deepdive\">\n    <img class=\"mm-pdp-deepdive-img\" src=\"https://menmansion.com/cdn/shop/files/tallow_6717dc4e-91c8-4004-9713-4f01e1b18f4b.png?v=1776688595&amp;width=1445\" alt=\"Tallow Gesichtscreme\">\n    <div class=\"mm-pdp-deepdive-body\">\n      \n      <h2 class=\"mm-pdp-deepdive-title\">Tallow Gesichtscreme</h2>\n      <p class=\"mm-pdp-deepdive-text\">Zieht vollständig ein und stärkt spürbar die Hautbarriere.</p>\n      <div class=\"mm-pdp-deepdive-checks\">\n        <span><span class=\"mm-pdp-check\">✓</span>Stärkt die Hautbarriere</span>\n        <span><span class=\"mm-pdp-check\">✓</span>Beruhigt und nährt - ohne Fettfilm</span>\n        <span><span class=\"mm-pdp-check\">✓</span>Zieht vollständig ein</span>\n      </div>\n    </div>\n  </div>\n  <div class=\"mm-pdp-deepdive\">\n    <img class=\"mm-pdp-deepdive-img\" src=\"https://menmansion.com/cdn/shop/files/menmansion-verlauf-gold-aleppo.png?v=1776688595&amp;width=1445\" alt=\"Aleppo Seife\">\n    <div class=\"mm-pdp-deepdive-body\">\n      \n      <h2 class=\"mm-pdp-deepdive-title\">Aleppo Seife</h2>\n      <p class=\"mm-pdp-deepdive-text\">Traditionelle Reinigung, inspiriert von zeitlosen Traditionen - entfernt Schmutz und überschüssigen Talg, ohne die Haut auszutrocknen.</p>\n      <div class=\"mm-pdp-deepdive-checks\">\n        <span><span class=\"mm-pdp-check\">✓</span>Entfernt Schmutz und überschüssigen Talg</span>\n        <span><span class=\"mm-pdp-check\">✓</span>Naturreine Öle, keine synthetischen Tenside</span>\n        <span><span class=\"mm-pdp-check\">✓</span>Trocknet die Haut nicht aus</span>\n      </div>\n    </div>\n  </div>\n</div>",
+        "color_scheme": "background-1",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "mm_pdp_studie_section": {
+      "type": "custom-liquid",
+      "settings": {
+        "custom_liquid": "<div class=\"mm-pdp-studie\">\n  \n  <h2 class=\"mm-pdp-studie-title\">Bewiesene Wirkung,<br><span class=\"mm-pdp-gold\">sichtbare Ergebnisse</span></h2>\n  <div class=\"mm-pdp-studie-stats\">\n    <div class=\"mm-pdp-studie-stat\">\n      <div class=\"mm-pdp-studie-number\">95%</div>\n      <div class=\"mm-pdp-studie-desc\">Sichtbare Ergebnisse bei regelmäßiger Anwendung</div>\n      <div class=\"mm-pdp-studie-meta\">Ergebnisse einer 4-wöchigen Kundenstudie</div>\n    </div>\n    <div class=\"mm-pdp-studie-stat\">\n      <div class=\"mm-pdp-studie-number\">91%</div>\n      <div class=\"mm-pdp-studie-desc\">Berichten von einer spürbar einfacheren Morgenroutine</div>\n      <div class=\"mm-pdp-studie-meta\">Ergebnisse einer 4-wöchigen Kundenstudie</div>\n    </div>\n    <div class=\"mm-pdp-studie-stat\">\n      <div class=\"mm-pdp-studie-number\">97%</div>\n      <div class=\"mm-pdp-studie-desc\">Würden die Routine weiterempfehlen</div>\n      <div class=\"mm-pdp-studie-meta\">Ergebnisse einer 4-wöchigen Kundenstudie</div>\n    </div>\n  </div>\n</div>",
+        "color_scheme": "background-1",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "mm_pdp_routine_section": {
+      "type": "custom-liquid",
+      "settings": {
+        "custom_liquid": "{{ 'mm-pdp-routine3.css' | asset_url | stylesheet_tag }}\n<section class=\"mm-r3\" id=\"mm-pdp-routine-anchor\">\n  <div class=\"mm-r3-inner\">\n\n    <header class=\"mm-r3-head\">\n      <h2 class=\"mm-r3-title\">Die Routine. <span>In 2 Steps.</span></h2>\n      <p class=\"mm-r3-sub\">Deine tägliche Routine - einfach, effektiv, natürlich</p>\n    </header>\n\n    <ol class=\"mm-r3-track\" id=\"mm-r3-track\">\n      <li class=\"mm-r3-card\">\n        <div class=\"mm-r3-media\">\n          <img src=\"https://menmansion.com/cdn/shop/files/IMG_1680.jpg?v=1775741337&amp;width=800\" alt=\"Reinigen\" loading=\"lazy\" width=\"800\" height=\"600\">\n          <span class=\"mm-r3-fade\"></span>\n          <span class=\"mm-r3-num\">01</span>\n        </div>\n        <div class=\"mm-r3-body\">\n          <div class=\"mm-r3-row\"><h3>Reinigen</h3></div>\n          <p>Reinige dein Gesicht mit der Aleppo-Seife und lauwarmem Wasser, um Schmutz und überschüssigen Talg zu entfernen.</p>\n        </div>\n      </li>\n      <li class=\"mm-r3-card\">\n        <div class=\"mm-r3-media\">\n          <img src=\"https://menmansion.com/cdn/shop/files/IMG_1502_3.jpg?v=1775510634&amp;width=800\" alt=\"Auftragen\" loading=\"lazy\" width=\"800\" height=\"600\">\n          <span class=\"mm-r3-fade\"></span>\n          <span class=\"mm-r3-num\">02</span>\n        </div>\n        <div class=\"mm-r3-body\">\n          <div class=\"mm-r3-row\"><h3>Auftragen</h3></div>\n          <p>Eine kleine Menge der Tallow Gesichtscreme auf das leicht feuchte Gesicht auftragen und einmassieren. Die hautähnlichen Lipide stärken die Hautbarriere und ziehen vollständig ein.</p>\n        </div>\n      </li>\n    </ol>\n\n    <div class=\"mm-r3-dots\" id=\"mm-r3-dots\" hidden>\n      <button type=\"button\" data-i=\"0\" aria-label=\"Schritt 1\"><span></span></button>\n      <button type=\"button\" data-i=\"1\" aria-label=\"Schritt 2\"><span></span></button>\n    </div>\n\n  </div>\n</section>\n\n<script>\n(function () {\n  var track = document.getElementById('mm-r3-track');\n  var dots  = document.getElementById('mm-r3-dots');\n  if (!track || !dots || !track.children.length) return;\n  var btns = dots.querySelectorAll('button');\n  function stepWidth() {\n    if (track.children.length > 1) return track.children[1].offsetLeft - track.children[0].offsetLeft;\n    return track.children[0].getBoundingClientRect().width;\n  }\n  function sync() {\n    var scrollable = track.scrollWidth - track.clientWidth > 8;\n    dots.hidden = !scrollable;\n    if (!scrollable) return;\n    var step = stepWidth();\n    if (!step) return;\n    var i = Math.min(btns.length - 1, Math.round(track.scrollLeft / step));\n    for (var n = 0; n < btns.length; n++) btns[n].setAttribute('aria-current', n === i ? 'true' : 'false');\n  }\n  for (var b = 0; b < btns.length; b++) {\n    btns[b].addEventListener('click', function () {\n      var el = track.children[+this.dataset.i];\n      if (el) track.scrollTo({ left: el.offsetLeft - track.offsetLeft, behavior: 'smooth' });\n    });\n  }\n  track.addEventListener('scroll', sync, { passive: true });\n  window.addEventListener('resize', sync);\n  sync();\n})();\n</script>",
+        "color_scheme": "background-1",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "mm_pdp_comparison_section": {
+      "type": "custom-liquid",
+      "settings": {
+        "custom_liquid": "<div class=\"mm-pdp-compare\">\n  \n  <h2 class=\"mm-pdp-compare-title\">Men Mansion vs.<br>andere Marken</h2>\n  <div class=\"mm-pdp-compare-table\">\n    <div class=\"mm-pdp-compare-row mm-pdp-compare-head\">\n      <span class=\"mm-pdp-compare-head-why\"><span class=\"mm-pdp-compare-why-label\">Warum</span>{%- if settings.logo != blank -%}<img class=\"mm-pdp-compare-logo\" src=\"{{ settings.logo | image_url: width: 300 }}\" alt=\"{{ shop.name }}\" loading=\"lazy\">{%- else -%}<span class=\"mm-pdp-compare-why-name\">Men Mansion</span>{%- endif -%}</span>\n      <span class=\"mm-pdp-compare-head-mm\"><span class=\"mm-pdp-compare-thumb\"><img src=\"{{ 'mm-tallow-tiegel.png' | asset_url }}\" alt=\"Men Mansion Tallow Gesichtscreme\" loading=\"lazy\" width=\"46\" height=\"46\"></span></span>\n      <span class=\"mm-pdp-compare-head-other\"><span class=\"mm-pdp-compare-thumb\"><img src=\"{{ 'mm-andere-tiegel.png' | asset_url }}\" alt=\"Andere Marken\" loading=\"lazy\" width=\"46\" height=\"46\"></span></span>\n    </div>\n    <div class=\"mm-pdp-compare-row\"><span class=\"mm-pdp-compare-label\">Handgefertigt in kleinen Chargen</span><span class=\"mm-pdp-compare-cell-us\"><span class=\"mm-pdp-compare-badge mm-pdp-compare-badge--yes\"><svg width=\"13\" height=\"13\" viewBox=\"0 0 16 16\" fill=\"none\"><path d=\"M3 8.5L6.5 12L13 4\" stroke=\"currentColor\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg></span></span><span class=\"mm-pdp-compare-cell-them\"><span class=\"mm-pdp-compare-badge mm-pdp-compare-badge--no\"><svg width=\"13\" height=\"13\" viewBox=\"0 0 16 16\" fill=\"none\"><path d=\"M4 4L12 12M12 4L4 12\" stroke=\"currentColor\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg></span></span></div>\n    <div class=\"mm-pdp-compare-row\"><span class=\"mm-pdp-compare-label\">Natürliche Wirkstoffe</span><span class=\"mm-pdp-compare-cell-us\"><span class=\"mm-pdp-compare-badge mm-pdp-compare-badge--yes\"><svg width=\"13\" height=\"13\" viewBox=\"0 0 16 16\" fill=\"none\"><path d=\"M3 8.5L6.5 12L13 4\" stroke=\"currentColor\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg></span></span><span class=\"mm-pdp-compare-cell-them\"><span class=\"mm-pdp-compare-badge mm-pdp-compare-badge--no\"><svg width=\"13\" height=\"13\" viewBox=\"0 0 16 16\" fill=\"none\"><path d=\"M4 4L12 12M12 4L4 12\" stroke=\"currentColor\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg></span></span></div>\n    <div class=\"mm-pdp-compare-row\"><span class=\"mm-pdp-compare-label\">Enthält Silikone &amp; Mineralöl</span><span class=\"mm-pdp-compare-cell-us\"><span class=\"mm-pdp-compare-badge mm-pdp-compare-badge--no\"><svg width=\"13\" height=\"13\" viewBox=\"0 0 16 16\" fill=\"none\"><path d=\"M4 4L12 12M12 4L4 12\" stroke=\"currentColor\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg></span></span><span class=\"mm-pdp-compare-cell-them\"><span class=\"mm-pdp-compare-badge mm-pdp-compare-badge--yes\"><svg width=\"13\" height=\"13\" viewBox=\"0 0 16 16\" fill=\"none\"><path d=\"M3 8.5L6.5 12L13 4\" stroke=\"currentColor\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg></span></span></div>\n    <div class=\"mm-pdp-compare-row\"><span class=\"mm-pdp-compare-label\">Eigene Manufaktur, keine Massenware</span><span class=\"mm-pdp-compare-cell-us\"><span class=\"mm-pdp-compare-badge mm-pdp-compare-badge--yes\"><svg width=\"13\" height=\"13\" viewBox=\"0 0 16 16\" fill=\"none\"><path d=\"M3 8.5L6.5 12L13 4\" stroke=\"currentColor\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg></span></span><span class=\"mm-pdp-compare-cell-them\"><span class=\"mm-pdp-compare-badge mm-pdp-compare-badge--no\"><svg width=\"13\" height=\"13\" viewBox=\"0 0 16 16\" fill=\"none\"><path d=\"M4 4L12 12M12 4L4 12\" stroke=\"currentColor\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg></span></span></div>\n    <div class=\"mm-pdp-compare-row\"><span class=\"mm-pdp-compare-label\">Sichtbare Ergebnisse nach wenigen Tagen</span><span class=\"mm-pdp-compare-cell-us\"><span class=\"mm-pdp-compare-badge mm-pdp-compare-badge--yes\"><svg width=\"13\" height=\"13\" viewBox=\"0 0 16 16\" fill=\"none\"><path d=\"M3 8.5L6.5 12L13 4\" stroke=\"currentColor\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg></span></span><span class=\"mm-pdp-compare-cell-them\"><span class=\"mm-pdp-compare-badge mm-pdp-compare-badge--no\"><svg width=\"13\" height=\"13\" viewBox=\"0 0 16 16\" fill=\"none\"><path d=\"M4 4L12 12M12 4L4 12\" stroke=\"currentColor\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg></span></span></div>\n    <div class=\"mm-pdp-compare-row\"><span class=\"mm-pdp-compare-label\">Künstliche Duft- &amp; Farbstoffe</span><span class=\"mm-pdp-compare-cell-us\"><span class=\"mm-pdp-compare-badge mm-pdp-compare-badge--no\"><svg width=\"13\" height=\"13\" viewBox=\"0 0 16 16\" fill=\"none\"><path d=\"M4 4L12 12M12 4L4 12\" stroke=\"currentColor\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg></span></span><span class=\"mm-pdp-compare-cell-them\"><span class=\"mm-pdp-compare-badge mm-pdp-compare-badge--yes\"><svg width=\"13\" height=\"13\" viewBox=\"0 0 16 16\" fill=\"none\"><path d=\"M3 8.5L6.5 12L13 4\" stroke=\"currentColor\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg></span></span></div>\n  </div>\n</div>",
+        "color_scheme": "background-1",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "ss_before_after_5_JGaLpB": {
+      "type": "ss-before-after-5",
+      "blocks": {
+        "item_YknMUJ": {
+          "type": "item",
+          "settings": {
+            "icon": "plant",
+            "custom_icon": "shopify://shop_images/Naturlich-Icon.svg",
+            "title": "100% natürliche Inhaltsstoffe",
+            "text": "Frei von Chemikalien, Hormonen und künstlichen Zusätzen.",
+            "column": "1"
+          }
+        },
+        "item_Xn74Ct": {
+          "type": "item",
+          "settings": {
+            "icon": "atc",
+            "custom_icon": "shopify://shop_images/Haut.svg",
+            "title": "Die perfekte Formel",
+            "text": "Spendet Feuchtigkeit, repariert die Haut und macht sie geschmeidig.",
+            "column": "1"
+          }
+        },
+        "item_gBFHKx": {
+          "type": "item",
+          "settings": {
+            "icon": "bi-ecology",
+            "custom_icon": "shopify://shop_images/Skin.svg",
+            "title": "Reich an Nährstoffen",
+            "text": "Enthält die Vitamine A, D, E und K, die die Haut nähren und Feuchtigkeit spenden.",
+            "column": "2"
+          }
+        },
+        "item_wVYfPA": {
+          "type": "item",
+          "settings": {
+            "icon": "atc",
+            "custom_icon": "shopify://shop_images/Lorbeer.svg",
+            "title": "Traditionell inspiriert",
+            "text": "Pflege basierend auf bewährten Methoden unserer Vorfahren.",
+            "column": "2"
+          }
+        }
+      },
+      "block_order": [
+        "item_YknMUJ",
+        "item_Xn74Ct",
+        "item_gBFHKx",
+        "item_wVYfPA"
+      ],
+      "disabled": true,
+      "settings": {
+        "content_align": "center",
+        "content_align_mobile": "center",
+        "title": "<h2>Die Essenz der alten Römer</h2>",
+        "title_custom": false,
+        "title_font": "playfair_display_n4",
+        "title_size": 36,
+        "title_size_mobile": 26,
+        "title_height": 130,
+        "text": "<p>Tallow – Reduziert auf das Wesentliche</p>",
+        "text_custom": false,
+        "text_font": "josefin_sans_n4",
+        "text_size": 20,
+        "text_size_mobile": 16,
+        "text_height": 130,
+        "text_margin_top": 20,
+        "text_margin_top_mobile": 16,
+        "body_gap": 100,
+        "body_gap_mobile": 24,
+        "body_margin_top": 50,
+        "body_margin_top_mobile": 30,
+        "items_gap": 30,
+        "items_gap_mobile": 30,
+        "item_content_align": "center",
+        "item_content_align_mobile": "center",
+        "icon_size": 44,
+        "icon_size_mobile": 36,
+        "item_title_custom": false,
+        "item_title_font": "playfair_display_n4",
+        "item_title_size": 18,
+        "item_title_size_mobile": 14,
+        "item_title_height": 130,
+        "item_title_margin_top": 10,
+        "item_title_margin_top_mobile": 10,
+        "item_text_custom": false,
+        "item_text_font": "playfair_display_n4",
+        "item_text_size": 16,
+        "item_text_size_mobile": 13,
+        "item_text_height": 150,
+        "item_text_margin_top": 10,
+        "item_text_margin_top_mobile": 10,
+        "left_image": "shopify://shop_images/hf_20260406_205044_ed0d7166-db66-4c3a-bf4f-ba4d192779c1.png",
+        "right_image": "shopify://shop_images/L1007626.jpg",
+        "image_radius": 500,
+        "image_border_thickness": 0,
+        "image_ratio": "square",
+        "image_ratio_mobile": "square",
+        "btn_size": 56,
+        "btn_size_mobile": 56,
+        "btn_arrow_size": 80,
+        "btn_arrow_size_mobile": 80,
+        "btn_border_thickness": 0,
+        "title_color": "#fafaf8",
+        "text_color": "#fafaf8",
+        "icon_color": "#fafaf8",
+        "item_title_color": "#fafaf8",
+        "item_text_color": "#fafaf8",
+        "btn_bg_color": "#ffffff",
+        "btn_arrow_color": "#000000",
+        "btn_border_color": "#000000",
+        "line_color": "#ffffff",
+        "image_border_color": "#000000",
+        "background_color": "#191919",
+        "background_gradient": "",
+        "border_color": "#000000",
+        "margin_top": 20,
+        "margin_bottom": 20,
+        "margin_horizontal": 0,
+        "margin_horizontal_mobile": 0,
+        "padding_top": 8,
+        "padding_bottom": 20,
+        "padding_horizontal": 5,
+        "padding_horizontal_mobile": 1.5,
+        "full_width": false,
+        "content_width": 120,
+        "border_thickness": 0,
+        "section_radius": 0,
+        "lazy": true
+      }
+    },
+    "ss_testimonial_12_ACbPN9": {
+      "type": "ss-testimonial-12",
+      "blocks": {
+        "slide_GyfWhc": {
+          "type": "slide",
+          "settings": {
+            "media_style": "image",
+            "image": "shopify://shop_images/Landing-Titel_result.webp",
+            "video_url": "",
+            "controls": false,
+            "stars_count": 5,
+            "text": "<p>\"Das einzige was mir wirklich eine cleane Haut gebracht hat, ist das Beef Tallow von Men Mansion!\"</p>",
+            "author": "<p><strong>Justus</strong></p>"
+          }
+        },
+        "slide_LFVULw": {
+          "type": "slide",
+          "settings": {
+            "media_style": "video",
+            "video": "shopify://files/videos/copy_C16F6FC5-818C-4676-8E2B-B01451ECE934.mov",
+            "video_url": "",
+            "controls": false,
+            "poster": "shopify://shop_images/0001-422711012090687009.png",
+            "stars_count": 5,
+            "text": "<p>\"Hatte jahrelang unreine Haut. Das ist wirklich das einzige was funktioniert hat.\"</p>",
+            "author": "<p><strong>Jay</strong></p>"
+          }
+        },
+        "slide_zXKXPT": {
+          "type": "slide",
+          "settings": {
+            "media_style": "video",
+            "video": "shopify://files/videos/BF3DE763-A068-4DC8-8F5F-31EB3D01E027.mov",
+            "video_url": "",
+            "controls": false,
+            "poster": "shopify://shop_images/Neueste_Fotos_anzeigen_5.png",
+            "stars_count": 5,
+            "text": "<p>\"Ich war immer skeptisch was Skincare Produkte angeht, aber das hier ist wirklich anders! Super angenehm auf der Haut, zieht schnell ein und riecht edel.\"</p>",
+            "author": "<p><strong>Ebi</strong></p>"
+          }
+        },
+        "slide_BNgyqA": {
+          "type": "slide",
+          "settings": {
+            "media_style": "image",
+            "image": "shopify://shop_images/gemini-image-2_Create_a_very_realistic_smartphone_mirror_selfie_of_a_young_couple_around_20_2-0.jpg",
+            "video_url": "",
+            "controls": false,
+            "stars_count": 5,
+            "text": "<p>„Meine Haut hat einen richtig gesunden Glow bekommen – meine Freundin liebt’s. Bleibe dabei.“</p>",
+            "author": "<p><strong>Julien</strong></p>"
+          }
+        },
+        "slide_REHWqc": {
+          "type": "slide",
+          "settings": {
+            "media_style": "image",
+            "image": "shopify://shop_images/gemini-image-2___Spiegel-Selfie___Clean_Skin_Result_UGC-Style_Textprompt_Create_a_realisti-0.jpg",
+            "video_url": "",
+            "controls": false,
+            "stars_count": 5,
+            "text": "<p>„Benutze die Creme jetzt seit 2 Wochen und bin echt positiv überrascht. Meine Haut fühlt sich deutlich besser an. Werde wieder bestellen.“</p>",
+            "author": "<p><strong>Tobias</strong></p>"
+          }
+        },
+        "slide_EnC3EU": {
+          "type": "slide",
+          "settings": {
+            "media_style": "image",
+            "image": "shopify://shop_images/gemini-image-2_Create_a_very_realistic_smartphone_mirror_selfie_of_a_young_man_around_18_21_y-0.jpg",
+            "video_url": "",
+            "controls": false,
+            "stars_count": 5,
+            "text": "<p>„Ich benutze wirklich nur noch diese Creme. Meine Haut sieht einfach makellos aus und fühlt sich auch so an.“</p>",
+            "author": "<p><strong>Jonas</strong></p>"
+          }
+        },
+        "slide_jGTdGB": {
+          "type": "slide",
+          "settings": {
+            "media_style": "image",
+            "image": "shopify://shop_images/gemini-image-2_Create_a_highly_realistic_smartphone_photo_of_a_young_man_20_25_years_old_show-1.jpg",
+            "video_url": "",
+            "controls": false,
+            "stars_count": 5,
+            "text": "<p>„Meine Haut fühlt sich komplett anders an als vorher. Bin echt positiv überrascht, wurde sogar darauf angesprochen.“</p>",
+            "author": "<p><strong>Can</strong></p>"
+          }
+        }
+      },
+      "block_order": [
+        "slide_GyfWhc",
+        "slide_LFVULw",
+        "slide_zXKXPT",
+        "slide_BNgyqA",
+        "slide_REHWqc",
+        "slide_EnC3EU",
+        "slide_jGTdGB"
+      ],
+      "disabled": true,
+      "name": "SS - Testimonials #12",
+      "settings": {
+        "heading": "<h1>Das sagen unsere Gentleman</h1>",
+        "heading_custom": true,
+        "heading_font": "josefin_sans_n4",
+        "heading_size": 30,
+        "heading_size_mobile": 22,
+        "heading_height": 130,
+        "heading_align": "center",
+        "heading_align_mobile": "center",
+        "sub_heading": "",
+        "sub_heading_custom": false,
+        "sub_heading_font": "josefin_sans_n4",
+        "sub_heading_size": 30,
+        "sub_heading_size_mobile": 22,
+        "sub_heading_height": 150,
+        "sub_heading_mt": 12,
+        "sub_heading_align": "center",
+        "sub_heading_align_mobile": "center",
+        "slider_view": 5,
+        "slider_view_mobile": 1.3,
+        "slider_gap": 28,
+        "slider_gap_mobile": 20,
+        "slider_mt": 20,
+        "autoplay": false,
+        "autoplay_delay": 5,
+        "card_padding_vertical": 20,
+        "card_padding_vertical_mobile": 16,
+        "card_padding_horizontal": 20,
+        "card_padding_horizontal_mobile": 16,
+        "card_radius": 20,
+        "card_border_thickness": 1,
+        "card_shadow": false,
+        "media_radius": 20,
+        "media_border_thickness": 0,
+        "media_ratio": "square",
+        "media_ratio_mobile": "square",
+        "content_padding_vertical": 0,
+        "content_padding_vertical_mobile": 0,
+        "content_padding_horizontal": 0,
+        "content_padding_horizontal_mobile": 0,
+        "hide_content": false,
+        "stars_size": 16,
+        "stars_mt": 12,
+        "stars_align": "center",
+        "stars_align_mobile": "center",
+        "text_custom": false,
+        "text_font": "josefin_sans_n4",
+        "text_size": 16,
+        "text_size_mobile": 16,
+        "text_height": 130,
+        "text_mt": 12,
+        "text_align": "center",
+        "text_align_mobile": "center",
+        "author_custom": false,
+        "author_font": "josefin_sans_n4",
+        "author_size": 14,
+        "author_size_mobile": 14,
+        "author_height": 130,
+        "author_mt": 12,
+        "author_align": "center",
+        "author_align_mobile": "center",
+        "navigation_mt": 40,
+        "navigation_gap": 20,
+        "navigation_align": "center",
+        "navigation_align_mobile": "center",
+        "arrow_size": 50,
+        "arrow_size_mobile": 50,
+        "arrow_show_desktop": true,
+        "arrow_show_mobile": false,
+        "dots_size": 9,
+        "dots_size_mobile": 6,
+        "dots_show_desktop": false,
+        "dots_show_mobile": true,
+        "btn_icon_size": 50,
+        "btn_icon_size_mobile": 40,
+        "card_bg_color": "#fafaf8",
+        "card_bg_gradient": "",
+        "card_border_color": "#dedbc4",
+        "media_border_color": "#191919",
+        "stars_color": "#af9841",
+        "text_color": "#191919",
+        "author_color": "#191919",
+        "video_icon_bg_color": "#ffffff",
+        "video_icon_color": "#af9841",
+        "arrow_color": "#af9841",
+        "arrow_hover_color": "#af9841",
+        "dots_color": "#af9841",
+        "heading_color": "#fafaf8",
+        "sub_heading_color": "#837c5c",
+        "background_color": "#191919",
+        "background_gradient": "",
+        "border_color": "#af9841",
+        "margin_top": 0,
+        "margin_bottom": 0,
+        "padding_top": 20,
+        "padding_bottom": 16,
+        "padding_horizontal": 5,
+        "padding_horizontal_mobile": 1.5,
+        "full_width": true,
+        "content_width": 1200,
+        "border_thickness": 0,
+        "lazy": true
+      }
+    },
+    "mm_pdp_reviews_header_section": {
+      "type": "custom-liquid",
+      "settings": {
+        "custom_liquid": "{%- liquid\n  assign rating = product.metafields.loox.avg_rating\n  assign review_count = product.metafields.loox.num_reviews\n  if rating != blank\n    assign rating_display = rating | replace: '.', ','\n    assign rounded = rating | round\n  else\n    assign rating_display = '4,8'\n    assign review_count = 398\n    assign rounded = 5\n  endif\n-%}\n<div class=\"mm-pdp-reviews\">\n  <div class=\"mm-pdp-reviews-head\">\n    <div>\n      \n      <h2 class=\"mm-pdp-reviews-title\">Was Männer über uns sagen</h2>\n    </div>\n    <div class=\"mm-pdp-reviews-summary\">\n      <span class=\"mm-pdp-reviews-avg\">{{ rating_display }}</span>\n      <div class=\"mm-pdp-reviews-summary-body\">\n        <div class=\"mm-pdp-reviews-stars\">{% for i in (1..5) %}{% if i <= rounded %}★{% else %}<span style=\"color:var(--mm-graphite)\">★</span>{% endif %}{% endfor %}</div>\n        <div class=\"mm-pdp-reviews-total\">{{ review_count }} verifizierte Bewertungen</div>\n      </div>\n    </div>\n  </div>\n\n  <div class=\"mm-pdp-reviews-spotlight\">\n    <span class=\"mm-pdp-reviews-badge\">Top-Bewertung</span>\n    <div class=\"mm-pdp-reviews-spotlight-body\">\n      <div class=\"mm-pdp-reviews-stars\">★★★★★</div>\n      <div class=\"mm-pdp-reviews-spotlight-quote\">„Endlich eine cleane Haut“</div>\n      <p class=\"mm-pdp-reviews-spotlight-text\">Das einzige was mir wirklich eine cleane Haut gebracht hat, ist das Beef Tallow von Men Mansion!</p>\n      <div class=\"mm-pdp-reviews-author\">\n        <span class=\"mm-pdp-reviews-avatar\">J</span>\n        <div>\n          <div class=\"mm-pdp-reviews-author-name\">Justus <svg width=\"13\" height=\"13\" viewBox=\"0 0 24 24\"><circle cx=\"12\" cy=\"12\" r=\"11\" fill=\"var(--mm-gold-soft)\"></circle><path d=\"M7 12.5l3 3 7-7\" fill=\"none\" stroke=\"var(--mm-onyx)\" stroke-width=\"2.6\" stroke-linecap=\"round\" stroke-linejoin=\"round\"></path></svg></div>\n          <div class=\"mm-pdp-reviews-author-meta\">Verifiziert · Clear Skin Set</div>\n        </div>\n      </div>\n    </div>\n  </div>\n\n  <div class=\"mm-pdp-reviews-more-head\">\n    \n    <span class=\"mm-pdp-reviews-swipe-hint\">Wischen →</span>\n  </div>\n\n  <div\n    class=\"mm-pdp-reviews-grid\"\n    data-mm-reviews-grid\n    data-product-id=\"{{ product.id }}\"\n    data-fallback-image=\"{{ product.featured_image | image_url: width: 400 }}\"\n    data-fallback-product-name=\"{{ product.title | escape }}\"\n  ></div>\n  <div class=\"mm-pdp-reviews-more-wrap\">\n    <button type=\"button\" class=\"mm-pdp-reviews-cta mm-pdp-reviews-more\" data-mm-reviews-more hidden>Mehr Bewertungen</button>\n  </div>\n</div>",
+        "color_scheme": "background-1",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "mm_pdp_reviews_loox_section": {
+      "type": "apps",
+      "blocks": {
+        "mm_pdp_reviews_loox": {
+          "type": "shopify://apps/loox-reviews/blocks/loox-dynamic-section/5c3b337f-fd14-4df5-b1d6-80ec13e6e28e",
+          "settings": {
+            "reviews_to_display": "product_reviews_only",
+            "default_tab": "automatic",
+            "only_photos": false,
+            "aggregated": false,
+            "limit": 10,
+            "hide_thumbnails": false,
+            "maxwidth": 1080
+          }
+        }
+      },
+      "block_order": [
+        "mm_pdp_reviews_loox"
+      ],
+      "settings": {
+        "include_margins": true
+      }
+    },
+    "33473044-82a0-4796-8303-cd1e5be3caf2": {
+      "type": "collapsible-content",
+      "blocks": {
+        "template--19956043415894__33473044-82a0-4796-8303-cd1e5be3caf2-collapsible_row-1": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Wie schnell sehe ich Ergebnisse nach der Anwendung?",
+            "icon": "none",
+            "row_content": "<p>Die Tallow Gesichtscreme versorgt deine Haut bereits ab der ersten Anwendung mit intensiver Feuchtigkeit und hinterlässt sie geschmeidig und weich. Unsere Kunden erleben bereits beeindruckende Ergebnisse nach nur 2 Wochen regelmäßiger Anwendung.</p>",
+            "page": ""
+          }
+        },
+        "template--19956043415894__33473044-82a0-4796-8303-cd1e5be3caf2-collapsible_row-2": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Ist die Tallow Gesichtscreme für empfindliche Haut geeignet?",
+            "icon": "none",
+            "row_content": "<p>Ja, die Creme ist ideal für empfindliche Haut, da sie ausschließlich aus natürlichen Zutaten besteht, die sanft zur Haut sind. Bio-Rindertalg und Traubenkernöl beruhigen irritierte Haut und spenden Feuchtigkeit, ohne die Haut zu reizen.</p>",
+            "page": ""
+          }
+        },
+        "template--19956043415894__33473044-82a0-4796-8303-cd1e5be3caf2-collapsible_row-3": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Welche Nährstoffe enthält Tallow?",
+            "icon": "none",
+            "row_content": "<p>Bio-Rindertalg ist reich an essentiellen Fettsäuren wie Omega-3 und Omega-6 sowie an den Vitaminen A, D, E und K. Diese Nährstoffe unterstützen die Regeneration der Haut, spenden intensive Feuchtigkeit, fördern die Elastizität und wirken antioxidativ, um die Haut vor schädlichen Umwelteinflüssen zu schützen.</p>",
+            "page": ""
+          }
+        },
+        "template--19956043415894__33473044-82a0-4796-8303-cd1e5be3caf2-collapsible_row-4": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Woher stammen die Zutaten der Tallow Gesichtscreme?",
+            "icon": "none",
+            "row_content": "<p>Unsere Tallow Gesichtscreme enthält ausschließlich ausgewählte, natürliche Inhaltsstoffe. Der Bio-Rindertalg stammt von grasgefütterten Rindern aus biologischer Weidehaltung auf der Schwäbischen Alb. Das Traubenkernöl wird nachhaltig aus den Samen der Weintraube gewonnen. Ergänzt wird die Rezeptur durch hochwertiges Schwarzkümmelöl, naturbelassenes Bienenwachs und ätherisches Zedernholzöl. Alle Rohstoffe werden sorgfältig ausgewählt und in Deutschland unter kontrollierten Bedingungen verarbeitet.</p>",
+            "page": ""
+          }
+        },
+        "96fe91e3-71c4-4922-ad47-0e093042e3f1": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Wie wird die Tallow Gesichtscreme angewendet?",
+            "icon": "none",
+            "row_content": "<p>Trage eine kleine Menge der Creme auf die gereinigte Haut von Gesicht und Hals auf. Massiere sie sanft ein, bis sie vollständig eingezogen ist. Sie eignet sich perfekt für die morgendliche und abendliche Anwendung.</p>",
+            "page": ""
+          }
+        },
+        "d0a599bb-a1a0-41c4-9633-ac5a52f132cf": {
+          "type": "collapsible_row",
+          "settings": {
+            "heading": "Für welche Hauttypen ist die Gesichtscreme geeignet?",
+            "icon": "none",
+            "row_content": "<p>Die Tallow Gesichtscreme ist für alle Hauttypen geeignet – von trockener über empfindliche bis hin zu fettiger oder reifer Haut. Dank ihrer natürlichen Inhaltsstoffe und der ausgleichenden Wirkung von Traubenkernöl kann sie die Bedürfnisse jeder Haut optimal unterstützen und ein gesundes, gepflegtes Hautbild fördern.</p>",
+            "page": ""
+          }
+        }
+      },
+      "block_order": [
+        "template--19956043415894__33473044-82a0-4796-8303-cd1e5be3caf2-collapsible_row-1",
+        "template--19956043415894__33473044-82a0-4796-8303-cd1e5be3caf2-collapsible_row-2",
+        "template--19956043415894__33473044-82a0-4796-8303-cd1e5be3caf2-collapsible_row-3",
+        "template--19956043415894__33473044-82a0-4796-8303-cd1e5be3caf2-collapsible_row-4",
+        "96fe91e3-71c4-4922-ad47-0e093042e3f1",
+        "d0a599bb-a1a0-41c4-9633-ac5a52f132cf"
+      ],
+      "disabled": true,
+      "settings": {
+        "caption": "",
+        "heading": "Deine Fragen. Unsere Antworten.",
+        "heading_size": "h1",
+        "heading_alignment": "center",
+        "layout": "none",
+        "color_scheme": "",
+        "container_color_scheme": "",
+        "open_first_collapsible_row": false,
+        "image_ratio": "adapt",
+        "desktop_layout": "image_second",
+        "padding_top": 60,
+        "padding_bottom": 36
+      }
+    },
+    "169800360473363ca0": {
+      "type": "apps",
+      "settings": {
+        "include_margins": true
+      }
+    },
+    "45f77b37-82dc-4dcd-aab6-662315b32360": {
+      "type": "rich-text",
+      "blocks": {
+        "template--19956043415894__45f77b37-82dc-4dcd-aab6-662315b32360-heading-1": {
+          "type": "heading",
+          "settings": {
+            "heading": "Oft zusammen gekauft",
+            "heading_size": "h1"
+          }
+        }
+      },
+      "block_order": [
+        "template--19956043415894__45f77b37-82dc-4dcd-aab6-662315b32360-heading-1"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "background-1",
+        "full_width": true,
+        "padding_top": 20,
+        "padding_bottom": 0
+      }
+    },
+    "related-products": {
+      "type": "mm-pdp-related",
+      "settings": {
+        "heading": "",
+        "heading_size": "h1",
+        "products_to_show": 4,
+        "color_scheme": "background-1"
+      }
+    },
+    "mm_pdp_ingredients_section": {
+      "type": "custom-liquid",
+      "name": "MM Inhaltsstoffe (Raster)",
+      "settings": {
+        "custom_liquid": "{{ 'mm-pdp-ingredients-grid.css' | asset_url | stylesheet_tag }}\n<section class=\"mm-ig\">\n  <div class=\"mm-ig-inner\">\n\n    <header class=\"mm-ig-head\">\n      <h2 class=\"mm-ig-title\">Die Magie dahinter</h2>\n    </header>\n\n  <ul class=\"mm-ig-grid\">\n    <li class=\"mm-ig-card\">\n      <img src=\"https://cdn.shopify.com/s/files/1/0779/4583/1766/files/35.jpg?v=1786099583&width=600\" alt=\"Tallow\" loading=\"lazy\" width=\"600\" height=\"600\">\n      <span class=\"mm-ig-fade\"></span>\n      <div class=\"mm-ig-cap\">\n        <h3 class=\"mm-ig-name\">Tallow</h3>\n        <p class=\"mm-ig-benefit\">Enthält alle Nährstoffe und Vitamine die deine Haut benötigt.</p>\n      </div>\n    </li>\n    <li class=\"mm-ig-card\">\n      <img src=\"https://cdn.shopify.com/s/files/1/0779/4583/1766/files/gemini-image-2_Create_a_cinematic_macro_scene_featuring_grape_seed_oil_as_the_central_ingredien-2_2.jpg?v=1786099586&width=600\" alt=\"Traubenkernöl\" loading=\"lazy\" width=\"600\" height=\"600\">\n      <span class=\"mm-ig-fade\"></span>\n      <div class=\"mm-ig-cap\">\n        <h3 class=\"mm-ig-name\">Traubenkernöl</h3>\n        <p class=\"mm-ig-benefit\">Zieht leicht ein und sorgt für ein geschmeidiges Hautgefühl.</p>\n      </div>\n    </li>\n    <li class=\"mm-ig-card\">\n      <img src=\"https://cdn.shopify.com/s/files/1/0779/4583/1766/files/Lucid_Realism_Hyperrealistic_macro_shot_of_black_cumin_oil_Nig_0_1.jpg?v=1786099587&width=600\" alt=\"Schwarzkümmelöl\" loading=\"lazy\" width=\"600\" height=\"600\">\n      <span class=\"mm-ig-fade\"></span>\n      <div class=\"mm-ig-cap\">\n        <h3 class=\"mm-ig-name\">Schwarzkümmelöl</h3>\n        <p class=\"mm-ig-benefit\">Wirkt antibakteriell, stärkt die Haut und beruhigt Unreinheiten.</p>\n      </div>\n    </li>\n    <li class=\"mm-ig-card\">\n      <img src=\"https://cdn.shopify.com/s/files/1/0779/4583/1766/files/IMG_0327.jpg?v=1786099586&width=600\" alt=\"Bienenwachs\" loading=\"lazy\" width=\"600\" height=\"600\">\n      <span class=\"mm-ig-fade\"></span>\n      <div class=\"mm-ig-cap\">\n        <h3 class=\"mm-ig-name\">Bienenwachs</h3>\n        <p class=\"mm-ig-benefit\">Schützt die Haut und hält sie langanhaltend geschmeidig.</p>\n      </div>\n    </li>\n    <li class=\"mm-ig-card\">\n      <img src=\"https://cdn.shopify.com/s/files/1/0779/4583/1766/files/ChatGPT_Image_10._Aug._2026_10_26_18.png?v=1786350395&width=600\" alt=\"Zedernholzöl\" loading=\"lazy\" width=\"600\" height=\"600\">\n      <span class=\"mm-ig-fade\"></span>\n      <div class=\"mm-ig-cap\">\n        <h3 class=\"mm-ig-name\">Zedernholzöl</h3>\n        <p class=\"mm-ig-benefit\">Verleiht der Creme ihren edlen, maskulinen Duft nach Zedernholz.</p>\n      </div>\n    </li>\n  </ul>\n\n  </div>\n</section>",
+        "color_scheme": "background-1",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "mm_pdp_sticky_cta_section": {
+      "type": "custom-liquid",
+      "settings": {
+        "custom_liquid": "{{ 'mm-pdp-sticky-cta.css' | asset_url | stylesheet_tag }}\n{%- liquid\n  assign sc_variant = product.selected_or_first_available_variant\n  assign sc_price = sc_variant.price\n  assign sc_compare = sc_variant.compare_at_price\n-%}\n<div class=\"mm-sc\" id=\"mm-sc\" aria-hidden=\"true\">\n  <div class=\"mm-sc-info\">\n    <span class=\"mm-sc-title\">{{ product.title }}</span>\n    <span class=\"mm-sc-prices\">\n      <span class=\"mm-sc-price\">{{ sc_price | money_without_currency }} €</span>\n      {%- if sc_compare > sc_price -%}\n        <span class=\"mm-sc-compare\">{{ sc_compare | money_without_currency }} €</span>\n      {%- endif -%}\n    </span>\n  </div>\n  <button type=\"button\" class=\"mm-btn mm-btn--primary mm-sc-cta\" id=\"mm-sc-cta\">Bundle wählen</button>\n</div>\n\n<script>\n(function () {\n  var bar = document.getElementById('mm-sc');\n  // In der Theme-Vorschau liegt die Shopify-Leiste unten drueber und verdeckt die\n  // Sticky-Bar komplett. Nur dort nach oben versetzen, auf dem Shop bleibt sie unten.\n  if (bar && /shopifypreview\\.com$/.test(location.hostname)) bar.classList.add('is-preview');\n  var cta = document.getElementById('mm-sc-cta');\n  if (!bar || !cta) return;\n\n  // Ab hier soll die Leiste erscheinen: die Vorher/Nachher-Section.\n  var trigger = document.querySelector('.mm-pdp-ba') || document.querySelector('.mm-pdp-principle');\n  // Ziel des Klicks: die Bundle-Auswahl in der Buybox (Koala-Widget),\n  // ersatzweise der Kaufbereich.\n  function target() {\n    return document.querySelector('koala-quantity-breaks-embed')\n      || document.querySelector('koala-quantity-breaks-app-block')\n      || document.querySelector('.koala-deal')\n      || document.querySelector('.product-form__buttons')\n      || document.querySelector('.product__info-container');\n  }\n\n  var ticking = false;\n  function sync() {\n    ticking = false;\n    if (!trigger) return;\n    var show = trigger.getBoundingClientRect().top < window.innerHeight * 0.6;\n    bar.classList.toggle('is-visible', show);\n    bar.setAttribute('aria-hidden', show ? 'false' : 'true');\n  }\n  function onScroll() {\n    if (ticking) return;\n    ticking = true;\n    window.requestAnimationFrame(sync);\n  }\n\n  cta.addEventListener('click', function () {\n    var el = target();\n    if (!el) return;\n    var header = document.querySelector('.section-header, sticky-header, header');\n    var offset = header ? header.getBoundingClientRect().height + 12 : 12;\n    var y = el.getBoundingClientRect().top + window.pageYOffset - offset;\n    window.scrollTo({ top: Math.max(0, y), behavior: 'smooth' });\n  });\n\n  window.addEventListener('scroll', onScroll, { passive: true });\n  window.addEventListener('resize', onScroll);\n  sync();\n})();\n</script>",
+        "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    }
+  },
+  "order": [
+    "main",
+    "mm_pdp_deepdives_section",
+    "mm_pdp_studie_section",
+    "mm_pdp_routine_section",
+    "mm_pdp_comparison_section",
+    "ss_before_after_5_JGaLpB",
+    "ss_testimonial_12_ACbPN9",
+    "mm_pdp_ingredients_section",
+    "mm_pdp_reviews_header_section",
+    "mm_pdp_reviews_loox_section",
+    "33473044-82a0-4796-8303-cd1e5be3caf2",
+    "169800360473363ca0",
+    "45f77b37-82dc-4dcd-aab6-662315b32360",
+    "related-products",
+    "mm_pdp_sticky_cta_section"
+  ]
+}

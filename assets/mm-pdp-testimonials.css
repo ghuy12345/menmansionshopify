@@ -1,0 +1,126 @@
+/* ==========================================================================
+   Testimonials "Das sagen unsere Gentleman" (Tallow-PDP)
+   Layout nach Vorlage, Typo/Farben/Groessen aus dem Design-System.
+
+   Regeln, die hier greifen:
+   - Sectiontitel h2 -> 26px wie alle PDP-Sections. Die Vorlage wollte
+     clamp(21px,6.2vw,50px) mit white-space:nowrap; das passt nicht ins Raster
+     und wuerde auf 390px auf ~21px schrumpfen.
+   - Zitat in var(--mm-font-display). Als <p> ohne !important moeglich, die
+     base.css-Regel greift nur auf h1-h6.
+   - Fliesstext und Meta in --mm-fg-muted, nur Zitat und Name in --mm-fg.
+   - Sterne in --mm-gold-soft wie .mm-why2-stars, .mm-pdp-reviews-stars und
+     .mm-bs-rating-stars. Die alte App-Section nutzte #AF9841 (= --mm-gold).
+   - radius 0 ueber --mm-radius, keine Schatten. Tiefe ueber Ton + Hairlines.
+   - Eigenes Praefix mm-tst-*, kein Eingriff in geteilte Klassen.
+   ========================================================================== */
+
+.mm-tst { padding: 48px 20px; border-bottom: var(--mm-hairline); }
+.mm-tst-inner { display: flex; flex-direction: column; gap: var(--mm-space-5); }
+
+/* ---------- Kopf ---------- */
+.mm-tst-head { text-align: center; }
+.mm-tst-title { font-size: 26px; margin: 0; color: var(--mm-fg); }
+
+/* ---------- Rail: Peek-Slider mit Scroll-Snap ---------- */
+.mm-tst-rail {
+  list-style: none; margin: 0; padding: 0 0 4px;
+  display: flex; gap: 16px;
+  overflow-x: auto; scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch; overscroll-behavior-x: contain;
+  scrollbar-width: none;
+}
+.mm-tst-rail::-webkit-scrollbar { display: none; }
+
+/* Kartenflaeche --mm-ink (#0E0E0E) statt --mm-charcoal (#272725): dunkler als der
+   Section-Grund, dadurch setzt sich die Karte ab ohne zweiten Farbton.
+   20px Radius wie die Karten im Live-Theme; overflow: hidden, damit das Bild an
+   der Oberkante mitgerundet wird. */
+.mm-tst-card {
+  flex: 0 0 min(84%, 330px); scroll-snap-align: start;
+  display: flex; flex-direction: column;
+  background: var(--mm-ink);
+  border: var(--mm-hairline);
+  border-top: var(--mm-hairline-gold);
+  border-radius: var(--mm-radius-card);
+  overflow: hidden;
+}
+
+/* ---------- Medien: einheitliches Verhaeltnis, sonst springen die Kartenhoehen ----------
+   8/7 statt 4/5: das ist genau 30% weniger Hoehe. Bei 300px Kartenbreite
+   262,5px statt 375px. */
+.mm-tst-media { position: relative; aspect-ratio: 8 / 7; overflow: hidden; background: var(--mm-charcoal); }
+.mm-tst-media img,
+.mm-tst-media video { width: 100%; height: 100%; object-fit: cover; object-position: center top; display: block; }
+.mm-tst-poster { position: absolute; inset: 0; transition: opacity var(--mm-dur-2) var(--mm-ease); }
+.mm-tst-card.is-playing .mm-tst-poster,
+.mm-tst-card.is-playing .mm-tst-play { opacity: 0; pointer-events: none; }
+
+/* Play-Button: quadratisch, Alabaster-Flaeche mit goldenem Dreieck */
+.mm-tst-play {
+  position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%);
+  width: 54px; height: 54px; padding: 0; cursor: pointer;
+  display: flex; align-items: center; justify-content: center;
+  background: var(--mm-alabaster); border: 0; border-radius: var(--mm-radius);
+  color: var(--mm-gold-soft);
+  transition: opacity var(--mm-dur-2) var(--mm-ease), background var(--mm-dur-1) var(--mm-ease);
+}
+.mm-tst-play:hover { background: #fff; }
+.mm-tst-play svg { width: 18px; height: 18px; }
+
+/* Aufschrift statt Badge-Flaeche */
+.mm-tst-tag {
+  position: absolute; left: 12px; top: 12px; z-index: 2;
+  font-size: 11px; letter-spacing: var(--mm-ls-eyebrow); text-transform: uppercase;
+  color: var(--mm-alabaster); background: rgba(14, 14, 14, 0.6); padding: 5px 10px;
+}
+
+/* ---------- Karteninhalt ---------- */
+.mm-tst-body { display: flex; flex-direction: column; gap: 10px; padding: 18px; flex: 1; }
+.mm-tst-stars { color: var(--mm-gold-soft); font-size: 13px; letter-spacing: 2px; }
+.mm-tst-quote {
+  font-family: var(--mm-font-display); font-weight: 600;
+  font-size: 16px; line-height: 1.35; color: var(--mm-fg); margin: 0;
+}
+.mm-tst-foot {
+  margin-top: auto; padding-top: 12px; border-top: var(--mm-hairline);
+  display: flex; align-items: center; justify-content: space-between; gap: 10px;
+}
+.mm-tst-name { font-size: 14px; font-weight: 700; color: var(--mm-fg); }
+.mm-tst-verified {
+  display: inline-flex; align-items: center; gap: 5px;
+  font-size: 11px; letter-spacing: 0.04em; color: var(--mm-fg-muted);
+}
+.mm-tst-verified svg { width: 11px; height: 11px; color: var(--mm-gold-soft); flex: none; }
+
+/* ---------- Navigation: Striche wie in Bestseller und Routine ----------
+   Vorher stand hier ein eigener Zaehler "01 / 07" plus eine mitlaufende
+   Goldlinie. Der Shop zeigt Slider-Positionen ueberall als Striche
+   (.mm-bs-progress-dash, .mm-r3-dots), deshalb hier das gleiche Muster. */
+.mm-tst-nav { display: flex; align-items: center; justify-content: center; gap: 8px; }
+.mm-tst-dot { appearance: none; border: 0; padding: 10px 0; background: transparent; cursor: pointer; }
+.mm-tst-dot span { display: block; width: 30px; height: 2px; background: var(--mm-graphite); transition: background var(--mm-dur-1) var(--mm-ease); }
+.mm-tst-dot[aria-current="true"] span { background: var(--mm-gold-soft); }
+
+.mm-tst-arrows { display: none; gap: 8px; flex: none; }
+.mm-tst-arrow {
+  width: 48px; height: 48px; padding: 0; cursor: pointer;
+  display: flex; align-items: center; justify-content: center;
+  background: transparent; color: var(--mm-fg);
+  border: var(--mm-hairline); border-radius: var(--mm-radius);
+  transition: border-color var(--mm-dur-1) var(--mm-ease), color var(--mm-dur-1) var(--mm-ease);
+}
+.mm-tst-arrow:hover { border-color: var(--mm-gold-soft); color: var(--mm-gold-soft); }
+.mm-tst-arrow[disabled] { opacity: 0.35; cursor: default; }
+.mm-tst-arrow[disabled]:hover { border-color: var(--mm-border); color: var(--mm-fg); }
+.mm-tst-arrow svg { width: 16px; height: 16px; }
+
+/* ---------- Desktop ---------- */
+@media screen and (min-width: 750px) {
+  .mm-tst { max-width: 960px; margin-inline: auto; }
+  .mm-tst-inner { gap: var(--mm-space-6); }
+  .mm-tst-card { flex: 0 0 300px; }
+  .mm-tst-body { padding: 20px; }
+  .mm-tst-nav { gap: 10px; }
+  .mm-tst-arrows { display: flex; margin-left: 8px; }
+}

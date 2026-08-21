@@ -1,0 +1,134 @@
+/* ==========================================================================
+   Herkunft-Section "Vom Bio-Hof in deine Hand" (PDP)
+   Layout/Design nach Herkunft-Section.md, Typo und Farben aus dem Shop.
+
+   Eigenes Praefix mm-hk-*, weil .mm-pdp-herkunft-* noch von anderen
+   Produkt-Templates genutzt wird.
+
+   Was gegenueber der Vorlage angepasst ist und warum:
+
+   - Sectiontitel 26px flach statt clamp(21px,5vw,26px). Alle PDP-Sections
+     stehen auf 26px; mit clamp waere er mobil auf 21px geschrumpft.
+   - Lead 14px --mm-fg-muted statt 17px. Standard fuer Sublines auf der PDP.
+   - Kartentitel 16px, weight 600, Display-Font mit !important statt 21px.
+     Ohne !important gewinnt h3 { font-family: SuisseIntl-Bold !important }
+     aus base.css und die Karten rendern in Sans, der h2 in Serif.
+   - Fliesstext 14px/1.6 in --mm-fg-muted (Vorlage: 14-16px/1.55-1.65).
+   - Keine Eyebrow-Labels. Die Vorlage hatte "Der Weg in die Dose" und die
+     Schrittworte als goldene Uppercase-Kicker mit 0.26em Sperrung - genau das
+     Muster, das sitewide entfernt wurde. Der Kopf ist jetzt eine normale h3,
+     die Schrittworte sind kleine gedaempfte Labels ohne Gold und Uppercase.
+   - Slider-Position als Striche wie .mm-bs-progress-dash, .mm-r3-dots und
+     .mm-tst-dot: 30x2px, --mm-graphite auf --mm-gold-soft. Der Zaehler "1 / 3"
+     der Vorlage ist raus, den gleichen hatten wir in den Testimonials schon
+     rausgenommen.
+   - Aufklapper als natives <details>/<summary>, kein JS. Label in der Typo von
+     .mm-btn (12px, weight 700, ls 0.02em, kein Uppercase) statt 13px/0.18em
+     Uppercase - Buttons und Buttonaehnliches haben im Shop eine feste Regel.
+   - Farbwerte ueber Tokens ohne Fallbacks: die Vorlage hatte
+     var(--mm-gold-soft,#AF9841) und var(--mm-alabaster,#EFECE6), beide
+     Fallbacks sind falsch (richtig #C6B074 und #FAFAF8).
+   ========================================================================== */
+
+.mm-hk { padding: 48px 0; border-bottom: var(--mm-hairline); color: var(--mm-fg); overflow: hidden; }
+.mm-hk-wrap { padding: 0 20px; max-width: 520px; margin: 0 auto; }
+
+/* ---------- Hook ---------- */
+.mm-hk-title { font-size: 26px; line-height: 1.15; margin: 0 0 10px; color: var(--mm-fg); text-wrap: balance; }
+.mm-hk-lead { margin: 0; font-size: 14px; line-height: 1.6; color: var(--mm-fg-muted); text-wrap: pretty; }
+
+/* ---------- Hero ---------- */
+.mm-hk-hero {
+  position: relative; margin: 24px auto 0; width: 100%; max-width: 520px;
+  aspect-ratio: 4 / 5; overflow: hidden; border-radius: var(--mm-radius-card); background: var(--mm-charcoal);
+}
+.mm-hk-hero img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center 45%; }
+/* display: block !important, weil base.css:468ff div:empty { display: none } setzt
+   und dieser Verlauf ein leeres div ist. Ohne das war der Verlauf unsichtbar und
+   die Bildunterschrift stand auf dem hellen Stroh. */
+.mm-hk-hero-grad {
+  display: block !important;
+  position: absolute; inset: auto 0 0 0; height: 62%; pointer-events: none;
+  background: linear-gradient(to top, var(--mm-ink) 4%, rgba(14, 14, 14, 0.72) 42%, rgba(14, 14, 14, 0));
+}
+.mm-hk-hero-cap { position: absolute; left: 20px; right: 20px; bottom: 18px; pointer-events: none; }
+/* 21px: gleiche Groesse wie .mm-pdp-routine-step-title, nicht 26px - der
+   Ortsname soll nicht mit dem Sectiontitel konkurrieren. */
+.mm-hk-hero-place {
+  font-family: var(--mm-font-display); font-weight: 600;
+  font-size: 21px; line-height: 1.15; color: var(--mm-fg); margin: 0 0 4px;
+}
+.mm-hk-hero-sub { font-size: 12px; line-height: 1.4; color: var(--mm-fg-muted); margin: 0; }
+
+/* ---------- Kopf der Kartenreihe ---------- */
+.mm-hk-steps-head { margin-top: 30px; margin-bottom: 12px; }
+.mm-hk-steps-title {
+  font-family: var(--mm-font-display) !important; font-weight: 600;
+  font-size: 16px; margin: 0; color: var(--mm-fg);
+}
+
+/* ---------- Karten ---------- */
+.mm-hk-scroll {
+  display: flex; gap: 12px; overflow-x: auto; scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch; overscroll-behavior-x: contain; scrollbar-width: none;
+  padding: 0 20px 4px; scroll-padding-left: 20px; max-width: 520px; margin: 0 auto;
+}
+.mm-hk-scroll::-webkit-scrollbar { display: none; }
+.mm-hk-card {
+  flex: 0 0 auto; width: min(268px, 72vw); scroll-snap-align: start;
+  background: var(--mm-ink); border: var(--mm-hairline); border-radius: var(--mm-radius-card); overflow: hidden;
+}
+.mm-hk-card-img { position: relative; aspect-ratio: 4 / 3; overflow: hidden; background: var(--mm-charcoal); }
+.mm-hk-card-img img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center 50%; }
+.mm-hk-card-body { padding: 18px 18px 20px; }
+/* Schrittwort als gedaempftes Label, nicht als Gold-Kicker */
+.mm-hk-step { font-size: 12px; line-height: 1.4; color: var(--mm-fg-muted); margin-bottom: 6px; }
+.mm-hk-card-title {
+  font-family: var(--mm-font-display) !important; font-weight: 600;
+  font-size: 16px; line-height: 1.2; margin: 0 0 8px; color: var(--mm-fg);
+}
+.mm-hk-card-text { margin: 0; font-size: 14px; line-height: 1.6; color: var(--mm-fg-muted); }
+
+/* ---------- Striche ---------- */
+.mm-hk-dots { display: flex; gap: 8px; padding: 14px 20px 0; max-width: 520px; margin: 0 auto; }
+.mm-hk-dots button { appearance: none; border: 0; padding: 10px 0; background: transparent; cursor: pointer; }
+.mm-hk-dots span { display: block; width: 30px; height: 2px; background: var(--mm-graphite); transition: background var(--mm-dur-1) var(--mm-ease); }
+.mm-hk-dots button[aria-current="true"] span { background: var(--mm-gold-soft); }
+
+/* ---------- Aufklapper ---------- */
+.mm-hk-more { margin-top: 22px; }
+.mm-hk-more > summary {
+  display: flex; align-items: center; justify-content: space-between; gap: 16px;
+  list-style: none; cursor: pointer;
+  border-top: var(--mm-hairline); border-bottom: var(--mm-hairline);
+  padding: 16px 0; color: var(--mm-fg);
+  font-size: 12px; font-weight: 700; letter-spacing: 0.02em;
+  transition: color var(--mm-dur-1) var(--mm-ease);
+}
+.mm-hk-more > summary::-webkit-details-marker { display: none; }
+.mm-hk-more > summary:hover { color: var(--mm-gold-soft); }
+.mm-hk-plus { color: var(--mm-gold-soft); font-size: 18px; line-height: 1; flex: none; }
+.mm-hk-more[open] .mm-hk-plus-open { display: none; }
+.mm-hk-plus-close { display: none; }
+.mm-hk-more[open] .mm-hk-plus-close { display: inline; }
+.mm-hk-more-body { padding: 18px 0 0; }
+.mm-hk-more-body p { margin: 0 0 14px; font-size: 14px; line-height: 1.6; color: var(--mm-fg-muted); }
+.mm-hk-more-body p:last-child { margin-bottom: 0; }
+
+/* ---------- Desktop: Hero und Karten nebeneinander im Raster ---------- */
+@media screen and (min-width: 750px) {
+  .mm-hk { padding: 56px 0 48px; }
+  .mm-hk-wrap { max-width: 1040px; padding: 0 var(--mm-container-pad); }
+  /* Gleiche Innenbreite wie .mm-hk-wrap: 1040px minus zweimal container-pad.
+     Padding direkt auf dem Hero geht nicht, das Bild liegt absolut im Kasten. */
+  .mm-hk-hero { max-width: calc(1040px - 2 * var(--mm-container-pad)); aspect-ratio: 16 / 9; margin-top: 28px; }
+  .mm-hk-hero img { object-position: center 40%; }
+  .mm-hk-hero-place { font-size: 26px; }
+  .mm-hk-scroll {
+    display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px;
+    max-width: 1040px; padding: 0 var(--mm-container-pad);
+    overflow-x: visible; scroll-snap-type: none;
+  }
+  .mm-hk-card { width: auto; }
+  .mm-hk-dots { display: none; }
+}

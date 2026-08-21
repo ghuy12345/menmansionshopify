@@ -1,0 +1,368 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "ss_testimonials_21_AbHfRN": {
+      "type": "ss-testimonials-21",
+      "blocks": {
+        "slide_i9MRNj": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/IMG_2990.jpg",
+            "author_image": "shopify://shop_images/IMG_1435.jpg",
+            "author": "Mike&Henry",
+            "job_title": "+85.000 Follower",
+            "social_icon": "instagram",
+            "text": "<p><em>\"Echt baba Produkte, Men Mansion ist die neue Ära der Männerpflege. Alle Produkte sind hochwertig und 100% natürlich.\"</em></p>",
+            "button": "",
+            "url": ""
+          }
+        },
+        "slide_nGgfkz": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/Neueste_Fotos_anzeigen.jpg",
+            "author_image": "shopify://shop_images/IMG_1437.jpg",
+            "author": "tandiego01",
+            "job_title": "+250.000 Follower",
+            "social_icon": "tiktok",
+            "text": "<p><em>\"Meine Haut war noch nie so glatt und gepflegt – bekomme jetzt ständig Komplimente und bin super zufrieden\"</em></p>",
+            "button": "",
+            "url": ""
+          }
+        },
+        "slide_ebzMwd": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/IMG_1438.jpg",
+            "author_image": "shopify://shop_images/IMG_1436.jpg",
+            "author": "Dqan68",
+            "job_title": "+55.000 Follower",
+            "social_icon": "tiktok",
+            "text": "<p><em>\"Ich habe unzählige Pflegeprodukte ausprobiert, aber nichts kommt an die natürliche Power von Tallow ran.\"</em></p>",
+            "button": "",
+            "url": ""
+          }
+        }
+      },
+      "block_order": [
+        "slide_i9MRNj",
+        "slide_nGgfkz",
+        "slide_ebzMwd"
+      ],
+      "disabled": true,
+      "settings": {
+        "content_align": "center",
+        "content_align_mobile": "center",
+        "heading": "<p>Erfolg spricht für sich – Das sagen unsere Gentlemen</p>",
+        "heading_custom": false,
+        "heading_font": "josefin_sans_n4",
+        "heading_size": 48,
+        "heading_size_mobile": 24,
+        "heading_height": 130,
+        "text": "<p>Täglich genutzt von Influencern, Models und über 10.000 Männern.</p>",
+        "text_custom": false,
+        "text_font": "josefin_sans_n4",
+        "text_size": 20,
+        "text_size_mobile": 12,
+        "text_height": 150,
+        "text_mt": 24,
+        "text_mt_mobile": 16,
+        "slider_view": 3,
+        "slider_view_mobile": 1.3,
+        "slider_gap": 40,
+        "slider_gap_mobile": 20,
+        "slider_mt": 72,
+        "slider_mt_mobile": 40,
+        "slide_radius": 20,
+        "slide_border_thickness": 0,
+        "image_ratio": "square",
+        "image_ratio_mobile": "square",
+        "slide_content_padding_horizontal": 24,
+        "slide_content_padding_horizontal_mobile": 18,
+        "slide_content_padding_vertical": 40,
+        "slide_content_padding_vertical_mobile": 30,
+        "slide_content_align": "left",
+        "slide_content_align_mobile": "left",
+        "author_image_width": 48,
+        "author_image_width_mobile": 36,
+        "author_image_radius": 100,
+        "author_custom": false,
+        "author_font": "josefin_sans_n4",
+        "author_size": 18,
+        "author_size_mobile": 14,
+        "author_height": 130,
+        "job_title_custom": false,
+        "job_title_font": "josefin_sans_n4",
+        "job_title_size": 14,
+        "job_title_size_mobile": 12,
+        "job_title_height": 130,
+        "social_size": 32,
+        "social_size_mobile": 28,
+        "slide_text_custom": false,
+        "slide_text_font": "playfair_display_n4",
+        "slide_text_size": 18,
+        "slide_text_size_mobile": 12,
+        "slide_text_height": 150,
+        "slide_text_mt": 30,
+        "slide_text_mt_mobile": 24,
+        "button_custom": false,
+        "button_font": "josefin_sans_n4",
+        "button_size": 18,
+        "button_size_mobile": 14,
+        "button_height": 100,
+        "button_padding_vertical": 12,
+        "button_padding_vertical_mobile": 12,
+        "button_padding_horizontal": 16,
+        "button_padding_horizontal_mobile": 16,
+        "button_radius": 6,
+        "button_border_thickness": 1,
+        "button_mt": 20,
+        "button_mt_mobile": 16,
+        "button_style": "non_outline_arrow",
+        "arrow_size": 48,
+        "arrow_size_mobile": 38,
+        "arrow_icon_size": 10,
+        "arrow_icon_size_mobile": 8,
+        "arrow_border_thickness": 0,
+        "arrow_radius": 100,
+        "arrow_hover_effect": "scale",
+        "arrow_show_desktop": true,
+        "arrow_show_mobile": false,
+        "dots_size": 8,
+        "dots_size_mobile": 8,
+        "dots_mt": 32,
+        "dots_mt_mobile": 24,
+        "dots_show_desktop": false,
+        "dots_show_mobile": true,
+        "heading_color": "#fafaf8",
+        "text_color": "#fafaf8",
+        "slide_bg_color": "#ece8e4",
+        "slide_border_color": "#000000",
+        "author_color": "#000000",
+        "job_title_color": "#000000",
+        "social_color": "#1c1c1e",
+        "slide_text_color": "#000000",
+        "button_color": "#333333",
+        "button_hover_color": "#aeaeae",
+        "button_bg_color": "",
+        "button_bg_hover_color": "",
+        "button_border_color": "#c7c7c7",
+        "button_border_hover_color": "#000000",
+        "arrow_color": "#7b7b7b",
+        "arrow_hover_color": "#7b7b7b",
+        "arrow_bg_color": "#ebebeb",
+        "arrow_bg_hover_color": "#f5f5f5",
+        "arrow_border_color": "#c7c7c7",
+        "arrow_border_hover_color": "#c7c7c7",
+        "dots_color": "#000000",
+        "background_color": "#191919",
+        "background_gradient": "",
+        "border_color": "#000000",
+        "margin_top": 0,
+        "margin_bottom": 0,
+        "margin_horizontal": 0,
+        "margin_horizontal_mobile": 0,
+        "padding_top": 16,
+        "padding_bottom": 36,
+        "padding_horizontal": 5,
+        "padding_horizontal_mobile": 1.5,
+        "full_width": false,
+        "content_width": 1400,
+        "border_thickness": 0,
+        "section_radius": 0,
+        "lazy": true
+      }
+    },
+    "ss_scrolling_announcement_bar_WpAdrF": {
+      "type": "ss-scrolling-announcement-bar",
+      "blocks": {
+        "text_PpDw46": {
+          "type": "text",
+          "settings": {
+            "text": "Manufaktur auf der Schwäbischen Alb"
+          }
+        },
+        "text_8BymQr": {
+          "type": "text",
+          "settings": {
+            "text": "Made for Men"
+          }
+        },
+        "text_jpJQ6d": {
+          "type": "text",
+          "settings": {
+            "text": "30 Tage Geld zurück"
+          }
+        }
+      },
+      "block_order": [
+        "text_PpDw46",
+        "text_8BymQr",
+        "text_jpJQ6d"
+      ],
+      "settings": {
+        "insert_css_class_target": "",
+        "text_size": 17,
+        "ss_font_family": "playfair_display_n4",
+        "link": "",
+        "animation_duration": 100,
+        "animation_direction": "left",
+        "pause_hover": false,
+        "bg": "#191919",
+        "text_color": "#fafafa",
+        "hover_opacity": 90,
+        "padding_horizontal": 1,
+        "padding_vertical": 1.7
+      }
+    },
+    "custom_liquid_UkgdHq": {
+      "type": "custom-liquid",
+      "settings": {
+        "custom_liquid": "{{ 'mm-home-vip.css' | asset_url | stylesheet_tag }}\n<script src=\"{{ 'mm-home-vip.js' | asset_url }}\" defer=\"defer\"></script>\n<section class=\"mm mm-vip\">\n  <div class=\"mm-inner\">\n    <div class=\"mm-copy\">\n      <p class=\"mm-vip-eyebrow\">Newsletter</p>\n      <h2 class=\"mm-h2\">Exklusive Vorteile sichern.</h2>\n      <p class=\"mm-lead\">Sei der Erste, der von unseren exklusiven Rabattaktionen und Produktlaunches erfährt.</p>\n    </div>\n    <div class=\"mm-vip-form-wrap\">\n      <label class=\"mm-vip-label\">E-Mail-Adresse</label>\n      <div class=\"klaviyo-form-TRCGwb\"></div>\n      <p class=\"mm-legal\">Mit der Anmeldung stimmst du unserer <a href=\"/pages/datenschutzerklaerung\">Datenschutzerklärung</a> zu.</p>\n    </div>\n  </div>\n</section>",
+        "color_scheme": "accent-2",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "ss_cookie_banner_mQniWU": {
+      "type": "ss-cookie-banner",
+      "blocks": {
+        "accept_button_hdgPgg": {
+          "type": "accept_button",
+          "settings": {
+            "button_text": "Akzeptieren",
+            "button_color": "#333333",
+            "button_text_color": "#ffffff",
+            "button_border_color": "#000000",
+            "button_border_width": 0,
+            "button_border_radius": 24
+          }
+        },
+        "decline_button_jpdpyL": {
+          "type": "decline_button",
+          "settings": {
+            "redirect_url": "",
+            "button_text": "Ablehnen",
+            "button_color": "#ffffff",
+            "button_text_color": "#000000",
+            "button_border_color": "#000000",
+            "button_border_width": 1,
+            "button_border_radius": 24
+          }
+        }
+      },
+      "block_order": [
+        "accept_button_hdgPgg",
+        "decline_button_jpdpyL"
+      ],
+      "settings": {
+        "text_color": "#000000",
+        "text_size": 16,
+        "text": "<p>Diese Website verwendet Cookies, um Dir das beste Erlebnis zu bieten. 🍪</p>",
+        "max_width": 400,
+        "background_color": "#ffffff",
+        "border_radius": 24,
+        "vertical_padding": 20,
+        "horizontal_padding": 20,
+        "placement": "bottom-left",
+        "enable_shadow": true
+      }
+    },
+    "mm_home_why_section": {
+      "type": "custom-liquid",
+      "settings": {
+        "custom_liquid": "<section class=\"mm-why2\">\n  <div class=\"mm-why2-wrap\">\n    <div class=\"mm-why2-grid\">\n\n      <div>\n        \n        <h2 class=\"mm-why2-title\">Made in Germany.<br>Made for Men.</h2>\n        <hr class=\"mm-rule-gold\" style=\"margin-bottom:var(--mm-space-5);\">\n\n        <div class=\"mm-why2-rating\">\n          <span class=\"mm-why2-stars\">★★★★★</span>\n          <span class=\"mm-why2-rating-text\">4,8/5 · +2.400 Bewertungen</span>\n        </div>\n\n        <a href=\"/pages/unsere-mission\" class=\"mm-btn mm-btn--primary mm-why2-cta\">Unsere Geschichte</a>\n\n        </div>\n\n    </div>\n  </div>\n</section>",
+        "color_scheme": "background-1",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "mm_home_compare_section": {
+      "type": "custom-liquid",
+      "settings": {
+        "custom_liquid": "{{ 'mm-pdp-clearskinset.css' | asset_url | stylesheet_tag }}\n<div class=\"mm-why2-wrap\">\n  <div class=\"mm-home-compare mm-home-compare--solo\">\n\n    <div class=\"mm-pdp-compare\">\n      <div class=\"mm-pdp-compare-table\">\n        <div class=\"mm-pdp-compare-row mm-pdp-compare-head\">\n          <span class=\"mm-pdp-compare-head-why\"><span class=\"mm-pdp-compare-why-label\">Warum</span>{%- if settings.logo != blank -%}<img class=\"mm-pdp-compare-logo\" src=\"{{ settings.logo | image_url: width: 300 }}\" alt=\"{{ shop.name }}\" loading=\"lazy\">{%- else -%}<span class=\"mm-pdp-compare-why-name\">Men Mansion</span>{%- endif -%}</span>\n          <span class=\"mm-pdp-compare-head-mm\"><span class=\"mm-pdp-compare-thumb\"><img src=\"{{ 'mm-tallow-tiegel.png' | asset_url }}\" alt=\"Men Mansion Tallow Gesichtscreme\" loading=\"lazy\" width=\"46\" height=\"46\"></span></span>\n          <span class=\"mm-pdp-compare-head-other\"><span class=\"mm-pdp-compare-thumb\"><img src=\"{{ 'mm-andere-tiegel.png' | asset_url }}\" alt=\"Andere Marken\" loading=\"lazy\" width=\"46\" height=\"46\"></span></span>\n        </div>\n        <div class=\"mm-pdp-compare-row\"><span class=\"mm-pdp-compare-label\">Handgefertigt in kleinen Chargen</span><span class=\"mm-pdp-compare-cell-us\"><span class=\"mm-pdp-compare-badge mm-pdp-compare-badge--yes\"><svg width=\"13\" height=\"13\" viewBox=\"0 0 16 16\" fill=\"none\"><path d=\"M3 8.5L6.5 12L13 4\" stroke=\"currentColor\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg></span></span><span class=\"mm-pdp-compare-cell-them\"><span class=\"mm-pdp-compare-badge mm-pdp-compare-badge--no\"><svg width=\"13\" height=\"13\" viewBox=\"0 0 16 16\" fill=\"none\"><path d=\"M4 4L12 12M12 4L4 12\" stroke=\"currentColor\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg></span></span></div>\n        <div class=\"mm-pdp-compare-row\"><span class=\"mm-pdp-compare-label\">Natürliche Wirkstoffe</span><span class=\"mm-pdp-compare-cell-us\"><span class=\"mm-pdp-compare-badge mm-pdp-compare-badge--yes\"><svg width=\"13\" height=\"13\" viewBox=\"0 0 16 16\" fill=\"none\"><path d=\"M3 8.5L6.5 12L13 4\" stroke=\"currentColor\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg></span></span><span class=\"mm-pdp-compare-cell-them\"><span class=\"mm-pdp-compare-badge mm-pdp-compare-badge--no\"><svg width=\"13\" height=\"13\" viewBox=\"0 0 16 16\" fill=\"none\"><path d=\"M4 4L12 12M12 4L4 12\" stroke=\"currentColor\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg></span></span></div>\n        <div class=\"mm-pdp-compare-row\"><span class=\"mm-pdp-compare-label\">Enthält Silikone &amp; Mineralöl</span><span class=\"mm-pdp-compare-cell-us\"><span class=\"mm-pdp-compare-badge mm-pdp-compare-badge--no\"><svg width=\"13\" height=\"13\" viewBox=\"0 0 16 16\" fill=\"none\"><path d=\"M4 4L12 12M12 4L4 12\" stroke=\"currentColor\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg></span></span><span class=\"mm-pdp-compare-cell-them\"><span class=\"mm-pdp-compare-badge mm-pdp-compare-badge--yes\"><svg width=\"13\" height=\"13\" viewBox=\"0 0 16 16\" fill=\"none\"><path d=\"M3 8.5L6.5 12L13 4\" stroke=\"currentColor\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg></span></span></div>\n        <div class=\"mm-pdp-compare-row\"><span class=\"mm-pdp-compare-label\">Eigene Manufaktur, keine Massenware</span><span class=\"mm-pdp-compare-cell-us\"><span class=\"mm-pdp-compare-badge mm-pdp-compare-badge--yes\"><svg width=\"13\" height=\"13\" viewBox=\"0 0 16 16\" fill=\"none\"><path d=\"M3 8.5L6.5 12L13 4\" stroke=\"currentColor\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg></span></span><span class=\"mm-pdp-compare-cell-them\"><span class=\"mm-pdp-compare-badge mm-pdp-compare-badge--no\"><svg width=\"13\" height=\"13\" viewBox=\"0 0 16 16\" fill=\"none\"><path d=\"M4 4L12 12M12 4L4 12\" stroke=\"currentColor\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg></span></span></div>\n        <div class=\"mm-pdp-compare-row\"><span class=\"mm-pdp-compare-label\">Sichtbare Ergebnisse nach wenigen Tagen</span><span class=\"mm-pdp-compare-cell-us\"><span class=\"mm-pdp-compare-badge mm-pdp-compare-badge--yes\"><svg width=\"13\" height=\"13\" viewBox=\"0 0 16 16\" fill=\"none\"><path d=\"M3 8.5L6.5 12L13 4\" stroke=\"currentColor\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg></span></span><span class=\"mm-pdp-compare-cell-them\"><span class=\"mm-pdp-compare-badge mm-pdp-compare-badge--no\"><svg width=\"13\" height=\"13\" viewBox=\"0 0 16 16\" fill=\"none\"><path d=\"M4 4L12 12M12 4L4 12\" stroke=\"currentColor\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg></span></span></div>\n        <div class=\"mm-pdp-compare-row\"><span class=\"mm-pdp-compare-label\">Künstliche Duft- &amp; Farbstoffe</span><span class=\"mm-pdp-compare-cell-us\"><span class=\"mm-pdp-compare-badge mm-pdp-compare-badge--no\"><svg width=\"13\" height=\"13\" viewBox=\"0 0 16 16\" fill=\"none\"><path d=\"M4 4L12 12M12 4L4 12\" stroke=\"currentColor\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg></span></span><span class=\"mm-pdp-compare-cell-them\"><span class=\"mm-pdp-compare-badge mm-pdp-compare-badge--yes\"><svg width=\"13\" height=\"13\" viewBox=\"0 0 16 16\" fill=\"none\"><path d=\"M3 8.5L6.5 12L13 4\" stroke=\"currentColor\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg></span></span></div>\n</div>",
+        "color_scheme": "background-1",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "mm_home_hero_section": {
+      "type": "custom-liquid",
+      "settings": {
+        "custom_liquid": "{{ 'mm-home-hero.css' | asset_url | stylesheet_tag }}\n<script src=\"{{ 'mm-home-hero.js' | asset_url }}\" defer=\"defer\"></script>\n<section class=\"mm-hero\">\n\n  <div class=\"mm-hero-stage\">\n    <img class=\"mm-hero-img\" src=\"https://menmansion.com/cdn/shop/files/mobile.png?v=1785751077&width=900\" alt=\"Men Mansion Naturpflege\" width=\"1792\" height=\"2400\" loading=\"eager\" fetchpriority=\"high\">\n    <img class=\"mm-hero-img-desktop\" src=\"https://menmansion.com/cdn/shop/files/desktop.png?v=1785751063&width=2000\" alt=\"Men Mansion Naturpflege\" width=\"2752\" height=\"1536\" loading=\"eager\" fetchpriority=\"high\">\n\n    <div class=\"mm-hero-dim\">&nbsp;</div>\n    <div class=\"mm-hero-scrim\">&nbsp;</div>\n\n    <div class=\"mm-hero-ribbon\" aria-hidden=\"true\">\n      <div class=\"mm-hero-ribbon-track\">\n        <span>Sommer-Special</span><span>Zwei Gratis-Produkte</span><span>Sommer-Special</span><span>Zwei Gratis-Produkte</span><span>Sommer-Special</span><span>Zwei Gratis-Produkte</span><span>Sommer-Special</span><span>Zwei Gratis-Produkte</span><span>Sommer-Special</span><span>Zwei Gratis-Produkte</span><span>Sommer-Special</span><span>Zwei Gratis-Produkte</span><span>Sommer-Special</span><span>Zwei Gratis-Produkte</span><span>Sommer-Special</span><span>Zwei Gratis-Produkte</span>\n      </div>\n    </div>\n\n    <div class=\"mm-hero-copy\">\n      <div class=\"mm-hero-col\">\n        <p class=\"mm-hero-eyebrow\">Natürliche Pflegeprodukte für Männer</p>\n        <h1 class=\"mm-hero-headline\">\n          <span class=\"mm-hero-headline-mobile\">Pflege, die deine <span class=\"mm-hero-headline-highlight\">Haut versteht</span></span>\n          <span class=\"mm-hero-headline-desktop\">Pflege, die deine Haut <span class=\"mm-hero-headline-highlight\">wirklich versteht</span></span>\n        </h1>\n        <p class=\"mm-hero-subline\">Jetzt im Sommer-Special: <strong class=\"mm-hero-subline-highlight\">2 Gratis-Produkte</strong> zu ausgewählten Artikeln.</p>\n        <a href=\"/collections/bundles\" class=\"mm-btn mm-btn--gold mm-hero-cta\">Sommer Deals entdecken</a>\n      </div>\n    </div>\n  </div>\n\n</section>",
+        "color_scheme": "background-1",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "mm_home_bestseller_section": {
+      "type": "custom-liquid",
+      "settings": {
+        "custom_liquid": "{{ 'mm-home-bestseller.css' | asset_url | stylesheet_tag }}\n<script src=\"{{ 'mm-home-bestseller.js' | asset_url }}\" defer=\"defer\"></script>\n<section class=\"mm-bs\">\n  <div class=\"mm-bs-head\">\n    <div class=\"mm-bs-head-main\">\n      <h2 class=\"mm-bs-title\">Unsere Topseller</h2>\n    </div>\n  </div>\n\n  <div class=\"mm-bs-slider\">\n<article class=\"mm-bs-card mm-bs-card--featured\">\n  <div class=\"mm-bs-card-media\">\n    <a href=\"/products/tallow-gesichtscreme-y-50ml\" class=\"mm-bs-media-link\"><img src=\"https://menmansion.com/cdn/shop/files/sommerspecialdeal_1.png?v=1783342063&width=800\" alt=\"Tallow Gesichtscreme® 50ml\" loading=\"lazy\"></a>\n    <div class=\"mm-bs-badges\"><span class=\"mm-bs-badge-hero\">Bestseller</span></div>\n  </div>\n  <div class=\"mm-bs-card-body\">\n    <h3 class=\"mm-bs-name\"><a href=\"/products/tallow-gesichtscreme-y-50ml\" class=\"mm-bs-name-link\">Tallow Gesichtscreme® 50ml</a></h3>\n    {%- render 'mm-rating', product: all_products['tallow-gesichtscreme-y-50ml'], fallback: all_products['skin-beard-set'] -%}\n    <p class=\"mm-bs-benefit\">Reines Gold für klare und gesunde Haut</p>\n    <div class=\"mm-bs-buy\">\n      <div class=\"mm-bs-price-row\"><span class=\"mm-bs-price\">39,90 €</span></div>\n      \n      \n    </div>\n  </div>\n</article>\n<article class=\"mm-bs-card\">\n  <div class=\"mm-bs-card-media\">\n    <a href=\"/products/daily-care-essentials\" class=\"mm-bs-media-link\"><img src=\"https://menmansion.com/cdn/shop/files/hf_20260423_163947_4f92dd62-46c0-4399-a122-5f30f89df088.png?v=1776962598&width=800\" alt=\"Daily Care Essentials\" loading=\"lazy\"></a>\n    <div class=\"mm-bs-badges\"><span class=\"mm-bs-badge-save\">Angebot</span></div>\n  </div>\n  <div class=\"mm-bs-card-body\">\n    \n    <h3 class=\"mm-bs-name\"><a href=\"/products/daily-care-essentials\" class=\"mm-bs-name-link\">Daily Care Essentials</a></h3>\n    {%- render 'mm-rating', product: all_products['daily-care-essentials'], fallback: all_products['skin-beard-set'] -%}\n    <p class=\"mm-bs-benefit\">Die komplette Routine</p>\n    <div class=\"mm-bs-buy\">\n      <div class=\"mm-bs-price-row\"><span class=\"mm-bs-price\">79,90 €</span><span class=\"mm-bs-compare\">117,60 €</span></div>\n      <span class=\"mm-bs-saving\">Du sparst 37,70 €</span>\n      \n    </div>\n  </div>\n</article>\n<article class=\"mm-bs-card\">\n  <div class=\"mm-bs-card-media\">\n    <a href=\"/products/clear-skin-set\" class=\"mm-bs-media-link\"><img src=\"https://menmansion.com/cdn/shop/files/gemini-image-2_Two_skincare_products_placed_side_by_side_on_a_matte_dark_black_surface_against_-2_18769921-5bcf-4707-9d0a-4bdb96c1972e.jpg?v=1776688595&width=800\" alt=\"Clear Skin Set\" loading=\"lazy\"></a>\n    <div class=\"mm-bs-badges\"><span class=\"mm-bs-badge-save\">Angebot</span></div>\n  </div>\n  <div class=\"mm-bs-card-body\">\n    \n    <h3 class=\"mm-bs-name\"><a href=\"/products/clear-skin-set\" class=\"mm-bs-name-link\">Clear Skin Set</a></h3>\n    {%- render 'mm-rating', product: all_products['clear-skin-set'], fallback: all_products['skin-beard-set'] -%}\n    <p class=\"mm-bs-benefit\">Ruhigere, reinere Haut</p>\n    <div class=\"mm-bs-buy\">\n      <div class=\"mm-bs-price-row\"><span class=\"mm-bs-price\">49,90 €</span><span class=\"mm-bs-compare\">54,80 €</span></div>\n      <span class=\"mm-bs-saving\">Du sparst 4,90 €</span>\n      \n    </div>\n  </div>\n</article>\n<article class=\"mm-bs-card\">\n  <div class=\"mm-bs-card-media\">\n    <a href=\"/products/bartpflege-set\" class=\"mm-bs-media-link\"><img src=\"https://menmansion.com/cdn/shop/files/bart-serum.png?v=1764519637&width=800\" alt=\"Bartpflege-Set\" loading=\"lazy\"></a>\n    \n  </div>\n  <div class=\"mm-bs-card-body\">\n    \n    <h3 class=\"mm-bs-name\"><a href=\"/products/bartpflege-set\" class=\"mm-bs-name-link\">Bartpflege-Set</a></h3>\n    {%- render 'mm-rating', product: all_products['bartpflege-set'], fallback: all_products['skin-beard-set'] -%}\n    <p class=\"mm-bs-benefit\">Voller, definierter Bart</p>\n    <div class=\"mm-bs-buy\">\n      <div class=\"mm-bs-price-row\"><span class=\"mm-bs-price\">34,90 €</span></div>\n      \n      \n    </div>\n  </div>\n</article>\n  </div>\n\n  <div class=\"mm-bs-progress\">\n<span class=\"mm-bs-progress-dash is-active\"></span>\n<span class=\"mm-bs-progress-dash\"></span>\n<span class=\"mm-bs-progress-dash\"></span>\n<span class=\"mm-bs-progress-dash\"></span>\n  </div>\n\n  <div class=\"mm-bs-grid\">\n<article class=\"mm-bs-card mm-bs-card--featured\">\n  <div class=\"mm-bs-card-media\">\n    <a href=\"/products/tallow-gesichtscreme-y-50ml\" class=\"mm-bs-media-link\"><img src=\"https://menmansion.com/cdn/shop/files/sommerspecialdeal_1.png?v=1783342063&width=800\" alt=\"Tallow Gesichtscreme® 50ml\" loading=\"lazy\"></a>\n    <div class=\"mm-bs-badges\"><span class=\"mm-bs-badge-hero\">Bestseller</span></div>\n  </div>\n  <div class=\"mm-bs-card-body\">\n    <h3 class=\"mm-bs-name\"><a href=\"/products/tallow-gesichtscreme-y-50ml\" class=\"mm-bs-name-link\">Tallow Gesichtscreme® 50ml</a></h3>\n    {%- render 'mm-rating', product: all_products['tallow-gesichtscreme-y-50ml'], fallback: all_products['skin-beard-set'] -%}\n    <p class=\"mm-bs-benefit\">Reines Gold für klare und gesunde Haut</p>\n    <div class=\"mm-bs-buy\">\n      <div class=\"mm-bs-price-row\"><span class=\"mm-bs-price\">39,90 €</span></div>\n      \n      \n    </div>\n  </div>\n</article>\n<article class=\"mm-bs-card\">\n  <div class=\"mm-bs-card-media\">\n    <a href=\"/products/daily-care-essentials\" class=\"mm-bs-media-link\"><img src=\"https://menmansion.com/cdn/shop/files/hf_20260423_163947_4f92dd62-46c0-4399-a122-5f30f89df088.png?v=1776962598&width=800\" alt=\"Daily Care Essentials\" loading=\"lazy\"></a>\n    <div class=\"mm-bs-badges\"><span class=\"mm-bs-badge-save\">Angebot</span></div>\n  </div>\n  <div class=\"mm-bs-card-body\">\n    \n    <h3 class=\"mm-bs-name\"><a href=\"/products/daily-care-essentials\" class=\"mm-bs-name-link\">Daily Care Essentials</a></h3>\n    {%- render 'mm-rating', product: all_products['daily-care-essentials'], fallback: all_products['skin-beard-set'] -%}\n    <p class=\"mm-bs-benefit\">Die komplette Routine</p>\n    <div class=\"mm-bs-buy\">\n      <div class=\"mm-bs-price-row\"><span class=\"mm-bs-price\">79,90 €</span><span class=\"mm-bs-compare\">117,60 €</span></div>\n      <span class=\"mm-bs-saving\">Du sparst 37,70 €</span>\n      \n    </div>\n  </div>\n</article>\n<article class=\"mm-bs-card\">\n  <div class=\"mm-bs-card-media\">\n    <a href=\"/products/clear-skin-set\" class=\"mm-bs-media-link\"><img src=\"https://menmansion.com/cdn/shop/files/gemini-image-2_Two_skincare_products_placed_side_by_side_on_a_matte_dark_black_surface_against_-2_18769921-5bcf-4707-9d0a-4bdb96c1972e.jpg?v=1776688595&width=800\" alt=\"Clear Skin Set\" loading=\"lazy\"></a>\n    <div class=\"mm-bs-badges\"><span class=\"mm-bs-badge-save\">Angebot</span></div>\n  </div>\n  <div class=\"mm-bs-card-body\">\n    \n    <h3 class=\"mm-bs-name\"><a href=\"/products/clear-skin-set\" class=\"mm-bs-name-link\">Clear Skin Set</a></h3>\n    {%- render 'mm-rating', product: all_products['clear-skin-set'], fallback: all_products['skin-beard-set'] -%}\n    <p class=\"mm-bs-benefit\">Ruhigere, reinere Haut</p>\n    <div class=\"mm-bs-buy\">\n      <div class=\"mm-bs-price-row\"><span class=\"mm-bs-price\">49,90 €</span><span class=\"mm-bs-compare\">54,80 €</span></div>\n      <span class=\"mm-bs-saving\">Du sparst 4,90 €</span>\n      \n    </div>\n  </div>\n</article>\n<article class=\"mm-bs-card\">\n  <div class=\"mm-bs-card-media\">\n    <a href=\"/products/bartpflege-set\" class=\"mm-bs-media-link\"><img src=\"https://menmansion.com/cdn/shop/files/bart-serum.png?v=1764519637&width=800\" alt=\"Bartpflege-Set\" loading=\"lazy\"></a>\n    \n  </div>\n  <div class=\"mm-bs-card-body\">\n    \n    <h3 class=\"mm-bs-name\"><a href=\"/products/bartpflege-set\" class=\"mm-bs-name-link\">Bartpflege-Set</a></h3>\n    {%- render 'mm-rating', product: all_products['bartpflege-set'], fallback: all_products['skin-beard-set'] -%}\n    <p class=\"mm-bs-benefit\">Voller, definierter Bart</p>\n    <div class=\"mm-bs-buy\">\n      <div class=\"mm-bs-price-row\"><span class=\"mm-bs-price\">34,90 €</span></div>\n      \n      \n    </div>\n  </div>\n</article>\n  </div>\n\n  <div class=\"mm-bs-viewall\">\n    <a href=\"/collections/pflegeprodukte-fuer-maenner\" class=\"mm-bs-trust-viewall\">Alle Topseller ansehen</a>\n  </div>\n\n  </section>",
+        "color_scheme": "background-1",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "mm_home_bundles_section": {
+      "type": "custom-liquid",
+      "settings": {
+        "custom_liquid": "{{ 'mm-home-bestseller.css' | asset_url | stylesheet_tag }}\n<script src=\"{{ 'mm-home-bestseller.js' | asset_url }}\" defer=\"defer\"></script>\n<section class=\"mm-bs\">\n  <div class=\"mm-bs-head\">\n    <div class=\"mm-bs-head-main\">\n      <h2 class=\"mm-bs-title\">Unsere Bundles</h2>\n      \n    </div>\n  </div>\n\n  <div class=\"mm-bs-slider\">\n<article class=\"mm-bs-card\">\n  <div class=\"mm-bs-card-media\">\n    <a href=\"/products/skin-hair-duo\" class=\"mm-bs-media-link\"><img src=\"https://menmansion.com/cdn/shop/files/B9941345-gold_3a230e3d-24c6-49c7-8a28-10b8dce8f7d0.png?v=1776688874&width=800\" alt=\"Skin & Hair Duo\" loading=\"lazy\"></a>\n    <div class=\"mm-bs-badges\"><span class=\"mm-bs-badge-save\" style=\"margin-left:auto;\">Angebot</span></div>\n  </div>\n  <div class=\"mm-bs-card-body\">\n    <h3 class=\"mm-bs-name\"><a href=\"/products/skin-hair-duo\" class=\"mm-bs-name-link\">Skin & Hair Duo</a></h3>\n    {%- render 'mm-rating', product: all_products['skin-hair-duo'], fallback: all_products['skin-beard-set'] -%}\n    <p class=\"mm-bs-benefit\">Gepflegte Haut, mehr Volumen</p>\n    <div class=\"mm-bs-buy\">\n      <div class=\"mm-bs-price-row\"><span class=\"mm-bs-price\">59,90 €</span><span class=\"mm-bs-compare\">67,80 €</span></div>\n      <span class=\"mm-bs-saving\">Du sparst 7,90 €</span>\n      \n    </div>\n  </div>\n</article>\n<article class=\"mm-bs-card\">\n  <div class=\"mm-bs-card-media\">\n    <a href=\"/products/skin-beard-set\" class=\"mm-bs-media-link\"><img src=\"https://menmansion.com/cdn/shop/files/hf_20260313_102954_815e0bff-069d-4d04-b268-6ec603d7361a.png?v=1773398165&width=800\" alt=\"Skin & Beard Set\" loading=\"lazy\"></a>\n    <div class=\"mm-bs-badges\"><span class=\"mm-bs-badge-save\" style=\"margin-left:auto;\">Angebot</span></div>\n  </div>\n  <div class=\"mm-bs-card-body\">\n    <h3 class=\"mm-bs-name\"><a href=\"/products/skin-beard-set\" class=\"mm-bs-name-link\">Skin & Beard Set</a></h3>\n    {%- render 'mm-rating', product: all_products['skin-beard-set'], fallback: all_products['skin-beard-set'] -%}\n    <p class=\"mm-bs-benefit\">Geschmeidige Haut & Bart</p>\n    <div class=\"mm-bs-buy\">\n      <div class=\"mm-bs-price-row\"><span class=\"mm-bs-price\">54,90 €</span><span class=\"mm-bs-compare\">64,80 €</span></div>\n      <span class=\"mm-bs-saving\">Du sparst 9,90 €</span>\n      \n    </div>\n  </div>\n</article>\n<article class=\"mm-bs-card\">\n  <div class=\"mm-bs-card-media\">\n    <a href=\"/products/hot-season-edition-1\" class=\"mm-bs-media-link\"><img src=\"https://menmansion.com/cdn/shop/files/hf_20260519_072438_1b94d883-2aa1-4769-adfd-6cc275f2bc7e.png?v=1779175568&width=800\" alt=\"Hot Season Edition\" loading=\"lazy\"></a>\n    <div class=\"mm-bs-badges\"><span class=\"mm-bs-badge-save\" style=\"margin-left:auto;\">Angebot</span></div>\n  </div>\n  <div class=\"mm-bs-card-body\">\n    <h3 class=\"mm-bs-name\"><a href=\"/products/hot-season-edition-1\" class=\"mm-bs-name-link\">Hot Season Edition</a></h3>\n    {%- render 'mm-rating', product: all_products['hot-season-edition-1'], fallback: all_products['skin-beard-set'] -%}\n    <p class=\"mm-bs-benefit\">Kühlung, Pflege, Definition</p>\n    <div class=\"mm-bs-buy\">\n      <div class=\"mm-bs-price-row\"><span class=\"mm-bs-price\">74,90 €</span><span class=\"mm-bs-compare\">87,70 €</span></div>\n      <span class=\"mm-bs-saving\">Du sparst 12,80 €</span>\n      \n    </div>\n  </div>\n</article>\n<article class=\"mm-bs-card\">\n  <div class=\"mm-bs-card-media\">\n    <a href=\"/products/arctic-skin-set\" class=\"mm-bs-media-link\"><img src=\"https://menmansion.com/cdn/shop/files/hf_20260519_071515_1e527f43-e5ff-4b13-958d-b59cf95cbb66.png?v=1779175235&width=800\" alt=\"Arctic Skin Set\" loading=\"lazy\"></a>\n    <div class=\"mm-bs-badges\"><span class=\"mm-bs-badge-save\" style=\"margin-left:auto;\">Angebot</span></div>\n  </div>\n  <div class=\"mm-bs-card-body\">\n    <h3 class=\"mm-bs-name\"><a href=\"/products/arctic-skin-set\" class=\"mm-bs-name-link\">Arctic Skin Set</a></h3>\n    {%- render 'mm-rating', product: all_products['arctic-skin-set'], fallback: all_products['skin-beard-set'] -%}\n    <p class=\"mm-bs-benefit\">Wacher Blick, klare Haut</p>\n    <div class=\"mm-bs-buy\">\n      <div class=\"mm-bs-price-row\"><span class=\"mm-bs-price\">49,90 €</span><span class=\"mm-bs-compare\">59,80 €</span></div>\n      <span class=\"mm-bs-saving\">Du sparst 9,90 €</span>\n      \n    </div>\n  </div>\n</article>\n  </div>\n\n  <div class=\"mm-bs-progress\">\n<span class=\"mm-bs-progress-dash is-active\"></span>\n<span class=\"mm-bs-progress-dash\"></span>\n<span class=\"mm-bs-progress-dash\"></span>\n<span class=\"mm-bs-progress-dash\"></span>\n  </div>\n\n  <div class=\"mm-bs-grid\">\n<article class=\"mm-bs-card\">\n  <div class=\"mm-bs-card-media\">\n    <a href=\"/products/skin-hair-duo\" class=\"mm-bs-media-link\"><img src=\"https://menmansion.com/cdn/shop/files/B9941345-gold_3a230e3d-24c6-49c7-8a28-10b8dce8f7d0.png?v=1776688874&width=800\" alt=\"Skin & Hair Duo\" loading=\"lazy\"></a>\n    <div class=\"mm-bs-badges\"><span class=\"mm-bs-badge-save\" style=\"margin-left:auto;\">Angebot</span></div>\n  </div>\n  <div class=\"mm-bs-card-body\">\n    <h3 class=\"mm-bs-name\"><a href=\"/products/skin-hair-duo\" class=\"mm-bs-name-link\">Skin & Hair Duo</a></h3>\n    {%- render 'mm-rating', product: all_products['skin-hair-duo'], fallback: all_products['skin-beard-set'] -%}\n    <p class=\"mm-bs-benefit\">Gepflegte Haut, mehr Volumen</p>\n    <div class=\"mm-bs-buy\">\n      <div class=\"mm-bs-price-row\"><span class=\"mm-bs-price\">59,90 €</span><span class=\"mm-bs-compare\">67,80 €</span></div>\n      <span class=\"mm-bs-saving\">Du sparst 7,90 €</span>\n      \n    </div>\n  </div>\n</article>\n<article class=\"mm-bs-card\">\n  <div class=\"mm-bs-card-media\">\n    <a href=\"/products/skin-beard-set\" class=\"mm-bs-media-link\"><img src=\"https://menmansion.com/cdn/shop/files/hf_20260313_102954_815e0bff-069d-4d04-b268-6ec603d7361a.png?v=1773398165&width=800\" alt=\"Skin & Beard Set\" loading=\"lazy\"></a>\n    <div class=\"mm-bs-badges\"><span class=\"mm-bs-badge-save\" style=\"margin-left:auto;\">Angebot</span></div>\n  </div>\n  <div class=\"mm-bs-card-body\">\n    <h3 class=\"mm-bs-name\"><a href=\"/products/skin-beard-set\" class=\"mm-bs-name-link\">Skin & Beard Set</a></h3>\n    {%- render 'mm-rating', product: all_products['skin-beard-set'], fallback: all_products['skin-beard-set'] -%}\n    <p class=\"mm-bs-benefit\">Geschmeidige Haut & Bart</p>\n    <div class=\"mm-bs-buy\">\n      <div class=\"mm-bs-price-row\"><span class=\"mm-bs-price\">54,90 €</span><span class=\"mm-bs-compare\">64,80 €</span></div>\n      <span class=\"mm-bs-saving\">Du sparst 9,90 €</span>\n      \n    </div>\n  </div>\n</article>\n<article class=\"mm-bs-card\">\n  <div class=\"mm-bs-card-media\">\n    <a href=\"/products/hot-season-edition-1\" class=\"mm-bs-media-link\"><img src=\"https://menmansion.com/cdn/shop/files/hf_20260519_072438_1b94d883-2aa1-4769-adfd-6cc275f2bc7e.png?v=1779175568&width=800\" alt=\"Hot Season Edition\" loading=\"lazy\"></a>\n    <div class=\"mm-bs-badges\"><span class=\"mm-bs-badge-save\" style=\"margin-left:auto;\">Angebot</span></div>\n  </div>\n  <div class=\"mm-bs-card-body\">\n    <h3 class=\"mm-bs-name\"><a href=\"/products/hot-season-edition-1\" class=\"mm-bs-name-link\">Hot Season Edition</a></h3>\n    {%- render 'mm-rating', product: all_products['hot-season-edition-1'], fallback: all_products['skin-beard-set'] -%}\n    <p class=\"mm-bs-benefit\">Kühlung, Pflege, Definition</p>\n    <div class=\"mm-bs-buy\">\n      <div class=\"mm-bs-price-row\"><span class=\"mm-bs-price\">74,90 €</span><span class=\"mm-bs-compare\">87,70 €</span></div>\n      <span class=\"mm-bs-saving\">Du sparst 12,80 €</span>\n      \n    </div>\n  </div>\n</article>\n<article class=\"mm-bs-card\">\n  <div class=\"mm-bs-card-media\">\n    <a href=\"/products/arctic-skin-set\" class=\"mm-bs-media-link\"><img src=\"https://menmansion.com/cdn/shop/files/hf_20260519_071515_1e527f43-e5ff-4b13-958d-b59cf95cbb66.png?v=1779175235&width=800\" alt=\"Arctic Skin Set\" loading=\"lazy\"></a>\n    <div class=\"mm-bs-badges\"><span class=\"mm-bs-badge-save\" style=\"margin-left:auto;\">Angebot</span></div>\n  </div>\n  <div class=\"mm-bs-card-body\">\n    <h3 class=\"mm-bs-name\"><a href=\"/products/arctic-skin-set\" class=\"mm-bs-name-link\">Arctic Skin Set</a></h3>\n    {%- render 'mm-rating', product: all_products['arctic-skin-set'], fallback: all_products['skin-beard-set'] -%}\n    <p class=\"mm-bs-benefit\">Wacher Blick, klare Haut</p>\n    <div class=\"mm-bs-buy\">\n      <div class=\"mm-bs-price-row\"><span class=\"mm-bs-price\">49,90 €</span><span class=\"mm-bs-compare\">59,80 €</span></div>\n      <span class=\"mm-bs-saving\">Du sparst 9,90 €</span>\n      \n    </div>\n  </div>\n</article>\n  </div>\n\n  <div class=\"mm-bs-viewall\">\n    <a href=\"/collections/bundles\" class=\"mm-bs-trust-viewall\">Alle Bundles ansehen</a>\n  </div>\n\n  </section>",
+        "color_scheme": "background-1",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "mm_home_tallow_section": {
+      "type": "custom-liquid",
+      "settings": {
+        "custom_liquid": "{{ 'mm-home-tallow.css' | asset_url | stylesheet_tag }}\n<script src=\"{{ 'mm-home-tallow.js' | asset_url }}\" defer=\"defer\"></script>\n<section class=\"mm-tallow\">\n  <div class=\"mm-tallow-head\">\n    <h2 class=\"mm-tallow-title\">„Die beste Gesichtscreme der Welt!\"</h2>\n    <p class=\"mm-tallow-lead\">Der 100 % natürliche Gesichtsbalm der alten Römer - für sichtbar gesunde und makellose Haut.</p>\n  </div>\n\n  <div class=\"mm-tallow-grid\">\n    <div class=\"mm-tallow-media\">\n      <img src=\"https://menmansion.com/cdn/shop/files/L1007643.jpg?v=1776242371&width=1200\" alt=\"Tallow Gesichtscreme in der Hand\" loading=\"lazy\" width=\"1200\" height=\"1200\">\n    </div>\n    <div class=\"mm-tallow-content\">\n      <div class=\"mm-tallow-rating\"><span class=\"mm-tallow-rating-stars\">★★★★★</span><span>4,9 · 1.435 Bewertungen</span></div>\n      <h3 class=\"mm-tallow-name\">Tallow Gesichtscreme™ 50ml</h3>\n      <p class=\"mm-tallow-sub\">Premium Rindertalg, veredelt mit ausgewählten Naturölen. Mehr braucht deine Haut nicht.</p>\n      <div class=\"mm-tallow-usps\">\n        <div class=\"mm-tallow-usp\"><span class=\"mm-tallow-usp-check\">✓</span><span>Sichtbare Ergebnisse nach wenigen&nbsp;Anwendungen</span></div>\n        <div class=\"mm-tallow-usp\"><span class=\"mm-tallow-usp-check\">✓</span><span>Zieht schnell ein, ohne Fettfilm</span></div>\n        <div class=\"mm-tallow-usp\"><span class=\"mm-tallow-usp-check\">✓</span><span>Grasgefüttertes Beef Tallow</span></div>\n      </div>\n      <a href=\"/products/tallow-gesichtscreme-y-50ml\" class=\"mm-tallow-cta\" data-variant-id=\"52607180013910\">Mehr erfahren</a>\n      <div class=\"mm-tallow-stock\"><span class=\"mm-tallow-stock-dot\"></span><span>Auf Lager - Versand innerhalb von 1–2 Werktagen</span></div>\n          </div>\n  </div>\n\n  <div class=\"mm-tallow-sticky\" data-mm-tallow-sticky>\n    <div class=\"mm-tallow-sticky-info\">\n      <span class=\"mm-tallow-sticky-name\">Tallow Gesichtscreme™ 50ml</span>\n      <span class=\"mm-tallow-sticky-price\">39,90 €</span>\n    </div>\n    <a href=\"/products/tallow-gesichtscreme-y-50ml\" class=\"mm-tallow-sticky-cta\" data-variant-id=\"52607180013910\">Mehr erfahren</a>\n  </div>\n</section>",
+        "color_scheme": "background-1",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "mm_home_magazin_section": {
+      "type": "custom-liquid",
+      "name": "MM Home - Magazin-Rail",
+      "settings": {
+        "custom_liquid": "{{ 'mm-home-magazin.css' | asset_url | stylesheet_tag }}\n<section class=\"mm mm-mag\">\n  <div class=\"mm-wrap\">\n\n    <div class=\"mm-maghead\">\n      <div>\n        \n        <h2 class=\"mm-h2\">Men Mansion Magazin</h2>\n      </div>\n      <a class=\"mm-all\" href=\"{{ blogs.news.url }}\">Alle Artikel\n        <svg width=\"14\" height=\"10\" viewBox=\"0 0 14 10\" fill=\"none\" aria-hidden=\"true\"><path d=\"M9 1l4 4-4 4M0 5h13\" stroke=\"currentColor\" stroke-width=\"1.3\"/></svg>\n      </a>\n    </div>\n\n    <div class=\"mm-rail\">\n      {%- for article in blogs.news.articles -%}\n        {%- liquid\n          assign mm_cat = 'Hautpflege'\n          if article.handle contains 'bartpflege-routine'\n            assign mm_cat = 'Bartpflege'\n          elsif article.handle contains 'sea-texture-spray'\n            assign mm_cat = 'Haarstyling'\n          endif\n        -%}\n        <a class=\"mm-card\" href=\"{{ article.url }}\">\n          <figure>\n            {%- if article.image -%}\n              <img src=\"{{ article.image | image_url: width: 800 }}\" alt=\"{{ article.title | escape }}\" loading=\"lazy\" width=\"800\" height=\"600\">\n            {%- endif -%}\n          </figure>\n          <div class=\"mm-cardbody\">\n            <span class=\"mm-cat\">{{ mm_cat }}</span>\n            <h3>{{ article.title }}</h3>\n          </div>\n        </a>\n      {%- endfor -%}\n    </div>\n\n  </div>\n</section>",
+        "color_scheme": "background-1",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "mm_home_voices_section": {
+      "type": "custom-liquid",
+      "name": "Stimmen unserer Kunden",
+      "settings": {
+        "custom_liquid": "{{ 'mm-pdp-clearskinset.css' | asset_url | stylesheet_tag }}\n<div class=\"mm-pdp-reviews mm-home-voices\">\n  <div class=\"mm-pdp-reviews-spotlight\">\n    <span class=\"mm-pdp-reviews-badge\">Top-Bewertung</span>\n    <div class=\"mm-pdp-reviews-spotlight-body\">\n      <div class=\"mm-pdp-reviews-stars\">★★★★★</div>\n      <div class=\"mm-pdp-reviews-spotlight-quote\">„Endlich eine Creme, die nicht fettet“</div>\n      <p class=\"mm-pdp-reviews-spotlight-text\">Meine Haut fühlt sich nach 2 Wochen deutlich ruhiger und gepflegter an. Absolut&nbsp;empfehlenswert!</p>\n      <div class=\"mm-pdp-reviews-author\">\n        <span class=\"mm-pdp-reviews-avatar\">M</span>\n        <div>\n          <div class=\"mm-pdp-reviews-author-name\">Markus T. <svg width=\"13\" height=\"13\" viewBox=\"0 0 24 24\"><circle cx=\"12\" cy=\"12\" r=\"11\" fill=\"var(--mm-gold-soft)\"></circle><path d=\"M7 12.5l3 3 7-7\" fill=\"none\" stroke=\"var(--mm-onyx)\" stroke-width=\"2.6\" stroke-linecap=\"round\" stroke-linejoin=\"round\"></path></svg></div>\n          <div class=\"mm-pdp-reviews-author-meta\">Verifiziert · Tallow Gesichtscreme</div>\n        </div>\n      </div>\n    </div>\n  </div>\n</div>\n{{ 'mm-pdp-testimonials.css' | asset_url | stylesheet_tag }}\n<section class=\"mm-tst\">\n  <div class=\"mm-tst-inner\">\n\n    <header class=\"mm-tst-head\">\n      <h2 class=\"mm-tst-title\">Das sagen unsere Gentleman</h2>\n    </header>\n\n    <ol class=\"mm-tst-rail\" id=\"mm-tst-rail\">\n\n      <li class=\"mm-tst-card\">\n        <div class=\"mm-tst-media\">\n          <img src=\"https://menmansion.com/cdn/shop/files/Landing-Titel_result.webp?v=1776242371&width=700\" alt=\"Justus, Kunde von Men Mansion\" loading=\"lazy\" width=\"700\" height=\"613\">\n        </div>\n        <div class=\"mm-tst-body\">\n          <span class=\"mm-tst-stars\" aria-label=\"5 von 5 Sternen\">★★★★★</span>\n          <p class=\"mm-tst-quote\">„Das einzige was mir wirklich eine cleane Haut gebracht hat, ist das Beef Tallow von Men Mansion!“</p>\n          <div class=\"mm-tst-foot\">\n            <span class=\"mm-tst-name\">Justus</span>\n            <span class=\"mm-tst-verified\"><svg viewBox=\"0 0 16 16\" fill=\"none\" aria-hidden=\"true\"><path d=\"M3 8.5L6.5 12L13 4\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg>Verifiziert</span>\n          </div>\n        </div>\n      </li>\n\n      <li class=\"mm-tst-card\" data-mm-tst-video>\n        <div class=\"mm-tst-media\">\n          <video preload=\"none\" muted playsinline loop\n                 poster=\"https://menmansion.com/cdn/shop/files/0001-422711012090687009.png?v=1774877605&width=700\"\n                 data-src=\"https://menmansion.com/cdn/shop/videos/c/vp/d90fd28f183241ba89fd19a25d52fcd7/d90fd28f183241ba89fd19a25d52fcd7.HD-1080p-7.2Mbps-79814673.mp4\"></video>\n          <img class=\"mm-tst-poster\" src=\"https://menmansion.com/cdn/shop/files/0001-422711012090687009.png?v=1774877605&width=700\" alt=\"Jay, Kunde von Men Mansion\" loading=\"lazy\" width=\"700\" height=\"613\">\n          <button type=\"button\" class=\"mm-tst-play\" aria-label=\"Video von Jay abspielen\">\n            <svg viewBox=\"0 0 16 16\" fill=\"currentColor\" aria-hidden=\"true\"><path d=\"M4 2.5v11l9-5.5-9-5.5Z\"/></svg>\n          </button>\n        </div>\n        <div class=\"mm-tst-body\">\n          <span class=\"mm-tst-stars\" aria-label=\"5 von 5 Sternen\">★★★★★</span>\n          <p class=\"mm-tst-quote\">„Hatte jahrelang unreine Haut. Das ist wirklich das einzige was funktioniert hat.“</p>\n          <div class=\"mm-tst-foot\">\n            <span class=\"mm-tst-name\">Jay</span>\n            <span class=\"mm-tst-verified\"><svg viewBox=\"0 0 16 16\" fill=\"none\" aria-hidden=\"true\"><path d=\"M3 8.5L6.5 12L13 4\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg>Verifiziert</span>\n          </div>\n        </div>\n      </li>\n\n      <li class=\"mm-tst-card\" data-mm-tst-video>\n        <div class=\"mm-tst-media\">\n          <video preload=\"none\" muted playsinline loop\n                 poster=\"https://menmansion.com/cdn/shop/files/Neueste_Fotos_anzeigen_5.png?v=1774878225&width=700\"\n                 data-src=\"https://menmansion.com/cdn/shop/videos/c/vp/d8c85ac160da4e3fad95c79867533536/d8c85ac160da4e3fad95c79867533536.HD-1080p-7.2Mbps-79815517.mp4\"></video>\n          <img class=\"mm-tst-poster\" src=\"https://menmansion.com/cdn/shop/files/Neueste_Fotos_anzeigen_5.png?v=1774878225&width=700\" alt=\"Ebi, Kunde von Men Mansion\" loading=\"lazy\" width=\"700\" height=\"613\">\n          <button type=\"button\" class=\"mm-tst-play\" aria-label=\"Video von Ebi abspielen\">\n            <svg viewBox=\"0 0 16 16\" fill=\"currentColor\" aria-hidden=\"true\"><path d=\"M4 2.5v11l9-5.5-9-5.5Z\"/></svg>\n          </button>\n        </div>\n        <div class=\"mm-tst-body\">\n          <span class=\"mm-tst-stars\" aria-label=\"5 von 5 Sternen\">★★★★★</span>\n          <p class=\"mm-tst-quote\">„Ich war immer skeptisch was Skincare Produkte angeht, aber das hier ist wirklich anders! Super angenehm auf der Haut, zieht schnell ein und riecht edel.“</p>\n          <div class=\"mm-tst-foot\">\n            <span class=\"mm-tst-name\">Ebi</span>\n            <span class=\"mm-tst-verified\"><svg viewBox=\"0 0 16 16\" fill=\"none\" aria-hidden=\"true\"><path d=\"M3 8.5L6.5 12L13 4\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg>Verifiziert</span>\n          </div>\n        </div>\n      </li>\n\n      <li class=\"mm-tst-card\">\n        <div class=\"mm-tst-media\">\n          <img src=\"https://menmansion.com/cdn/shop/files/gemini-image-2_Create_a_very_realistic_smartphone_mirror_selfie_of_a_young_couple_around_20_2-0.jpg?v=1770986538&width=700\" alt=\"Julien, Kunde von Men Mansion\" loading=\"lazy\" width=\"700\" height=\"613\">\n        </div>\n        <div class=\"mm-tst-body\">\n          <span class=\"mm-tst-stars\" aria-label=\"5 von 5 Sternen\">★★★★★</span>\n          <p class=\"mm-tst-quote\">„Meine Haut hat einen richtig gesunden Glow bekommen, meine Freundin liebt’s. Bleibe dabei.“</p>\n          <div class=\"mm-tst-foot\">\n            <span class=\"mm-tst-name\">Julien</span>\n            <span class=\"mm-tst-verified\"><svg viewBox=\"0 0 16 16\" fill=\"none\" aria-hidden=\"true\"><path d=\"M3 8.5L6.5 12L13 4\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg>Verifiziert</span>\n          </div>\n        </div>\n      </li>\n\n      <li class=\"mm-tst-card\">\n        <div class=\"mm-tst-media\">\n          <img src=\"https://menmansion.com/cdn/shop/files/gemini-image-2___Spiegel-Selfie___Clean_Skin_Result_UGC-Style_Textprompt_Create_a_realisti-0.jpg?v=1770986492&width=700\" alt=\"Tobias, Kunde von Men Mansion\" loading=\"lazy\" width=\"700\" height=\"613\">\n        </div>\n        <div class=\"mm-tst-body\">\n          <span class=\"mm-tst-stars\" aria-label=\"5 von 5 Sternen\">★★★★★</span>\n          <p class=\"mm-tst-quote\">„Benutze die Creme jetzt seit 2 Wochen und bin echt positiv überrascht. Meine Haut fühlt sich deutlich besser an. Werde wieder bestellen.“</p>\n          <div class=\"mm-tst-foot\">\n            <span class=\"mm-tst-name\">Tobias</span>\n            <span class=\"mm-tst-verified\"><svg viewBox=\"0 0 16 16\" fill=\"none\" aria-hidden=\"true\"><path d=\"M3 8.5L6.5 12L13 4\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg>Verifiziert</span>\n          </div>\n        </div>\n      </li>\n\n      <li class=\"mm-tst-card\">\n        <div class=\"mm-tst-media\">\n          <img src=\"https://menmansion.com/cdn/shop/files/gemini-image-2_Create_a_very_realistic_smartphone_mirror_selfie_of_a_young_man_around_18_21_y-0.jpg?v=1770986522&width=700\" alt=\"Jonas, Kunde von Men Mansion\" loading=\"lazy\" width=\"700\" height=\"613\">\n        </div>\n        <div class=\"mm-tst-body\">\n          <span class=\"mm-tst-stars\" aria-label=\"5 von 5 Sternen\">★★★★★</span>\n          <p class=\"mm-tst-quote\">„Ich benutze wirklich nur noch diese Creme. Meine Haut sieht einfach makellos aus und fühlt sich auch so an.“</p>\n          <div class=\"mm-tst-foot\">\n            <span class=\"mm-tst-name\">Jonas</span>\n            <span class=\"mm-tst-verified\"><svg viewBox=\"0 0 16 16\" fill=\"none\" aria-hidden=\"true\"><path d=\"M3 8.5L6.5 12L13 4\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg>Verifiziert</span>\n          </div>\n        </div>\n      </li>\n\n      <li class=\"mm-tst-card\">\n        <div class=\"mm-tst-media\">\n          <img src=\"https://menmansion.com/cdn/shop/files/gemini-image-2_Create_a_highly_realistic_smartphone_photo_of_a_young_man_20_25_years_old_show-1.jpg?v=1770986559&width=700\" alt=\"Can, Kunde von Men Mansion\" loading=\"lazy\" width=\"700\" height=\"613\">\n        </div>\n        <div class=\"mm-tst-body\">\n          <span class=\"mm-tst-stars\" aria-label=\"5 von 5 Sternen\">★★★★★</span>\n          <p class=\"mm-tst-quote\">„Meine Haut fühlt sich komplett anders an als vorher. Bin echt positiv überrascht, wurde sogar darauf angesprochen.“</p>\n          <div class=\"mm-tst-foot\">\n            <span class=\"mm-tst-name\">Can</span>\n            <span class=\"mm-tst-verified\"><svg viewBox=\"0 0 16 16\" fill=\"none\" aria-hidden=\"true\"><path d=\"M3 8.5L6.5 12L13 4\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg>Verifiziert</span>\n          </div>\n        </div>\n      </li>\n    </ol>\n\n    <div class=\"mm-tst-nav\" id=\"mm-tst-nav\">\n      <div class=\"mm-tst-arrows\">\n        <button type=\"button\" class=\"mm-tst-arrow\" data-mm-tst-prev aria-label=\"Vorherige Stimme\">\n          <svg viewBox=\"0 0 16 16\" fill=\"none\" aria-hidden=\"true\"><path d=\"M10 3L5 8l5 5\" stroke=\"currentColor\" stroke-width=\"1.6\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg>\n        </button>\n        <button type=\"button\" class=\"mm-tst-arrow\" data-mm-tst-next aria-label=\"Naechste Stimme\">\n          <svg viewBox=\"0 0 16 16\" fill=\"none\" aria-hidden=\"true\"><path d=\"M6 3l5 5-5 5\" stroke=\"currentColor\" stroke-width=\"1.6\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg>\n        </button>\n      </div>\n    </div>\n\n  </div>\n</section>\n\n<script>\n(function () {\n  var rail = document.getElementById('mm-tst-rail');\n  if (!rail) return;\n  var cards = Array.prototype.slice.call(rail.children);\n  var nav = document.getElementById('mm-tst-nav');\n  var prev = document.querySelector('[data-mm-tst-prev]');\n  var next = document.querySelector('[data-mm-tst-next]');\n  var total = cards.length;\n\n  // Striche wie in Bestseller und Routine: einer pro Karte, klickbar\n  function step() {\n    return cards.length > 1 ? cards[1].offsetLeft - cards[0].offsetLeft : cards[0].offsetWidth;\n  }\n\n  // Es sind mehrere Karten gleichzeitig sichtbar, der Scroll endet also vor der\n  // letzten Karte. Ohne diese Grenze gab es Striche, die nie aktiv werden, und\n  // der Pfeil lief am Ende ins Leere statt umzubrechen.\n  function maxIndex() {\n    var s = step();\n    if (!s) return 0;\n    return Math.max(0, Math.min(total - 1, Math.round((rail.scrollWidth - rail.clientWidth) / s)));\n  }\n\n  function index() {\n    var s = step();\n    if (!s) return 0;\n    return Math.max(0, Math.min(maxIndex(), Math.round(rail.scrollLeft / s)));\n  }\n\n  function scrollToCard(i, behavior) {\n    var el = cards[i];\n    if (el) rail.scrollTo({ left: el.offsetLeft - rail.offsetLeft, behavior: behavior || 'smooth' });\n  }\n\n  // Striche: einer pro anfahrbarer Position, vor der Pfeil-Gruppe und in\n  // aufsteigender Reihenfolge. Bei Resize aendert sich die Zahl, also neu bauen.\n  var dots = [];\n  var arrowsBox = nav ? nav.querySelector('.mm-tst-arrows') : null;\n  function buildDots() {\n    if (!nav) return;\n    for (var r = 0; r < dots.length; r++) {\n      if (dots[r].parentNode) dots[r].parentNode.removeChild(dots[r]);\n    }\n    dots = [];\n    var n = maxIndex() + 1;\n    for (var d = 0; d < n; d++) {\n      var b = document.createElement('button');\n      b.type = 'button';\n      b.className = 'mm-tst-dot';\n      b.setAttribute('aria-label', 'Stimme ' + (d + 1));\n      b.dataset.i = d;\n      b.appendChild(document.createElement('span'));\n      b.addEventListener('click', function () { scrollToCard(+this.dataset.i, 'smooth'); });\n      if (arrowsBox) nav.insertBefore(b, arrowsBox);\n      else nav.appendChild(b);\n      dots.push(b);\n    }\n  }\n\n  function sync() {\n    var i = index();\n    for (var n = 0; n < dots.length; n++) {\n      dots[n].setAttribute('aria-current', n === i ? 'true' : 'false');\n    }\n    // Kein disabled an den Raendern: der Slider laeuft im Kreis.\n  }\n\n  function go(dir) {\n    if (!step()) return;\n    var max = maxIndex();\n    var t = index() + dir;\n    var wrapped = false;\n    if (t < 0) { t = max; wrapped = true; }\n    else if (t > max) { t = 0; wrapped = true; }\n    // Beim Umbruch hart springen, smooth wuerde sichtbar durch alle Karten scrollen.\n    scrollToCard(t, wrapped ? 'auto' : 'smooth');\n  }\n\n  buildDots();\n  if (prev) prev.addEventListener('click', function () { go(-1); });\n  if (next) next.addEventListener('click', function () { go(1); });\n\n  rail.addEventListener('scroll', sync, { passive: true });\n  // Bei Resize aendert sich die Zahl der anfahrbaren Positionen, Striche neu bauen.\n  window.addEventListener('resize', function () { buildDots(); sync(); });\n  sync();\n\n  // Video: startet stumm per Nutzer-Gesture, Poster bleibt bis \"playing\" feuert\n  cards.forEach(function (card) {\n    if (!card.hasAttribute('data-mm-tst-video')) return;\n    var video = card.querySelector('video');\n    var btn = card.querySelector('.mm-tst-play');\n    if (!video || !btn) return;\n    // Quelle erst beim ersten Klick setzen. Mit src im Markup hat Chrome trotz\n    // preload=\"metadata\" beide Dateien komplett geladen: 12,9 MB und 7,2 MB.\n    // Der Ladebalken lief dadurch minutenlang weiter.\n    function ensureSrc() {\n      if (!video.getAttribute('src') && video.dataset.src) video.src = video.dataset.src;\n    }\n    btn.addEventListener('click', function () {\n      // andere laufende Videos anhalten\n      cards.forEach(function (other) {\n        if (other === card) return;\n        var v = other.querySelector('video');\n        if (v && !v.paused) { v.pause(); other.classList.remove('is-playing'); }\n      });\n      ensureSrc();\n      var p = video.play();\n      if (p && p.catch) p.catch(function () {});\n    });\n    // Klick auf die Videoflaeche haelt an bzw. laesst weiterlaufen\n    video.addEventListener('click', function () {\n      if (video.paused) {\n        ensureSrc();\n        var r = video.play();\n        if (r && r.catch) r.catch(function () {});\n      } else {\n        video.pause();\n      }\n    });\n    video.addEventListener('playing', function () {\n      card.classList.add('is-playing');\n      video.controls = true;\n    });\n  });\n})();\n</script>",
+        "color_scheme": "background-1",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    }
+  },
+  "order": [
+    "mm_home_hero_section",
+    "mm_home_bestseller_section",
+    "mm_home_bundles_section",
+    "mm_home_tallow_section",
+    "ss_testimonials_21_AbHfRN",
+    "mm_home_compare_section",
+    "ss_scrolling_announcement_bar_WpAdrF",
+    "mm_home_why_section",
+    "mm_home_voices_section",
+    "mm_home_magazin_section",
+    "custom_liquid_UkgdHq",
+    "ss_cookie_banner_mQniWU"
+  ]
+}

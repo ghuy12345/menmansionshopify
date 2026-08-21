@@ -1,0 +1,545 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-product",
+      "blocks": {
+        "mm_pdp_assets": {
+          "type": "custom_liquid",
+          "name": "MM PDP Redesign - Assets",
+          "settings": {
+            "custom_liquid": "{{ 'mm-pdp-clearskinset.css' | asset_url | stylesheet_tag }}\n<script src=\"{{ 'mm-pdp-clearskinset.js' | asset_url }}\" defer=\"defer\"></script>\n<style>\n  product-info[data-product-id=\"{{ product.id }}\"] .product__title h2 { font-family: var(--mm-font-display); font-weight: 600; }\n  product-info[data-product-id=\"{{ product.id }}\"] .caption-with-letter-spacing { font-family: var(--mm-font-body); color: var(--mm-gold-soft); letter-spacing: 0.14em; }\n  product-info[data-product-id=\"{{ product.id }}\"] .product-form__submit.button--primary {\n    background: var(--mm-alabaster);\n    color: var(--mm-onyx);\n    border: 0;\n    border-radius: 10px;\n    font-family: var(--mm-font-body);\n    font-weight: 700;\n    font-size: 11px;\n    text-transform: uppercase;\n    letter-spacing: 0.14em;\n    padding: 17px 18px;\n    transition: background 150ms var(--mm-ease);\n  }\n  product-info[data-product-id=\"{{ product.id }}\"] .product-form__submit.button--primary:hover {\n    background: var(--mm-gold);\n  }\n  product-info[data-product-id=\"{{ product.id }}\"] product-form,\n  product-info[data-product-id=\"{{ product.id }}\"] .product-form,\n  product-info[data-product-id=\"{{ product.id }}\"] .product-form__buttons {\n    margin-top: 0;\n  }\n  product-info[data-product-id=\"{{ product.id }}\"] a[href=\"#looxReviewsFrame\"] {\n    display: inline-flex !important;\n    margin: 0 !important;\n    padding: 0 !important;\n  }\n  product-info[data-product-id=\"{{ product.id }}\"] .loox-rating {\n    margin: 0 !important;\n    padding: 0 !important;\n  }\n</style>"
+          }
+        },
+        "loox_reviews_loox_rating_Kn3NFm": {
+          "type": "shopify://apps/loox-reviews/blocks/loox-rating/5c3b337f-fd14-4df5-b1d6-80ec13e6e28e",
+          "settings": {
+            "contentSize": 14,
+            "pattern": "([count] Bewertungen) • Dermatologisch getestet",
+            "hideText": false,
+            "alignment": "",
+            "layout": "",
+            "textColor": "",
+            "starColor": "",
+            "showAllReviews": false,
+            "looxOpenFloatingWidget": false,
+            "emptyRatingWidget": false
+          }
+        },
+        "title": {
+          "type": "title",
+          "settings": {}
+        },
+        "text_TmqRRT": {
+          "type": "text",
+          "settings": {
+            "text": "Reines Gold für klare und gesunde Haut",
+            "text_style": "subtitle"
+          }
+        },
+        "custom_liquid_YjXmkL": {
+          "type": "custom_liquid",
+          "name": "Description",
+          "settings": {
+            "custom_liquid": "<p style=\"font-size: 13px; font-weight: 300; color: #FAFAF8; font-family: var(--font-body); line-height: 1.6; margin: 0; padding: 12px 0 8px;\">\n  Männerpflege auf Tallow-Basis, veredelt mit ausgewählten Naturölen. Nahezu identisch mit den natürlichen Lipiden der Haut (Sebum) und reich an Vitamin A, D, E &amp; K. Unterstützt die Hautbarriere und pflegt intensiv.\n</p>"
+          }
+        },
+        "upsell_koala_bundles_bundle_app_block_fXg4BA": {
+          "type": "shopify://apps/upsell-koala-bundles/blocks/bundle-app-block/2b951f75-113f-4fca-bdf3-c92703235716",
+          "settings": {
+            "product": "{{product}}"
+          }
+        },
+        "sternify_sternify_bundle_pDeFci": {
+          "type": "shopify://apps/sternify/blocks/sternify_bundle/fcc6e879-7d9e-4924-b387-68cfab68cec6",
+          "disabled": true,
+          "settings": {
+            "Abstand_oben": 0,
+            "Abstand_unten": 0,
+            "product": "{{product}}"
+          }
+        },
+        "price": {
+          "type": "price",
+          "disabled": true,
+          "settings": {}
+        },
+        "mm_pdp_price_cta": {
+          "type": "custom_liquid",
+          "name": "MM PDP Redesign - Preis + Spare-Chip + Einzelwert",
+          "disabled": true,
+          "settings": {
+            "custom_liquid": "{%- liquid\n  assign variant = product.selected_or_first_available_variant\n  assign compare = variant.compare_at_price\n-%}\n<div class=\"mm-pdp-price-row\">\n  <div class=\"mm-pdp-price-line\">\n    <span class=\"mm-pdp-price-total\">{{ variant.price | money_without_currency }} €</span>\n    {%- if compare > variant.price -%}\n      {%- assign save = compare | minus: variant.price -%}\n      <span class=\"mm-pdp-price-save\">Spare {{ save | money_without_currency }} €</span>\n    {%- endif -%}\n  </div>\n  {%- if compare > variant.price -%}\n    <span class=\"mm-pdp-price-compare\">(Einzelwert {{ compare | money_without_currency }} €)</span>\n  {%- endif -%}\n</div>"
+          }
+        },
+        "buy_buttons": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_dynamic_checkout": false,
+            "show_gift_card_recipient": false
+          }
+        },
+        "9b8c4c92124ab94f": {
+          "type": "shopify://apps/section-store/blocks/block-shipping-info/d7a2e423-ea88-4344-b866-6d0fb487c3dd",
+          "settings": {
+            "use_dot": true,
+            "icon_color": "#2e9613",
+            "icon_size": 14,
+            "ships_by_text": "Lieferung am",
+            "shipping_within_days": 3,
+            "include_weekend": false,
+            "ships_by_font_size": 11,
+            "ships_by_text_color": "#fafaf8",
+            "fast_shipping_text": "COUNTRY_FLAG Gratis Versand ab 60€",
+            "allow_all_countries": true,
+            "allowed_countries": "DE,AT,CH,US,FR,IT",
+            "fast_shipping_text_for_rest_countries": "Fast International Shipping",
+            "fast_shipping_text_color": "#fafaf8",
+            "border_style": "none",
+            "border_width": 0.5,
+            "border_color": "#3a3a3a",
+            "border_radius": 0,
+            "bg_color": "",
+            "padding_vertical": 8,
+            "padding_horizontal": 0
+          }
+        },
+        "custom_liquid_MaM6Eg": {
+          "type": "custom_liquid",
+          "name": "Urgency",
+          "disabled": true,
+          "settings": {
+            "custom_liquid": "<div style=\"text-align: center; padding: 0px 10px;\">\n  <p style=\"font-size: 11px; font-weight: 600; color: #f0ede6; margin-bottom: 1px; font-family: var(--font-body);\">\n    Handgefertigt in Deutschland. Limitierte Chargen.\n  </p>\n  <p style=\"font-size: 9px; color: #b0ada8; font-family: var(--font-body); letter-spacing: 0.03em; margin: 0;\">\n    Alle Preise inkl. MwSt. &middot; Grundpreis &euro;798,00&nbsp;/&nbsp;L\n  </p>\n</div>"
+          }
+        },
+        "mm_pdp_certificates": {
+          "type": "custom_liquid",
+          "settings": {
+            "custom_liquid": "<div class=\"mm-cert\"><div class=\"mm-cert__bullets\"><div class=\"mm-cert__bullet\"><img class=\"mm-cert__icon\" src=\"https://menmansion.com/cdn/shop/files/menmansion-icon-checkmark_b488c175-ec8e-4d1e-a2f5-5ade59cea816.svg?width=32\" alt=\"\" width=\"16\" height=\"16\" loading=\"lazy\">100% natürliche Inhaltsstoffe</div><div class=\"mm-cert__bullet\"><img class=\"mm-cert__icon\" src=\"https://menmansion.com/cdn/shop/files/menmansion-icon-checkmark_b488c175-ec8e-4d1e-a2f5-5ade59cea816.svg?width=32\" alt=\"\" width=\"16\" height=\"16\" loading=\"lazy\">Handgemacht in Deutschland</div><div class=\"mm-cert__bullet\"><img class=\"mm-cert__icon\" src=\"https://menmansion.com/cdn/shop/files/menmansion-icon-checkmark_b488c175-ec8e-4d1e-a2f5-5ade59cea816.svg?width=32\" alt=\"\" width=\"16\" height=\"16\" loading=\"lazy\">Dermatologisch getestet</div><div class=\"mm-cert__bullet\"><img class=\"mm-cert__icon\" src=\"https://menmansion.com/cdn/shop/files/menmansion-icon-checkmark_b488c175-ec8e-4d1e-a2f5-5ade59cea816.svg?width=32\" alt=\"\" width=\"16\" height=\"16\" loading=\"lazy\">Frei von künstlichen Zusätzen</div><div class=\"mm-cert__bullet\"><img class=\"mm-cert__icon\" src=\"https://menmansion.com/cdn/shop/files/menmansion-icon-checkmark_b488c175-ec8e-4d1e-a2f5-5ade59cea816.svg?width=32\" alt=\"\" width=\"16\" height=\"16\" loading=\"lazy\">Grasgefütterter Rindertalg</div><div class=\"mm-cert__bullet\"><img class=\"mm-cert__icon\" src=\"https://menmansion.com/cdn/shop/files/menmansion-icon-checkmark_b488c175-ec8e-4d1e-a2f5-5ade59cea816.svg?width=32\" alt=\"\" width=\"16\" height=\"16\" loading=\"lazy\">Limitierte Chargen</div></div><div class=\"mm-cert__info\"><img class=\"mm-cert__seal\" src=\"https://cdn.shopify.com/s/files/1/0779/4583/1766/files/dermatest_Siegel_dermatestGarantie_RGB_2026_Juli_DE.png?v=1785592163\" alt=\"Dermatest Siegel\" width=\"148\" height=\"91\" loading=\"lazy\"><a class=\"mm-cert__link\" href=\"https://cdn.shopify.com/s/files/1/0779/4583/1766/files/Tallow_Facial_Cream_Gesichtscreme_Zertifikat.pdf?v=1785591979\" target=\"_blank\" rel=\"noopener\">Zertifikat ansehen<svg viewBox=\"0 0 17 12\" width=\"12\" height=\"8\" aria-hidden=\"true\"><path d=\"M16.29 5.5 11.2.66a.7.7 0 0 0-.96 1.02l3.85 3.62H1.23a.73.73 0 0 0 0 1.39h12.86l-3.85 3.66a.7.7 0 0 0 .95 1.02l5.1-4.85a.7.7 0 0 0 0-1.02Z\" fill=\"currentColor\"/></svg></a></div></div>"
+          }
+        },
+        "6aaec6b2720b47da": {
+          "type": "shopify://apps/section-store/blocks/block-atc-style/d7a2e423-ea88-4344-b866-6d0fb487c3dd",
+          "disabled": true,
+          "settings": {
+            "background_color": "#fafaf8",
+            "text_color": "#191919",
+            "hover_background_color": "#af9841",
+            "hover_text_color": "#191919",
+            "font_size": 0,
+            "font_weight": "default",
+            "border_style": "none",
+            "border_width": 1,
+            "border_color": "#fafaf8",
+            "border_radius": -1,
+            "padding_vertical": 0,
+            "background_effect": "none",
+            "gradient_color_end": "#333333",
+            "hover_effect": "shine_lift",
+            "animation": "none",
+            "button_icon": "arrow_right",
+            "use_custom_text": true,
+            "button_text": "Jetzt risikofrei testen",
+            "show_price": false,
+            "round_price": false,
+            "compare_at_price_color": "#666666"
+          }
+        },
+        "custom_liquid_t4UhKL": {
+          "type": "custom_liquid",
+          "name": "Payment Badges",
+          "disabled": true,
+          "settings": {
+            "custom_liquid": "<div id='ss-payment-icons'></div>"
+          }
+        },
+        "mm_pdp_guarantee_card": {
+          "type": "custom_liquid",
+          "name": "MM PDP Redesign - 30-Tage-Garantie",
+          "settings": {
+            "custom_liquid": "<div class=\"mm-pdp-guarantee mm-guar\" data-mm-guar><svg width=\"28\" height=\"28\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\"><path d=\"M12 3l7 3v5c0 4.5-3 8.5-7 10-4-1.5-7-5.5-7-10V6l7-3z\"></path><path d=\"M9 12l2 2 4-4\"></path></svg><div><div class=\"mm-pdp-guarantee-title\">Unsere 30 Tage Risikofrei Garantie</div><p class=\"mm-pdp-guarantee-text\">Nicht zufrieden? Kein Problem mit unserer <span class=\"mm-nowrap\">Geld-zurück-Garantie.</span></p><button type=\"button\" class=\"mm-guar__toggle\" data-mm-guar-toggle aria-expanded=\"false\"><span data-mm-guar-label>Mehr lesen</span><svg class=\"mm-guar__chevron\" width=\"10\" height=\"10\" viewBox=\"0 0 12 12\" aria-hidden=\"true\"><path d=\"M2 4l4 4 4-4\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.5\"></path></svg></button><div class=\"mm-guar__more\" data-mm-guar-more><div class=\"mm-guar__more-inner\"><p class=\"mm-pdp-guarantee-text\">Du hast 30 Tage Zeit, das Produkt zurückzuschicken – ohne Wenn und Aber. Das ist unser Versprechen an dich, weil wir möchten, dass du unsere natürlichen Pflegeprodukte rundum sorglos testen kannst: ohne Druck, ohne versteckte Kosten. Überzeuge dich selbst von der Wirkung. Solltest du nicht zufrieden sein, erhältst du 100 % deines Kaufpreises zurück – ganz unkompliziert.</p></div></div></div></div><script>(function(){var r=document.querySelector(\"[data-mm-guar]\");if(!r)return;var b=r.querySelector(\"[data-mm-guar-toggle]\"),l=r.querySelector(\"[data-mm-guar-label]\");b.addEventListener(\"click\",function(){var o=r.classList.toggle(\"is-open\");b.setAttribute(\"aria-expanded\",o?\"true\":\"false\");l.textContent=o?\"Weniger anzeigen\":\"Mehr lesen\";});})();</script>"
+          }
+        },
+        "custom_liquid_nPaeiV": {
+          "type": "custom_liquid",
+          "name": "Customer Needs",
+          "settings": {
+            "custom_liquid": "<div class=\"mm-skin-types\">\n  <p class=\"mm-skin-types__label\">Geeignet für:</p>\n  <div class=\"mm-skin-types__grid\">\n    <div class=\"mm-skin-types__item\">\n      <div class=\"mm-skin-types__icon\">\n        <img src=\"https://cdn.shopify.com/s/files/1/0779/4583/1766/files/NORMALE_HAUT.svg?v=1774872404\" alt=\"Normale Haut\" />\n      </div>\n      <span class=\"mm-skin-types__text\">Normale Haut</span>\n    </div>\n    <div class=\"mm-skin-types__item\">\n      <div class=\"mm-skin-types__icon\">\n        <img src=\"https://cdn.shopify.com/s/files/1/0779/4583/1766/files/TROCKENE_HAUT.svg?v=1774872404\" alt=\"Trockene Haut\" />\n      </div>\n      <span class=\"mm-skin-types__text\">Trockene Haut</span>\n    </div>\n    <div class=\"mm-skin-types__item\">\n      <div class=\"mm-skin-types__icon\">\n        <img src=\"https://cdn.shopify.com/s/files/1/0779/4583/1766/files/UNREINE_HAUT.svg?v=1774872405\" alt=\"Unreine Haut\" />\n      </div>\n      <span class=\"mm-skin-types__text\">Unreine Haut</span>\n    </div>\n  </div>\n</div>\n<style>\n  .mm-skin-types {\n    padding: 8px 0 8px;\n    border-top: 1px solid rgba(175, 152, 65, 0.2);\n    margin-top: 2px;\n  }\n  .mm-skin-types__label {\n    font-size: 12px;\n    letter-spacing: 0.12em;\n    color: #FAFAF8;\n    margin: 0 0 12px 0;\n    font-weight: 900;\n  }\n  .mm-skin-types__grid {\n    display: flex;\n    gap: 0;\n    align-items: flex-start;\n  }\n  .mm-skin-types__item {\n    flex: 1;\n    display: flex;\n    flex-direction: column;\n    align-items: center;\n    gap: 8px;\n    padding: 0 8px;\n    border-right: 1px solid rgba(255, 255, 255, 0.08);\n  }\n  .mm-skin-types__item:last-child {\n    border-right: none;\n  }\n  .mm-skin-types__icon {\n    width: 60px;\n    height: 60px;\n  }\n  .mm-skin-types__icon img {\n    width: 100%;\n    height: 100%;\n    object-fit: contain;\n  }\n  .mm-skin-types__text {\n    font-size: 11px;\n    color: #FAFAF8;\n    text-align: center;\n    letter-spacing: 0.04em;\n    line-height: 1.3;\n  }\n</style>"
+          }
+        },
+        "mm_pdp_details_accordion": {
+          "type": "custom_liquid",
+          "name": "MM PDP Redesign - Produktdetails Akkordeon",
+          "settings": {
+            "custom_liquid": "<div class=\"mm-pdp-accordion\">\n  <div class=\"mm-pdp-accordion-row\" data-mm-accordion>\n    <div class=\"mm-pdp-accordion-head\" data-mm-accordion-toggle>\n      <span class=\"mm-pdp-accordion-label\">Beschreibung</span>\n      <span class=\"mm-pdp-accordion-mark\" data-mm-accordion-mark>+</span>\n    </div>\n    <div class=\"mm-pdp-accordion-body\" data-mm-accordion-body hidden>\n      <h2>Die natürliche Tallow Creme für Männer.</h2>\n      <p class=\"mm-pdp-desc-lead\">Die meisten Pflegeprodukte sind auf Masse ausgelegt: vollgepackt mit Füllstoffen, synthetischen Duftstoffen und Inhaltsstoffen, die du nicht aussprechen kannst. Sie versprechen viel und liefern wenig.</p>\n      <p class=\"mm-pdp-desc-tagline\">Men Mansion ist anders.</p>\n      <div class=\"mm-pdp-desc-section\">\n        <span class=\"mm-pdp-desc-eyebrow\">Die Basis</span>\n        <p><strong>Hochwertiger Rindertalg von der Schwäbischen Alb</strong> - seit Jahrtausenden bewährt. Zieht sofort ein und wirkt direkt: kein Fettfilm, keine Rückstände.</p>\n        <span class=\"mm-pdp-desc-eyebrow\">Die Wirkstoffe</span>\n        <p class=\"mm-pdp-desc-lead\">Schwarzk&uuml;mmel&ouml;l, Traubenkern&ouml;l, Bienenwachs und Squalan.</p>\n        <p class=\"mm-pdp-desc-lead\">Vier ausgewählte Wirkstoffe für eine Formel, die schnell einzieht und die Haut geschmeidig hält. Abgerundet mit einer dezenten Duftkomposition aus <strong>Bergamotte und Zedernholz</strong>.</p>\n        <p class=\"mm-pdp-desc-quote\">Jede Zutat hat ihre Aufgabe. Keine ist Füllstoff.</p>\n        <span class=\"mm-pdp-desc-eyebrow\">Das Ergebnis</span>\n        <p class=\"mm-pdp-desc-lead\">Viele Anwender berichten bereits nach kurzer Zeit von:</p>\n        <ul class=\"mm-pdp-desc-checklist\">\n          <li><span>✓</span>weniger Trockenheit</li>\n          <li><span>✓</span>reduziertem Spannungsgefühl</li>\n          <li><span>✓</span>sichtbar glatterer Haut</li>\n        </ul>\n        <p class=\"mm-pdp-desc-note\">Geeignet für trockene, empfindliche, unreine und normale Haut.</p>\n      </div>\n      <p class=\"mm-pdp-desc-footer\">Handgefertigt in Deutschland &middot; Limitierte Chargen &middot; <span>Made for Men</span></p>\n    </div>\n  </div>\n  <div class=\"mm-pdp-accordion-row\" data-mm-accordion>\n    <div class=\"mm-pdp-accordion-head\" data-mm-accordion-toggle>\n      <span class=\"mm-pdp-accordion-label\">Inhaltsstoffe &amp; Wirkung</span>\n      <span class=\"mm-pdp-accordion-mark\" data-mm-accordion-mark>+</span>\n    </div>\n    <div class=\"mm-pdp-accordion-body\" data-mm-accordion-body hidden>\n      <p class=\"mm-pdp-desc-tagline\">Was drin ist - und warum es wirkt.</p>\n      <div class=\"mm-pdp-desc-ingredient\">\n        <p class=\"mm-pdp-desc-ingredient-name\">Rindertalg (Tallow) <span>· Schwäbische Alb</span></p>\n        <p class=\"mm-pdp-desc-lead\">Der Kern der Formel. Rindertalg hat eine nahezu identische Lipidstruktur wie menschliche Haut - er wird aufgenommen statt aufzuliegen. Enthält die Vitamine A, D, E und K, die die Haut nähren, die Barriere stärken und die Regeneration unterstützen. Unser Tallow stammt ausschließlich von grasgefütterten Rindern aus kontrollierter Weidehaltung.</p>\n      </div>\n      <div class=\"mm-pdp-desc-ingredient\">\n        <p class=\"mm-pdp-desc-ingredient-name\">Schwarzkümmelöl <span>· Ägyptische Tradition</span></p>\n        <p class=\"mm-pdp-desc-lead\">Seit Jahrtausenden im Einsatz. Antibakteriell und ausgleichend. Wirkt gezielt bei unreiner oder gereizter Haut und unterstützt ein gleichmäßiges Hautbild.</p>\n      </div>\n      <div class=\"mm-pdp-desc-ingredient\">\n        <p class=\"mm-pdp-desc-ingredient-name\">Traubenkernöl <span>· Europäische Weinrebe</span></p>\n        <p class=\"mm-pdp-desc-lead\">Leicht. Schnell einziehend. Hoch konzentriert an Linolsäure. Stärkt die Hautbarriere, ohne zu beschweren.</p>\n      </div>\n      <div class=\"mm-pdp-desc-ingredient\">\n        <p class=\"mm-pdp-desc-ingredient-name\">Bienenwachs <span>· Imkerei Baden-Württemberg</span></p>\n        <p class=\"mm-pdp-desc-lead\">Bildet eine natürliche Schutzschicht, die Feuchtigkeit in der Haut hält und vor äußeren Einflüssen schützt.</p>\n      </div>\n      <div class=\"mm-pdp-desc-ingredient\">\n        <p class=\"mm-pdp-desc-ingredient-name\">Squalan <span>· Pflanzlichen Ursprungs</span></p>\n        <p class=\"mm-pdp-desc-lead\">Ein Lipid, das die Haut selbst kennt. Lässt die Creme schneller einziehen und hinterlässt ein glattes, nicht fettendes Hautgefühl.</p>\n      </div>\n      <div class=\"mm-pdp-desc-ingredient\">\n        <p class=\"mm-pdp-desc-ingredient-name\">Cetylalkohol <span>· Pflanzlicher Konsistenzgeber</span></p>\n        <p class=\"mm-pdp-desc-lead\">Kein Alkohol im klassischen Sinne, sondern ein pflanzlicher Fettbestandteil, der die Creme geschmeidig und cremig macht.</p>\n      </div>\n      <div class=\"mm-pdp-desc-ingredient\">\n        <p class=\"mm-pdp-desc-ingredient-name\">Bergamotte &amp; Zedernholzöl</p>\n        <p class=\"mm-pdp-desc-lead\">Frisch, klar, belebend zu Beginn, holzig, warm, maskulin im Abgang. Kein künstliches Parfüm, eine dezente ätherische Duftkomposition.</p>\n      </div>\n      <p class=\"mm-pdp-desc-note\">INCI: Tallow, Vitis Vinifera Seed Oil, Nigella Sativa Seed Oil, Cera Alba, Squalane, Cetyl Alcohol, Citrus Aurantium Bergamia Peel Oil, Cedrus Atlantica Bark Oil</p>\n      <p class=\"mm-pdp-desc-footer\">Dermatologisch getestet &middot; Handgemacht in Deutschland &middot; <span>Made for Men</span></p>\n      <p class=\"mm-pdp-desc-note\"><a class=\"mm-pdp-desc-link\" href=\"{{ 'sicherheitsbericht-tallow-2026-07.pdf' | asset_url }}\">Laborbericht zum Download</a></p>\n    </div>\n  </div>\n  <div class=\"mm-pdp-accordion-row\" data-mm-accordion>\n    <div class=\"mm-pdp-accordion-head\" data-mm-scroll-to=\"#mm-pdp-routine-anchor\">\n      <span class=\"mm-pdp-accordion-label\">Anwendung</span>\n      <span class=\"mm-pdp-accordion-scroll-hint\"><span class=\"mm-pdp-accordion-scroll-label\">Zur Routine</span><span class=\"mm-pdp-accordion-arrow\">↓</span></span>\n    </div>\n  </div>\n  <div class=\"mm-pdp-accordion-row\" data-mm-accordion>\n    <div class=\"mm-pdp-accordion-head\" data-mm-accordion-toggle>\n      <span class=\"mm-pdp-accordion-label\">Versand &amp; Rückgabe</span>\n      <span class=\"mm-pdp-accordion-mark\" data-mm-accordion-mark>+</span>\n    </div>\n    <div class=\"mm-pdp-accordion-body\" data-mm-accordion-body hidden>\n      <p><strong>Versand aus Deutschland. Schnell und zuverlässig.</strong></p>\n      <p>Alle Bestellungen werden aus unserem Lager in Rottenburg versendet – innerhalb von 1–2 Werktagen nach Auftragseingang.</p>\n      <p><strong>Lieferzeit:</strong><br>Deutschland, Österreich, Schweiz - 2–4 Werktage</p>\n      <p><strong>Kostenloser Versand</strong> ab €60 Bestellwert.</p>\n      <p>Nicht zufrieden? Kein Problem. Du hast 30 Tage Zeit, das Produkt zurückzuschicken – ohne Wenn und Aber.</p>\n    </div>\n  </div>\n<div class=\"mm-pdp-accordion-row\" data-mm-accordion><div class=\"mm-pdp-accordion-head\" data-mm-accordion-toggle><span class=\"mm-pdp-accordion-label\">Herstellerinformationen</span><span class=\"mm-pdp-accordion-mark\" data-mm-accordion-mark>+</span></div><div class=\"mm-pdp-accordion-body\" data-mm-accordion-body hidden><p>Handgemachte Produktion aus Deutschland, auf der Schwäbischen Alb – in kleinen Chargen.</p><p>Men Mansion ist eine Marke der<br><strong>Lieferladen.de GmbH</strong><br>Calwer Straße 23<br>70173 Stuttgart</p><p>Telefon: <a class=\"mm-pdp-desc-link\" href=\"tel:+4915561311609\">015561311609</a><br>E-Mail: <a class=\"mm-pdp-desc-link\" href=\"mailto:info@menmansion.com\">info@menmansion.com</a></p></div></div></div>"
+          }
+        },
+        "b4cc2f39fdba867b": {
+          "type": "shopify://apps/section-store/blocks/block-comments/d7a2e423-ea88-4344-b866-6d0fb487c3dd",
+          "settings": {
+            "content_alignment": "center",
+            "comment_verified_badge_position": "inline",
+            "verified_badge_color": "#187bfc",
+            "verified_badge_text": "Verified Customer",
+            "slide_style": "dots",
+            "autoplay": 4,
+            "comment_name_1": "Dan Rowden",
+            "comment_1": "#(Markus T.) Endlich eine Creme die nicht fettet. Meine Haut fühlt sich nach 2 Wochen deutlich ruhiger und gepflegter an. Absolut&nbsp;empfehlenswert!",
+            "comment_name_2": "Sarah Moth",
+            "comment_2": "#(Luca S.) Hatte immer Probleme mit trockener Haut nach der Rasur. Diese Creme zieht sofort ein und meine Haut spannt nicht mehr. Top Qualität.",
+            "comment_name_3": "",
+            "comment_3": "#(Jonas K.) Bin von Rindertalg-Pflege überzeugt. Rötungen sind deutlich zurückgegangen. Kaufe definitiv nach.",
+            "avatar_border_radius": 100,
+            "avatar_size": 44,
+            "author_font_size": 14,
+            "author_font_weight": 500,
+            "author_font_color": "#fafaf8",
+            "star_style": "mild",
+            "star_color": "#af9841",
+            "star_size": 14,
+            "item_border_style": "solid",
+            "item_border_width": 0.5,
+            "item_border_color": "#3a3a3a",
+            "item_border_radius": 12,
+            "item_bg_color": "#232323",
+            "effect": "none",
+            "item_padding_vertical": 14,
+            "item_padding_horizontal": 16
+          }
+        },
+        "mm_pdp_social_proof": {
+          "type": "custom_liquid",
+          "name": "MM PDP Redesign - Social Proof",
+          "settings": {
+            "custom_liquid": "<div class=\"mm-pdp-social-proof\">\n  <div class=\"mm-pdp-social-proof-avatars\">\n    <img src=\"https://menmansion.com/cdn/shop/files/IMG_2572.jpg?width=80\" alt=\"\" loading=\"lazy\">\n    <img src=\"https://menmansion.com/cdn/shop/files/0002-8194805062219929543.png?width=80\" alt=\"\" loading=\"lazy\">\n    <img src=\"https://menmansion.com/cdn/shop/files/0003-1890891485917242492.png?width=80\" alt=\"\" loading=\"lazy\">\n  </div>\n  <p class=\"mm-pdp-social-proof-text\">Dermatologisch getestet <span class=\"mm-pdp-social-proof-verified\">✓</span> + <strong>10.000 Männern</strong> benutzen täglich!</p>\n</div>"
+          }
+        },
+        "custom_liquid_ktbqHQ": {
+          "type": "custom_liquid",
+          "name": "Product Tabs",
+          "settings": {
+            "custom_liquid": "<div id='ss-tabs-icon-insert-block'></div>"
+          }
+        },
+        "custom_liquid_HhbdcV": {
+          "type": "custom_liquid",
+          "name": "Titel",
+          "disabled": true,
+          "settings": {
+            "custom_liquid": "<style>\n  @font-face {\n    font-family: 'SaolStandard';\n    src: url('https://cdn.shopify.com/s/files/1/0779/4583/1766/files/SaolStandard-Semibold.otf?v=1757668345') format('opentype');\n    font-weight: 600;\n    font-style: normal;\n  }\n\n  .mm-title-wrapper {\n    margin-top: 6px;\n    margin-bottom: -12px;\n  }\n\n  .mm-product-title {\n    font-family: 'SaolStandard', serif;\n    font-size: 24px;\n    font-weight: 600;\n    line-height: 1.2;\n    color: #FAFAF8;\n    margin: 0;\n    padding: 0;\n    white-space: nowrap;\n    display: block;\n  }\n\n  @media (max-width: 380px) {\n    .mm-product-title {\n      font-size: 24px;\n    }\n  }\n\n  @media (max-width: 340px) {\n    .mm-product-title {\n      font-size: 22px;\n    }\n  }\n</style>\n\n<div class=\"mm-title-wrapper\">\n  <div class=\"mm-product-title\">{{ product.title }}</div>\n</div>"
+          }
+        },
+        "custom_liquid_BLVEzX": {
+          "type": "custom_liquid",
+          "name": "Social Proof",
+          "disabled": true,
+          "settings": {
+            "custom_liquid": "<div id='ss-social-proof'></div>"
+          }
+        },
+        "custom_liquid_iyFn8D": {
+          "type": "custom_liquid",
+          "name": "Price per Day",
+          "disabled": true,
+          "settings": {
+            "custom_liquid": "<div style=\"position: relative; height: 0; overflow: visible;\">\n  <span style=\"\n    position: absolute;\n    right: 0;\n    top: -80px;\n    border: 1px solid #ffffff;\n    color: #ffffff;\n    font-size: 11px;\n    font-weight: 500;\n    padding: 4px 10px;\n    border-radius: 5px;\n    white-space: nowrap;\n  \">€0,50 / Tag &nbsp;·&nbsp; 2 Monate Vorrat</span>\n</div>"
+          }
+        },
+        "custom_liquid_CMRyxj": {
+          "type": "custom_liquid",
+          "name": "inkl.MwSt",
+          "disabled": true,
+          "settings": {
+            "custom_liquid": "<p style=\"font-size: 11px; color: #b0ada8; text-align: center; margin-top: 12px; font-family: var(--font-body); letter-spacing: 0.03em;\">\n inkl. MwSt. &middot; &euro;798,00&nbsp;/&nbsp;L\n</p>"
+          }
+        },
+        "667354250fe073fc": {
+          "type": "shopify://apps/section-store/blocks/block-banner/d7a2e423-ea88-4344-b866-6d0fb487c3dd",
+          "name": "Urgency",
+          "disabled": true,
+          "settings": {
+            "gap": 1,
+            "text_align": "center",
+            "link": "",
+            "use_image": false,
+            "icon": "rocket",
+            "image_size": 30,
+            "image_position": "left",
+            "icon_color": "#c4a265",
+            "title_text": "<p><strong>Handgefertigt in Deutschland. In limitierten Chargen.</strong></p>",
+            "title_size": 13,
+            "title_color": "#fafaf8",
+            "body_text": "",
+            "body_size": 13,
+            "body_color": "#999999",
+            "border": "solid",
+            "border_thickness": 0.5,
+            "border_color": "#3a3a3a",
+            "radius": 10,
+            "background": "#232323",
+            "background_gradient": "",
+            "shadow": "none",
+            "padding_vertical": 6,
+            "padding_horizontal": 16
+          }
+        },
+        "section_store_block_pulse_badge_7CY8ME": {
+          "type": "shopify://apps/section-store/blocks/block-pulse-badge/d7a2e423-ea88-4344-b866-6d0fb487c3dd",
+          "disabled": true,
+          "settings": {
+            "content_align": "left",
+            "use_indicator": false,
+            "pulse_icon_size": 12,
+            "pulse_icon_color": "#2e9613",
+            "text": "<p>Auf Lager | In 2-4 Tagen bei dir</p>",
+            "text_size": 14,
+            "auto_text_weight": "normal",
+            "text_color": "#c5c5c5",
+            "border": "none",
+            "border_thickness": 1,
+            "border_color": "#000000",
+            "radius": 0,
+            "background": "",
+            "padding_top": 0,
+            "padding_bottom": 0,
+            "padding_left": 10,
+            "padding_right": 0
+          }
+        },
+        "custom_liquid_NXtaV6": {
+          "type": "custom_liquid",
+          "name": "Payment Badges",
+          "disabled": true,
+          "settings": {
+            "custom_liquid": "<div class=\"ultimate-badges\"></div>"
+          }
+        },
+        "custom_liquid_gCgaR8": {
+          "type": "custom_liquid",
+          "name": "Trust Badges",
+          "disabled": true,
+          "settings": {
+            "custom_liquid": "<div id='ss-trust-badges-3'></div>"
+          }
+        }
+      },
+      "block_order": [
+        "mm_pdp_assets",
+        "loox_reviews_loox_rating_Kn3NFm",
+        "title",
+        "text_TmqRRT",
+        "custom_liquid_YjXmkL",
+        "upsell_koala_bundles_bundle_app_block_fXg4BA",
+        "sternify_sternify_bundle_pDeFci",
+        "price",
+        "mm_pdp_price_cta",
+        "buy_buttons",
+        "9b8c4c92124ab94f",
+        "custom_liquid_MaM6Eg",
+        "mm_pdp_certificates",
+        "6aaec6b2720b47da",
+        "custom_liquid_t4UhKL",
+        "mm_pdp_guarantee_card",
+        "custom_liquid_nPaeiV",
+        "mm_pdp_details_accordion",
+        "b4cc2f39fdba867b",
+        "mm_pdp_social_proof",
+        "custom_liquid_ktbqHQ",
+        "custom_liquid_HhbdcV",
+        "custom_liquid_BLVEzX",
+        "custom_liquid_iyFn8D",
+        "custom_liquid_CMRyxj",
+        "667354250fe073fc",
+        "section_store_block_pulse_badge_7CY8ME",
+        "custom_liquid_NXtaV6",
+        "custom_liquid_gCgaR8"
+      ],
+      "settings": {
+        "enable_sticky_info": true,
+        "color_scheme": "",
+        "media_size": "medium",
+        "constrain_to_viewport": true,
+        "media_fit": "contain",
+        "gallery_layout": "thumbnail_slider",
+        "media_position": "left",
+        "image_zoom": "none",
+        "mobile_thumbnails": "show",
+        "hide_variants": true,
+        "enable_video_looping": true,
+        "padding_top": 20,
+        "padding_bottom": 20
+      }
+    },
+    "mm_pdp_ba_section": {
+      "type": "custom-liquid",
+      "settings": {
+        "custom_liquid": "<div class=\"mm-pdp-principle\">\n  \n  <h2 class=\"mm-pdp-principle-title\">Bereits nach wenigen Anwendungen sichtbare Ergebnisse</h2>\n  <p class=\"mm-pdp-principle-sub\">Tallow – Reduziert auf das Wesentliche.</p>\n\n<div class=\"mm-pdp-ba mm-pdp-ba--wide\" data-mm-ba>\n  <span class=\"mm-pdp-ba-label mm-pdp-ba-label--before\">Vorher</span>\n  <span class=\"mm-pdp-ba-label mm-pdp-ba-label--after\">Nachher</span>\n  <div class=\"mm-pdp-ba-after\" data-mm-ba-after>\n    <img src=\"https://menmansion.com/cdn/shop/files/L1007626.jpg?v=1764431475&width=900\" alt=\"Nachher: Haut nach Tallow Gesichtscreme\" draggable=\"false\">\n  </div>\n  <div class=\"mm-pdp-ba-before\" data-mm-ba-before>\n    <img src=\"https://menmansion.com/cdn/shop/files/hf_20260406_205044_ed0d7166-db66-4c3a-bf4f-ba4d192779c1.png?v=1775510228&width=900\" alt=\"Vorher: Haut ohne Tallow Gesichtscreme\" draggable=\"false\">\n  </div>\n  <div class=\"mm-pdp-ba-handle\" data-mm-ba-handle>\n    <span class=\"mm-pdp-ba-handle-grip\"><svg width=\"16\" height=\"16\" viewBox=\"0 0 16 16\" fill=\"none\"><path d=\"M5 4L1 8L5 12\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M11 4L15 8L11 12\" stroke=\"currentColor\" stroke-width=\"1.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg></span>\n  </div>\n</div>\n\n  <div class=\"mm-pdp-principle-grid mm-pdp-principle-grid--4\">\n    <div class=\"mm-pdp-principle-card\">\n      <img class=\"mm-pdp-principle-icon\" width=\"24\" height=\"24\" src=\"https://menmansion.com/cdn/shop/files/Naturlich-Icon.svg?v=1766148057\" alt=\"\">\n      <h4 class=\"mm-pdp-principle-card-title\">Zieht komplett ein</h4>\n      <p class=\"mm-pdp-principle-card-text\">Ohne Fettfilm und ohne Rückstände auf der Haut.</p>\n    </div>\n    <div class=\"mm-pdp-principle-card\">\n      <img class=\"mm-pdp-principle-icon\" width=\"24\" height=\"24\" src=\"https://menmansion.com/cdn/shop/files/Haut.svg?v=1766157612\" alt=\"\">\n      <h4 class=\"mm-pdp-principle-card-title\">Perfekte Formel</h4>\n      <p class=\"mm-pdp-principle-card-text\">Feuchtigkeit, Aufbau und Geschmeidigkeit in einem.</p>\n    </div>\n    <div class=\"mm-pdp-principle-card\">\n      <img class=\"mm-pdp-principle-icon\" width=\"24\" height=\"24\" src=\"https://menmansion.com/cdn/shop/files/Skin.svg?v=1766157611\" alt=\"\">\n      <h4 class=\"mm-pdp-principle-card-title\">Reich an Nährstoffen</h4>\n      <p class=\"mm-pdp-principle-card-text\">Vitamin A, D, E und K aus dem Rindertalg.</p>\n    </div>\n    <div class=\"mm-pdp-principle-card\">\n      <img class=\"mm-pdp-principle-icon\" width=\"24\" height=\"24\" src=\"https://menmansion.com/cdn/shop/files/Lorbeer.svg?v=1766080022\" alt=\"\">\n      <h4 class=\"mm-pdp-principle-card-title\">Traditionelle Basis</h4>\n      <p class=\"mm-pdp-principle-card-text\">Rezeptur nach alter&nbsp;Überlieferung.</p>\n    </div>\n  </div>\n</div>",
+        "color_scheme": "background-1",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "mm_pdp_ingredients_section": {
+      "type": "custom-liquid",
+      "name": "MM Inhaltsstoffe (Raster)",
+      "settings": {
+        "custom_liquid": "{{ 'mm-pdp-ingredients-grid.css' | asset_url | stylesheet_tag }}\n<section class=\"mm-ig\">\n  <div class=\"mm-ig-inner\">\n\n    <header class=\"mm-ig-head\">\n      <h2 class=\"mm-ig-title\">100 % natürliche Inhaltsstoffe</h2>\n      <p class=\"mm-ig-eyebrow\">Die Magie dahinter. Reduziert auf das Wesentliche</p>\n    </header>\n\n  <ul class=\"mm-ig-grid\">\n    <li class=\"mm-ig-card\">\n      <img src=\"https://cdn.shopify.com/s/files/1/0779/4583/1766/files/35.jpg?v=1786099583&width=600\" alt=\"Tallow\" loading=\"lazy\" width=\"600\" height=\"600\">\n      <span class=\"mm-ig-fade\"></span>\n      <div class=\"mm-ig-cap\">\n        <h3 class=\"mm-ig-name\">Tallow</h3>\n        <p class=\"mm-ig-benefit\">Enthält alle Nährstoffe und Vitamine die deine Haut benötigt.</p>\n      </div>\n    </li>\n    <li class=\"mm-ig-card\">\n      <img src=\"https://cdn.shopify.com/s/files/1/0779/4583/1766/files/gemini-image-2_Create_a_cinematic_macro_scene_featuring_grape_seed_oil_as_the_central_ingredien-2_2.jpg?v=1786099586&width=600\" alt=\"Traubenkernöl\" loading=\"lazy\" width=\"600\" height=\"600\">\n      <span class=\"mm-ig-fade\"></span>\n      <div class=\"mm-ig-cap\">\n        <h3 class=\"mm-ig-name\">Traubenkernöl</h3>\n        <p class=\"mm-ig-benefit\">Zieht leicht ein und sorgt für ein geschmeidiges Hautgefühl.</p>\n      </div>\n    </li>\n    <li class=\"mm-ig-card\">\n      <img src=\"https://cdn.shopify.com/s/files/1/0779/4583/1766/files/Lucid_Realism_Hyperrealistic_macro_shot_of_black_cumin_oil_Nig_0_1.jpg?v=1786099587&width=600\" alt=\"Schwarzkümmelöl\" loading=\"lazy\" width=\"600\" height=\"600\">\n      <span class=\"mm-ig-fade\"></span>\n      <div class=\"mm-ig-cap\">\n        <h3 class=\"mm-ig-name\">Schwarzkümmelöl</h3>\n        <p class=\"mm-ig-benefit\">Wirkt antibakteriell, stärkt die Haut und beruhigt Unreinheiten.</p>\n      </div>\n    </li>\n    <li class=\"mm-ig-card\">\n      <img src=\"https://cdn.shopify.com/s/files/1/0779/4583/1766/files/IMG_0327.jpg?v=1786099586&width=600\" alt=\"Bienenwachs\" loading=\"lazy\" width=\"600\" height=\"600\">\n      <span class=\"mm-ig-fade\"></span>\n      <div class=\"mm-ig-cap\">\n        <h3 class=\"mm-ig-name\">Bienenwachs</h3>\n        <p class=\"mm-ig-benefit\">Schützt die Haut und hält sie langanhaltend geschmeidig.</p>\n      </div>\n    </li>\n    <li class=\"mm-ig-card\">\n      <img src=\"https://cdn.shopify.com/s/files/1/0779/4583/1766/files/results-driven_backed_by_science_formulated_for_all_skin_types______discover_our_range_of_powerful_serums_today_23648c38-f789-42fc-93de-16cdf40aa351.jpg?v=1786099584&width=600\" alt=\"Squalan\" loading=\"lazy\" width=\"600\" height=\"600\">\n      <span class=\"mm-ig-fade\"></span>\n      <div class=\"mm-ig-cap\">\n        <h3 class=\"mm-ig-name\">Squalan</h3>\n        <p class=\"mm-ig-benefit\">Zieht schnell ein und hinterlässt ein glattes Hautgefühl.</p>\n      </div>\n    </li>\n    <li class=\"mm-ig-card\">\n      <img src=\"https://cdn.shopify.com/s/files/1/0779/4583/1766/files/ChatGPT_Image_10._Aug._2026_10_29_08.png?v=1786350590&width=600\" alt=\"Cetylalkohol\" loading=\"lazy\" width=\"600\" height=\"600\">\n      <span class=\"mm-ig-fade\"></span>\n      <div class=\"mm-ig-cap\">\n        <h3 class=\"mm-ig-name\">Cetylalkohol</h3>\n        <p class=\"mm-ig-benefit\">Pflanzlicher Konsistenzgeber für eine cremige Textur.</p>\n      </div>\n    </li>\n    <li class=\"mm-ig-card\">\n      <img src=\"https://cdn.shopify.com/s/files/1/0779/4583/1766/files/ChatGPT_Image_10._Aug._2026_10_26_18.png?v=1786350395&width=600\" alt=\"Zedernholzöl\" loading=\"lazy\" width=\"600\" height=\"600\">\n      <span class=\"mm-ig-fade\"></span>\n      <div class=\"mm-ig-cap\">\n        <h3 class=\"mm-ig-name\">Zedernholzöl</h3>\n        <p class=\"mm-ig-benefit\">Verleiht der Creme ihren edlen, maskulinen Duft nach Zedernholz.</p>\n      </div>\n    </li>\n    <li class=\"mm-ig-card\">\n      <img src=\"https://cdn.shopify.com/s/files/1/0779/4583/1766/files/Bergamot_lends_a_fresh_elevated_edge__Bright_refined_effortlessly_premium.jpg?v=1786099583&width=600\" alt=\"Bergamotte\" loading=\"lazy\" width=\"600\" height=\"600\">\n      <span class=\"mm-ig-fade\"></span>\n      <div class=\"mm-ig-cap\">\n        <h3 class=\"mm-ig-name\">Bergamotte</h3>\n        <p class=\"mm-ig-benefit\">Frische Kopfnote der Duftkomposition. Dezent statt parfümiert.</p>\n      </div>\n    </li>\n  </ul>\n\n  </div>\n</section>",
+        "color_scheme": "background-1",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "mm_pdp_testimonials_section": {
+      "type": "custom-liquid",
+      "settings": {
+        "custom_liquid": "{{ 'mm-pdp-testimonials.css' | asset_url | stylesheet_tag }}\n<section class=\"mm-tst\">\n  <div class=\"mm-tst-inner\">\n\n    <header class=\"mm-tst-head\">\n      <h2 class=\"mm-tst-title\">Das sagen unsere Gentleman</h2>\n    </header>\n\n    <ol class=\"mm-tst-rail\" id=\"mm-tst-rail\">\n\n      <li class=\"mm-tst-card\">\n        <div class=\"mm-tst-media\">\n          <img src=\"https://menmansion.com/cdn/shop/files/Landing-Titel_result.webp?v=1776242371&width=700\" alt=\"Justus, Kunde von Men Mansion\" loading=\"lazy\" width=\"700\" height=\"613\">\n        </div>\n        <div class=\"mm-tst-body\">\n          <span class=\"mm-tst-stars\" aria-label=\"5 von 5 Sternen\">★★★★★</span>\n          <p class=\"mm-tst-quote\">„Das einzige was mir wirklich eine cleane Haut gebracht hat, ist das Beef Tallow von Men Mansion!“</p>\n          <div class=\"mm-tst-foot\">\n            <span class=\"mm-tst-name\">Justus</span>\n            <span class=\"mm-tst-verified\"><svg viewBox=\"0 0 16 16\" fill=\"none\" aria-hidden=\"true\"><path d=\"M3 8.5L6.5 12L13 4\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg>Verifiziert</span>\n          </div>\n        </div>\n      </li>\n\n      <li class=\"mm-tst-card\" data-mm-tst-video>\n        <div class=\"mm-tst-media\">\n          <video preload=\"none\" muted playsinline loop\n                 poster=\"https://menmansion.com/cdn/shop/files/0001-422711012090687009.png?v=1774877605&width=700\"\n                 data-src=\"https://menmansion.com/cdn/shop/videos/c/vp/d90fd28f183241ba89fd19a25d52fcd7/d90fd28f183241ba89fd19a25d52fcd7.HD-1080p-7.2Mbps-79814673.mp4\"></video>\n          <img class=\"mm-tst-poster\" src=\"https://menmansion.com/cdn/shop/files/0001-422711012090687009.png?v=1774877605&width=700\" alt=\"Jay, Kunde von Men Mansion\" loading=\"lazy\" width=\"700\" height=\"613\">\n          <button type=\"button\" class=\"mm-tst-play\" aria-label=\"Video von Jay abspielen\">\n            <svg viewBox=\"0 0 16 16\" fill=\"currentColor\" aria-hidden=\"true\"><path d=\"M4 2.5v11l9-5.5-9-5.5Z\"/></svg>\n          </button>\n        </div>\n        <div class=\"mm-tst-body\">\n          <span class=\"mm-tst-stars\" aria-label=\"5 von 5 Sternen\">★★★★★</span>\n          <p class=\"mm-tst-quote\">„Hatte jahrelang unreine Haut. Das ist wirklich das einzige was funktioniert hat.“</p>\n          <div class=\"mm-tst-foot\">\n            <span class=\"mm-tst-name\">Jay</span>\n            <span class=\"mm-tst-verified\"><svg viewBox=\"0 0 16 16\" fill=\"none\" aria-hidden=\"true\"><path d=\"M3 8.5L6.5 12L13 4\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg>Verifiziert</span>\n          </div>\n        </div>\n      </li>\n\n      <li class=\"mm-tst-card\" data-mm-tst-video>\n        <div class=\"mm-tst-media\">\n          <video preload=\"none\" muted playsinline loop\n                 poster=\"https://menmansion.com/cdn/shop/files/Neueste_Fotos_anzeigen_5.png?v=1774878225&width=700\"\n                 data-src=\"https://menmansion.com/cdn/shop/videos/c/vp/d8c85ac160da4e3fad95c79867533536/d8c85ac160da4e3fad95c79867533536.HD-1080p-7.2Mbps-79815517.mp4\"></video>\n          <img class=\"mm-tst-poster\" src=\"https://menmansion.com/cdn/shop/files/Neueste_Fotos_anzeigen_5.png?v=1774878225&width=700\" alt=\"Ebi, Kunde von Men Mansion\" loading=\"lazy\" width=\"700\" height=\"613\">\n          <button type=\"button\" class=\"mm-tst-play\" aria-label=\"Video von Ebi abspielen\">\n            <svg viewBox=\"0 0 16 16\" fill=\"currentColor\" aria-hidden=\"true\"><path d=\"M4 2.5v11l9-5.5-9-5.5Z\"/></svg>\n          </button>\n        </div>\n        <div class=\"mm-tst-body\">\n          <span class=\"mm-tst-stars\" aria-label=\"5 von 5 Sternen\">★★★★★</span>\n          <p class=\"mm-tst-quote\">„Ich war immer skeptisch was Skincare Produkte angeht, aber das hier ist wirklich anders! Super angenehm auf der Haut, zieht schnell ein und riecht edel.“</p>\n          <div class=\"mm-tst-foot\">\n            <span class=\"mm-tst-name\">Ebi</span>\n            <span class=\"mm-tst-verified\"><svg viewBox=\"0 0 16 16\" fill=\"none\" aria-hidden=\"true\"><path d=\"M3 8.5L6.5 12L13 4\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg>Verifiziert</span>\n          </div>\n        </div>\n      </li>\n\n      <li class=\"mm-tst-card\">\n        <div class=\"mm-tst-media\">\n          <img src=\"https://menmansion.com/cdn/shop/files/gemini-image-2_Create_a_very_realistic_smartphone_mirror_selfie_of_a_young_couple_around_20_2-0.jpg?v=1770986538&width=700\" alt=\"Julien, Kunde von Men Mansion\" loading=\"lazy\" width=\"700\" height=\"613\">\n        </div>\n        <div class=\"mm-tst-body\">\n          <span class=\"mm-tst-stars\" aria-label=\"5 von 5 Sternen\">★★★★★</span>\n          <p class=\"mm-tst-quote\">„Meine Haut hat einen richtig gesunden Glow bekommen, meine Freundin liebt’s. Bleibe dabei.“</p>\n          <div class=\"mm-tst-foot\">\n            <span class=\"mm-tst-name\">Julien</span>\n            <span class=\"mm-tst-verified\"><svg viewBox=\"0 0 16 16\" fill=\"none\" aria-hidden=\"true\"><path d=\"M3 8.5L6.5 12L13 4\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg>Verifiziert</span>\n          </div>\n        </div>\n      </li>\n\n      <li class=\"mm-tst-card\">\n        <div class=\"mm-tst-media\">\n          <img src=\"https://menmansion.com/cdn/shop/files/gemini-image-2___Spiegel-Selfie___Clean_Skin_Result_UGC-Style_Textprompt_Create_a_realisti-0.jpg?v=1770986492&width=700\" alt=\"Tobias, Kunde von Men Mansion\" loading=\"lazy\" width=\"700\" height=\"613\">\n        </div>\n        <div class=\"mm-tst-body\">\n          <span class=\"mm-tst-stars\" aria-label=\"5 von 5 Sternen\">★★★★★</span>\n          <p class=\"mm-tst-quote\">„Benutze die Creme jetzt seit 2 Wochen und bin echt positiv überrascht. Meine Haut fühlt sich deutlich besser an. Werde wieder bestellen.“</p>\n          <div class=\"mm-tst-foot\">\n            <span class=\"mm-tst-name\">Tobias</span>\n            <span class=\"mm-tst-verified\"><svg viewBox=\"0 0 16 16\" fill=\"none\" aria-hidden=\"true\"><path d=\"M3 8.5L6.5 12L13 4\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg>Verifiziert</span>\n          </div>\n        </div>\n      </li>\n\n      <li class=\"mm-tst-card\">\n        <div class=\"mm-tst-media\">\n          <img src=\"https://menmansion.com/cdn/shop/files/gemini-image-2_Create_a_very_realistic_smartphone_mirror_selfie_of_a_young_man_around_18_21_y-0.jpg?v=1770986522&width=700\" alt=\"Jonas, Kunde von Men Mansion\" loading=\"lazy\" width=\"700\" height=\"613\">\n        </div>\n        <div class=\"mm-tst-body\">\n          <span class=\"mm-tst-stars\" aria-label=\"5 von 5 Sternen\">★★★★★</span>\n          <p class=\"mm-tst-quote\">„Ich benutze wirklich nur noch diese Creme. Meine Haut sieht einfach makellos aus und fühlt sich auch so an.“</p>\n          <div class=\"mm-tst-foot\">\n            <span class=\"mm-tst-name\">Jonas</span>\n            <span class=\"mm-tst-verified\"><svg viewBox=\"0 0 16 16\" fill=\"none\" aria-hidden=\"true\"><path d=\"M3 8.5L6.5 12L13 4\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg>Verifiziert</span>\n          </div>\n        </div>\n      </li>\n\n      <li class=\"mm-tst-card\">\n        <div class=\"mm-tst-media\">\n          <img src=\"https://menmansion.com/cdn/shop/files/gemini-image-2_Create_a_highly_realistic_smartphone_photo_of_a_young_man_20_25_years_old_show-1.jpg?v=1770986559&width=700\" alt=\"Can, Kunde von Men Mansion\" loading=\"lazy\" width=\"700\" height=\"613\">\n        </div>\n        <div class=\"mm-tst-body\">\n          <span class=\"mm-tst-stars\" aria-label=\"5 von 5 Sternen\">★★★★★</span>\n          <p class=\"mm-tst-quote\">„Meine Haut fühlt sich komplett anders an als vorher. Bin echt positiv überrascht, wurde sogar darauf angesprochen.“</p>\n          <div class=\"mm-tst-foot\">\n            <span class=\"mm-tst-name\">Can</span>\n            <span class=\"mm-tst-verified\"><svg viewBox=\"0 0 16 16\" fill=\"none\" aria-hidden=\"true\"><path d=\"M3 8.5L6.5 12L13 4\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg>Verifiziert</span>\n          </div>\n        </div>\n      </li>\n    </ol>\n\n    <div class=\"mm-tst-nav\" id=\"mm-tst-nav\">\n      <div class=\"mm-tst-arrows\">\n        <button type=\"button\" class=\"mm-tst-arrow\" data-mm-tst-prev aria-label=\"Vorherige Stimme\">\n          <svg viewBox=\"0 0 16 16\" fill=\"none\" aria-hidden=\"true\"><path d=\"M10 3L5 8l5 5\" stroke=\"currentColor\" stroke-width=\"1.6\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg>\n        </button>\n        <button type=\"button\" class=\"mm-tst-arrow\" data-mm-tst-next aria-label=\"Naechste Stimme\">\n          <svg viewBox=\"0 0 16 16\" fill=\"none\" aria-hidden=\"true\"><path d=\"M6 3l5 5-5 5\" stroke=\"currentColor\" stroke-width=\"1.6\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg>\n        </button>\n      </div>\n    </div>\n\n  </div>\n</section>\n\n<script>\n(function () {\n  var rail = document.getElementById('mm-tst-rail');\n  if (!rail) return;\n  var cards = Array.prototype.slice.call(rail.children);\n  var nav = document.getElementById('mm-tst-nav');\n  var prev = document.querySelector('[data-mm-tst-prev]');\n  var next = document.querySelector('[data-mm-tst-next]');\n  var total = cards.length;\n\n  // Striche wie in Bestseller und Routine: einer pro Karte, klickbar\n  function step() {\n    return cards.length > 1 ? cards[1].offsetLeft - cards[0].offsetLeft : cards[0].offsetWidth;\n  }\n\n  // Es sind mehrere Karten gleichzeitig sichtbar, der Scroll endet also vor der\n  // letzten Karte. Ohne diese Grenze gab es Striche, die nie aktiv werden, und\n  // der Pfeil lief am Ende ins Leere statt umzubrechen.\n  function maxIndex() {\n    var s = step();\n    if (!s) return 0;\n    return Math.max(0, Math.min(total - 1, Math.round((rail.scrollWidth - rail.clientWidth) / s)));\n  }\n\n  function index() {\n    var s = step();\n    if (!s) return 0;\n    return Math.max(0, Math.min(maxIndex(), Math.round(rail.scrollLeft / s)));\n  }\n\n  function scrollToCard(i, behavior) {\n    var el = cards[i];\n    if (el) rail.scrollTo({ left: el.offsetLeft - rail.offsetLeft, behavior: behavior || 'smooth' });\n  }\n\n  // Striche: einer pro anfahrbarer Position, vor der Pfeil-Gruppe und in\n  // aufsteigender Reihenfolge. Bei Resize aendert sich die Zahl, also neu bauen.\n  var dots = [];\n  var arrowsBox = nav ? nav.querySelector('.mm-tst-arrows') : null;\n  function buildDots() {\n    if (!nav) return;\n    for (var r = 0; r < dots.length; r++) {\n      if (dots[r].parentNode) dots[r].parentNode.removeChild(dots[r]);\n    }\n    dots = [];\n    var n = maxIndex() + 1;\n    for (var d = 0; d < n; d++) {\n      var b = document.createElement('button');\n      b.type = 'button';\n      b.className = 'mm-tst-dot';\n      b.setAttribute('aria-label', 'Stimme ' + (d + 1));\n      b.dataset.i = d;\n      b.appendChild(document.createElement('span'));\n      b.addEventListener('click', function () { scrollToCard(+this.dataset.i, 'smooth'); });\n      if (arrowsBox) nav.insertBefore(b, arrowsBox);\n      else nav.appendChild(b);\n      dots.push(b);\n    }\n  }\n\n  function sync() {\n    var i = index();\n    for (var n = 0; n < dots.length; n++) {\n      dots[n].setAttribute('aria-current', n === i ? 'true' : 'false');\n    }\n    // Kein disabled an den Raendern: der Slider laeuft im Kreis.\n  }\n\n  function go(dir) {\n    if (!step()) return;\n    var max = maxIndex();\n    var t = index() + dir;\n    var wrapped = false;\n    if (t < 0) { t = max; wrapped = true; }\n    else if (t > max) { t = 0; wrapped = true; }\n    // Beim Umbruch hart springen, smooth wuerde sichtbar durch alle Karten scrollen.\n    scrollToCard(t, wrapped ? 'auto' : 'smooth');\n  }\n\n  buildDots();\n  if (prev) prev.addEventListener('click', function () { go(-1); });\n  if (next) next.addEventListener('click', function () { go(1); });\n\n  rail.addEventListener('scroll', sync, { passive: true });\n  // Bei Resize aendert sich die Zahl der anfahrbaren Positionen, Striche neu bauen.\n  window.addEventListener('resize', function () { buildDots(); sync(); });\n  sync();\n\n  // Video: startet stumm per Nutzer-Gesture, Poster bleibt bis \"playing\" feuert\n  cards.forEach(function (card) {\n    if (!card.hasAttribute('data-mm-tst-video')) return;\n    var video = card.querySelector('video');\n    var btn = card.querySelector('.mm-tst-play');\n    if (!video || !btn) return;\n    // Quelle erst beim ersten Klick setzen. Mit src im Markup hat Chrome trotz\n    // preload=\"metadata\" beide Dateien komplett geladen: 12,9 MB und 7,2 MB.\n    // Der Ladebalken lief dadurch minutenlang weiter.\n    function ensureSrc() {\n      if (!video.getAttribute('src') && video.dataset.src) video.src = video.dataset.src;\n    }\n    btn.addEventListener('click', function () {\n      // andere laufende Videos anhalten\n      cards.forEach(function (other) {\n        if (other === card) return;\n        var v = other.querySelector('video');\n        if (v && !v.paused) { v.pause(); other.classList.remove('is-playing'); }\n      });\n      ensureSrc();\n      var p = video.play();\n      if (p && p.catch) p.catch(function () {});\n    });\n    // Klick auf die Videoflaeche haelt an bzw. laesst weiterlaufen\n    video.addEventListener('click', function () {\n      if (video.paused) {\n        ensureSrc();\n        var r = video.play();\n        if (r && r.catch) r.catch(function () {});\n      } else {\n        video.pause();\n      }\n    });\n    video.addEventListener('playing', function () {\n      card.classList.add('is-playing');\n      video.controls = true;\n    });\n  });\n})();\n</script>",
+        "color_scheme": "background-1",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "mm_pdp_studie_section": {
+      "type": "custom-liquid",
+      "settings": {
+        "custom_liquid": "<div class=\"mm-pdp-studie\">\n  \n  <h2 class=\"mm-pdp-studie-title\">Bewiesene Wirkung,<br><span class=\"mm-pdp-gold\">sichtbare Ergebnisse</span></h2>\n  <div class=\"mm-pdp-studie-stats\">\n    <div class=\"mm-pdp-studie-stat\">\n      <div class=\"mm-pdp-studie-number\">92%</div>\n      <div class=\"mm-pdp-studie-desc\">Sichtbar klarere Haut nach 7 Tagen</div>\n      <div class=\"mm-pdp-studie-meta\">Ergebnisse einer 4-wöchigen Kundenstudie</div>\n    </div>\n    <div class=\"mm-pdp-studie-stat\">\n      <div class=\"mm-pdp-studie-number\">96%</div>\n      <div class=\"mm-pdp-studie-desc\">Sofort weniger Trockenheit</div>\n      <div class=\"mm-pdp-studie-meta\">Ergebnisse einer 4-wöchigen Kundenstudie</div>\n    </div>\n    <div class=\"mm-pdp-studie-stat\">\n      <div class=\"mm-pdp-studie-number\">97%</div>\n      <div class=\"mm-pdp-studie-desc\">Würden die Creme weiterempfehlen</div>\n      <div class=\"mm-pdp-studie-meta\">Ergebnisse einer 4-wöchigen Kundenstudie</div>\n    </div>\n  </div>\n</div>",
+        "color_scheme": "background-1",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "mm_pdp_herkunft_section": {
+      "type": "custom-liquid",
+      "settings": {
+        "custom_liquid": "{{ 'mm-pdp-herkunft2.css' | asset_url | stylesheet_tag }}\n<section class=\"mm-hk\">\n  <div class=\"mm-hk-wrap\">\n    <h2 class=\"mm-hk-title\">Vom Bio&#8209;Hof der Schw&auml;bischen Alb in deine Hand</h2>\n    <p class=\"mm-hk-lead\">Rindertalg galt seit Jahrtausenden als Goldstandard der Hautpflege. Wir holen dieses Wissen zur&uuml;ck - reduziert auf das, was deine Haut wirklich braucht.</p>\n  </div>\n\n  <div class=\"mm-hk-hero\">\n    <img src=\"https://menmansion.com/cdn/shop/files/mm-hk-hof.png?width=1000\" alt=\"Men Mansion Gr&uuml;nder mit Bio-Weiderind auf dem Hof\" width=\"1000\" height=\"1250\" loading=\"lazy\">\n    <div class=\"mm-hk-hero-grad\"></div>\n    <div class=\"mm-hk-hero-cap\">\n      <p class=\"mm-hk-hero-place\">Schw&auml;bische Alb</p>\n      <p class=\"mm-hk-hero-sub\">Partner-Metzgerei, grasgef&uuml;tterte Bio-Rinder</p>\n    </div>\n  </div>\n\n  <div class=\"mm-hk-wrap mm-hk-steps-head\">\n    <h3 class=\"mm-hk-steps-title\">Der Weg in die Dose</h3>\n  </div>\n\n  <div class=\"mm-hk-scroll\" id=\"mm-hk-scroll\">\n    <article class=\"mm-hk-card\">\n      <div class=\"mm-hk-card-img\"><img src=\"https://menmansion.com/cdn/shop/files/mm-hk-ursprung.png?width=700\" alt=\"Tallow Gesichtscreme neben Rindfleisch\" width=\"1000\" height=\"750\" loading=\"lazy\"></div>\n      <div class=\"mm-hk-card-body\">\n        <p class=\"mm-hk-step\">Ursprung</p>\n        <h3 class=\"mm-hk-card-title\">Rindertalg vom Weiderind</h3>\n        <p class=\"mm-hk-card-text\">Von grasgef&uuml;tterten Bio-Rindern, die auf der Weide stehen.</p>\n      </div>\n    </article>\n    <article class=\"mm-hk-card\">\n      <div class=\"mm-hk-card-img\"><img src=\"https://menmansion.com/cdn/shop/files/mm-hk-metzgerei.png?width=700\" alt=\"Men Mansion Gr&uuml;nder mit dem Metzger\" width=\"1000\" height=\"750\" loading=\"lazy\"></div>\n      <div class=\"mm-hk-card-body\">\n        <p class=\"mm-hk-step\">Handwerk</p>\n        <h3 class=\"mm-hk-card-title\">Eine Metzgerei, ein Partner</h3>\n        <p class=\"mm-hk-card-text\">Unser Talg kommt aus einem Betrieb, den wir pers&ouml;nlich kennen.</p>\n      </div>\n    </article>\n    <article class=\"mm-hk-card\">\n      <div class=\"mm-hk-card-img\"><img src=\"https://menmansion.com/cdn/shop/files/mm-hk-zutaten.png?width=700\" alt=\"Honig, &Ouml;l und Bienenwachs neben der Tallow Gesichtscreme\" width=\"1000\" height=\"750\" loading=\"lazy\"></div>\n      <div class=\"mm-hk-card-body\">\n        <p class=\"mm-hk-step\">Veredelung</p>\n        <h3 class=\"mm-hk-card-title\">Nat&uuml;rlich veredelt</h3>\n        <p class=\"mm-hk-card-text\">Veredelt mit nat&uuml;rlichen Zutaten regionaler Anbieter.</p>\n      </div>\n    </article>\n  </div>\n\n  <div class=\"mm-hk-dots\" id=\"mm-hk-dots\">\n    <button type=\"button\" data-i=\"0\" aria-label=\"Ursprung\" aria-current=\"true\"><span></span></button>\n    <button type=\"button\" data-i=\"1\" aria-label=\"Handwerk\" aria-current=\"false\"><span></span></button>\n    <button type=\"button\" data-i=\"2\" aria-label=\"Veredelung\" aria-current=\"false\"><span></span></button>\n  </div>\n\n  <div class=\"mm-hk-wrap\">\n    <details class=\"mm-hk-more\">\n      <summary>\n        <span>Die ganze Geschichte</span>\n        <span class=\"mm-hk-plus\"><span class=\"mm-hk-plus-open\">+</span><span class=\"mm-hk-plus-close\">&minus;</span></span>\n      </summary>\n      <div class=\"mm-hk-more-body\">\n        <p>Unsere Creme entsteht auf der Schw&auml;bischen Alb in einer kleinen Metzgerei, die uns mit Rindertalg von grasgef&uuml;tterten Bio-Rindern versorgt. In kleinen Chargen fertigen wir daraus unsere Pflege mit viel Sorgfalt und Pr&auml;zision, veredelt mit nat&uuml;rlichen Inhaltsstoffen von regionalen Anbietern.</p>\n        <p>Pflege, reduziert auf das Wesentliche: kein Wasser, keine F&uuml;llstoffe, keine Duftstoff-Kaskaden. Nur das, was die Haut kennt.</p>\n      </div>\n    </details>\n  </div>\n</section>\n\n<script>\n(function () {\n  var s = document.getElementById('mm-hk-scroll');\n  var d = document.getElementById('mm-hk-dots');\n  if (!s || !d) return;\n  var btns = d.querySelectorAll('button');\n\n  function step() {\n    return s.children.length > 1 ? s.children[1].offsetLeft - s.children[0].offsetLeft : s.children[0].offsetWidth;\n  }\n  function sync() {\n    var scrollable = s.scrollWidth - s.clientWidth > 8;\n    d.style.display = scrollable ? '' : 'none';\n    if (!scrollable) return;\n    var w = step();\n    if (!w) return;\n    var i = Math.max(0, Math.min(btns.length - 1, Math.round(s.scrollLeft / w)));\n    for (var n = 0; n < btns.length; n++) {\n      btns[n].setAttribute('aria-current', n === i ? 'true' : 'false');\n    }\n  }\n  for (var b = 0; b < btns.length; b++) {\n    btns[b].addEventListener('click', function () {\n      var el = s.children[+this.dataset.i];\n      if (el) s.scrollTo({ left: el.offsetLeft - s.offsetLeft, behavior: 'smooth' });\n    });\n  }\n  s.addEventListener('scroll', sync, { passive: true });\n  window.addEventListener('resize', sync);\n  sync();\n})();\n</script>",
+        "color_scheme": "background-1",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "mm_pdp_routine_section": {
+      "type": "custom-liquid",
+      "settings": {
+        "custom_liquid": "{{ 'mm-pdp-routine3.css' | asset_url | stylesheet_tag }}\n<section class=\"mm-r3\" id=\"mm-pdp-routine-anchor\">\n  <div class=\"mm-r3-inner\">\n\n    <header class=\"mm-r3-head\">\n      <h2 class=\"mm-r3-title\">Gepflegte Haut.<br><span>In 3 Schritten</span></h2>\n      <p class=\"mm-r3-sub\">Deine tägliche Routine - einfach, effektiv, natürlich.</p>\n    </header>\n\n    <ol class=\"mm-r3-track\" id=\"mm-r3-track\">\n\n      <li class=\"mm-r3-card\">\n        <div class=\"mm-r3-media\">\n          <img src=\"https://menmansion.com/cdn/shop/files/IMG_1680.jpg?v=1775741337&width=800\" alt=\"Gesicht mit der Aleppo-Seife reinigen\" loading=\"lazy\" width=\"800\" height=\"600\">\n          <span class=\"mm-r3-fade\"></span>\n          <span class=\"mm-r3-num\">01</span>\n        </div>\n        <div class=\"mm-r3-body\">\n          <div class=\"mm-r3-row\"><h3>Reinigen</h3></div>\n          <p>Gesicht mit der Aleppo-Seife und lauwarmem Wasser reinigen – löst Schmutz und überschüssigen Talg. Bereitet die Haut sanft vor, ohne sie auszutrocknen.</p>\n          <div class=\"mm-r3-foot\"><img class=\"mm-r3-thumb\" src=\"{{ 'mm-r3-aleppo.png' | asset_url }}\" alt=\"Aleppo Seife\" loading=\"lazy\" width=\"64\" height=\"64\"></div>\n        </div>\n      </li>\n\n      <li class=\"mm-r3-card\">\n        <div class=\"mm-r3-media\">\n          <img src=\"https://menmansion.com/cdn/shop/files/IMG_1502_3.jpg?v=1775510634&width=800\" alt=\"Tallow Gesichtscreme einmassieren\" loading=\"lazy\" width=\"800\" height=\"600\">\n          <span class=\"mm-r3-fade\"></span>\n          <span class=\"mm-r3-num\">02</span>\n        </div>\n        <div class=\"mm-r3-body\">\n          <div class=\"mm-r3-row\"><h3>Einmassieren</h3></div>\n          <p>Die Tallow Gesichtscreme in einer kleinen Menge einmassieren. Die hautähnlichen Lipide stärken die Barriere und ziehen vollständig ein.</p>\n          <div class=\"mm-r3-foot\">\n            <img class=\"mm-r3-thumb\" src=\"{{ 'mm-tallow-tiegel.png' | asset_url }}\" alt=\"Tallow Gesichtscreme\" loading=\"lazy\" width=\"64\" height=\"64\">\n          </div>\n        </div>\n      </li>\n\n      <li class=\"mm-r3-card\">\n        <div class=\"mm-r3-media\">\n          <img src=\"https://menmansion.com/cdn/shop/files/Unknown_1edbc7b1-af96-47cb-8384-55744279e3f8.jpg?v=1775510657&width=800\" alt=\"Tallow Gesichtscreme täglich anwenden\" loading=\"lazy\" width=\"800\" height=\"600\">\n          <span class=\"mm-r3-fade\"></span>\n          <span class=\"mm-r3-num\">03</span>\n        </div>\n        <div class=\"mm-r3-body\">\n          <div class=\"mm-r3-row\"><h3>Dranbleiben</h3></div>\n          <p>Morgens und abends auftragen. Kein Aufwand, keine lange Routine - sichtbar ruhigere Haut in zwei bis vier Wochen.</p>\n        </div>\n      </li>\n    </ol>\n\n    <div class=\"mm-r3-dots\" id=\"mm-r3-dots\" hidden>\n      <button type=\"button\" data-i=\"0\" aria-label=\"Schritt 1\"><span></span></button>\n      <button type=\"button\" data-i=\"1\" aria-label=\"Schritt 2\"><span></span></button>\n      <button type=\"button\" data-i=\"2\" aria-label=\"Schritt 3\"><span></span></button>\n    </div>\n\n  </div>\n</section>\n\n<script>\n(function () {\n  var track = document.getElementById('mm-r3-track');\n  var dots  = document.getElementById('mm-r3-dots');\n  if (!track || !dots || !track.children.length) return;\n  var btns = dots.querySelectorAll('button');\n\n  function stepWidth() {\n    if (track.children.length > 1) {\n      return track.children[1].offsetLeft - track.children[0].offsetLeft;\n    }\n    return track.children[0].getBoundingClientRect().width;\n  }\n\n  function sync() {\n    var scrollable = track.scrollWidth - track.clientWidth > 8;\n    dots.hidden = !scrollable;\n    if (!scrollable) return;\n    var step = stepWidth();\n    if (!step) return;\n    var i = Math.min(btns.length - 1, Math.round(track.scrollLeft / step));\n    for (var n = 0; n < btns.length; n++) {\n      btns[n].setAttribute('aria-current', n === i ? 'true' : 'false');\n    }\n  }\n\n  for (var b = 0; b < btns.length; b++) {\n    btns[b].addEventListener('click', function () {\n      var el = track.children[+this.dataset.i];\n      if (el) track.scrollTo({ left: el.offsetLeft - track.offsetLeft, behavior: 'smooth' });\n    });\n  }\n\n  track.addEventListener('scroll', sync, { passive: true });\n  window.addEventListener('resize', sync);\n  sync();\n})();\n</script>",
+        "color_scheme": "background-1",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "mm_pdp_comparison_section": {
+      "type": "custom-liquid",
+      "settings": {
+        "custom_liquid": "<div class=\"mm-pdp-compare\">\n  \n  <h2 class=\"mm-pdp-compare-title\">Men Mansion vs.<br>andere Marken</h2>\n  <div class=\"mm-pdp-compare-table\">\n    <div class=\"mm-pdp-compare-row mm-pdp-compare-head\">\n      <span class=\"mm-pdp-compare-head-why\"><span class=\"mm-pdp-compare-why-label\">Warum</span>{%- if settings.logo != blank -%}<img class=\"mm-pdp-compare-logo\" src=\"{{ settings.logo | image_url: width: 300 }}\" alt=\"{{ shop.name }}\" loading=\"lazy\">{%- else -%}<span class=\"mm-pdp-compare-why-name\">Men Mansion</span>{%- endif -%}</span>\n      <span class=\"mm-pdp-compare-head-mm\"><span class=\"mm-pdp-compare-thumb\"><img src=\"{{ 'mm-tallow-tiegel.png' | asset_url }}\" alt=\"Men Mansion Tallow Gesichtscreme\" loading=\"lazy\" width=\"46\" height=\"46\"></span></span>\n      <span class=\"mm-pdp-compare-head-other\"><span class=\"mm-pdp-compare-thumb\"><img src=\"{{ 'mm-andere-tiegel.png' | asset_url }}\" alt=\"Andere Marken\" loading=\"lazy\" width=\"46\" height=\"46\"></span></span>\n    </div>\n    <div class=\"mm-pdp-compare-row\"><span class=\"mm-pdp-compare-label\">Handgefertigt in kleinen Chargen</span><span class=\"mm-pdp-compare-cell-us\"><span class=\"mm-pdp-compare-badge mm-pdp-compare-badge--yes\"><svg width=\"13\" height=\"13\" viewBox=\"0 0 16 16\" fill=\"none\"><path d=\"M3 8.5L6.5 12L13 4\" stroke=\"currentColor\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg></span></span><span class=\"mm-pdp-compare-cell-them\"><span class=\"mm-pdp-compare-badge mm-pdp-compare-badge--no\"><svg width=\"13\" height=\"13\" viewBox=\"0 0 16 16\" fill=\"none\"><path d=\"M4 4L12 12M12 4L4 12\" stroke=\"currentColor\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg></span></span></div>\n    <div class=\"mm-pdp-compare-row\"><span class=\"mm-pdp-compare-label\">Natürliche Wirkstoffe</span><span class=\"mm-pdp-compare-cell-us\"><span class=\"mm-pdp-compare-badge mm-pdp-compare-badge--yes\"><svg width=\"13\" height=\"13\" viewBox=\"0 0 16 16\" fill=\"none\"><path d=\"M3 8.5L6.5 12L13 4\" stroke=\"currentColor\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg></span></span><span class=\"mm-pdp-compare-cell-them\"><span class=\"mm-pdp-compare-badge mm-pdp-compare-badge--no\"><svg width=\"13\" height=\"13\" viewBox=\"0 0 16 16\" fill=\"none\"><path d=\"M4 4L12 12M12 4L4 12\" stroke=\"currentColor\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg></span></span></div>\n    <div class=\"mm-pdp-compare-row\"><span class=\"mm-pdp-compare-label\">Enthält Silikone &amp; Mineralöl</span><span class=\"mm-pdp-compare-cell-us\"><span class=\"mm-pdp-compare-badge mm-pdp-compare-badge--no\"><svg width=\"13\" height=\"13\" viewBox=\"0 0 16 16\" fill=\"none\"><path d=\"M4 4L12 12M12 4L4 12\" stroke=\"currentColor\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg></span></span><span class=\"mm-pdp-compare-cell-them\"><span class=\"mm-pdp-compare-badge mm-pdp-compare-badge--yes\"><svg width=\"13\" height=\"13\" viewBox=\"0 0 16 16\" fill=\"none\"><path d=\"M3 8.5L6.5 12L13 4\" stroke=\"currentColor\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg></span></span></div>\n    <div class=\"mm-pdp-compare-row\"><span class=\"mm-pdp-compare-label\">Eigene Manufaktur, keine Massenware</span><span class=\"mm-pdp-compare-cell-us\"><span class=\"mm-pdp-compare-badge mm-pdp-compare-badge--yes\"><svg width=\"13\" height=\"13\" viewBox=\"0 0 16 16\" fill=\"none\"><path d=\"M3 8.5L6.5 12L13 4\" stroke=\"currentColor\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg></span></span><span class=\"mm-pdp-compare-cell-them\"><span class=\"mm-pdp-compare-badge mm-pdp-compare-badge--no\"><svg width=\"13\" height=\"13\" viewBox=\"0 0 16 16\" fill=\"none\"><path d=\"M4 4L12 12M12 4L4 12\" stroke=\"currentColor\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg></span></span></div>\n    <div class=\"mm-pdp-compare-row\"><span class=\"mm-pdp-compare-label\">Sichtbare Ergebnisse nach wenigen Tagen</span><span class=\"mm-pdp-compare-cell-us\"><span class=\"mm-pdp-compare-badge mm-pdp-compare-badge--yes\"><svg width=\"13\" height=\"13\" viewBox=\"0 0 16 16\" fill=\"none\"><path d=\"M3 8.5L6.5 12L13 4\" stroke=\"currentColor\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg></span></span><span class=\"mm-pdp-compare-cell-them\"><span class=\"mm-pdp-compare-badge mm-pdp-compare-badge--no\"><svg width=\"13\" height=\"13\" viewBox=\"0 0 16 16\" fill=\"none\"><path d=\"M4 4L12 12M12 4L4 12\" stroke=\"currentColor\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg></span></span></div>\n    <div class=\"mm-pdp-compare-row\"><span class=\"mm-pdp-compare-label\">Künstliche Duft- &amp; Farbstoffe</span><span class=\"mm-pdp-compare-cell-us\"><span class=\"mm-pdp-compare-badge mm-pdp-compare-badge--no\"><svg width=\"13\" height=\"13\" viewBox=\"0 0 16 16\" fill=\"none\"><path d=\"M4 4L12 12M12 4L4 12\" stroke=\"currentColor\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg></span></span><span class=\"mm-pdp-compare-cell-them\"><span class=\"mm-pdp-compare-badge mm-pdp-compare-badge--yes\"><svg width=\"13\" height=\"13\" viewBox=\"0 0 16 16\" fill=\"none\"><path d=\"M3 8.5L6.5 12L13 4\" stroke=\"currentColor\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg></span></span></div>\n  </div>\n</div>",
+        "color_scheme": "background-1",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "mm_pdp_faq_section": {
+      "type": "custom-liquid",
+      "settings": {
+        "custom_liquid": "<div class=\"mm-pdp-faq\">\n  \n  <h2 class=\"mm-pdp-faq-title\">Deine Fragen. Unsere Antworten.</h2>\n  <div class=\"mm-pdp-accordion\">\n    <div class=\"mm-pdp-accordion-row\" data-mm-accordion>\n      <div class=\"mm-pdp-accordion-head\" data-mm-accordion-toggle>\n        <span class=\"mm-pdp-accordion-label\">Was ist Tallow und warum wirkt es?</span>\n        <span class=\"mm-pdp-accordion-mark\" data-mm-accordion-mark>+</span>\n      </div>\n      <div class=\"mm-pdp-accordion-body\" data-mm-accordion-body hidden>\n        <p>Hochwertiger Rindertalg von der Schwäbischen Alb - biologisch nahezu identisch mit den natürlichen Lipiden deiner Haut, daher keine Barriere und direkte Wirkung.</p>\n      </div>\n    </div>\n    <div class=\"mm-pdp-accordion-row\" data-mm-accordion>\n      <div class=\"mm-pdp-accordion-head\" data-mm-accordion-toggle>\n        <span class=\"mm-pdp-accordion-label\">Welche Inhaltsstoffe sind enthalten?</span>\n        <span class=\"mm-pdp-accordion-mark\" data-mm-accordion-mark>+</span>\n      </div>\n      <div class=\"mm-pdp-accordion-body\" data-mm-accordion-body hidden>\n        <p>Rindertalg, Schwarzkümmelöl, Traubenkernöl, Bienenwachs und Squalan, abgerundet mit einer dezenten Duftkomposition aus Bergamotte und Zedernholz.</p>\n      </div>\n    </div>\n    <div class=\"mm-pdp-accordion-row\" data-mm-accordion>\n      <div class=\"mm-pdp-accordion-head\" data-mm-accordion-toggle>\n        <span class=\"mm-pdp-accordion-label\">Für welchen Hauttyp eignet sich die Creme?</span>\n        <span class=\"mm-pdp-accordion-mark\" data-mm-accordion-mark>+</span>\n      </div>\n      <div class=\"mm-pdp-accordion-body\" data-mm-accordion-body hidden>\n        <p>Für trockene, empfindliche, unreine und normale Haut.</p>\n      </div>\n    </div>\n    <div class=\"mm-pdp-accordion-row\" data-mm-accordion>\n      <div class=\"mm-pdp-accordion-head\" data-mm-accordion-toggle>\n        <span class=\"mm-pdp-accordion-label\">Wie lange dauert der Versand?</span>\n        <span class=\"mm-pdp-accordion-mark\" data-mm-accordion-mark>+</span>\n      </div>\n      <div class=\"mm-pdp-accordion-body\" data-mm-accordion-body hidden>\n        <p>Versand aus unserem Lager in Rottenburg, Deutschland - innerhalb von 1–2 Werktagen nach Auftragseingang. Lieferzeit in Deutschland, Österreich und der Schweiz: 2–4 Werktage. Kostenloser Versand ab 60 € Bestellwert.</p>\n      </div>\n    </div>\n    <div class=\"mm-pdp-accordion-row\" data-mm-accordion>\n      <div class=\"mm-pdp-accordion-head\" data-mm-accordion-toggle>\n        <span class=\"mm-pdp-accordion-label\">Was, wenn mir das Produkt nicht gefällt?</span>\n        <span class=\"mm-pdp-accordion-mark\" data-mm-accordion-mark>+</span>\n      </div>\n      <div class=\"mm-pdp-accordion-body\" data-mm-accordion-body hidden>\n        <p>Du hast 30 Tage Zeit, das Produkt zurückzuschicken - ohne Wenn und Aber. Das ist unser Versprechen.</p>\n      </div>\n    </div>\n  </div>\n</div>",
+        "color_scheme": "background-1",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "mm_pdp_reviews_header_section": {
+      "type": "custom-liquid",
+      "settings": {
+        "custom_liquid": "{%- liquid\n  assign rating = product.metafields.loox.avg_rating\n  assign review_count = product.metafields.loox.num_reviews\n  if rating != blank\n    assign rating_display = rating | replace: '.', ','\n    assign rounded = rating | round\n  else\n    assign rating_display = '4,8'\n    assign review_count = 398\n    assign rounded = 5\n  endif\n-%}\n<div class=\"mm-pdp-reviews\">\n  <div class=\"mm-pdp-reviews-head\">\n    <div>\n      \n      <h2 class=\"mm-pdp-reviews-title\">Was Männer über uns sagen</h2>\n    </div>\n    <div class=\"mm-pdp-reviews-summary\">\n      <span class=\"mm-pdp-reviews-avg\">{{ rating_display }}</span>\n      <div class=\"mm-pdp-reviews-summary-body\">\n        <div class=\"mm-pdp-reviews-stars\">{% for i in (1..5) %}{% if i <= rounded %}★{% else %}<span style=\"color:var(--mm-graphite)\">★</span>{% endif %}{% endfor %}</div>\n        <div class=\"mm-pdp-reviews-total\">{{ review_count }} verifizierte Bewertungen</div>\n      </div>\n    </div>\n  </div>\n\n  <div class=\"mm-pdp-reviews-spotlight\">\n    <span class=\"mm-pdp-reviews-badge\">Top-Bewertung</span>\n    <div class=\"mm-pdp-reviews-spotlight-body\">\n      <div class=\"mm-pdp-reviews-stars\">★★★★★</div>\n      <div class=\"mm-pdp-reviews-spotlight-quote\">„Endlich eine Creme, die nicht fettet“</div>\n      <p class=\"mm-pdp-reviews-spotlight-text\">Meine Haut fühlt sich nach 2 Wochen deutlich ruhiger und gepflegter an. Absolut&nbsp;empfehlenswert!</p>\n      <div class=\"mm-pdp-reviews-author\">\n        <span class=\"mm-pdp-reviews-avatar\">M</span>\n        <div>\n          <div class=\"mm-pdp-reviews-author-name\">Markus T. <svg width=\"13\" height=\"13\" viewBox=\"0 0 24 24\"><circle cx=\"12\" cy=\"12\" r=\"11\" fill=\"var(--mm-gold-soft)\"></circle><path d=\"M7 12.5l3 3 7-7\" fill=\"none\" stroke=\"var(--mm-onyx)\" stroke-width=\"2.6\" stroke-linecap=\"round\" stroke-linejoin=\"round\"></path></svg></div>\n          <div class=\"mm-pdp-reviews-author-meta\">Verifiziert · Tallow Gesichtscreme</div>\n        </div>\n      </div>\n    </div>\n  </div>\n\n  <div class=\"mm-pdp-reviews-more-head\">\n    \n    <span class=\"mm-pdp-reviews-swipe-hint\">Wischen →</span>\n  </div>\n\n  <div\n    class=\"mm-pdp-reviews-grid\"\n    data-mm-reviews-grid\n    data-product-id=\"{{ product.id }}\"\n    data-fallback-image=\"{{ product.featured_image | image_url: width: 400 }}\"\n    data-fallback-product-name=\"{{ product.title | escape }}\"\n  ></div>\n  <div class=\"mm-pdp-reviews-more-wrap\">\n    <button type=\"button\" class=\"mm-pdp-reviews-cta mm-pdp-reviews-more\" data-mm-reviews-more hidden>Mehr Bewertungen</button>\n  </div>\n</div>",
+        "color_scheme": "background-1",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    },
+    "1772107123a1310b71": {
+      "type": "apps",
+      "blocks": {
+        "loox_reviews_loox_dynamic_section_LybneF": {
+          "type": "shopify://apps/loox-reviews/blocks/loox-dynamic-section/5c3b337f-fd14-4df5-b1d6-80ec13e6e28e",
+          "settings": {
+            "reviews_to_display": "product_reviews_only",
+            "default_tab": "automatic",
+            "only_photos": false,
+            "aggregated": false,
+            "limit": 10,
+            "hide_thumbnails": false,
+            "maxwidth": 1080,
+            "is_sample": true
+          }
+        }
+      },
+      "block_order": [
+        "loox_reviews_loox_dynamic_section_LybneF"
+      ],
+      "settings": {
+        "include_margins": true
+      }
+    },
+    "45f77b37-82dc-4dcd-aab6-662315b32360": {
+      "type": "rich-text",
+      "blocks": {
+        "template--19956043415894__45f77b37-82dc-4dcd-aab6-662315b32360-heading-1": {
+          "type": "heading",
+          "settings": {
+            "heading": "Oft zusammen gekauft",
+            "heading_size": "h1"
+          }
+        }
+      },
+      "block_order": [
+        "template--19956043415894__45f77b37-82dc-4dcd-aab6-662315b32360-heading-1"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "background-1",
+        "full_width": true,
+        "padding_top": 20,
+        "padding_bottom": 0
+      }
+    },
+    "related-products": {
+      "type": "mm-pdp-related",
+      "settings": {
+        "heading": "",
+        "heading_size": "h1",
+        "products_to_show": 4,
+        "color_scheme": "background-1"
+      }
+    },
+    "mm_pdp_sticky_cta_section": {
+      "type": "custom-liquid",
+      "settings": {
+        "custom_liquid": "{{ 'mm-pdp-sticky-cta.css' | asset_url | stylesheet_tag }}\n{%- liquid\n  assign sc_variant = product.selected_or_first_available_variant\n  assign sc_price = sc_variant.price\n  assign sc_compare = sc_variant.compare_at_price\n-%}\n<div class=\"mm-sc\" id=\"mm-sc\" aria-hidden=\"true\">\n  <div class=\"mm-sc-info\">\n    <span class=\"mm-sc-title\">{{ product.title }}</span>\n    <span class=\"mm-sc-prices\">\n      <span class=\"mm-sc-price\">{{ sc_price | money_without_currency }} €</span>\n      {%- if sc_compare > sc_price -%}\n        <span class=\"mm-sc-compare\">{{ sc_compare | money_without_currency }} €</span>\n      {%- endif -%}\n    </span>\n  </div>\n  <button type=\"button\" class=\"mm-btn mm-btn--primary mm-sc-cta\" id=\"mm-sc-cta\">Bundle wählen</button>\n</div>\n\n<script>\n(function () {\n  var bar = document.getElementById('mm-sc');\n  // In der Theme-Vorschau liegt die Shopify-Leiste unten drueber und verdeckt die\n  // Sticky-Bar komplett. Nur dort nach oben versetzen, auf dem Shop bleibt sie unten.\n  if (bar && /shopifypreview\\.com$/.test(location.hostname)) bar.classList.add('is-preview');\n  var cta = document.getElementById('mm-sc-cta');\n  if (!bar || !cta) return;\n\n  // Ab hier soll die Leiste erscheinen: die Vorher/Nachher-Section.\n  var trigger = document.querySelector('.mm-pdp-ba') || document.querySelector('.mm-pdp-principle');\n  // Ziel des Klicks: die Bundle-Auswahl in der Buybox (Koala-Widget),\n  // ersatzweise der Kaufbereich.\n  function target() {\n    return document.querySelector('koala-quantity-breaks-embed')\n      || document.querySelector('koala-quantity-breaks-app-block')\n      || document.querySelector('.koala-deal')\n      || document.querySelector('.product-form__buttons')\n      || document.querySelector('.product__info-container');\n  }\n\n  var ticking = false;\n  function sync() {\n    ticking = false;\n    if (!trigger) return;\n    var show = trigger.getBoundingClientRect().top < window.innerHeight * 0.6;\n    bar.classList.toggle('is-visible', show);\n    bar.setAttribute('aria-hidden', show ? 'false' : 'true');\n  }\n  function onScroll() {\n    if (ticking) return;\n    ticking = true;\n    window.requestAnimationFrame(sync);\n  }\n\n  cta.addEventListener('click', function () {\n    var el = target();\n    if (!el) return;\n    var header = document.querySelector('.section-header, sticky-header, header');\n    var offset = header ? header.getBoundingClientRect().height + 12 : 12;\n    var y = el.getBoundingClientRect().top + window.pageYOffset - offset;\n    window.scrollTo({ top: Math.max(0, y), behavior: 'smooth' });\n  });\n\n  window.addEventListener('scroll', onScroll, { passive: true });\n  window.addEventListener('resize', onScroll);\n  sync();\n})();\n</script>",
+        "color_scheme": "",
+        "padding_top": 0,
+        "padding_bottom": 0
+      }
+    }
+  },
+  "order": [
+    "main",
+    "mm_pdp_ba_section",
+    "mm_pdp_ingredients_section",
+    "mm_pdp_testimonials_section",
+    "mm_pdp_studie_section",
+    "mm_pdp_herkunft_section",
+    "mm_pdp_routine_section",
+    "mm_pdp_comparison_section",
+    "mm_pdp_faq_section",
+    "mm_pdp_reviews_header_section",
+    "1772107123a1310b71",
+    "45f77b37-82dc-4dcd-aab6-662315b32360",
+    "related-products",
+    "mm_pdp_sticky_cta_section"
+  ]
+}

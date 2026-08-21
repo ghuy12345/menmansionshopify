@@ -1,0 +1,40 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "apps",
+      "blocks": {
+        "recommenda_inline_quiz": {
+          "type": "shopify://apps/recomma-product-quiz-builder/blocks/recommenda_inline_quiz/66d3c4bd-027b-4c27-8ac0-2965d95b778a",
+          "settings": {
+            "quiz_id": 4840,
+            "width": 100,
+            "height": 100,
+            "padding_top": 0,
+            "padding_right": 0,
+            "padding_bottom": 0,
+            "padding_left": 0,
+            "open_delay": 0
+          }
+        }
+      },
+      "block_order": [
+        "recommenda_inline_quiz"
+      ],
+      "settings": {
+        "include_margins": false
+      }
+    }
+  },
+  "order": [
+    "main"
+  ]
+}
